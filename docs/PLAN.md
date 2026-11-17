@@ -224,3 +224,8 @@ No pushing or GitHub repo creation unless asked.
 - Whether LibreOffice preserves `xml:id`, unknown parts, metadata and foreign markup. Spike 4 pre-work tests this.
 - The licences of `zip`, `quick-xml`, `image` and `uuid`. Each is checked when added.
 - The version and licence claims for Parley, Loro and Automerge are deferred to Spikes 2b and 3 and noted there as unverified.
+- 2026-11-17: Repo pushed to github.com/Creative-Oak/skriv (public).
+  - Decided: web app first; Spike 7 (desktop) deferred.
+  - CI on push runs only the quick checks. The LibreOffice fidelity job is manual (Run workflow).
+  - Ten Word-exported EU ODT documents passed every criterion; addendum in the Spike 1 results.
+

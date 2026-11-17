@@ -2,6 +2,11 @@
 
 Status: proposal, 2026-11-17. This needs a decision before work starts.
 
+**Decided 2026-11-17: skriv is built as a web app first.** Spike 2 targets
+browsers only: desktop Chrome, Edge, Firefox and Safari; Safari on iOS;
+Chrome on Android with Gboard. The desktop shell (Tauri or Electron, and
+Spike 7) is deferred until there is a desktop to ship.
+
 These three spikes settle the remaining Phase 0 decisions:
 
 - **Spike 2:** the view strategy (ADR 0004).
@@ -17,8 +22,9 @@ week   1    2    3    4    5    6
 S2     [contract][ A and B prototypes ][ device and AT test rounds ]
 S2b         [ own engine prototype  ][ Typst-kernel prototype ][compare]
 S3     [ mapping ][ concurrency fuzz ][ history size ][ blind review ]
-S7                                    (starts when S2 has a prototype)
 ```
+
+Spike 7 (Tauri on Linux) is deferred: web first.
 
 ## What Spike 1 gives all three
 
@@ -58,8 +64,8 @@ input and accessibility?
   is a projection of the model, never the source of truth, and transactions
   map to model operations.
 - **B (owned view).** The engine positions lines in the DOM. Input comes
-  through EditContext in Chromium and Electron, or a hidden textarea
-  elsewhere. Semantic `<h1>`–`<h6>`/`<p>` elements stay in reading order, so
+  through EditContext in Chrome and Edge, or a hidden textarea in Firefox and
+  Safari. Semantic `<h1>`–`<h6>`/`<p>` elements stay in reading order, so
   the accessibility tree is the DOM itself, not a side DOM.
 
 Verify before building:
@@ -76,7 +82,7 @@ comments.
 
 | Input | What to type | What to check |
 |---|---|---|
-| Danish keyboard (macOS, Windows, Linux) | `Æbleøen på Ålborg`; dead keys `´ e` → `é`, `¨ u` → `ü`, `^ o` → `ô`, `` ` a `` → `à`; AltGr combinations (`@ £ $ € { } [ ] \|`) | No lost or doubled characters; the caret is right after each dead-key sequence |
+| Danish keyboard (macOS, Windows, Linux; in each desktop browser) | `Æbleøen på Ålborg`; dead keys `´ e` → `é`, `¨ u` → `ü`, `^ o` → `ô`, `` ` a `` → `à`; AltGr combinations (`@ £ $ € { } [ ] \|`) | No lost or doubled characters; the caret is right after each dead-key sequence |
 | macOS IME | Press-and-hold accent menu (`e` → `é`); Japanese Kana (`にほん` → 日本); Pinyin | The composition underline shows; committing replaces the whole composition; Escape cancels it |
 | Windows IME | Microsoft Japanese IME; Microsoft Pinyin; the Windows emoji panel (Win+.) | Same as macOS |
 | Android Gboard (Danish layout) | Typing with autocorrect on; swipe typing; tapping a suggestion; long-press for `æ ø å`; backspace across a word Gboard has "composed" | No duplicated or vanished words (the classic contenteditable failure); the caret stays put |
@@ -113,8 +119,11 @@ comments.
 Report every failure per platform. A strategy that fails only on one platform
 may still win with a documented fallback.
 
-**Deliverable.** `docs/spikes/02-results.md` recommends A or B per platform
-(web, desktop) and updates ADR 0004. The prototype code is kept in
+**Deliverable.** `docs/spikes/02-results.md` recommends A or B for the web
+app, per browser where they differ, and updates ADR 0004. Since EditContext
+exists only in Chrome and Edge, B on the web means a hidden-textarea input
+path for Firefox and Safari. That makes A the likelier web choice, which the
+spike must confirm or refute. The prototype code is kept in
 `prototypes/` behind the layout contract.
 
 ---
@@ -236,6 +245,15 @@ ADR 0002 is updated on property encoding and origins.
    - a mid-range Windows laptop and an Android phone;
    - at least one regular screen-reader user for a usability pass, ideally
      from a Danish public-sector partner.
-2. **Whether Spike 7 (Tauri on Linux) starts as soon as Spike 2 has a
-   prototype,** or waits for its decision.
-3. **Who sits on the Spike 3 blind review.**
+2. **Who sits on the Spike 3 blind review.**
+
+## Where each spike can run
+
+Cloud sessions are Linux containers with no screen, keyboard or real devices.
+
+| Work | Cloud session? |
+|---|---|
+| Spike 3 (CRDT) | Yes. The blind review needs people. |
+| Spike 2b (layout) | Building and correctness, yes. Latency numbers need real hardware; determinism across operating systems needs CI runners on macOS and Windows. |
+| Spike 2 prototypes | Building them and synthetic browser tests (Playwright, `beforeinput`/composition events), yes. |
+| Spike 2 real tests | No: keyboards, input methods, Gboard, dictation, screen readers and latency need real devices and a person. |

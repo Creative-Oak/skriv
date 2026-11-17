@@ -24,6 +24,8 @@ and Euro-Office render to canvas too.
   contradict it.
 - **Text input goes through a replaceable input layer.** We can start with one
   technique and move to another without touching the model or the layout engine.
+- **Web first** (decided 2026-11-17). The first product is a web app. Desktop
+  packaging comes later.
 - **The view never owns the document** (ADR 0002). Any editor framework used
   in the view keeps a projection of the model, not the model itself.
 
@@ -51,4 +53,4 @@ anything for it yet; Spike 2 does that.
 |---|---|
 | View strategy: A (ProseMirror view with engine-directed lines and pages) or B (owned DOM view with EditContext or a hidden textarea) | Spike 2 |
 | Layout kernel: our own on the Linebender stack, or Typst as the kernel | Spike 2b |
-| Desktop shell: Tauri (system WebViews; WebKitGTK on Linux is the risk) or Electron | Spike 7 |
+| Desktop shell: Tauri (system WebViews; WebKitGTK on Linux is the risk) or Electron | Spike 7, deferred until after the web app |

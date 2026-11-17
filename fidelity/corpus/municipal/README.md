@@ -1,6 +1,7 @@
-# Municipal templates (not in git)
+# Real-world public-sector documents (not in git)
 
-Put real Danish municipal templates and documents here, or anywhere else, and
+Put real public-sector documents here (Danish municipal ones ideally; EU
+documents exported from Word are here now), or anywhere else, and
 point the harness at them:
 
 ```bash

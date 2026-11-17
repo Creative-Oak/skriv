@@ -8,4 +8,4 @@ reader).
 
 **Kill / continue (from the report).** If it fails, switch desktop to Electron.
 
-**Status:** not started. It depends on Spike 2.
+**Status:** deferred (2026-11-17). skriv is built as a web app first; this spike runs when a desktop shell is on the table. Linux users of the web app are covered by Spike 2's Firefox and Chrome tests.

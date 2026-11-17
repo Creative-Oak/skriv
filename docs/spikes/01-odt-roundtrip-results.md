@@ -125,6 +125,41 @@ The most common, by count:
 Footnotes, tab stops, page layouts and tables of contents are the obvious
 next modelling work. All four matter for municipal letters.
 
+## Addendum: ODT exported by Microsoft Word (2026-11-17)
+
+**The corpus.** Ten public EU documents (EU-FOSSA 2 project reports, a
+code-list guideline, school-survey questionnaires and results), 10–125 pages
+each. All were written by **Microsoft Word's own ODT export**
+(`MicrosoftOffice/15.0`). That is the opposite of the main corpus, and close
+to what public-sector users will bring: documents made in Word and saved as
+ODT. They live in `fidelity/corpus/municipal/` and are not committed.
+
+**Results.** Everything passed:
+- 0 unreadable;
+- 100% of untouched elements byte-preserved (81,020 elements);
+- 100% canonical survival when regenerating everything;
+- 0 files with visible loss in identity and regen mode;
+- 100% LibreOffice re-save agreement;
+- the canary flagged all 10 damaged files.
+
+**Byte identity.** Regenerated `content.xml` matched Word's bytes in 9 of 10
+files; `styles.xml` and `meta.xml` matched in all 10.
+
+**Slots.** 4.8% of the XML went into slots, mostly `style:tab-stops` (1,722)
+and footnotes (`text:note`, 317). Word documents lean even harder on
+footnotes and tab stops than LibreOffice's, which supports putting them first
+in the modelling order.
+
+**The attribute-order diagnostic.** In touch mode, 5 files rendered slightly
+differently (up to 0.5% of a page). This is the same LibreOffice import
+quirk, and Word's export triggers it more often. It confirms that "write new
+attributes in LibreOffice's serialisation order" is real work, not polish.
+
+**Caveat.** These are EU-level documents, not Danish municipal ones, and only
+ten of them. They are a much better proxy than LibreOffice's test suite, but
+the decision-point-1 re-check should still use Danish municipal documents
+when we can get some.
+
 ## Surprises and corrections
 
 1. **Our regenerated XML is byte-identical to LibreOffice's.** Properties stay

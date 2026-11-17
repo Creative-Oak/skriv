@@ -1,13 +1,18 @@
 name: CI
 
+# Every push runs the quick checks (Rust and TypeScript tooling). The
+# LibreOffice fidelity job is slow, so while we prototype it runs only when
+# started by hand: Actions → CI → Run workflow.
 on:
   push:
     branches: [main]
   pull_request:
-  schedule:
-    # Nightly: the full LibreOffice corpus.
-    - cron: "17 2 * * *"
   workflow_dispatch:
+    inputs:
+      libreoffice_corpus:
+        description: "Also fetch and run the full LibreOffice corpus (~480 files) and the preservation experiment"
+        type: boolean
+        default: false
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -54,6 +59,7 @@ jobs:
 
   fidelity:
     name: Fidelity harness (LibreOffice oracle)
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     needs: rust
     steps:
@@ -82,20 +88,20 @@ jobs:
           echo "SKRIV_SOFFICE=$SOFFICE" >> "$GITHUB_ENV"
           "$SOFFICE" --version
       - run: cargo build --release -p skriv-fidelity
-      - name: Generated corpus (every push)
+      - name: Generated corpus
         run: >
           ./target/release/skriv-fidelity run fidelity/corpus/generated
           --canary --enforce --workers 2
           --out fidelity/reports/ci-generated --work fidelity/work/ci-generated
-      - name: LibreOffice corpus (nightly and manual runs)
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      - name: LibreOffice corpus
+        if: inputs.libreoffice_corpus
         run: |
           fidelity/scripts/fetch-lo-corpus.sh
           ./target/release/skriv-fidelity run fidelity/corpus/libreoffice \
             --canary --enforce --workers 4 \
             --out fidelity/reports/ci-libreoffice --work fidelity/work/ci-libreoffice
-      - name: LibreOffice preservation findings (nightly and manual runs)
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      - name: LibreOffice preservation findings
+        if: inputs.libreoffice_corpus
         run: python3 -I fidelity/scripts/lo_preservation.py --out fidelity/reports/ci-preservation
       - uses: actions/upload-artifact@v4
         if: always()
