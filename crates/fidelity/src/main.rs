@@ -40,10 +40,12 @@ enum Cmd {
         /// Parallel LibreOffice processes.
         #[arg(long, default_value_t = 4)]
         workers: usize,
-        #[arg(long, default_value_t = 50)]
+        #[arg(long, default_value_t = 75)]
         dpi: u32,
-        /// Changed-pixel ratio per page above which a page counts as visibly different.
-        #[arg(long, default_value_t = 0.001)]
+        /// Changed-pixel ratio per page above which a page counts as visibly
+        /// different. LibreOffice renders deterministically (identity
+        /// round trips measure exactly 0), so the default is: any change.
+        #[arg(long, default_value_t = 0.0)]
         threshold: f64,
         /// Only the first N files (sorted by path).
         #[arg(long)]
@@ -51,6 +53,9 @@ enum Cmd {
         /// Fail (exit 1) if the kill criteria are not met.
         #[arg(long)]
         enforce: bool,
+        /// Also run the negative control, which damages documents on purpose.
+        #[arg(long)]
+        canary: bool,
     },
 }
 
@@ -69,6 +74,7 @@ fn main() -> Result<()> {
             threshold,
             limit,
             enforce,
+            canary,
         } => {
             if work.exists() {
                 std::fs::remove_dir_all(&work)?;
@@ -77,11 +83,19 @@ fn main() -> Result<()> {
                 std::fs::remove_dir_all(&out)?;
             }
             std::fs::create_dir_all(&out)?;
+            std::fs::create_dir_all(&work)?;
+            // soffice needs absolute paths: its profile is a file:// URL.
+            let work = std::fs::canonicalize(&work)?;
+            let out = std::fs::canonicalize(&out)?;
             let cfg = skriv_fidelity::Config {
                 corpus,
                 work,
                 out: out.clone(),
-                modes: Mode::ALL.to_vec(),
+                modes: if canary {
+                    [Mode::ALL.as_slice(), &[Mode::Canary]].concat()
+                } else {
+                    Mode::ALL.to_vec()
+                },
                 visual: !no_visual,
                 lo_loop: !no_lo_loop,
                 soffice,
@@ -93,6 +107,9 @@ fn main() -> Result<()> {
             let run = skriv_fidelity::run(&cfg)?;
             let summary = skriv_fidelity::report::write(&run, &out)?;
             println!("{}", summary.headline());
+            if let Some(c) = summary.canary() {
+                println!("{c}");
+            }
             println!("report: {}", out.join("index.html").display());
             if enforce && !summary.kill_criteria_met() {
                 std::process::exit(1);

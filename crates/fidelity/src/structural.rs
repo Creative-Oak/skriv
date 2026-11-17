@@ -28,6 +28,10 @@ pub enum Mode {
     Identity,
     Touch,
     Regen,
+    /// Negative control: deliberately empties every third non-empty
+    /// paragraph. The harness must report this as loss; if it doesn't, the
+    /// harness is broken. Never counts towards the kill criteria.
+    Canary,
 }
 
 impl Mode {
@@ -38,6 +42,7 @@ impl Mode {
             Mode::Identity => "identity",
             Mode::Touch => "touch",
             Mode::Regen => "regen",
+            Mode::Canary => "canary",
         }
     }
 }
@@ -178,6 +183,22 @@ fn apply_mode(doc: &mut skriv_model::Document, mode: Mode) -> Vec<Origin> {
     let mut touched = Vec::new();
     match mode {
         Mode::Identity => {}
+        Mode::Canary => {
+            let mut n = 0usize;
+            for p in skriv_model::paragraphs_mut(doc) {
+                if p.plain_text().trim().is_empty() {
+                    continue;
+                }
+                n += 1;
+                if n % 3 == 1 {
+                    p.content.clear();
+                    p.meta.dirty = true;
+                    if let Some(o) = p.meta.origin {
+                        touched.push(o);
+                    }
+                }
+            }
+        }
         Mode::Regen => skriv_model::for_each_node_mut(doc, &mut |_, m| {
             m.dirty = true;
             if let Some(o) = m.origin {

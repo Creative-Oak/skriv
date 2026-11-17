@@ -61,6 +61,8 @@ pub struct Visual {
 #[derive(Clone, Debug, Default, Serialize)]
 pub struct LoLoop {
     pub canonical: BTreeMap<&'static str, Tally>,
+    /// Elements that differed between two LibreOffice re-saves of the original, so not scored.
+    pub unstable: usize,
     pub error: Option<String>,
 }
 
@@ -107,7 +109,7 @@ fn display_name(p: &Path) -> String {
     )
 }
 
-/// A filesystem-safe, unique stem for a corpus file.
+/// A short, unique stem for a corpus file.
 fn stem(i: usize) -> String {
     format!("f{i:04}")
 }
@@ -115,20 +117,26 @@ fn stem(i: usize) -> String {
 pub fn run(cfg: &Config) -> Result<Run> {
     let files = collect_corpus(&cfg.corpus, cfg.limit);
     let odt_dir = cfg.work.join("odt");
-    std::fs::create_dir_all(&odt_dir)?;
+    for v in std::iter::once("original").chain(cfg.modes.iter().map(|m| m.label())) {
+        std::fs::create_dir_all(odt_dir.join(v))?;
+    }
 
     eprintln!("structural: {} files", files.len());
+    // Every variant of a file keeps the same file name, in its own directory:
+    // documents can show their own file name (a `text:file-name` field in a
+    // header), and a different name would render as a difference.
     let results: Vec<Prepared> = files
         .par_iter()
         .enumerate()
         .map(|(i, path)| {
             let bytes = std::fs::read(path).unwrap_or_default();
             let out = structural::run_file(&display_name(path), &bytes, &cfg.modes);
-            let orig = odt_dir.join(format!("{}-original.odt", stem(i)));
+            let file = format!("{}.odt", stem(i));
+            let orig = odt_dir.join("original").join(&file);
             std::fs::write(&orig, &bytes).ok();
             let mut written = Vec::new();
             for (mode, pkg) in out.packages {
-                let p = odt_dir.join(format!("{}-{}.odt", stem(i), mode.label()));
+                let p = odt_dir.join(mode.label()).join(&file);
                 if std::fs::write(&p, pkg).is_ok() {
                     written.push((mode, p));
                 }
@@ -170,6 +178,38 @@ pub fn run(cfg: &Config) -> Result<Run> {
     Ok(run)
 }
 
+/// Convert files after copying them to one staging directory, so every
+/// variant of a document is opened from the same full path. Documents can show
+/// their own path (`text:file-name text:display="full"`), and we must not
+/// count our directory layout as a difference.
+fn staged_convert(
+    oracle: &render::Oracle,
+    inputs: &[PathBuf],
+    stage: &Path,
+    format: &str,
+    outdir: &Path,
+) -> Result<()> {
+    if stage.exists() {
+        std::fs::remove_dir_all(stage)?;
+    }
+    std::fs::create_dir_all(stage)?;
+    let mut staged = Vec::with_capacity(inputs.len());
+    for p in inputs {
+        let to = stage.join(p.file_name().unwrap_or_default());
+        std::fs::copy(p, &to)?;
+        staged.push(to);
+    }
+    let failed = oracle.convert(&staged, format, outdir);
+    if !failed.is_empty() {
+        eprintln!(
+            "  {} of {} files produced no {format}",
+            failed.len(),
+            staged.len()
+        );
+    }
+    Ok(())
+}
+
 fn visual_pass(
     cfg: &Config,
     oracle: &render::Oracle,
@@ -177,46 +217,51 @@ fn visual_pass(
     run: &mut Run,
 ) -> Result<()> {
     let pdf_dir = cfg.work.join("pdf");
-    let mut inputs = Vec::new();
-    for (r, written, orig) in results {
-        if r.error.is_none() {
-            inputs.push(orig.clone());
-            inputs.extend(written.iter().map(|(_, p)| p.clone()));
-        }
-    }
-    eprintln!("visual: rendering {} files with LibreOffice", inputs.len());
-    oracle.convert(&inputs, "pdf", &pdf_dir);
     let png_dir = cfg.work.join("png");
+    let ok: Vec<&Prepared> = results
+        .iter()
+        .filter(|(r, _, _)| r.error.is_none())
+        .collect();
+    let originals: Vec<PathBuf> = ok.iter().map(|(_, _, o)| o.clone()).collect();
+    eprintln!(
+        "visual: rendering {} originals and their round trips",
+        originals.len()
+    );
+    let stage = cfg.work.join("stage");
+    staged_convert(oracle, &originals, &stage, "pdf", &pdf_dir.join("original"))?;
+    for mode in &cfg.modes {
+        let inputs: Vec<PathBuf> = ok
+            .iter()
+            .filter_map(|(_, w, _)| w.iter().find(|(m, _)| m == mode).map(|(_, p)| p.clone()))
+            .collect();
+        staged_convert(oracle, &inputs, &stage, "pdf", &pdf_dir.join(mode.label()))?;
+    }
     let diff_dir = cfg.out.join("diffs");
     std::fs::create_dir_all(&diff_dir)?;
 
-    let per_file: Vec<(String, BTreeMap<Mode, Visual>)> = results
+    let per_file: Vec<(String, BTreeMap<Mode, Visual>)> = ok
         .par_iter()
-        .filter(|(r, _, _)| r.error.is_none())
         .map(|(r, written, orig)| {
             let mut m = BTreeMap::new();
-            let ostem = orig.file_stem().unwrap().to_string_lossy().into_owned();
+            let st = orig.file_stem().unwrap().to_string_lossy().into_owned();
             let orig_pages = render::rasterise(
-                &pdf_dir.join(format!("{ostem}.pdf")),
-                &png_dir.join(&ostem),
+                &pdf_dir.join("original").join(format!("{st}.pdf")),
+                &png_dir.join("original").join(&st),
                 cfg.dpi,
             );
-            for (mode, p) in written {
-                let wstem = p.file_stem().unwrap().to_string_lossy().into_owned();
+            for (mode, _) in written {
                 let mut v = Visual::default();
-                match (
-                    &orig_pages,
-                    render::rasterise(
-                        &pdf_dir.join(format!("{wstem}.pdf")),
-                        &png_dir.join(&wstem),
-                        cfg.dpi,
-                    ),
-                ) {
+                let out_pages = render::rasterise(
+                    &pdf_dir.join(mode.label()).join(format!("{st}.pdf")),
+                    &png_dir.join(mode.label()).join(&st),
+                    cfg.dpi,
+                );
+                match (&orig_pages, out_pages) {
                     (Ok(a), Ok(b)) => {
                         v.pages_original = a.len();
                         v.pages_output = b.len();
                         for (i, (pa, pb)) in a.iter().zip(b.iter()).enumerate() {
-                            let diff_name = format!("{wstem}-p{}.png", i + 1);
+                            let diff_name = format!("{st}-{}-p{}.png", mode.label(), i + 1);
                             let want_img = v.diff_images.len() < 3;
                             let diff_path = diff_dir.join(&diff_name);
                             match render::compare_pages(
@@ -262,81 +307,105 @@ fn lo_loop_pass(
     run: &mut Run,
 ) -> Result<()> {
     let dir = cfg.work.join("resaved");
-    let mut inputs = Vec::new();
-    for (r, written, orig) in results {
-        if r.error.is_none()
-            && let Some((_, p)) = written.iter().find(|(m, _)| *m == Mode::Regen)
-        {
-            inputs.push(orig.clone());
-            inputs.push(p.clone());
-        }
-    }
-    eprintln!("libreoffice loop: re-saving {} files", inputs.len());
-    oracle.convert(&inputs, "odt", &dir);
-    let per_file: Vec<(String, LoLoop)> = results
+    let ok: Vec<(&Prepared, &PathBuf)> = results
+        .iter()
+        .filter(|(r, _, _)| r.error.is_none())
+        .filter_map(|p| {
+            p.1.iter()
+                .find(|(m, _)| *m == Mode::Regen)
+                .map(|(_, w)| (p, w))
+        })
+        .collect();
+    let originals: Vec<PathBuf> = ok.iter().map(|(p, _)| p.2.clone()).collect();
+    let ours: Vec<PathBuf> = ok.iter().map(|(_, w)| (*w).clone()).collect();
+    eprintln!(
+        "libreoffice loop: re-saving {} originals twice and our regenerated files once",
+        originals.len()
+    );
+    // The original is re-saved twice: LibreOffice is not deterministic for
+    // some content (an unfixed date field stores the time of saving), and
+    // anything that differs between those two runs is noise, not loss.
+    let stage = cfg.work.join("stage");
+    staged_convert(oracle, &originals, &stage, "odt", &dir.join("a"))?;
+    staged_convert(oracle, &originals, &stage, "odt", &dir.join("b"))?;
+    staged_convert(oracle, &ours, &stage, "odt", &dir.join("ours"))?;
+    let per_file: Vec<(String, LoLoop)> = ok
         .par_iter()
-        .filter(|(r, w, _)| r.error.is_none() && w.iter().any(|(m, _)| *m == Mode::Regen))
-        .map(|(r, written, orig)| {
-            let regen = &written.iter().find(|(m, _)| *m == Mode::Regen).unwrap().1;
-            let a = dir.join(orig.file_name().unwrap());
-            let b = dir.join(regen.file_name().unwrap());
-            (r.name.clone(), compare_resaved(&a, &b))
+        .map(|((r, _, orig), _)| {
+            let f = orig.file_name().unwrap();
+            (
+                r.name.clone(),
+                compare_resaved(
+                    &dir.join("a").join(f),
+                    &dir.join("b").join(f),
+                    &dir.join("ours").join(f),
+                ),
+            )
         })
         .collect();
     run.lo_loop = per_file.into_iter().collect();
     Ok(())
 }
 
-fn compare_resaved(a: &Path, b: &Path) -> LoLoop {
+/// Compare LibreOffice's re-save of our file (`ours`) with its re-save of the
+/// original (`a`), counting only elements that were identical across two
+/// re-saves of the original (`a`, `b`).
+fn compare_resaved(a: &Path, b: &Path, ours: &Path) -> LoLoop {
     let mut out = LoLoop::default();
     let read = |p: &Path, part: &str| -> Result<String> {
         let pkg = skriv_odf::package::Package::open(std::fs::read(p)?)?;
         Ok(pkg.read_string(part)?.unwrap_or_default())
     };
+    type Pool<'a> = std::collections::HashMap<(&'a str, u64), usize>;
+    fn pool(c: &canon::Canon) -> Pool<'_> {
+        let mut p = Pool::new();
+        for e in &c.elems {
+            *p.entry((e.feature, e.hash)).or_insert(0) += 1;
+        }
+        p
+    }
+    fn take(p: &mut Pool<'_>, k: (&'static str, u64)) -> bool {
+        match p.get_mut(&k) {
+            Some(n) if *n > 0 => {
+                *n -= 1;
+                true
+            }
+            _ => false,
+        }
+    }
     for part in ["content.xml", "styles.xml", "meta.xml"] {
-        let (sa, sb) = match (read(a, part), read(b, part)) {
-            (Ok(x), Ok(y)) => (x, y),
-            (Err(e), _) | (_, Err(e)) => {
+        let texts = (read(a, part), read(b, part), read(ours, part));
+        let (sa, sb, so) = match texts {
+            (Ok(x), Ok(y), Ok(z)) => (x, y, z),
+            (Err(e), _, _) | (_, Err(e), _) | (_, _, Err(e)) => {
                 out.error = Some(format!("{part}: {e}"));
                 return out;
             }
         };
-        let (aa, ab) = if part == "content.xml" {
-            (canon::auto_styles(&sa), canon::auto_styles(&sb))
-        } else {
-            Default::default()
+        let auto = |s: &str| {
+            if part == "content.xml" {
+                canon::auto_styles(s)
+            } else {
+                Default::default()
+            }
         };
-        let (Ok(ca), Ok(cb)) = (canon::canon(&sa, &aa), canon::canon(&sb, &ab)) else {
+        let (ma, mb, mo) = (auto(&sa), auto(&sb), auto(&so));
+        let (Ok(ca), Ok(cb), Ok(co)) = (
+            canon::canon(&sa, &ma),
+            canon::canon(&sb, &mb),
+            canon::canon(&so, &mo),
+        ) else {
             out.error = Some(format!("{part}: does not parse after re-save"));
             return out;
         };
-        let mut pool: std::collections::HashMap<(&str, u64), usize> = Default::default();
-        for e in &cb.elems {
-            *pool.entry((e.feature, e.hash)).or_insert(0) += 1;
-        }
+        let mut stable = pool(&cb);
+        let mut theirs = pool(&co);
         for e in &ca.elems {
-            // meta.xml after a re-save carries the save time and editing
-            // statistics; those differ by construction and aren't loss.
-            if part == "meta.xml"
-                && matches!(
-                    e.name.as_str(),
-                    "office:document-meta"
-                        | "office:meta"
-                        | "meta:editing-duration"
-                        | "dc:date"
-                        | "meta:editing-cycles"
-                        | "meta:generator"
-                )
-            {
+            if !take(&mut stable, (e.feature, e.hash)) {
+                out.unstable += 1;
                 continue;
             }
-            let ok = match pool.get_mut(&(e.feature, e.hash)) {
-                Some(n) if *n > 0 => {
-                    *n -= 1;
-                    true
-                }
-                _ => false,
-            };
+            let ok = take(&mut theirs, (e.feature, e.hash));
             out.canonical.entry(e.feature).or_default().add(ok);
         }
     }

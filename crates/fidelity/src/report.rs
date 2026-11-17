@@ -30,6 +30,7 @@ pub struct ModeSummary {
     pub touched: Tally,
     pub touched_by_feature: BTreeMap<String, Tally>,
     pub files_all_parts_identical: usize,
+    pub files_changed: usize,
     pub visual_files: usize,
     pub visual_loss_files: Vec<String>,
     pub visual_errors: usize,
@@ -58,20 +59,25 @@ impl Summary {
         self.mode(Mode::Touch).and_then(|m| m.untouched.pct())
     }
 
-    pub fn visible_loss_files(&self) -> usize {
-        self.modes
-            .values()
-            .map(|m| m.visual_loss_files.len())
-            .max()
-            .unwrap_or(0)
-    }
-
     pub fn kill_criteria_met(&self) -> bool {
         self.untouched_pct().is_some_and(|p| p >= UNTOUCHED_TARGET)
-            && self
-                .modes
-                .values()
-                .all(|m| m.visual_loss_files.is_empty() && m.visual_errors == 0)
+            && Mode::ALL.iter().all(|m| {
+                self.mode(*m)
+                    .is_none_or(|m| m.visual_loss_files.is_empty() && m.visual_errors == 0)
+            })
+    }
+
+    /// The negative control: it should show loss. If it doesn't, the harness is broken.
+    pub fn canary(&self) -> Option<String> {
+        let c = self.mode(Mode::Canary)?;
+        Some(format!(
+            "canary (deliberate damage): {} files damaged, {} of them flagged as visible loss; canonical {}",
+            c.files_changed,
+            c.visual_loss_files.len(),
+            c.canonical
+                .pct()
+                .map_or("n/a".into(), |p| format!("{p:.2}%")),
+        ))
     }
 
     pub fn headline(&self) -> String {
@@ -151,6 +157,8 @@ pub fn summarise(run: &Run) -> Summary {
             }
             if mr.identical_parts.values().all(|b| *b) {
                 ms.files_all_parts_identical += 1;
+            } else {
+                ms.files_changed += 1;
             }
             if let Some(v) = run.visual.get(&f.name).and_then(|m| m.get(mode)) {
                 ms.visual_files += 1;
@@ -244,6 +252,12 @@ pub fn markdown(run: &Run, s: &Summary) -> String {
         run.generated, run.skriv_commit, run.libreoffice, s.files, run.threshold, run.dpi
     );
     let _ = writeln!(o, "**{}**\n", s.headline());
+    if let Some(c) = s.canary() {
+        let _ = writeln!(
+            o,
+            "Negative control — {c}. If this showed no loss, the harness would be broken.\n"
+        );
+    }
     let _ = writeln!(o, "## Kill criteria\n");
     let _ = writeln!(
         o,
@@ -316,6 +330,7 @@ pub fn markdown(run: &Run, s: &Summary) -> String {
         if let Some(ms) = s.modes.get(m.label())
             && !ms.visual_loss_files.is_empty()
         {
+            // (canary files are listed in report.json, not here)
             let _ = writeln!(o, "\n## Visible differences, {} mode\n", m.label());
             for f in &ms.visual_loss_files {
                 let v = &run.visual[f][&m];
