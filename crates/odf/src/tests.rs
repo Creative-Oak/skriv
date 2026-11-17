@@ -128,6 +128,7 @@ fn regenerating_everything_reproduces_libreoffice_style_xml() {
     let w = odt
         .write_with(WriteOptions {
             regenerate_text: true,
+            ..Default::default()
         })
         .unwrap();
     assert!(w.stats.regenerated_nodes > 50);
@@ -253,6 +254,44 @@ fn editing_one_paragraph_leaves_everything_else_verbatim() {
 }
 
 #[test]
+fn scrambled_regeneration_changes_only_touched_elements() {
+    let mut odt = read(sample()).unwrap();
+    let paras = paragraphs_mut(&mut odt.doc);
+    let target = paras
+        .into_iter()
+        .find(|p| p.plain_text() == "in section")
+        .unwrap();
+    target.meta.dirty = true;
+    let w = odt
+        .write_with(WriteOptions {
+            scramble_regenerated: true,
+            ..Default::default()
+        })
+        .unwrap();
+    // A single attribute can't change order, so the bytes stay the same.
+    assert_eq!(w.content_xml, content_xml());
+    // One attribute: order can't change. Use the heading, which has three.
+    let mut odt = read(sample()).unwrap();
+    let Block::Paragraph(h) = &mut odt.doc.body[2] else {
+        panic!()
+    };
+    h.meta.dirty = true;
+    let w = odt
+        .write_with(WriteOptions {
+            scramble_regenerated: true,
+            ..Default::default()
+        })
+        .unwrap();
+    assert_eq!(
+        w.content_xml,
+        content_xml().replace(
+            r#"<text:h text:style-name="P1" text:outline-level="2" xml:id="id1">"#,
+            r#"<text:h xml:id="id1" text:outline-level="2" text:style-name="P1">"#
+        )
+    );
+}
+
+#[test]
 fn stamping_ids_patches_only_start_tags() {
     let mut odt = read(sample()).unwrap();
     stamp_ids(&mut odt.doc);
@@ -362,7 +401,7 @@ mod prop {
             prop_assert_eq!(&odt.write().unwrap().content_xml, &content);
             let mut odt = read(bytes).unwrap();
             touch_all(&mut odt.doc);
-            let w = odt.write_with(WriteOptions { regenerate_text: true }).unwrap();
+            let w = odt.write_with(WriteOptions { regenerate_text: true, ..Default::default() }).unwrap();
             prop_assert_eq!(&w.content_xml, &content);
         }
     }

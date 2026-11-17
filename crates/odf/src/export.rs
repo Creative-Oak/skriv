@@ -36,6 +36,12 @@ pub struct WriteStats {
 pub struct WriteOptions {
     /// Ignore text-run source spans and re-escape all character data.
     pub regenerate_text: bool,
+    /// Test knob: write regenerated start tags with their attributes in
+    /// reverse order. Regenerated XML otherwise reproduces LibreOffice's
+    /// serialisation exactly, which would make "untouched elements stay
+    /// byte-identical" impossible to tell apart from "everything happened to
+    /// come out the same". Never set this outside the fidelity harness.
+    pub scramble_regenerated: bool,
 }
 
 enum Open {
@@ -143,7 +149,12 @@ impl<'a> Writer<'a> {
         self.stats.regenerated_nodes += 1;
         self.out.push('<');
         self.out.push_str(name);
-        for a in attrs.iter() {
+        let ordered: Vec<&Attr> = if self.opts.scramble_regenerated {
+            attrs.0.iter().rev().collect()
+        } else {
+            attrs.iter().collect()
+        };
+        for a in ordered {
             self.out.push(' ');
             self.out.push_str(&a.name);
             self.out.push_str("=\"");

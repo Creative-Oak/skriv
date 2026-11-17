@@ -128,7 +128,12 @@ def content_xml(probes):
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         f'<office:document-content {XMLNS} office:version="1.4"{root_attr}>'
         "<office:automatic-styles/><office:body><office:text>"
-        "<text:p text:style-name=\"Standard\">first paragraph</text:p>"
+        + (
+            '<text:p text:style-name="Standard" xml:id="sk-first">first paragraph</text:p>'
+            if "id-edited-paragraph" in probes
+            else '<text:p text:style-name="Standard">first paragraph</text:p>'
+        )
+        + 
         f"{body}"
         "</office:text></office:body></office:document-content>"
     )
@@ -274,6 +279,11 @@ def checks_for(probe):
     if probe in simple_ids:
         tag, marker, exp = simple_ids[probe]
         add(f"xml:id on <{tag}>", lambda z, c, s, m: check_id(c, tag, marker, exp))
+    if probe == "id-edited-paragraph":
+        add(
+            "xml:id on the paragraph the user edits",
+            lambda z, c, s, m: check_id(c, "text:p", "first paragraph", "sk-first"),
+        )
     if probe == "id-list":
         add("xml:id on <text:list>", lambda z, c, s, m: check_id(c, "text:list", "marker-li1", "sk-list1"))
         add("xml:id on <text:list-item>", lambda z, c, s, m: check_id(c, "text:list-item", "marker-li1", "sk-li1"))
@@ -461,6 +471,7 @@ def checks_for(probe):
 
 
 PROBES = list(BODY) + [
+    "id-edited-paragraph",
     "manifest-rdf",
     "extra-part-listed",
     "extra-part-unlisted",

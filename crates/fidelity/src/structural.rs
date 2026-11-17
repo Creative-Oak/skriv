@@ -8,8 +8,10 @@
 //!
 //! - **identity**: read and write with nothing changed.
 //! - **touch**: mark every 5th modelled node dirty (no content change) and
-//!   write. Measures the kill criterion: are *untouched* elements preserved
-//!   byte for byte, and are the touched ones regenerated faithfully?
+//!   write, with regenerated start tags' attributes reversed so every
+//!   touched element really differs in bytes. Measures the kill criterion:
+//!   are *untouched* elements preserved byte for byte, and are the touched
+//!   ones regenerated faithfully (canonically)?
 //! - **regen**: mark everything dirty and re-escape all text. Measures how
 //!   much of the document the model genuinely understands.
 
@@ -155,6 +157,10 @@ pub fn run_file(name: &str, bytes: &[u8], modes: &[Mode]) -> Outputs {
         let t = Instant::now();
         let written = match odt.write_with(WriteOptions {
             regenerate_text: mode == Mode::Regen,
+            // In touch mode, make regenerated elements differ in bytes from
+            // the source (attribute order), so the untouched-element metric
+            // tests preservation rather than serialisation coincidence.
+            scramble_regenerated: mode == Mode::Touch,
         }) {
             Ok(w) => w,
             Err(e) => {
