@@ -71,7 +71,10 @@ generated); 485 are readable (3 encrypted, 1 deliberately malformed). See
   stored long term.
 - An origin is only meaningful against the exact source bytes. Once a
   document lives in the CRDT, origins must be dropped or re-anchored on the
-  next import (Spike 4).
+  next import (Spike 4). Spike 3 keeps them outside the CRDT, keyed by
+  node ID.
+- A clean node whose child list changed must not be copied whole
+  (`NodeMeta::children_changed`, found in Spike 3).
 
 ## Open decisions
 
@@ -79,4 +82,4 @@ generated); 485 are readable (3 encrypted, 1 deliberately malformed). See
 |---|---|
 | Behaviour on documents from other producers (Word-converted, older OpenOffice, generators) | Municipal corpus run (Spike 1 follow-up) |
 | Real edits (not just touching) verified against LibreOffice making the same edit | Spike 1 follow-up: "edit equivalence" mode |
-| How origins and slots are stored once the model lives in the CRDT | Spike 3 and Spike 4 |
+| How origins and slots are stored once the model lives in the CRDT | **Answered by Spike 3** (to be confirmed against LibreOffice editing in Spike 4): slots go into the CRDT as atomic values; origins stay out, in a per-replica baseline from the last imported ODT; dirty flags are re-derived on export by comparing each node with its baseline form. A replica without the source file regenerates everything, canonically. See `docs/spikes/03-results.md`. |

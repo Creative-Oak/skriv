@@ -57,6 +57,7 @@ skriv/
 | 0004 | DOM rendering behind a replaceable input layer; pure canvas rejected for accessibility | ProseMirror-directed vs owned view (Spike 2); own engine vs Typst kernel (Spike 2b); Tauri vs Electron (Spike 7) |
 | 0005 | MPL-2.0 for core and apps; embeddable into AGPL birk; no AGPL or GPL dependencies in core; every dependency is checked and recorded in `docs/licences.md`, enforced by cargo-deny | Whether a future sync server should be AGPL (deferred) |
 | 0006 | Round-trip by projection with preservation: per-element dirty flag, untouched elements re-emitted verbatim | Granularity of slots (Spike 1 result) |
+| 0008 | (proposed, Spike 3) Loro as the CRDT: a movable tree for sections, lists and tables, rich text with block markers for paragraphs | Blind review of merge outcomes; history/storage policy against the ~10× target |
 
 ## Spike briefs (docs/spikes/01–07)
 

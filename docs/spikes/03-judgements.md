@@ -62,10 +62,11 @@ reviewed. Each says what was chosen, why, and what it costs. Results are in
    (as a fresh browser tab would), commits every 20 edits, and saves. An
    edit is: type 1–4 words (55%), delete 1–12 characters (25%), format a
    range (12%), press Enter (4%), set a paragraph property (4%); 4% type
-   into a table cell. Because that mix makes a 2-page letter grow to about
-   200 pages, there is also a **steady** variant that deletes 1–60
-   characters at a time, so the document keeps its size: a year of
-   revisions rather than a year of writing.
+   into a table cell. That mix makes a 2-page letter grow to 341 pages, so
+   there is also a **revising** variant (`steady` in the code) that deletes
+   1–60 characters at a time. It was meant to keep the size steady; it
+   doesn't (deletions stop at paragraph ends), and the letter still grows
+   to 289 pages. The results report the real end sizes.
 
 8. **Suggestions are accepted whole**, as Patchwork does: a reviewer's
    branch is a fork with its own peer; the suggestion shown is the diff of

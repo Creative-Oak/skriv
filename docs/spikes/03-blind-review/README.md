@@ -16,7 +16,9 @@ outcomes yet.
    ideally people who write municipal letters for a living. Who sits on
    the panel is still an open decision (see
    [`02-03-next-spikes-plan.md`](../02-03-next-spikes-plan.md)).
-2. Give each a copy of `scenarios.md` (or a printout). They tick
+2. Give each a copy of `scenarios.md` (or a printout), and nothing else:
+   `03-results.md` discusses some scenarios by encoding and would unblind
+   them. They tick
    *acceptable* or *not acceptable* for every outcome and may add a note.
 3. Collect the sheets, then decode the key:
    `tr 'A-Za-z' 'N-ZA-Mn-za-m' < key.txt`.

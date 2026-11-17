@@ -1,0 +1,10 @@
+
+running 2 tests
+test concurrent_tables::automerge has been running for over 60 seconds
+test concurrent_tables::loro has been running for over 60 seconds
+loro: 10000 runs, 174426 ops (34738 row inserts, 17478 row deletes, 17251 column inserts, 16829 column deletes, 88027 cell edits), 39924 merges, 5264 edits into cells a concurrent row+column insert left empty, 192 runs ended with no rows or no columns, 0 failures
+.automerge: 10000 runs, 174426 ops (34738 row inserts, 17478 row deletes, 17251 column inserts, 16829 column deletes, 88027 cell edits), 39924 merges, 5260 edits into cells a concurrent row+column insert left empty, 192 runs ended with no rows or no columns, 0 failures
+.
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 229.75s
+
+EXIT 0
