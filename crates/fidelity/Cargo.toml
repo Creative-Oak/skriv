@@ -1,0 +1,27 @@
+[package]
+name = "skriv-fidelity"
+version = "0.0.0"
+description = "ODT round-trip fidelity harness with LibreOffice as oracle."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "skriv-fidelity"
+path = "src/main.rs"
+
+[dependencies]
+skriv-model.workspace = true
+skriv-odf.workspace = true
+quick-xml.workspace = true
+zip.workspace = true
+image.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+clap.workspace = true
+anyhow.workspace = true
+rayon.workspace = true
+walkdir.workspace = true
+
+[lints]
+workspace = true

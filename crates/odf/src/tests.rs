@@ -325,7 +325,7 @@ mod prop {
         (arb_text(), arb_text(), 0usize..4, any::<bool>()).prop_map(|(a, b, sp, span)| {
             let esc = |s: &str| {
                 let mut o = String::new();
-                xml::escape_text(s, &mut o);
+                xml::escape_text(s, xml::Dialect::default(), &mut o);
                 o
             };
             let mut p = String::from("<text:p text:style-name=\"Standard\">");

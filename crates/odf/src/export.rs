@@ -11,7 +11,7 @@
 
 use skriv_model::*;
 
-use crate::xml::{escape_attr, escape_text};
+use crate::xml::{Dialect, escape_attr, escape_text};
 
 /// Byte accounting for one write, used by the fidelity report to show how
 /// much of the output was copied, regenerated, or carried in slots.
@@ -57,6 +57,8 @@ pub struct Writer<'a> {
     pub out: String,
     pub stats: WriteStats,
     pub opts: WriteOptions,
+    /// Escaping conventions of the part being written.
+    pub dialect: Dialect,
 }
 
 impl<'a> Writer<'a> {
@@ -68,6 +70,7 @@ impl<'a> Writer<'a> {
             out: String::new(),
             stats: WriteStats::default(),
             opts,
+            dialect: Dialect::default(),
         }
     }
 
@@ -91,7 +94,7 @@ impl<'a> Writer<'a> {
             };
             self.out.push_str(&tag[..cut]);
             self.out.push_str(" xml:id=\"");
-            escape_attr(meta.id.as_str(), &mut self.out);
+            escape_attr(meta.id.as_str(), self.dialect, &mut self.out);
             self.out.push('"');
             self.out.push_str(&tag[cut..]);
             self.stats.stamped_nodes += 1;
@@ -144,12 +147,12 @@ impl<'a> Writer<'a> {
             self.out.push(' ');
             self.out.push_str(&a.name);
             self.out.push_str("=\"");
-            escape_attr(&a.value, &mut self.out);
+            escape_attr(&a.value, self.dialect, &mut self.out);
             self.out.push('"');
         }
         if meta.stamp_id && attrs.get("xml:id").is_none() {
             self.out.push_str(" xml:id=\"");
-            escape_attr(meta.id.as_str(), &mut self.out);
+            escape_attr(meta.id.as_str(), self.dialect, &mut self.out);
             self.out.push('"');
         }
         self.out.push('>');
@@ -208,7 +211,7 @@ impl<'a> Writer<'a> {
         self.out.push('<');
         self.out.push_str(name);
         self.out.push('>');
-        escape_text(text, &mut self.out);
+        escape_text(text, self.dialect, &mut self.out);
         self.out.push_str("</");
         self.out.push_str(name);
         self.out.push('>');
@@ -378,7 +381,7 @@ impl<'a> Writer<'a> {
                     let src = self.src(o.part);
                     self.out.push_str(&src[o.start..o.end]);
                 }
-                _ => escape_text(&t.text, &mut self.out),
+                _ => escape_text(&t.text, self.dialect, &mut self.out),
             },
             Inline::Control(c) => self.leaf(c.kind.element(), &c.attrs, &c.meta),
             Inline::Span(s) | Inline::Link(s) => {
@@ -446,7 +449,7 @@ impl<'a> Writer<'a> {
                                 };
                                 if let Some(ol) = self.begin(name, &l.attrs, &l.meta) {
                                     if l.meta.dirty {
-                                        escape_text(&l.text, &mut self.out);
+                                        escape_text(&l.text, self.dialect, &mut self.out);
                                     }
                                     self.end(ol);
                                 }
@@ -545,7 +548,7 @@ impl<'a> Writer<'a> {
             match e {
                 MetaEntry::Field(f) => {
                     if let Some(o) = self.begin(&f.name, &f.attrs, &f.meta) {
-                        escape_text(&f.text, &mut self.out);
+                        escape_text(&f.text, self.dialect, &mut self.out);
                         self.end(o);
                     }
                 }

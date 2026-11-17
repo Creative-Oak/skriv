@@ -133,6 +133,10 @@ impl Tree {
 }
 
 pub fn parse(src: &str) -> Result<Tree, Error> {
+    // quick-xml skips a byte-order mark without counting it, which would shift
+    // every span by three bytes. Parse after it and add it back.
+    let bom = if src.starts_with('\u{feff}') { 3 } else { 0 };
+    let src = &src[bom..];
     let mut reader = Reader::from_str(src);
     reader.config_mut().trim_text(false);
     reader.config_mut().check_end_names = true;
@@ -243,6 +247,14 @@ pub fn parse(src: &str) -> Result<Tree, Error> {
         .copied()
         .find(|&i| matches!(nodes[i].kind, Kind::Element { .. }))
         .ok_or_else(|| Error::Xml("no root element".into()))?;
+    if bom > 0 {
+        for n in &mut nodes {
+            n.start += bom;
+            n.end += bom;
+            n.start_tag_end += bom;
+            n.end_tag_start += bom;
+        }
+    }
     Ok(Tree { nodes, root })
 }
 
@@ -285,13 +297,53 @@ pub fn unescape(s: &str) -> String {
     out
 }
 
-/// Escape character data the way LibreOffice does: `&`, `<`, `>`.
-pub fn escape_text(s: &str, out: &mut String) {
+/// How a producer spells characters that may or may not be escaped. Older
+/// LibreOffice versions write `'` raw; current ones write `&apos;` in both
+/// text and attributes. We learn the dialect from each source part so a
+/// regenerated element matches its neighbours.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct Dialect {
+    /// `'` as `&apos;` (text and attributes).
+    pub apos: bool,
+    /// `"` as `&quot;` in text (attributes always escape it).
+    pub quot_text: bool,
+}
+
+impl Default for Dialect {
+    /// Current LibreOffice.
+    fn default() -> Self {
+        Dialect {
+            apos: true,
+            quot_text: true,
+        }
+    }
+}
+
+impl Dialect {
+    pub fn detect(src: &str) -> Self {
+        // The two travel together in LibreOffice's own history: versions that
+        // escape one in text escape both.
+        let apos = if src.contains("&apos;") {
+            true
+        } else {
+            !src.contains('\'')
+        };
+        Dialect {
+            apos,
+            quot_text: apos || src.contains("&quot;"),
+        }
+    }
+}
+
+/// Escape character data: `&`, `<`, `>`, and `'` if the dialect does.
+pub fn escape_text(s: &str, d: Dialect, out: &mut String) {
     for c in s.chars() {
         match c {
             '&' => out.push_str("&amp;"),
             '<' => out.push_str("&lt;"),
             '>' => out.push_str("&gt;"),
+            '\'' if d.apos => out.push_str("&apos;"),
+            '"' if d.quot_text => out.push_str("&quot;"),
             _ => out.push(c),
         }
     }
@@ -299,13 +351,14 @@ pub fn escape_text(s: &str, out: &mut String) {
 
 /// Escape an attribute value for double quotes. Tabs and newlines become
 /// character references so attribute-value normalisation can't eat them.
-pub fn escape_attr(s: &str, out: &mut String) {
+pub fn escape_attr(s: &str, d: Dialect, out: &mut String) {
     for c in s.chars() {
         match c {
             '&' => out.push_str("&amp;"),
             '<' => out.push_str("&lt;"),
             '>' => out.push_str("&gt;"),
             '"' => out.push_str("&quot;"),
+            '\'' if d.apos => out.push_str("&apos;"),
             '\t' => out.push_str("&#x9;"),
             '\n' => out.push_str("&#xa;"),
             '\r' => out.push_str("&#xd;"),
@@ -348,6 +401,19 @@ mod tests {
     }
 
     #[test]
+    fn byte_order_mark_keeps_spans_right() {
+        let src = "\u{feff}<?xml version=\"1.0\"?><a><b/><c>t</c></a>";
+        let t = parse(src).unwrap();
+        let kids: Vec<_> = t
+            .root()
+            .children()
+            .iter()
+            .map(|&i| &src[t.node(i).start..t.node(i).end])
+            .collect();
+        assert_eq!(kids, ["<b/>", "<c>t</c>"]);
+    }
+
+    #[test]
     fn mismatched_tags_fail() {
         assert!(parse("<a><b></a>").is_err());
         assert!(parse("<a>").is_err());
@@ -356,11 +422,19 @@ mod tests {
     #[test]
     fn escape_round_trip() {
         let s = "a<b>&\"c\"\t\n";
-        let mut e = String::new();
-        escape_attr(s, &mut e);
-        assert_eq!(unescape(&e), s);
+        for apos in [true, false] {
+            let d = Dialect {
+                apos,
+                quot_text: apos,
+            };
+            let mut e = String::new();
+            escape_attr(s, d, &mut e);
+            assert_eq!(unescape(&e), s);
+        }
         let mut t = String::new();
-        escape_text("x<y&z", &mut t);
-        assert_eq!(t, "x&lt;y&amp;z");
+        escape_text("x<y&z'\"", Dialect::default(), &mut t);
+        assert_eq!(t, "x&lt;y&amp;z&apos;&quot;");
+        assert!(!Dialect::detect("<a b='c'/>").apos);
+        assert!(Dialect::detect("<a>&apos;</a>").apos);
     }
 }

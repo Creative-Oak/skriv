@@ -124,8 +124,15 @@ pub struct Written {
     pub stats: WriteStats,
 }
 
+const ENCRYPTED: &[u8] = b"manifest:encryption-data";
+
 pub fn read(bytes: Vec<u8>) -> Result<Odt, Error> {
     let package = package::Package::open(bytes)?;
+    if let Some(m) = package.read("META-INF/manifest.xml")?
+        && m.windows(ENCRYPTED.len()).any(|w| w == ENCRYPTED)
+    {
+        return Err(Error::Unsupported("encrypted document".into()));
+    }
     let content_text = package
         .read_string("content.xml")?
         .ok_or_else(|| Error::NotText("no content.xml".into()))?;
@@ -256,6 +263,7 @@ impl Odt {
 
         let mut part = |src: &Source| -> Result<String, Error> {
             let mut w = export::Writer::new(&self.content.text, styles_src, meta_src, opts);
+            w.dialect = xml::Dialect::detect(&src.text);
             let mut pos = 0;
             for h in &src.holes {
                 w.out.push_str(&src.text[pos..h.range.start]);
