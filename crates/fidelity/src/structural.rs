@@ -329,6 +329,84 @@ fn tally_part(
     }
 }
 
+/// Check a document after real edits (Spike 3). `touched` are the origins of
+/// nodes that were edited, inserted next to or deleted; every element that
+/// contains none of them must come out byte for byte. Unlike [`run_file`]'s
+/// modes, matching is by content, not by path: inserting or deleting a block
+/// shifts the paths of everything after it, which is not damage.
+pub fn compare_edited(
+    originals: &[(PartKind, String)],
+    w: &Written,
+    touched: &[Origin],
+) -> ModeResult {
+    let mut mr = ModeResult::default();
+    let orig_auto = originals
+        .iter()
+        .find(|(k, _)| *k == PartKind::Content)
+        .map(|(_, s)| auto_styles(s))
+        .unwrap_or_default();
+    let out_auto = auto_styles(&w.content_xml);
+    for (kind, orig) in originals {
+        let (label, out) = match kind {
+            PartKind::Content => ("content.xml", Some(&w.content_xml)),
+            PartKind::Styles => ("styles.xml", w.styles_xml.as_ref()),
+            PartKind::Meta => ("meta.xml", w.meta_xml.as_ref()),
+        };
+        let Some(out) = out else { continue };
+        mr.identical_parts.insert(label.to_owned(), orig == out);
+        let empty = HashMap::new();
+        let (ao, aw) = if *kind == PartKind::Content {
+            (&orig_auto, &out_auto)
+        } else {
+            (&empty, &empty)
+        };
+        let (Ok(co), Ok(cw)) = (canon(orig, ao), canon(out, aw)) else {
+            mr.notes.push(format!("{label}: output does not parse"));
+            continue;
+        };
+        let mut starts: Vec<usize> = touched
+            .iter()
+            .filter(|o| o.part == *kind)
+            .map(|o| o.start)
+            .collect();
+        starts.sort_unstable();
+        let mut bytes_pool: HashMap<&str, usize> = HashMap::new();
+        let mut canon_pool: HashMap<(&str, u64), usize> = HashMap::new();
+        for e in &cw.elems {
+            *bytes_pool.entry(&out[e.start..e.end]).or_insert(0) += 1;
+            *canon_pool.entry((e.feature, e.hash)).or_insert(0) += 1;
+        }
+        for e in &co.elems {
+            let lo = starts.partition_point(|&s| s < e.start);
+            let contains_touched = lo < starts.len() && starts[lo] < e.end;
+            if contains_touched {
+                continue;
+            }
+            // Untouched: the exact bytes must still be there, and so must the
+            // canonical subtree.
+            let take = |n: Option<&mut usize>| match n {
+                Some(n) if *n > 0 => {
+                    *n -= 1;
+                    true
+                }
+                _ => false,
+            };
+            let same = take(bytes_pool.get_mut(&orig[e.start..e.end]));
+            mr.untouched.entry(e.feature).or_default().add(same);
+            let found = take(canon_pool.get_mut(&(e.feature, e.hash)));
+            mr.canonical.entry(e.feature).or_default().add(found);
+            if (!same || !found) && mr.notes.len() < 12 {
+                mr.notes.push(format!(
+                    "{label}: untouched <{}> lost: {}",
+                    e.name,
+                    snippet(&orig[e.start..e.end])
+                ));
+            }
+        }
+    }
+    mr
+}
+
 fn snippet(s: &str) -> String {
     let mut t: String = s.chars().take(160).collect();
     if s.len() > t.len() {
