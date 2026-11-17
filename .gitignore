@@ -1,0 +1,12 @@
+/target
+node_modules/
+.turbo/
+dist/
+/fidelity/corpus/libreoffice/*
+!/fidelity/corpus/libreoffice/README.md
+/fidelity/corpus/municipal/*
+!/fidelity/corpus/municipal/README.md
+/fidelity/work/
+/fidelity/reports/*
+!/fidelity/reports/README.md
+.DS_Store
