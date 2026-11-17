@@ -82,6 +82,8 @@ impl Meta {
 pub enum Feature {
     Paragraph,
     Heading,
+    /// Spaces, tabs, line breaks, soft page breaks.
+    Control,
     List,
     Table,
     Section,
@@ -101,6 +103,7 @@ impl Feature {
         match self {
             Feature::Paragraph => "paragraphs",
             Feature::Heading => "headings",
+            Feature::Control => "spaces/tabs/breaks",
             Feature::List => "lists",
             Feature::Table => "tables",
             Feature::Section => "sections",
@@ -235,7 +238,7 @@ fn walk_inlines(inlines: &mut [Inline], f: &mut dyn FnMut(Feature, &mut NodeMeta
     for i in inlines {
         match i {
             Inline::Text(_) | Inline::Opaque(_) => {}
-            Inline::Control(c) => f(Feature::Paragraph, &mut c.meta),
+            Inline::Control(c) => f(Feature::Control, &mut c.meta),
             Inline::Span(s) | Inline::Link(s) => {
                 f(Feature::Span, &mut s.meta);
                 walk_inlines(&mut s.content, f);
@@ -316,4 +319,171 @@ pub fn feature_counts(doc: &mut Document) -> std::collections::BTreeMap<Feature,
     let mut m = std::collections::BTreeMap::new();
     for_each_node_mut(doc, &mut |f, _| *m.entry(f).or_insert(0) += 1);
     m
+}
+
+/// Recompute `descendants_dirty` for every node, bottom up. Call before
+/// writing; the writer relies on it to know which clean ancestors it must open
+/// up rather than copy whole. A text run without a source span counts as a
+/// change to its parent.
+pub fn propagate_dirty(doc: &mut Document) {
+    for b in &mut doc.body {
+        prop_block(b);
+    }
+    for list in [
+        &mut doc.styles.named,
+        &mut doc.styles.content_automatic,
+        &mut doc.styles.styles_automatic,
+    ] {
+        for e in list.iter_mut() {
+            match e {
+                StyleEntry::Style(s) => {
+                    let mut d = false;
+                    for c in &mut s.children {
+                        if let StyleChild::Props(p) = c {
+                            d |= p.meta.is_changed();
+                        }
+                    }
+                    s.meta.descendants_dirty = d;
+                }
+                StyleEntry::List(l) => {
+                    let mut d = false;
+                    for lv in &mut l.levels {
+                        if let ListLevelChild::Level(lv) = lv {
+                            let mut dl = false;
+                            for c in &mut lv.children {
+                                if let StyleChild::Props(p) = c {
+                                    dl |= p.meta.is_changed();
+                                }
+                            }
+                            lv.meta.descendants_dirty = dl;
+                            d |= dl || lv.meta.is_changed();
+                        }
+                    }
+                    l.meta.descendants_dirty = d;
+                }
+                StyleEntry::Opaque(_) => {}
+            }
+        }
+    }
+}
+
+fn settle(meta: &mut NodeMeta, below: bool) -> bool {
+    meta.descendants_dirty = below;
+    below || meta.is_changed()
+}
+
+fn prop_blocks(blocks: &mut [Block]) -> bool {
+    let mut d = false;
+    for b in blocks {
+        d |= prop_block(b);
+    }
+    d
+}
+
+fn prop_block(b: &mut Block) -> bool {
+    match b {
+        Block::Paragraph(p) => {
+            let below = prop_inlines(&mut p.content);
+            settle(&mut p.meta, below)
+        }
+        Block::List(l) => {
+            let mut below = false;
+            for c in &mut l.children {
+                if let ListChild::Item(i) = c {
+                    let bi = prop_blocks(&mut i.blocks);
+                    below |= settle(&mut i.meta, bi);
+                }
+            }
+            settle(&mut l.meta, below)
+        }
+        Block::Table(t) => {
+            let below = prop_table(&mut t.children);
+            settle(&mut t.meta, below)
+        }
+        Block::Section(s) => {
+            let below = prop_blocks(&mut s.blocks);
+            settle(&mut s.meta, below)
+        }
+        Block::TrackedChanges(t) => {
+            let mut below = false;
+            for r in &mut t.children {
+                if let RegionChild::Region(r) = r {
+                    let bi = prop_blocks(&mut r.change.info.rest);
+                    let ci = settle(&mut r.change.info.meta, bi);
+                    let bc = prop_blocks(&mut r.change.blocks) | ci;
+                    let c = settle(&mut r.change.meta, bc);
+                    below |= settle(&mut r.meta, c);
+                }
+            }
+            settle(&mut t.meta, below)
+        }
+        Block::Opaque(_) => false,
+    }
+}
+
+fn prop_table(children: &mut [TableChild]) -> bool {
+    let mut d = false;
+    for c in children {
+        d |= match c {
+            TableChild::Column(col) => settle(&mut col.meta, false),
+            TableChild::Row(r) => {
+                let mut below = false;
+                for c in &mut r.cells {
+                    if let CellChild::Cell(c) = c {
+                        let bc = prop_blocks(&mut c.blocks);
+                        below |= settle(&mut c.meta, bc);
+                    }
+                }
+                settle(&mut r.meta, below)
+            }
+            TableChild::Group(g) => {
+                let below = prop_table(&mut g.children);
+                settle(&mut g.meta, below)
+            }
+            TableChild::Opaque(_) => false,
+        };
+    }
+    d
+}
+
+fn prop_inlines(inlines: &mut [Inline]) -> bool {
+    let mut d = false;
+    for i in inlines {
+        d |= match i {
+            Inline::Text(t) => t.origin.is_none(),
+            Inline::Opaque(_) => false,
+            Inline::Control(c) => settle(&mut c.meta, false),
+            Inline::Span(s) | Inline::Link(s) => {
+                let below = prop_inlines(&mut s.content);
+                settle(&mut s.meta, below)
+            }
+            Inline::Field(f) => {
+                let below = prop_inlines(&mut f.display);
+                settle(&mut f.meta, below)
+            }
+            Inline::Bookmark(m) | Inline::ChangeMark(m) | Inline::AnnotationEnd(m) => {
+                settle(&mut m.meta, false)
+            }
+            Inline::Annotation(a) => {
+                let below = prop_blocks(&mut a.body);
+                settle(&mut a.meta, below)
+            }
+            Inline::Frame(f) => {
+                let mut below = false;
+                for c in &mut f.children {
+                    below |= match c {
+                        FrameChild::Image(im) => settle(&mut im.meta, false),
+                        FrameChild::TextBox(tb) => {
+                            let b = prop_blocks(&mut tb.blocks);
+                            settle(&mut tb.meta, b)
+                        }
+                        FrameChild::Title(l) | FrameChild::Desc(l) => settle(&mut l.meta, false),
+                        FrameChild::Opaque(_) => false,
+                    };
+                }
+                settle(&mut f.meta, below)
+            }
+        };
+    }
+    d
 }

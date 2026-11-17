@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 1865b159e089312691ae8ec789190fdec4741b3d52a5726892ce4ee367155873 # shrinks to paras = ["<text:p text:style-name=\"Standard\"></text:p>"]

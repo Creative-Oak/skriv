@@ -74,6 +74,11 @@ pub struct NodeMeta {
     pub dirty: bool,
     /// Write `id` out as `xml:id` even though the node is otherwise untouched.
     pub stamp_id: bool,
+    /// Computed by [`crate::propagate_dirty`] before a write: some node below
+    /// this one is dirty or stamped, so its start and end tags can be copied
+    /// but its children must be visited.
+    #[serde(default)]
+    pub descendants_dirty: bool,
 }
 
 impl NodeMeta {
@@ -85,6 +90,7 @@ impl NodeMeta {
                 origin: Some(origin),
                 dirty: false,
                 stamp_id: false,
+                descendants_dirty: false,
             },
             None => NodeMeta {
                 id: NodeId::mint(),
@@ -92,6 +98,7 @@ impl NodeMeta {
                 origin: Some(origin),
                 dirty: false,
                 stamp_id: false,
+                descendants_dirty: false,
             },
         }
     }
@@ -103,12 +110,18 @@ impl NodeMeta {
             origin: None,
             dirty: true,
             stamp_id: false,
+            descendants_dirty: false,
         }
     }
 
     /// True when the node can be written out by copying its source bytes.
     pub fn is_verbatim(&self) -> bool {
-        !self.dirty && self.origin.is_some()
+        !self.dirty && !self.stamp_id && !self.descendants_dirty && self.origin.is_some()
+    }
+
+    /// True when this node itself, not just something below it, must be written differently.
+    pub fn is_changed(&self) -> bool {
+        self.dirty || self.stamp_id || self.origin.is_none()
     }
 }
 

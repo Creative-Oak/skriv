@@ -242,6 +242,8 @@ pub struct TrackedChanges {
     pub children: Vec<RegionChild>,
 }
 
+/// Regions are large and rare; boxing would only complicate pattern matching.
+#[allow(clippy::large_enum_variant)]
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub enum RegionChild {
     Region(ChangedRegion),
@@ -287,7 +289,9 @@ pub struct ChangedRegion {
 impl ChangedRegion {
     /// The ID that `text:change*` marks in the flow refer to.
     pub fn change_id(&self) -> Option<&str> {
-        self.attrs.get("text:id").or_else(|| self.attrs.get("xml:id"))
+        self.attrs
+            .get("text:id")
+            .or_else(|| self.attrs.get("xml:id"))
     }
 }
 
@@ -482,16 +486,31 @@ impl Field {
                 Reference
             }
             "text:chapter" => Chapter,
-            "text:title" | "text:subject" | "text:author-name" | "text:creator"
-            | "text:file-name" | "text:word-count" | "text:character-count"
-            | "text:paragraph-count" | "text:description" | "text:keywords"
-            | "text:creation-date" | "text:modification-date" | "text:initial-creator" => {
-                DocumentInfo
-            }
-            "text:variable-get" | "text:variable-set" | "text:user-field-get"
-            | "text:user-defined" | "text:sequence-get" | "text:expression" => Variable,
-            "text:placeholder" | "text:conditional-text" | "text:hidden-text"
-            | "text:template-name" | "text:sender-firstname" | "text:page-variable-get" => Other,
+            "text:title"
+            | "text:subject"
+            | "text:author-name"
+            | "text:creator"
+            | "text:file-name"
+            | "text:word-count"
+            | "text:character-count"
+            | "text:paragraph-count"
+            | "text:description"
+            | "text:keywords"
+            | "text:creation-date"
+            | "text:modification-date"
+            | "text:initial-creator" => DocumentInfo,
+            "text:variable-get"
+            | "text:variable-set"
+            | "text:user-field-get"
+            | "text:user-defined"
+            | "text:sequence-get"
+            | "text:expression" => Variable,
+            "text:placeholder"
+            | "text:conditional-text"
+            | "text:hidden-text"
+            | "text:template-name"
+            | "text:sender-firstname"
+            | "text:page-variable-get" => Other,
             _ => return None,
         })
     }

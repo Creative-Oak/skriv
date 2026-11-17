@@ -1,0 +1,19 @@
+[package]
+name = "skriv-odf"
+version = "0.0.0"
+description = "ODT reader/writer for skriv: projection with preservation."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+skriv-model.workspace = true
+quick-xml.workspace = true
+zip.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+
+[lints]
+workspace = true
