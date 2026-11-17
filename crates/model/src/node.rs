@@ -138,6 +138,26 @@ pub struct Attr {
     pub value: String,
 }
 
+/// Attribute pairs whose order LibreOffice's ODF import depends on, as
+/// (must come first, must come after). XML says attribute order is
+/// insignificant; LibreOffice 26.8.1.1 disagrees. Spike 1 found this by
+/// reversing attribute order and bisecting rendering differences. Each pair
+/// below was involved, e.g. `fo:country` before `fo:language` changes which
+/// locale a weak character (an apostrophe) gets.
+///
+/// This table is a minimal start and is known to be incomplete: some
+/// orderings that respect it still render differently. The real fix is for
+/// new attributes to follow LibreOffice's own serialisation order (a
+/// follow-up). Existing attributes always keep their source order.
+pub const ORDER_SENSITIVE: &[(&str, &str)] = &[
+    ("fo:language", "fo:country"),
+    ("style:language-asian", "style:country-asian"),
+    ("style:language-complex", "style:country-complex"),
+    ("fo:font-style", "style:font-style-asian"),
+    ("fo:font-style", "style:font-style-complex"),
+    ("style:text-rotation-angle", "style:text-rotation-scale"),
+];
+
 /// Attributes in their original order. The model reads and writes the ones it
 /// understands through typed accessors on each node; everything else rides
 /// along untouched. Keeping order means a regenerated start tag usually comes
@@ -153,14 +173,27 @@ impl Attrs {
             .map(|a| a.value.as_str())
     }
 
+    /// Set an attribute. An existing one keeps its position; a new one goes
+    /// at the end, except where LibreOffice's import depends on order (see
+    /// [`ORDER_SENSITIVE`]), where it goes before the attribute it must precede.
     pub fn set(&mut self, name: &str, value: impl Into<String>) {
         let value = value.into();
-        match self.0.iter_mut().find(|a| a.name == name) {
-            Some(a) => a.value = value,
-            None => self.0.push(Attr {
-                name: name.to_owned(),
-                value,
-            }),
+        if let Some(a) = self.0.iter_mut().find(|a| a.name == name) {
+            a.value = value;
+            return;
+        }
+        let attr = Attr {
+            name: name.to_owned(),
+            value,
+        };
+        let before = ORDER_SENSITIVE
+            .iter()
+            .filter(|(first, _)| *first == name)
+            .filter_map(|(_, then)| self.0.iter().position(|a| a.name == *then))
+            .min();
+        match before {
+            Some(i) => self.0.insert(i, attr),
+            None => self.0.push(attr),
         }
     }
 

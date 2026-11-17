@@ -179,26 +179,36 @@ Each one is re-saved two ways: with `soffice --convert-to odt`, and through a UN
 
 Tick items as they land; add notes inline. This file is the source of truth for Phase 0 status.
 
-- [ ] 1. Toolchain: rustup (stable + wasm32), poppler
-- [ ] 2. Scaffold: Cargo workspace, LICENSE, TS workspace, Biome, CI skeleton
-- [ ] 3. ADRs 0001–0006 + docs/licences.md
-- [ ] 4. Spike briefs 01–07
-- [ ] 5. `model` crate + tests
-- [ ] 6a. `odf` reader/writer: identity round trip
-- [ ] 6b. `odf`: dirty regeneration per feature (styles, lists, sections, tables, frames, fields, annotations, tracked changes)
-- [ ] 7. Corpus: generate_corpus.py, fetch-lo-corpus.sh, manifest.toml, municipal placeholder
-- [ ] 8a. Harness: structural diff + per-element byte metric
-- [ ] 8b. Harness: visual diff (PDF → PNG → pixel diff)
-- [ ] 8c. Harness: LO → skriv → LO loop
-- [ ] 8d. Harness: JSON + HTML report
-- [ ] 9. LO preservation experiment → docs/spikes/04-libreoffice-preservation-findings.md
-- [ ] 10. Full corpus run → docs/spikes/01-odt-roundtrip-results.md + plan for Spikes 2, 2b, 3
+- [x] 1. Toolchain: rustup (stable + wasm32), poppler
+- [x] 2. Scaffold: Cargo workspace, LICENSE, TS workspace, Biome, CI skeleton
+- [x] 3. ADRs 0001–0006 + docs/licences.md
+- [x] 4. Spike briefs 01–07
+- [x] 5. `model` crate + tests
+- [x] 6a. `odf` reader/writer: identity round trip
+- [x] 6b. `odf`: dirty regeneration per feature (styles, lists, sections, tables, frames, fields, annotations, tracked changes)
+- [x] 7. Corpus: generate_corpus.py, fetch-lo-corpus.sh, manifest.toml, municipal placeholder
+- [x] 8a. Harness: structural diff + per-element byte metric
+- [x] 8b. Harness: visual diff (PDF → PNG → pixel diff)
+- [x] 8c. Harness: LO → skriv → LO loop
+- [x] 8d. Harness: JSON + HTML report
+- [x] 9. LO preservation experiment → docs/spikes/04-libreoffice-preservation-findings.md
+- [x] 10. Full corpus run → docs/spikes/01-odt-roundtrip-results.md + plan for Spikes 2, 2b, 3
 
 No pushing or GitHub repo creation unless asked.
 
 ## Log
 
 - 2026-11-17: Repo created at ~/Development/skriv. Plan written.
+- 2026-11-17: Phase 0 scaffold and Spike 1 done.
+  - Results are in `docs/spikes/01-odt-roundtrip-results.md`; Spike 4
+    pre-work is in `docs/spikes/04-libreoffice-preservation-findings.md`;
+    the next-spikes plan is in `docs/spikes/02-03-next-spikes-plan.md`.
+  - Departures from this plan, all decided during the work:
+    - all 480 eligible LibreOffice test files are used instead of 150–200;
+    - the harness gained a negative control (`--canary`), same-path rendering
+      and a re-save noise baseline;
+    - touch mode scrambles regenerated attribute order;
+    - CI was written but not run (no GitHub remote yet).
 
 ## Verification
 

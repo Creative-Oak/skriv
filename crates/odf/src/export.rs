@@ -150,7 +150,21 @@ impl<'a> Writer<'a> {
         self.out.push('<');
         self.out.push_str(name);
         let ordered: Vec<&Attr> = if self.opts.scramble_regenerated {
-            attrs.0.iter().rev().collect()
+            // Reverse, but keep the pairs LibreOffice is order-sensitive to
+            // in their required order: the scramble tests preservation, and
+            // whether that table is complete, not LibreOffice's parser.
+            let mut v: Vec<&Attr> = attrs.0.iter().rev().collect();
+            for (first, then) in ORDER_SENSITIVE {
+                let f = v.iter().position(|a| a.name == *first);
+                let t = v.iter().position(|a| a.name == *then);
+                if let (Some(f), Some(t)) = (f, t)
+                    && f > t
+                {
+                    let a = v.remove(f);
+                    v.insert(t, a);
+                }
+            }
+            v
         } else {
             attrs.iter().collect()
         };

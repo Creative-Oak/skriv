@@ -35,6 +35,11 @@ preserve what they don't change.
   conventions. Older LibreOffice writes `'` raw in text and attributes;
   current LibreOffice writes `&apos;` and `&quot;`.
 - **Empty-element spelling is kept.** `<x/>` versus `<x></x>` follows the original.
+- **Attribute order is kept.** LibreOffice's import turned out to be sensitive
+  to attribute order for some properties (Spike 1 results, "Surprises").
+  Existing attributes always keep their source order. New ones follow a
+  minimal ordering table (`skriv_model::ORDER_SENSITIVE`) until they can
+  follow LibreOffice's full serialisation order.
 - **ID stamping is optional and minimal.** Writing our IDs as `xml:id` on
   paragraphs, headings and sections patches only the start tag.
 - **Refusal over guessing.** If a namespace prefix we rely on is bound to an
@@ -43,15 +48,17 @@ preserve what they don't change.
 
 ## Evidence (Spike 1)
 
-Measured on 480 LibreOffice test documents; 476 are readable (3 encrypted,
-1 deliberately malformed). See `docs/spikes/01-odt-roundtrip-results.md`.
+Measured on 489 documents (480 LibreOffice test documents plus 9 we
+generated); 485 are readable (3 encrypted, 1 deliberately malformed). See
+`docs/spikes/01-odt-roundtrip-results.md`.
 
-- **Touch mode** (20% of nodes marked dirty): 100% of untouched elements came
-  out byte-identical. The kill criterion is ≥ 99%.
+- **Touch mode** (20% of nodes marked dirty, and the regenerated start tags
+  scrambled so they really differ): 100% of untouched elements came out
+  byte-identical (157,359 elements). The kill criterion is ≥ 99%.
 - **Regen mode** (every node regenerated, all text re-escaped):
   - every element survives canonically;
-  - `content.xml` came out byte-identical to LibreOffice's own bytes in 472
-    of 474 files, and `styles.xml` and `meta.xml` in all 474;
+  - `content.xml` came out byte-identical to LibreOffice's own bytes in 482
+    of 485 files, and `styles.xml` and `meta.xml` in all 485;
   - no page renders differently in LibreOffice;
   - LibreOffice's re-save of our file agrees with its re-save of the original
     on every stable element.

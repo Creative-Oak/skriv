@@ -296,3 +296,17 @@ fn walking_reaches_nested_paragraphs() {
     assert_eq!(counts[&Feature::Section], 1);
     assert_eq!(counts[&Feature::Table], 3); // table, row, cell
 }
+
+#[test]
+fn new_attributes_respect_libreoffice_order_sensitivity() {
+    let mut a = Attrs::from([("fo:country", "DK"), ("officeooo:rsid", "1")]);
+    a.set("fo:language", "da");
+    let names: Vec<_> = a.iter().map(|x| x.name.as_str()).collect();
+    assert_eq!(names, ["fo:language", "fo:country", "officeooo:rsid"]);
+    let mut b = Attrs::from([("style:text-rotation-scale", "line-height")]);
+    b.set("style:text-rotation-angle", "0");
+    assert_eq!(b.0[0].name, "style:text-rotation-angle");
+    // Updating keeps position.
+    a.set("fo:country", "SE");
+    assert_eq!(a.0[1].value, "SE");
+}

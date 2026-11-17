@@ -50,22 +50,23 @@ The document model is our own. It is ODF-shaped, but it is not ODF XML.
 
 ## Evidence (Spike 1)
 
-- 480 LibreOffice test documents were round-tripped through this model:
+- 485 readable documents (480 LibreOffice test documents plus 9 we generated)
+  were round-tripped through this model:
   - 100% of untouched elements were preserved byte for byte;
-  - 100% of elements survived full regeneration canonically;
+  - 100% of 197,970 elements survived full regeneration canonically;
   - no page rendered differently in LibreOffice.
 
   See `docs/spikes/01-odt-roundtrip-results.md`.
-- In the LibreOffice corpus, 7–14% of XML bytes still travel in slots.
-  Mostly that is page layouts, notes configuration, number formats, tables of
-  contents, footnotes and drawing styles. The model doesn't understand these
+- 9.7% of XML bytes still travel in slots.
+  Mostly that is tab stops, page layouts, notes configuration, number formats,
+  tables of contents, footnotes and drawing styles. The model doesn't understand these
   yet, but nothing is lost.
 
 ## Consequences
 
 - ODT is the natural projection. DOCX will be a second, engineered projection (Spike 5).
 - Keeping properties as ODF attributes means a regenerated element usually
-  comes out byte-identical to LibreOffice's (472 of 474 `content.xml` files).
+  comes out byte-identical to LibreOffice's (482 of 485 `content.xml` files).
   The price: a later DOCX projection must translate ODF property vocabulary,
   not a neutral one.
 
