@@ -42,7 +42,7 @@ breaking, a large C++ dependency and a server round trip per keystroke.
   time of saving. The harness therefore re-saves the original twice and
   scores only elements that are stable across both runs.
 - A negative control (`--canary`) empties paragraphs on purpose. The visual
-  check flagged 305 of 311 damaged files. The six it missed have content
+  check flagged 314 of 320 damaged files. The six it missed have content
   LibreOffice doesn't draw from the paragraph text:
   - spreadsheet-style table cells whose display is recomputed from `office:value`;
   - a hidden section;
