@@ -1,0 +1,26 @@
+[package]
+name = "skriv-crdt"
+version = "0.0.0"
+description = "Spike 3: the skriv document model in a CRDT, behind one trait, with Loro and Automerge backends."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[features]
+default = ["loro", "automerge"]
+loro = ["dep:loro"]
+automerge = ["dep:automerge"]
+
+[dependencies]
+skriv-model.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+loro = { version = "1.18", optional = true }
+automerge = { version = "0.12", optional = true }
+
+[dev-dependencies]
+skriv-odf.workspace = true
+skriv-fidelity = { path = "../fidelity" }
+
+[lints]
+workspace = true
