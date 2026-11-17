@@ -34,11 +34,11 @@ pub struct LoroDocument {
 
 /// Loro reads `a:b` in a mark key as "style `a`, instance `b`" when looking up
 /// expand behaviour. ODF names are full of colons, so mark keys are escaped.
-fn esc(k: &str) -> String {
+pub(crate) fn esc(k: &str) -> String {
     k.replace(':', "~")
 }
 
-fn unesc(k: &str) -> String {
+pub(crate) fn unesc(k: &str) -> String {
     k.replace('~', ":")
 }
 
@@ -60,39 +60,39 @@ fn configure(doc: &LoroDoc) {
     doc.config_text_style(m);
 }
 
-fn s(v: &ValueOrContainer) -> Option<String> {
+pub(crate) fn s(v: &ValueOrContainer) -> Option<String> {
     match v {
         ValueOrContainer::Value(LoroValue::String(s)) => Some(s.to_string()),
         _ => None,
     }
 }
 
-fn get_str(m: &LoroMap, k: &str) -> Option<String> {
+pub(crate) fn get_str(m: &LoroMap, k: &str) -> Option<String> {
     m.get(k).as_ref().and_then(s)
 }
 
-fn get_map(m: &LoroMap, k: &str) -> Option<LoroMap> {
+pub(crate) fn get_map(m: &LoroMap, k: &str) -> Option<LoroMap> {
     match m.get(k)? {
         ValueOrContainer::Container(Container::Map(m)) => Some(m),
         _ => None,
     }
 }
 
-fn get_text(m: &LoroMap, k: &str) -> Option<LoroText> {
+pub(crate) fn get_text(m: &LoroMap, k: &str) -> Option<LoroText> {
     match m.get(k)? {
         ValueOrContainer::Container(Container::Text(t)) => Some(t),
         _ => None,
     }
 }
 
-fn get_mlist(m: &LoroMap, k: &str) -> Option<LoroMovableList> {
+pub(crate) fn get_mlist(m: &LoroMap, k: &str) -> Option<LoroMovableList> {
     match m.get(k)? {
         ValueOrContainer::Container(Container::MovableList(l)) => Some(l),
         _ => None,
     }
 }
 
-fn read_props(m: &LoroMap) -> Props {
+pub(crate) fn read_props(m: &LoroMap) -> Props {
     let mut p = Props::new();
     m.for_each(|k, v| {
         if let Some(v) = s(&v) {
@@ -102,13 +102,13 @@ fn read_props(m: &LoroMap) -> Props {
     p
 }
 
-fn write_props(m: &LoroMap, p: &Props) {
+pub(crate) fn write_props(m: &LoroMap, p: &Props) {
     for (k, v) in p {
         m.insert(k, v.as_str()).expect("map insert");
     }
 }
 
-fn list_strings(l: &LoroMovableList) -> Vec<String> {
+pub(crate) fn list_strings(l: &LoroMovableList) -> Vec<String> {
     match l.get_value() {
         LoroValue::List(v) => v
             .iter()
@@ -121,7 +121,7 @@ fn list_strings(l: &LoroMovableList) -> Vec<String> {
     }
 }
 
-fn read_runs(t: &LoroText) -> Vec<Run> {
+pub(crate) fn read_runs(t: &LoroText) -> Vec<Run> {
     let mut runs = Vec::new();
     for d in t.to_delta() {
         if let TextDelta::Insert { insert, attributes } = d {

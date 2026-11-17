@@ -15,8 +15,12 @@
 //!   paragraph and carries its properties and its `parents` (enclosing
 //!   sections and lists). Tables are objects referenced from a marker.
 //!
-//! Both store the same logical document ([`logical::LDoc`]), so every test runs
-//! against both. [`codec`] maps the model to and from that logical document.
+//! - [`loro_flow_backend::LoroFlowDocument`] (feature `loro`): the hybrid,
+//!   added during the spike. A movable tree for sections, lists, tables
+//!   and cells; one rich text with block markers per run of paragraphs.
+//!
+//! All store the same logical document ([`logical::LDoc`]), so every test runs
+//! against each. [`codec`] maps the model to and from that logical document.
 
 pub mod codec;
 pub mod logical;
@@ -26,6 +30,8 @@ pub mod workload;
 pub mod automerge_backend;
 #[cfg(feature = "loro")]
 pub mod loro_backend;
+#[cfg(feature = "loro")]
+pub mod loro_flow_backend;
 
 use logical::{LCell, LDoc, LNode, LTable, Para, Props};
 

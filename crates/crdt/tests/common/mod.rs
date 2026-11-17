@@ -25,6 +25,11 @@ macro_rules! each_backend {
                 fn loro() {
                     super::$name::<skriv_crdt::loro_backend::LoroDocument>()
                 }
+                #[cfg(feature = "loro")]
+                #[test]
+                fn loro_flow() {
+                    super::$name::<skriv_crdt::loro_flow_backend::LoroFlowDocument>()
+                }
                 #[cfg(feature = "automerge")]
                 #[test]
                 fn automerge() {
@@ -175,4 +180,26 @@ pub fn canonical_survival(orig: &str, out: &str) -> (usize, usize, Vec<String>) 
         }
     }
     (ok, total, lost)
+}
+
+/// The Danish municipal letter repeated `copies` times, one section per
+/// copy, written as ODT. 100 copies is 100 pages in LibreOffice 26.8.
+pub fn scaled_letter(copies: usize) -> Vec<u8> {
+    let src = corpus("danish-municipal-letter.odt");
+    let mut odt = skriv_odf::read(src).unwrap();
+    odt.doc = skriv_crdt::workload::scale(&odt.doc, copies);
+    odt.write().unwrap().bytes
+}
+
+/// Paragraph IDs inside the container `id`, in order.
+pub fn paras_in(l: &LDoc, id: &str) -> Vec<String> {
+    match l.find(id) {
+        Some(skriv_crdt::logical::LNode::Container { children, .. }) => {
+            skriv_crdt::workload::top_paras(&LDoc {
+                body: children.clone(),
+                ..Default::default()
+            })
+        }
+        _ => Vec::new(),
+    }
 }

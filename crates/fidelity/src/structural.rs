@@ -364,12 +364,21 @@ pub fn compare_edited(
             mr.notes.push(format!("{label}: output does not parse"));
             continue;
         };
-        let mut starts: Vec<usize> = touched
+        let mut spans: Vec<(usize, usize)> = touched
             .iter()
             .filter(|o| o.part == *kind)
-            .map(|o| o.start)
+            .map(|o| (o.start, o.end))
             .collect();
-        starts.sort_unstable();
+        spans.sort_unstable();
+        let starts: Vec<usize> = spans.iter().map(|s| s.0).collect();
+        // Running maximum of touched ends, to ask "is this element inside a
+        // touched node?" with one binary search.
+        let mut reach = Vec::with_capacity(spans.len());
+        let mut m = 0;
+        for (_, e) in &spans {
+            m = m.max(*e);
+            reach.push(m);
+        }
         let mut bytes_pool: HashMap<&str, usize> = HashMap::new();
         let mut canon_pool: HashMap<(&str, u64), usize> = HashMap::new();
         for e in &cw.elems {
@@ -379,7 +388,10 @@ pub fn compare_edited(
         for e in &co.elems {
             let lo = starts.partition_point(|&s| s < e.start);
             let contains_touched = lo < starts.len() && starts[lo] < e.end;
-            if contains_touched {
+            // Inside an edited node: whatever the edit did to it is intended.
+            let hi = starts.partition_point(|&s| s <= e.start);
+            let inside_touched = hi > 0 && reach[hi - 1] >= e.end;
+            if contains_touched || inside_touched {
                 continue;
             }
             // Untouched: the exact bytes must still be there, and so must the

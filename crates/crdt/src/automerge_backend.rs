@@ -22,7 +22,7 @@ use std::cell::RefCell;
 use std::collections::{BTreeMap, HashMap};
 
 use automerge::iter::Span;
-use automerge::marks::{ExpandMark, Mark};
+use automerge::marks::{ExpandMark, Mark, MarkSet, UpdateSpansConfig};
 use automerge::transaction::Transactable;
 use automerge::{ActorId, AutoCommit, Cursor, ObjId, ObjType, ROOT, ReadDoc, ScalarValue, Value};
 
@@ -213,35 +213,91 @@ impl AutomergeDocument {
         pos - at
     }
 
-    /// Flatten containers into `parents` and write the blocks in order.
-    fn write_flow(
-        &mut self,
-        text: &ObjId,
-        mut at: usize,
-        parents: &mut Vec<String>,
-        nodes: &[LNode],
-    ) -> usize {
+    /// Write a whole flow into an empty text in one `update_spans` call:
+    /// containers are flattened into `parents`, tables are written as
+    /// objects and referenced from their marker. Inserting block by block
+    /// was quadratic (84 s for 100 pages; see the Spike 3 results).
+    fn write_flow(&mut self, text: &ObjId, nodes: &[LNode]) {
+        let mut spans = Vec::new();
+        self.flow_spans(&mut Vec::new(), nodes, &mut spans);
+        let mut config = UpdateSpansConfig::default().with_default_expand(ExpandMark::After);
+        for k in ["obj", "link"] {
+            config = config.with_mark_expand(k, ExpandMark::None);
+        }
+        self.doc
+            .update_spans(text, config, spans)
+            .expect("update_spans");
+    }
+
+    fn flow_spans(&mut self, parents: &mut Vec<String>, nodes: &[LNode], out: &mut Vec<Span>) {
+        use automerge::hydrate::Value as H;
         for n in nodes {
+            if let LNode::Container {
+                id,
+                kind,
+                props,
+                children,
+            } = n
+            {
+                let cs = self.obj(&ROOT, "containers").unwrap();
+                let c = self.doc.put_object(&cs, id.as_str(), ObjType::Map).unwrap();
+                self.doc.put(&c, "kind", kind.as_str()).unwrap();
+                let p = self.doc.put_object(&c, "props", ObjType::Map).unwrap();
+                self.write_props(&p, props);
+                parents.push(id.clone());
+                self.flow_spans(parents, children, out);
+                parents.pop();
+                continue;
+            }
+            let mut block: HashMap<String, H> = HashMap::new();
+            block.insert("id".into(), H::from(n.id()));
+            block.insert(
+                "parents".into(),
+                H::from(
+                    parents
+                        .iter()
+                        .map(|p| H::from(p.as_str()))
+                        .collect::<Vec<_>>(),
+                ),
+            );
             match n {
-                LNode::Container {
-                    id,
-                    kind,
-                    props,
-                    children,
-                } => {
-                    let cs = self.obj(&ROOT, "containers").unwrap();
-                    let c = self.doc.put_object(&cs, id.as_str(), ObjType::Map).unwrap();
-                    self.doc.put(&c, "kind", kind.as_str()).unwrap();
-                    let p = self.doc.put_object(&c, "props", ObjType::Map).unwrap();
-                    self.write_props(&p, props);
-                    parents.push(id.clone());
-                    at = self.write_flow(text, at, parents, children);
-                    parents.pop();
+                LNode::Para(p) => {
+                    block.insert("type".into(), H::from("p"));
+                    let attrs: HashMap<String, H> = p
+                        .props
+                        .iter()
+                        .map(|(k, v)| (k.clone(), H::from(v.as_str())))
+                        .collect();
+                    block.insert(
+                        "attrs".into(),
+                        H::from(automerge::hydrate::Map::from(attrs)),
+                    );
+                    out.push(Span::Block(automerge::hydrate::Map::from(block)));
+                    for r in &p.runs {
+                        let marks: MarkSet = r
+                            .marks
+                            .iter()
+                            .map(|(k, v)| (k.clone(), ScalarValue::from(v.as_str())))
+                            .collect();
+                        out.push(Span::Text {
+                            text: r.text.clone(),
+                            marks: (!r.marks.is_empty()).then(|| std::sync::Arc::new(marks)),
+                        });
+                    }
                 }
-                other => at = self.write_item(text, at, parents, other),
+                LNode::Embed { json, .. } => {
+                    block.insert("type".into(), H::from("e"));
+                    block.insert("json".into(), H::from(json.as_str()));
+                    out.push(Span::Block(automerge::hydrate::Map::from(block)));
+                }
+                LNode::Table(t) => {
+                    block.insert("type".into(), H::from("t"));
+                    self.write_table(t);
+                    out.push(Span::Block(automerge::hydrate::Map::from(block)));
+                }
+                LNode::Container { .. } => unreachable!(),
             }
         }
-        at
     }
 
     fn write_table(&mut self, t: &LTable) {
@@ -288,7 +344,7 @@ impl AutomergeDocument {
         let p = self.doc.put_object(&m, "props", ObjType::Map).unwrap();
         self.write_props(&p, &c.props);
         let t = self.doc.put_object(&m, "t", ObjType::Text).unwrap();
-        self.write_flow(&t, 0, &mut Vec::new(), &c.blocks);
+        self.write_flow(&t, &c.blocks);
     }
 
     /// Every block in a text, with its extent.
@@ -615,7 +671,7 @@ impl CrdtDoc for AutomergeDocument {
         for k in ["tables", "containers", "styles", "authors"] {
             me.doc.put_object(ROOT, k, ObjType::Map).unwrap();
         }
-        me.write_flow(&body, 0, &mut Vec::new(), &l.body);
+        me.write_flow(&body, &l.body);
         let styles = me.obj(&ROOT, "styles").unwrap();
         for (k, v) in &l.styles {
             me.doc.put(&styles, k.as_str(), v.as_str()).unwrap();

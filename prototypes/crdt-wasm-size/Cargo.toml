@@ -1,0 +1,30 @@
+# Spike 3: how big is each CRDT backend in a wasm32 bundle?
+# Not part of the workspace. Build with ./measure.sh.
+
+[package]
+name = "skriv-crdt-wasm-size"
+version = "0.0.0"
+edition = "2024"
+license = "MPL-2.0"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+loro = ["skriv-crdt/loro"]
+automerge = ["skriv-crdt/automerge"]
+
+[dependencies]
+skriv-crdt = { path = "../../crates/crdt", default-features = false }
+getrandom_04 = { package = "getrandom", version = "0.4", features = ["wasm_js"] }
+uuid = { version = "1", features = ["rng-getrandom"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[workspace]

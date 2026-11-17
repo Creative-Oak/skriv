@@ -24,3 +24,7 @@ skriv-fidelity = { path = "../fidelity" }
 
 [lints]
 workspace = true
+
+[[example]]
+name = "spike3"
+required-features = ["loro", "automerge"]

@@ -73,6 +73,20 @@ pub fn scale(doc: &Document, copies: usize) -> Document {
             body: blocks,
             ..Default::default()
         };
+        // Vary the wording per copy (a seeded shuffle of each text run's
+        // words), so the copies don't compress to nothing in the zip.
+        let mut rng = Rng::new(i as u64);
+        for p in skriv_model::paragraphs_mut(&mut section) {
+            for inline in &mut p.content {
+                if let skriv_model::Inline::Text(t) = inline {
+                    let mut words: Vec<&str> = t.text.split(' ').collect();
+                    for k in (1..words.len()).rev() {
+                        words.swap(k, rng.below(k + 1));
+                    }
+                    t.text = words.join(" ");
+                }
+            }
+        }
         skriv_model::for_each_node_mut(&mut section, &mut |_, m| {
             m.id = NodeId::mint();
             m.id_from_source = false;
@@ -398,6 +412,9 @@ pub struct Editor {
     pub stats: EditStats,
     /// Every id this editor touched, for the fidelity check.
     pub touched: BTreeSet<String>,
+    /// Delete about as much as is typed, so the document keeps its size
+    /// (a year of revisions rather than a year of writing).
+    pub steady: bool,
 }
 
 impl Editor {
@@ -410,6 +427,7 @@ impl Editor {
             prefix: prefix.to_owned(),
             stats: EditStats::default(),
             touched: BTreeSet::new(),
+            steady: false,
         }
     }
 
@@ -462,7 +480,12 @@ impl Editor {
             }
             55..=79 if len > 0 => {
                 let pos = self.rng.below(len);
-                let n = self.rng.range(1, 12).min(len - pos);
+                let n = if self.steady {
+                    self.rng.range(1, 60)
+                } else {
+                    self.rng.range(1, 12)
+                };
+                let n = n.min(len - pos);
                 if d.delete_text(&pid, pos, n) {
                     self.stats.deletes += 1;
                     self.stats.deleted_chars += n;
