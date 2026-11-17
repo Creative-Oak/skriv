@@ -34,6 +34,8 @@ pub struct ModeSummary {
     pub visual_files: usize,
     pub visual_loss_files: Vec<String>,
     pub visual_errors: usize,
+    /// Files LibreOffice could not render even in their original form.
+    pub oracle_unrenderable: Vec<String>,
 }
 
 #[derive(Clone, Debug, Default, Serialize)]
@@ -161,6 +163,10 @@ pub fn summarise(run: &Run) -> Summary {
                 ms.files_changed += 1;
             }
             if let Some(v) = run.visual.get(&f.name).and_then(|m| m.get(mode)) {
+                if v.original_unrenderable {
+                    ms.oracle_unrenderable.push(f.name.clone());
+                    continue;
+                }
                 ms.visual_files += 1;
                 if v.visible_loss {
                     ms.visual_loss_files.push(f.name.clone());
@@ -319,6 +325,17 @@ pub fn markdown(run: &Run, s: &Summary) -> String {
     );
     for (k, v) in &s.top_slots {
         let _ = writeln!(o, "- `{k}` × {v}");
+    }
+    if let Some(ms) = s.modes.get("identity")
+        && !ms.oracle_unrenderable.is_empty()
+    {
+        let _ = writeln!(
+            o,
+            "\n## Files LibreOffice could not render in their original form\n\nNot scored visually.\n"
+        );
+        for f in &ms.oracle_unrenderable {
+            let _ = writeln!(o, "- `{f}`");
+        }
     }
     if !s.read_errors.is_empty() {
         let _ = writeln!(o, "\n## Files we could not read\n");

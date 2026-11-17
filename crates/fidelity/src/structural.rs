@@ -163,7 +163,9 @@ pub fn run_file(name: &str, bytes: &[u8], modes: &[Mode]) -> Outputs {
             }
         };
         let write_ms = ms(t);
-        if mode == Mode::Identity {
+        // Count slots from the regenerate-all pass: in other modes a slot inside
+        // an untouched element is copied with its parent and never visited.
+        if mode == Mode::Regen {
             result.slots = written.stats.slot_names.clone();
             result.slot_bytes = written.stats.slot_bytes;
         }

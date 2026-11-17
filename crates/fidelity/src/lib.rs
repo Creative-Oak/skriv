@@ -56,6 +56,8 @@ pub struct Visual {
     pub visible_loss: bool,
     pub diff_images: Vec<String>,
     pub error: Option<String>,
+    /// LibreOffice could not render the original either: nothing to compare.
+    pub original_unrenderable: bool,
 }
 
 #[derive(Clone, Debug, Default, Serialize)]
@@ -285,7 +287,10 @@ fn visual_pass(
                         v.visible_loss =
                             v.pages_original != v.pages_output || v.pages_over_threshold > 0;
                     }
-                    (Err(e), _) => v.error = Some(format!("original did not render: {e}")),
+                    (Err(e), _) => {
+                        v.error = Some(format!("original did not render: {e}"));
+                        v.original_unrenderable = true;
+                    }
                     (_, Err(e)) => {
                         v.error = Some(format!("output did not render: {e}"));
                         v.visible_loss = true;
