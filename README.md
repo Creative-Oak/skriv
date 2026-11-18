@@ -15,6 +15,10 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
 
 - **Spike 1 (ODT round-trip fidelity): done.** Results are in
   [docs/spikes/01-odt-roundtrip-results.md](docs/spikes/01-odt-roundtrip-results.md).
+- **Spike 2 (paginated editing): provisional.** The owned view (B):
+  EditContext in Chrome and Edge, a hidden textarea in Firefox and Safari;
+  screen readers and reference hardware not yet tested; see
+  [docs/spikes/02-results.md](docs/spikes/02-results.md).
 - **Spike 2b (layout engine): done.** Our own engine on Parley; see
   [docs/spikes/02b-results.md](docs/spikes/02b-results.md) (ADR 0007, proposed).
 - **Spike 3 (CRDT): done.** Loro with a hybrid encoding; see
@@ -29,8 +33,9 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
   switching fails the criterion (5.1 false switches per 10 pages); checking
   every word against both dictionaries works; see
   [docs/spikes/06-results.md](docs/spikes/06-results.md) (ADR 0009, proposed).
-- **Next:** Spike 2 (editing latency, IME and screen readers on real
-  devices).
+- **Next:** Spike 2's deferred manual runs (screen readers, phones,
+  Windows, reference hardware), then decide the proposed ADRs and leave
+  Phase 0; see [docs/PLAN.md](docs/PLAN.md).
 - **Decisions:** [docs/adr/](docs/adr/). **Progress:** [docs/PLAN.md](docs/PLAN.md).
 
 ## Layout
