@@ -1,0 +1,6 @@
+native own: 5c75c68ac3118cad
+native own-greedy: 5c75c68ac3118cad
+native typst: fd94f89835f7b00a
+native own (justified): 4a220d64e67d86e9
+native own-greedy (justified): 91728d8ddd78c40c
+native typst (justified): 9a9571c37a722b6f

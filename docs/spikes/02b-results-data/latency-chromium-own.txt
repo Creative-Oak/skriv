@@ -1,0 +1,13 @@
+Chromium 157.0.8103.78
+own, page 1: 101 pages (full 219 ms, hash 5c75c68ac3118cad); p50 0.30 ms, p95 0.70 ms, max 6.00 ms
+own, page 50: 101 pages (full 219 ms, hash 5c75c68ac3118cad); p50 0.30 ms, p95 0.60 ms, max 3.60 ms
+own, table, page 80: 101 pages (full 219 ms, hash 5c75c68ac3118cad); p50 0.20 ms, p95 0.40 ms, max 1.60 ms
+own (justified), page 1: 101 pages (full 90 ms, hash 4a220d64e67d86e9); p50 0.50 ms, p95 1.00 ms, max 5.30 ms
+own (justified), page 50: 101 pages (full 90 ms, hash 4a220d64e67d86e9); p50 0.60 ms, p95 1.60 ms, max 4.40 ms
+own (justified), table, page 80: 101 pages (full 90 ms, hash 4a220d64e67d86e9); p50 0.20 ms, p95 0.50 ms, max 2.30 ms
+own-greedy, page 1: 101 pages (full 79 ms, hash 5c75c68ac3118cad); p50 0.20 ms, p95 0.40 ms, max 5.00 ms
+own-greedy, page 50: 101 pages (full 79 ms, hash 5c75c68ac3118cad); p50 0.30 ms, p95 0.40 ms, max 3.40 ms
+own-greedy, table, page 80: 101 pages (full 79 ms, hash 5c75c68ac3118cad); p50 0.20 ms, p95 0.40 ms, max 1.60 ms
+own-greedy (justified), page 1: 101 pages (full 77 ms, hash 91728d8ddd78c40c); p50 0.30 ms, p95 0.50 ms, max 5.20 ms
+own-greedy (justified), page 50: 101 pages (full 77 ms, hash 91728d8ddd78c40c); p50 0.40 ms, p95 0.60 ms, max 3.20 ms
+own-greedy (justified), table, page 80: 101 pages (full 77 ms, hash 91728d8ddd78c40c); p50 0.20 ms, p95 0.40 ms, max 1.90 ms

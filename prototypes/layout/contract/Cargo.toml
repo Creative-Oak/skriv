@@ -1,0 +1,21 @@
+[package]
+name = "layout-contract"
+version = "0.0.0"
+description = "Spike 2b: the layout contract shared by both paginators, and the model → layout input."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[features]
+default = ["model"]
+# Building input from a skriv model document (not needed in wasm, which
+# loads prepared input as JSON).
+model = ["dep:skriv-model"]
+
+[dependencies]
+serde.workspace = true
+skriv-model = { workspace = true, optional = true }
+
+[lints]
+workspace = true

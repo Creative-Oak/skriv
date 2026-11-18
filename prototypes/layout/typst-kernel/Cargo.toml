@@ -1,0 +1,17 @@
+[package]
+name = "layout-typst"
+version = "0.0.0"
+description = "Spike 2b prototype (b): Typst as the layout kernel, through a model → Typst bridge."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+layout-contract = { workspace = true, default-features = false }
+typst.workspace = true
+typst-ide.workspace = true
+typst-layout.workspace = true
+
+[lints]
+workspace = true
