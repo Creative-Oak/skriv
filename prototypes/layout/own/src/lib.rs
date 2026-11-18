@@ -381,7 +381,14 @@ impl OwnEngine {
             let mut x = x0;
             for (i, c) in seg.iter().enumerate() {
                 let w = if i >= vis {
-                    0.0
+                    // Hanging spaces take no room at a line break, but at
+                    // the end of the paragraph the caret moves over them
+                    // (as in LibreOffice), or a typed space wouldn't show.
+                    if last && c.space && !c.hard_break {
+                        c.advance
+                    } else {
+                        0.0
+                    }
                 } else if c.space {
                     c.advance + extra
                 } else {

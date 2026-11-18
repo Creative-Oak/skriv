@@ -773,6 +773,14 @@ Object.assign((window as unknown as { spike2: object }).spike2, {
   pmText: () => view.state.doc.textBetween(0, view.state.doc.content.size, '\n', '\n'),
   view,
   eng,
+  caret: (flat: number, off: number) => {
+    const p = toPos(view.state, flat, off)
+    if (p === null) return
+    view.focus()
+    view.dispatch(
+      view.state.tr.setSelection(TextSelection.create(view.state.doc, p)).scrollIntoView(),
+    )
+  },
 })
 place(0)
 document.documentElement.dataset.ready = '1'

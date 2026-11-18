@@ -1,9 +1,12 @@
 # Spike 2 results: paginated editing, input methods and screen readers
 
-**Status: in progress.** The prototypes and the automated measurements are
-done. The tests that need a person, real devices and screen readers are
-next: [`02-manual-tests.md`](02-manual-tests.md). This document gets its
-verdict, and ADR 0004 its update, when that sheet is filled in.
+**Status: provisional verdict.** The prototypes, the automated
+measurements and a manual pass in Firefox and Safari on the Mac are done.
+Phones, Windows, VoiceOver and latency on the reference hardware were
+deferred for this prototype (decided 2026-11-18; see
+[`02-manual-tests.md`](02-manual-tests.md)), so no screen reader has been
+tested and no latency has been measured on the brief's hardware. The
+verdict stands until those runs say otherwise.
 
 - **Date:** 2026-11-18.
 - **Brief:** [`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md),
@@ -14,6 +17,65 @@ verdict, and ADR 0004 its update, when that sheet is filled in.
   Chromium 141 and WebKit 26 (headless). This is not the brief's reference
   hardware (a mid-range Windows laptop, a MacBook Air M1, a mid-range
   Android phone); those runs are part of the manual sheet.
+
+## Verdict
+
+**Build the web app on B, the owned view: EditContext in Chrome and Edge,
+a hidden textarea in Firefox and Safari.** This refutes the brief's
+expectation that A would be the likelier web choice, on the evidence we
+have. It is provisional: the screen-reader criterion is untested, and A
+stays the fallback if B fails it.
+
+| Brief's criterion | B (owned view) | A (ProseMirror) |
+|---|---|---|
+| p95 keystroke to paint under 16 ms (mid-range laptop) | **Passes on an M4** in Chromium: 12.9–15.6 ms. WebKit headless 26–28 ms. Reference hardware not measured | **Fails on an M4** in Chromium: 23.2–25.3 ms. WebKit headless 36–64 ms |
+| No IME composition lost | No losses in the manual pass (Firefox, Safari: the textarea path) or the automated runs (Chromium: EditContext). Phones, Windows IMEs and EditContext by hand not tested | No losses in the manual pass (Firefox, Safari) or the automated runs |
+| Headings and paragraphs navigable by screen reader | **Untested** | **Untested** |
+
+Per browser:
+
+- **Chrome and Edge: B with EditContext.** The fastest path measured, and
+  the one the input layer was designed around.
+- **Firefox and Safari: B with the hidden textarea.** Faster than A in
+  WebKit; worked in the manual pass after the Backspace fix (finding 7).
+  If EditContext ships in either browser, B switches to it there without
+  touching the model or the engine: both input paths already sit behind one
+  interface.
+
+Why B, beyond the numbers:
+
+- **The latency gap is structural, not tuning.** After profiling, A's
+  remaining cost is ProseMirror's view update walking every top-level
+  block and the browser moving the native selection in a large
+  contenteditable (finding 2). Both grow with the document; closing the gap
+  means splitting the document into separately rendered pieces, which
+  ProseMirror doesn't do. B's costs were all ours and came down to under
+  2 ms of script (finding 3).
+- **B keeps one source of truth.** In B, edits go straight to the model and
+  the engine. A has to mirror every ProseMirror transaction back into the
+  model (ADR 0002 forbids the reverse), and the mirroring is where its
+  subtle bugs were (lost decorations after a split, finding 2).
+- **ADR 0004 already asks for a replaceable input layer.** B is that layer;
+  in A, ProseMirror owns input.
+
+What B costs, all of it ours to build (none of it is in the prototype):
+
+- **Accessibility of editing.** In browse mode the DOM is semantic and in
+  reading order in both views. While editing, A gets the contenteditable's
+  native caret tracking and announcements. B relies on the textarea's own
+  (one paragraph at a time) or on EditContext with a mirrored DOM
+  selection, whose screen-reader support is unknown. **This is the risk
+  that could reverse the verdict.**
+- Caret, selection, keyboard navigation (word, line, page), mouse and
+  touch selection with handles, clipboard, drag and drop, undo.
+- The browser's spellcheck underlines: B shows none. Proofing is our own
+  anyway (Spike 6).
+
+**What would reverse it:** a screen-reader test (NVDA, JAWS, VoiceOver)
+where B can't give caret echo, selection announcements or paragraph
+reading while editing, and no ARIA or input-surface change fixes it. Then
+A, with the document split into separately rendered pieces to meet the
+latency target.
 
 ## Verified before building
 
@@ -53,7 +115,7 @@ own CSS containment boundary.
   arrows, clicks and undo are our own. With EditContext the DOM selection
   mirrors ours, so assistive technology can follow the caret.
 
-## Findings so far
+## Findings
 
 **1. Both views meet the latency target in Chromium on this machine; B
 with room to spare, A barely.** Real key events, 80–120 ms apart, 300 per
@@ -116,10 +178,22 @@ only; real Safari on the M1 is on the manual sheet.
 3 into page 4, delete, type, undo twice, and the document is restored
 exactly (`scripts/check.mjs`).
 
-**7. Layout is deterministic across macOS and Linux.** The 2b layout hashes
+**7. Manual pass in Firefox and Safari: works well, two bugs fixed.**
+Spaces typed at the end of a paragraph didn't move the caret until the
+next character: the engine gave trailing spaces no width, right at a line
+break but wrong at the end of a paragraph (fixed in the engine; see the
+note in [`02b-results-data/`](02b-results-data/README.md)). And in Safari,
+B's textarea ignored Backspace at the start of a paragraph: Safari fires no
+`beforeinput` when there's nothing in the textarea to delete, so B now
+catches paragraph-boundary deletions on `keydown` too. Both are checked in
+WebKit and Chromium, in both views.
+
+**8. Layout is deterministic across macOS and Linux.** The 2b layout hashes
 computed on this Mac, natively and in Chromium's wasm, equal those
 recorded on Linux in Spike 2b, for both engines and both test letters.
-This answers part of ADR 0007's open question; Windows remains.
+This answers part of ADR 0007's open question; Windows remains. (The
+trailing-space fix in finding 7 later changed the own engine's hashes; on
+macOS native still equals wasm, and Linux has not been re-run.)
 
 ## Judgement calls
 
@@ -135,12 +209,12 @@ This answers part of ADR 0007's open question; Windows remains.
   typing, so no keystroke pays for serialising it. A real editor would
   keep an operation log, probably the CRDT's (Spike 3).
 
-## Still to do
+## Before the verdict is final
 
-1. The manual sheet: keyboards and input methods (Danish dead keys, macOS
-   and Windows IMEs, Gboard, iOS, dictation), screen readers (VoiceOver,
-   NVDA, JAWS, Narrator), and latency on the reference hardware.
-2. Firefox: Playwright's Firefox would not start on this machine, so the
-   Firefox runs are manual too.
-3. Then: the verdict per browser, the ADR 0004 update, and ADR 0007's
-   latency confirmation on real devices.
+1. **Screen readers first**, since they could reverse it: VoiceOver on the
+   Mac (Safari, Chrome), then NVDA and JAWS on Windows, against B and A.
+2. Latency on the reference hardware (mid-range Windows laptop, MacBook Air
+   M1, mid-range Android phone). This also confirms ADR 0007.
+3. Phones (Gboard, iOS keyboard) and Windows input methods, against B's
+   textarea and EditContext paths.
+4. Firefox latency: Playwright's Firefox would not start on this machine.

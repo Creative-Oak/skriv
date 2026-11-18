@@ -38,3 +38,9 @@ equal the hashes recorded on Linux:
 own-greedy 5c75c68ac3118cad, own 5c75c68ac3118cad, typst fd94f89835f7b00a,
 own justified 4a220d64e67d86e9, own-greedy justified 91728d8ddd78c40c,
 typst justified 9a9571c37a722b6f.
+
+Later the same day, after the trailing-space caret fix in the own engine
+(see ../02b-results-data/README.md), the own engine's hashes changed to
+988b0d52f689256d (ragged), 0e0cc69cb305ee29 / 50244fd0994b4c4c (justified
+own / own-greedy); native equals wasm in Chromium and WebKit on macOS.
+

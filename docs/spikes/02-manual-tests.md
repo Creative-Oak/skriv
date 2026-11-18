@@ -12,6 +12,14 @@ run press **Reset**; after it press **Download JSON** and put the file in
 `docs/spikes/02-results-data/manual/` named
 `<device>-<browser>-<view>-<test>.json`.
 
+**Scope decided 2026-11-18:** phones, Windows (NVDA, JAWS, Narrator,
+Windows IMEs), VoiceOver and latency on the reference hardware are
+**deferred** for this prototype. The tests in scope were run by hand in
+Firefox and Safari on the Mac and worked well, apart from two bugs, both
+fixed the same day: spaces typed at the end of a paragraph didn't move the
+caret until the next character, and in Safari, view B (textarea) ignored
+Backspace at the start of a paragraph, so paragraphs couldn't be joined.
+
 Views: **A** = `a.html` (ProseMirror), **B** = `b.html` (EditContext where
 available), **B-ta** = `b.html?input=textarea` (forced textarea, to test
 B's Firefox/Safari path in Chrome too).

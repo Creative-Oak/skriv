@@ -586,20 +586,24 @@ function onKey(e: KeyboardEvent) {
     case 'Enter':
       e.preventDefault()
       return enter(e.timeStamp)
-    // The textarea handles these itself (its beforeinput handler catches
-    // paragraph boundaries); the EditContext only holds one paragraph.
+    // Deletions the surface can't make: across a paragraph boundary, or
+    // over a selection spanning paragraphs (each surface holds one
+    // paragraph). The rest the surface makes itself. Safari fires no
+    // beforeinput for Backspace at the start of a textarea, so the
+    // textarea path needs this too; its beforeinput handler stays for
+    // keyboards that send no key codes (Android).
     case 'Backspace':
-      if (useEC && (!collapsed() || head[1] === 0)) {
+    case 'Delete': {
+      const back = e.key === 'Backspace'
+      const atEdge = back ? head[1] === 0 : head[1] === eng.length(head[0])
+      const across = !collapsed() && anchor[0] !== head[0]
+      if (across || (collapsed() && atEdge) || (useEC && !collapsed())) {
         e.preventDefault()
-        backspace(e.timeStamp)
+        if (back) backspace(e.timeStamp)
+        else forwardDelete(e.timeStamp)
       }
       return
-    case 'Delete':
-      if (useEC && (!collapsed() || head[1] === eng.length(head[0]))) {
-        e.preventDefault()
-        forwardDelete(e.timeStamp)
-      }
-      return
+    }
   }
   if (mod && e.key.toLowerCase() === 'a') {
     e.preventDefault()
@@ -730,6 +734,10 @@ Object.assign((window as unknown as { spike2: object }).spike2, {
   pageCount: () => eng.pages.length,
   phases,
   eng,
+  caret: (flat: number, off: number) => {
+    surface.focus()
+    select([flat, off])
+  },
 })
 place(0)
 document.documentElement.dataset.ready = '1'
