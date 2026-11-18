@@ -1,0 +1,24 @@
+[package]
+name = "skriv-proofing"
+version = "0.0.0"
+description = "Spike 6: language detection per paragraph and Hunspell-format spell checking for documents that mix Danish and English."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[features]
+default = ["lingua", "whatlang"]
+lingua = ["dep:lingua"]
+whatlang = ["dep:whatlang"]
+
+[dependencies]
+spellbook = "0.4.2"
+# Only the models we need: Danish and English, plus Norwegian Bokmål and
+# Swedish as confusers. Every other language model stays out of the build.
+lingua = { version = "1.8.0", default-features = false, features = ["danish", "english", "bokmal", "swedish"], optional = true }
+whatlang = { version = "0.18.0", optional = true }
+serde.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

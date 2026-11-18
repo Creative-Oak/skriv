@@ -1,0 +1,21 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). Business Danish full of English loanwords, with English sentences inside Danish paragraphs.
+da	title	Opsamling fra workshop om den nye borgerportal
+da	p	Tak for en god dag på workshoppen i torsdags. Her er en kort opsamling med de vigtigste pointer og de næste skridt. Slides og billeder af post-it-væggen ligger i projektets mappe på SharePoint.
+da	h	Formålet med dagen
+da	p	Vi ville samle input fra alle stakeholders, før vi går i gang med designfasen. Derfor var både borgerservice, fagområderne, IT og to borgere fra vores brugerpanel med. Facilitatoren fra bureauet indledte med at sige: {{en:"Today is about problems, not solutions."}} Det var en god ramme, for det holdt diskussionerne væk fra konkrete skærmbilleder.
+da	h	Hvad borgerne sagde
+da	p	Borgerne pegede især på, at det er svært at finde ud af, hvor langt en sag er. En af dem sagde, at hun havde ringet til kommunen fire gange for at høre, om hendes ansøgning om boligstøtte var modtaget. Det er netop den type henvendelser, vi gerne vil have færre af.
+da	p	Den anden borger, som til daglig arbejder i et internationalt firma og har engelsk som arbejdssprog, foreslog en simpel statuslinje som dem, man kender fra pakkelevering. {{en:"If I can track a parcel from China, I should be able to track my application."}} Citatet blev hængende resten af dagen.
+da	h	Feedback fra medarbejderne
+da	p	Medarbejderne i borgerservice gav feedback på den nuværende portal. Mange af de spørgsmål, de får, handler om login og om, hvilke dokumenter der skal vedhæftes. De ønsker en bedre onboarding af nye brugere og tekster, der er skrevet i et klart sprog. Flere nævnte, at engelske ord som dashboard og workflow forvirrer borgerne, og at vi bør skrive overblik og forløb i stedet.
+da	p	IT lagde vægt på, at portalen skal bygges, så den kan vedligeholdes uden en stor backlog af tilpasninger. Løsningen skal genbruge den fælles designguide, og alle komponenter skal testes for tilgængelighed, før de går i produktion.
+da	h	Prioriteret liste
+da	li	Status på sager i realtid, så borgeren kan se, hvor sagen er.
+da	li	Bedre vejledning til vedhæftning af dokumenter.
+da	li	Mulighed for at skrive sikkert til sagsbehandleren direkte fra sagen.
+da	li	Klart sprog i alle tekster, og færre fagord.
+da	li	En engelsk version af de mest brugte sider.
+da	h	Næste skridt
+da	p	Bureauet laver tre prototyper, som vi tester med borgere i uge 49. Vi bruger en simpel metode, hvor borgeren løser en opgave, mens vi observerer. Bagefter holder vi et kort møde med projektgruppen, hvor vi vælger den retning, der virker bedst. Projektlederen sagde det sådan: {{en:"Fail fast, learn fast."}} Vi skal bare huske, at det er borgernes tid, vi bruger.
+da	p	Har du kommentarer til opsamlingen, så skriv dem gerne i dokumentet senest fredag.

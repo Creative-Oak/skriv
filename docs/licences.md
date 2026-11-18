@@ -106,9 +106,69 @@ fonts ship.
 hyphenation patterns, MPL-2.0 per its Debian copyright), Playwright's
 Chromium, Node 22.
 
+## Spike 6 proofing (verified 2026-11-18)
+
+Checked against the published crates' `license` metadata and the licence
+files in the crate sources, and against the dictionaries' own README and
+affix-file headers (LibreOffice `dictionaries` repository, commit
+`c0865a85eb67`).
+
+**Rust crates.** `crates/proofing` uses spellbook, lingua and whatlang.
+Its 56 normal dependencies are all MIT, Apache-2.0, Zlib, Unlicense OR
+MIT, MPL-2.0 or Unicode-3.0; `cargo deny check licenses` passes with no
+change to `deny.toml`.
+
+| Crate | Version | Licence | Used? |
+|---|---|---|---|
+| `spellbook` (Hunspell-format checker, a port of Nuspell) | 0.4.2 | MPL-2.0 | yes |
+| `lingua` (lingua-rs), default features off | 1.8.0 | Apache-2.0 | yes (feature `lingua`) |
+| `lingua-{danish,english,bokmal,swedish}-language-model` | 1.3.0 | Apache-2.0 | yes |
+| `whatlang` | 0.18.0 | MIT | yes (feature `whatlang`) |
+| `zspell` | 0.5.5 | Apache-2.0 (no SPDX field: `license-file = "LICENSE"`, the Apache-2.0 text) | **no**: it can't parse `da_DK.aff` and has no compound support (its README says so) |
+| lingua's own dependencies: `dashmap` 6.2, `fst` 0.4 (Unlicense/MIT), `include_dir` 0.7 (MIT), `counter` 0.7 (MIT), `fastrand`, `regex`, `strum`, `maplit`, `itertools`, `rayon` (native only) | | MIT or MIT/Apache-2.0 | yes |
+| spellbook's: `hashbrown` (MIT OR Apache-2.0), `foldhash` (Zlib) | | | yes |
+
+lingua's Cargo manifest pulls `wasm-bindgen` and `serde-wasm-bindgen`
+(both MIT OR Apache-2.0) on wasm targets only; its Python and benchmarking
+dependencies (`pyo3`, `polars`, `cld2`) sit behind features we don't enable.
+
+**Dictionaries (data, not linked code; fetched by
+`crates/proofing/fetch-dicts.sh`, not committed):**
+
+| Dictionary | Version | Licence (as stated by the files) | Policy note |
+|---|---|---|---|
+| `da_DK` (Stavekontrolden, Foreningen for frit tilgængelige sprogværktøjer; based on data from Det Danske Sprog- og Litteraturselskab) | 2.9.101, 2026-06-07 | **GPL-2.0 / LGPL-2.1 / MPL-1.1 tri-licence** (README and `.aff` header) | Usable under **MPL-1.1**, file-level copyleft like our MPL-2.0: shipping the files unmodified (or modified, with the changes published) next to MPL-2.0 code is fine. The `.dic` file has three lines spellbook can't parse (`"A/S"`, `"c/o"`, `"I/S"`); we escape them in memory at load time, which modifies nothing on disk. |
+| `en_US` (SCOWL, Kevin Atkinson; affix file from Ispell) | 2020.12.07 | SCOWL's permissive licence (MIT-like: use, copy, modify, distribute with the notice); affix file BSD (Ispell); Moby, 12Dicts and Brian Kelk's lists in the public domain; WordNet notice | Permissive. The older `README.txt` in the same folder (2010) still says "LGPL" for the word list; the current `README_en_US.txt` is SCOWL's and says otherwise. Ship `README_en_US.txt` with it. |
+| `en_GB` (Marco A.G. Pinto et al.) | 2025 | **LGPL** (word list and affix file) | Data under LGPL. Distributing it unmodified as a separate file a user can replace is the usual reading of LGPL for data, but it is copyleft and ADR 0005 has no rule for data: **needs a decision** before it ships. Measured here for comparison only. |
+
+The `en/` folder's `license.txt` is the GPL-2.0 text; it belongs to the
+thesaurus and hyphenation files in that folder, which we don't use.
+
+**ADR 0005 has no policy for data files.** It bans copyleft *dependencies*
+of the core. Dictionaries are data loaded at run time, not linked. This
+spike does not decide the policy; it records that `da_DK` is usable under
+its MPL-1.1 option, that `en_US` is permissive, and that British English
+(`en_GB`) is LGPL-only. A proposed rule is in
+[ADR 0009](adr/0009-proofing.md).
+
+**LanguageTool** (LGPL-2.1, Java) can't be a dependency of the core under
+ADR 0005; it could only ever be an optional, separately installed server.
+Its Danish coverage was counted from the rule files on its default branch
+(commit `f44f5657`, 2026-11-18): `da/grammar.xml` has **78 pattern rules**
+(38 top-level rules and rule groups) and no `style.xml`; the Danish module
+adds only generic Java rules (whitespace, double punctuation, unpaired
+brackets, sentence-start capital, Hunspell). For comparison: English 5,571 +
+535 style (2,476 + 290 top-level), German 4,718 + 512, Dutch 1,916 + 1,573,
+Swedish 33. The report's "thin" is right.
+
+**Corpus text.** The handwritten part of the Spike 6 corpus
+(`crates/proofing/corpus/handwritten/`, `typos.tsv`) is our own, CC0-1.0.
+The Wikipedia part (CC BY-SA 4.0) is not committed: `fetch_wiki.py`
+downloads pinned revisions listed with their titles in `wiki-manifest.tsv`
+(the attribution), and `build_wiki.py` mixes them locally.
+
 ## To verify before adoption (from the report, not checked yet)
 - **Spike 2:** ProseMirror.
-- **Spike 6:** zspell, lingua-rs, whatlang; the `da_DK` Hunspell dictionary.
 - **Later:** Hayagriva; Tauri.
 - **Spike 5:** SuperDoc's DOCX corpus (docxcorp.us). The file licences matter,
   because SuperDoc itself is AGPL.

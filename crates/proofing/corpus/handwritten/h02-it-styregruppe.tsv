@@ -1,0 +1,43 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). Meeting minutes with English jargon, a status table and an English vendor update.
+da	title	Referat af møde i IT-styregruppen
+da	p	Mødet blev holdt den 28. oktober 2026 kl. 13.00–15.00 i mødelokale 2.14 på rådhuset og via Microsoft Teams.
+da	p	Deltagere: Hanne Vestergaard (formand), Peter Bach, Louise Nyborg, Ahmed Rahimi, Søren Krogh og Camilla Juul (referent). Afbud: Kristian Møller.
+da	h	1. Godkendelse af dagsorden
+da	p	Dagsordenen blev godkendt uden bemærkninger.
+da	h	2. Status på migreringen til LibreOffice
+da	p	Peter gav en status på projektet. Pilotfasen i Borgerservice og Jobcentret er afsluttet, og 212 medarbejdere bruger nu LibreOffice som standard. Der er kommet 46 henvendelser til servicedesken, og de fleste handler om skabeloner og om makroer i gamle regneark. Projektet holder budgettet, men go-live for resten af organisationen er flyttet fra 1. december til 15. januar, fordi integrationen til ESDH-systemet ikke er færdigtestet.
+da	p	Louise spurgte, om de nye skabeloner kan bruges i Word, så længe nogle afdelinger stadig har Microsoft 365. Peter svarede, at skabelonerne gemmes som ODT, og at Word kan åbne dem, men at sidehoved og sidefod kan se lidt anderledes ud.
+da	h	3. Opdatering fra leverandøren
+da	p	Leverandøren havde sendt en skriftlig opdatering, som blev læst op på mødet:
+en	quote	We have completed the integration tests for document generation and archiving. Two issues remain open: the export of tracked changes to PDF/A and the handling of digital signatures on ODT files. We expect to deliver a fix for both in release 4.2, which is scheduled for the second week of December.
+en	quote	Please note that the single sign-on configuration must be updated on your side before the release can be deployed to production.
+da	p	Styregruppen tog opdateringen til efterretning. Ahmed undersøger, hvem der skal opdatere opsætningen af single sign-on, og om det kan nås inden jul.
+da	h	4. Risici
+da	td	Risiko
+da	td	Sandsynlighed
+da	td	Konsekvens
+da	td	Ejer
+da	td	Forsinket integration til ESDH
+da	td	Høj
+da	td	Middel
+da	td	Peter
+da	td	Manglende uddannelse af superbrugere
+da	td	Middel
+da	td	Høj
+da	td	Louise
+da	td	Makroer i økonomiafdelingens regneark
+da	td	Høj
+da	td	Lav
+da	td	Søren
+da	p	Søren foreslog, at makroerne i økonomiafdelingens regneark bliver kortlagt i et regneark med en kolonne for hver makro, så man kan prioritere, hvilke der skal skrives om, og hvilke der kan droppes. Styregruppen bakkede op om forslaget.
+da	h	5. Budget og ressourcer
+da	p	Projektet har brugt 1,8 mio. kr. af en samlet ramme på 3,2 mio. kr. Der er afsat midler til to eksterne konsulenter i januar, og styregruppen godkendte, at en af dem bruges på uddannelse af superbrugere i stedet for på test.
+da	h	6. Eventuelt
+da	p	Camilla nævnte, at medarbejderne i Jobcentret efterspørger en kort vejledning på engelsk til de kolleger, der ikke taler dansk. Hanne bad projektet om at lave en vejledning på én side, som kan ligge på intranettet.
+da	h	Opfølgningspunkter
+da	li	Ahmed: afklare ansvaret for single sign-on (inden 11. november).
+da	li	Søren: kortlægge makroer i økonomiafdelingen (inden næste møde).
+da	li	Peter: ny tidsplan for go-live sendes til styregruppen.
+da	li	Projektet: engelsk vejledning til intranettet.
+da	p	Næste møde holdes den 25. november 2026.

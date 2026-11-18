@@ -13,3 +13,6 @@ dist/
 /prototypes/layout/fonts/*.ttf
 /prototypes/*/target*
 __pycache__/
+/crates/proofing/dicts/
+/crates/proofing/corpus/wiki-cache/
+/crates/proofing/corpus/wiki-build/

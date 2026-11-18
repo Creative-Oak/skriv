@@ -1,0 +1,43 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A climate report with English terms, an English figure caption and an English reference list. The references are invented.
+da	title	Kommunens klimaregnskab 2025
+da	h	Sammenfatning
+da	p	Kommunens samlede udledning af drivhusgasser faldt i 2025 med 6 procent i forhold til året før og ligger nu 41 procent under niveauet i 2010. Faldet skyldes især, at fjernvarmen er overgået til biomasse og varmepumper, og at flere borgere kører i elbil. Udledningen fra landbruget er stort set uændret.
+da	p	Regnskabet er udarbejdet efter den internationale standard {{en:Global Protocol for Community-Scale Greenhouse Gas Emission Inventories}}, som også bruges af de andre kommuner i DK2020-samarbejdet. Udledningerne opgøres i tre såkaldte scopes, hvor scope 1 er direkte udledninger i kommunen, scope 2 er udledninger fra el og fjernvarme, og scope 3 er udledninger uden for kommunen, som skyldes forbrug i kommunen.
+da	h	Udledning fordelt på sektorer
+da	td	Sektor
+da	td	2010
+da	td	2024
+da	td	2025
+da	td	Energi
+da	td	412.000 t
+da	td	198.000 t
+da	td	181.000 t
+da	td	Transport
+da	td	287.000 t
+da	td	241.000 t
+da	td	226.000 t
+da	td	Landbrug
+da	td	156.000 t
+da	td	149.000 t
+da	td	150.000 t
+da	td	Affald og spildevand
+da	td	38.000 t
+da	td	22.000 t
+da	td	21.000 t
+en	p	Figure 3: Greenhouse gas emissions by sector, 2010–2025, in tonnes of CO2 equivalent.
+da	p	Figuren er gengivet på engelsk, fordi den også indgår i kommunens rapportering til {{en:Covenant of Mayors}}.
+da	h	Transport
+da	p	Transporten er nu den største kilde til udledning i kommunen. Andelen af elbiler i bilparken steg fra 9 til 14 procent i løbet af året, og kommunen har etableret 260 nye ladestandere. Busserne i bytrafikken kører på el fra 2026. Kommunens egne biler er udskiftet til elbiler, bortset fra nogle af de tunge køretøjer i Vej og Park.
+da	h	Landbrug
+da	p	Udledningen fra landbruget er svær at påvirke for kommunen alene. Kommunen deltager i et projekt om udtagning af lavbundsjorder, hvor 120 hektar drænede jorder er blevet vådlagt i 2025. Effekten vil først kunne ses i regnskabet for 2026.
+da	h	Næste skridt
+da	li	Udarbejde en plan for de tunge køretøjer i Vej og Park.
+da	li	Udvide projektet om lavbundsjorder med yderligere 200 hektar.
+da	li	Opgøre scope 3-udledningerne fra kommunens indkøb mere præcist.
+da	h	Litteratur
+en	ref	Andersen, K. and Petersen, L. (2024). Municipal climate accounting in practice: lessons from Danish cities. Journal of Urban Climate Policy, 12(3), 45–67.
+en	ref	European Environment Agency (2025). Trends and projections in Europe 2025. Luxembourg: Publications Office of the European Union.
+da	ref	Energistyrelsen (2025). Energistatistik 2024. København: Energistyrelsen.
+en	ref	World Resources Institute (2021). Global Protocol for Community-Scale Greenhouse Gas Emission Inventories, version 1.1. Washington, DC.
+da	ref	Klimarådet (2025). Statusrapport 2025: Danmarks nationale klimamål og internationale forpligtelser. København.

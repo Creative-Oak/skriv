@@ -1,0 +1,42 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A technical guide with commands, paths, configuration keys and English error messages.
+da	title	Vejledning: Opsætning af skabelonserveren
+da	p	Denne vejledning beskriver, hvordan du installerer og konfigurerer skabelonserveren, som leverer dokumentskabeloner til LibreOffice på alle kommunens pc'er. Vejledningen er skrevet til medarbejdere i IT-driften.
+da	h	Forudsætninger
+da	li	En server med Ubuntu 24.04 LTS og mindst 4 GB RAM.
+da	li	Adgang til kommunens interne Git-server.
+da	li	Et certifikat til domænet skabeloner.intern.kommune.dk.
+da	h	Installation
+da	p	Log ind på serveren, og hent koden fra Git-serveren:
+da	code	git clone https://git.intern.kommune.dk/it/skabelonserver.git
+da	code	cd skabelonserver && ./install.sh --prefix /opt/skabeloner
+da	p	Installationsscriptet opretter en systembruger, der hedder skabeloner, og en tjeneste i systemd. Kontrollér, at tjenesten kører:
+da	code	systemctl status skabelonserver.service
+da	p	Hvis tjenesten ikke starter, så se i loggen med kommandoen journalctl -u skabelonserver. En typisk fejl er, at certifikatet ikke kan læses. Så står der i loggen:
+en	code	ERROR: could not load certificate from /etc/ssl/private/skabeloner.pem: permission denied
+da	p	Fejlen løses ved at give systembrugeren læseadgang til filen, eller ved at flytte certifikatet til mappen /opt/skabeloner/certs.
+da	h	Konfiguration
+da	p	Konfigurationen ligger i filen /opt/skabeloner/config.toml. De vigtigste indstillinger er:
+da	li	template_dir: mappen, hvor skabelonerne ligger. Standard er /opt/skabeloner/templates.
+da	li	refresh_interval: hvor ofte serveren læser skabelonerne igen, angivet i sekunder.
+da	li	allowed_networks: de netværk, der må hente skabeloner, fx 10.20.0.0/16.
+da	p	Når du har ændret konfigurationen, skal tjenesten genstartes med systemctl restart skabelonserver. Ændringer i selve skabelonerne kræver ikke genstart; de bliver læst ind automatisk efter det interval, der er sat i refresh_interval.
+da	h	Opsætning af klienterne
+da	p	På klienterne sættes stien til skabelonerne via en gruppepolitik. I LibreOffice findes indstillingen under Funktioner → Indstillinger → LibreOffice → Stier, hvor feltet Skabeloner peger på serverens WebDAV-adresse. Brugerne kan derefter vælge kommunens skabeloner under Filer → Ny → Skabeloner.
+da	p	Vær opmærksom på, at LibreOffice viser en advarsel, hvis certifikatet ikke er gyldigt:
+en	quote	The certificate for this site could not be verified. Do you want to continue?
+da	p	Brugerne må ikke trykke ja til den advarsel. Kontakt i stedet servicedesken, så certifikatet kan blive fornyet.
+da	h	Fejlfinding
+da	td	Symptom
+da	td	Årsag
+da	td	Løsning
+da	td	Skabelonerne vises ikke
+da	td	Forkert sti i gruppepolitikken
+da	td	Ret stien, og kør gpupdate /force
+da	td	Gamle skabeloner vises
+da	td	Cache på klienten
+da	td	Slet mappen %APPDATA%\LibreOffice\4\user\template
+da	td	Advarsel om certifikat
+da	td	Certifikatet er udløbet
+da	td	Forny certifikatet via IT-sikkerhed
+da	p	Ved andre fejl kan du oprette en sag i servicedesken med kategorien Skabeloner og vedhæfte loggen fra serveren.

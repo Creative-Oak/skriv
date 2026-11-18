@@ -1,0 +1,30 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A data protection memo quoting English clauses of a data processing agreement.
+da	title	Notat: Vurdering af leverandørens databehandleraftale
+da	addr	Til: Direktionen
+da	addr	Fra: Juridisk Afdeling, Line Bjerregaard
+da	addr	Dato: 9. oktober 2026
+da	h	Resumé
+da	p	Leverandøren af det nye bookingsystem til borgerservice har sendt sit standardudkast til en databehandleraftale. Aftalen er skrevet på engelsk og følger i store træk EU-Kommissionens standardkontraktbestemmelser. Juridisk Afdeling anbefaler, at aftalen underskrives, når tre punkter er rettet.
+da	h	Punkt 1: Underdatabehandlere
+da	p	Aftalens afsnit 7.2 lyder:
+en	quote	The Processor may engage sub-processors without the prior specific authorisation of the Controller, provided that the Controller is informed of any intended changes at least 14 days in advance.
+da	p	Det er en generel godkendelse af underdatabehandlere. Den er lovlig efter databeskyttelsesforordningens artikel 28, stk. 2, men fristen på 14 dage er kort. Kommunen har brug for mindst 30 dage til at vurdere en ny underdatabehandler og eventuelt gøre indsigelse. Vi foreslår, at fristen ændres til 30 dage.
+da	h	Punkt 2: Overførsel til tredjelande
+da	p	Leverandøren bruger en amerikansk underleverandør til at sende sms-påmindelser. Ifølge bilag B overføres borgerens telefonnummer og tidspunktet for aftalen til USA. Leverandøren henviser til, at underleverandøren er certificeret under {{en:EU-U.S. Data Privacy Framework}}, og at overførslen derfor har et gyldigt overførselsgrundlag.
+da	p	Det er korrekt, men kommunen bør overveje, om sms-påmindelser kan sendes via en dansk eller europæisk leverandør i stedet. Vi anbefaler, at spørgsmålet tages op med leverandøren.
+da	h	Punkt 3: Sletning ved ophør
+da	p	Afsnit 12.1 lyder:
+en	quote	Upon termination of the Agreement, the Processor shall, at the choice of the Controller, delete or return all personal data and delete existing copies, unless Union or Member State law requires storage of the personal data.
+da	p	Bestemmelsen er i orden, men aftalen siger ikke, hvor hurtigt data skal slettes. Vi foreslår en tilføjelse om, at sletning skal ske senest 90 dage efter ophør, og at leverandøren skal bekræfte sletningen skriftligt.
+da	h	Øvrige bemærkninger
+da	li	Aftalen henviser flere steder til {{en:"the Services"}} uden at definere begrebet. Det bør defineres i bilag A.
+da	li	Sikkerhedsforanstaltningerne i bilag C er beskrevet overordnet. Det er acceptabelt, fordi leverandøren har en ISAE 3000-erklæring.
+da	li	Aftalen er underlagt dansk ret, og tvister afgøres ved de danske domstole. Det er godt.
+da	h	Indstilling
+da	p	Juridisk Afdeling indstiller, at direktionen godkender aftalen med de tre ændringer, og at leverandøren bliver bedt om at bekræfte ændringerne inden den 1. november 2026.
+da	h	Forslag til ændret tekst (sendes til leverandøren)
+en	li	Clause 7.2: replace "at least 14 days in advance" with "at least 30 days in advance".
+en	li	Clause 12.1: add "Deletion shall take place no later than 90 days after termination, and the Processor shall confirm the deletion in writing."
+en	li	Annex A: add a definition of "the Services".
+da	p	Juridisk Afdeling deltager gerne i et møde med leverandøren, hvis der er behov for det.

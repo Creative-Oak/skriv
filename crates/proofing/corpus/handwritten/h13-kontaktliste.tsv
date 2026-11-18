@@ -1,0 +1,46 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A contact list and a supplier table: names, addresses, short cells. All names and numbers are invented.
+da	title	Kontaktoplysninger for beredskabet
+da	p	Listen opdateres hver måned af sekretariatet. Ret ikke i listen selv, men send rettelser til beredskab@kommune.dk.
+da	h	Krisestab
+da	td	Navn
+da	td	Funktion
+da	td	Telefon
+da	td	Kirsten Dahl
+da	td	Kommunaldirektør, leder af krisestaben
+da	td	20 11 34 56
+da	td	Morten Riis
+da	td	Beredskabschef
+da	td	20 11 34 57
+da	td	Sofie Brandt
+da	td	Kommunikationschef
+da	td	20 11 34 58
+da	td	Henrik Lund
+da	td	IT-chef
+da	td	20 11 34 59
+da	h	Eksterne kontakter
+da	li	Politiet, Østjyllands Politi, vagtcentralen: 114
+da	li	Region Midtjylland, Præhospitalet: 78 41 00 00
+da	li	Forsyningen, døgnvagt: 87 13 50 00
+da	li	Beredskabsstyrelsen, vagthavende: 45 90 60 00
+da	h	Leverandører
+da	td	Leverandør
+da	td	Adresse
+da	td	Ydelse
+da	td	Nordisk Pumpeservice A/S
+da	td	Industrivej 7, 8600 Silkeborg
+da	td	Pumper og slanger
+da	td	Østjysk Entreprenør ApS
+da	td	Grusgraven 3, 8300 Odder
+da	td	Gravemaskiner og sandsække
+da	td	SafeComms Nordic AB
+da	td	Storgatan 21, 211 42 Malmö, Sverige
+da	td	Satellittelefoner
+da	h	Engelsktalende kontakter
+da	p	Ved hændelser, hvor der er brug for hjælp fra nabolandene, går kontakten via Beredskabsstyrelsen. Til orientering er her kontaktpersonen hos den svenske leverandør, som kun taler engelsk:
+da	addr	Erik Lindqvist, Account Manager
+da	addr	SafeComms Nordic AB
+da	addr	+46 40 123 45 67
+da	addr	erik.lindqvist@safecomms.example
+en	p	Note for the supplier: this list is confidential and must not be shared outside the emergency management team.
+da	p	Senest opdateret den 1. november 2026 af Sekretariatet for Beredskab.

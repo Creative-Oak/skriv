@@ -1,0 +1,34 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). Tender requirements with a vendor's English answers in a table.
+da	title	Bilag 2: Kravspecifikation og leverandørens besvarelse
+da	p	Leverandøren skal besvare hvert krav med en beskrivelse af, hvordan løsningen opfylder kravet. Besvarelsen må gerne være på engelsk, men begreber, der vises for borgerne, skal være på dansk.
+da	h	Krav til brugergrænseflade
+da	td	K-01
+da	td	Løsningen skal kunne bruges med tastatur alene og skal overholde WCAG 2.2 på niveau AA.
+en	td	The solution is fully keyboard accessible. An independent audit in May 2026 found no failures against WCAG 2.2 level AA. The audit report is attached as appendix C.
+da	td	K-02
+da	td	Alle tekster, som borgerne ser, skal være på dansk, og løsningen skal kunne vise tekster på engelsk for borgere, der vælger det.
+en	td	All user interface texts are maintained in translation files. Danish and English are included as standard, and the customer can edit the texts without involving the supplier.
+da	td	K-03
+da	td	Løsningen skal kunne vise dokumenter i formaterne ODT, PDF og PDF/A uden at borgeren skal installere andet end en almindelig browser.
+en	td	Documents are rendered in the browser. ODT files are converted to PDF on the server when they are opened for the first time and cached for 24 hours.
+da	h	Krav til sikkerhed
+da	td	K-10
+da	td	Løsningen skal understøtte log-in med MitID Erhverv for medarbejdere og MitID for borgere.
+en	td	Supported. The solution uses the national identity broker via OpenID Connect.
+da	td	K-11
+da	td	Data skal opbevares i EU/EØS, og leverandøren må ikke overføre personoplysninger til tredjelande.
+en	td	All data is stored in two data centres in Denmark and Germany. No personal data is transferred outside the EU/EEA, and no sub-processor outside the EU/EEA has access to the data.
+da	td	K-12
+da	td	Leverandøren skal kunne dokumentere, at der er foretaget en penetrationstest inden for de seneste 12 måneder.
+en	td	A penetration test was carried out by an external company in March 2026. A summary of the findings and the actions taken can be shared under a non-disclosure agreement.
+da	h	Krav til drift
+da	td	K-20
+da	td	Løsningen skal have en oppetid på mindst 99,5 % målt pr. måned, eksklusive aftalte servicevinduer.
+en	td	We guarantee 99.7 per cent availability per month. Maintenance windows are on Tuesdays between 22.00 and 02.00 and are announced at least five working days in advance.
+da	td	K-21
+da	td	Leverandøren skal have en dansktalende support, som kan kontaktes på hverdage mellem kl. 8 og 16.
+en	td	Our support team in Aarhus speaks Danish and English and is available on weekdays from 8.00 to 17.00. Critical incidents are handled around the clock.
+da	h	Kundens vurdering
+da	p	Leverandørens besvarelse er generelt fyldestgørende. Ved K-03 er det uklart, om konverteringen til PDF sker på servere i EU, og det skal afklares ved det afklarende møde. Ved K-12 vil kunden bede om at se den fulde rapport fra penetrationstesten, før kontrakten underskrives.
+da	p	Samlet set vurderes besvarelsen at opfylde alle mindstekrav. Under kriteriet kvalitet får tilbuddet 8 point ud af 10.

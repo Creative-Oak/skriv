@@ -1,0 +1,35 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A building permit decision with an English contractor quote.
+da	addr	Mette Kjærgaard Holm
+da	addr	Skovbrynet 14, st. tv.
+da	addr	8240 Risskov
+da	addr	Sagsnr.: 2026-04417
+da	addr	Dato: 3. november 2026
+da	title	Afgørelse om byggetilladelse til tilbygning
+da	p	Kommunen har den 12. september 2026 modtaget din ansøgning om byggetilladelse til en tilbygning på 34 m² til enfamiliehuset på adressen ovenfor. Ansøgningen er indsendt via Byg og Miljø, og den blev registreret som komplet den 2. oktober 2026, da de sidste tegninger og den statiske dokumentation var modtaget.
+da	h	Afgørelse
+da	p	Kommunen giver hermed tilladelse til tilbygningen, jf. byggelovens § 16, stk. 1. Tilladelsen gælder kun det byggeri, der er beskrevet i ansøgningen og på de godkendte tegninger, og den forudsætter, at vilkårene nedenfor bliver overholdt.
+da	h	Vilkår
+da	li	Byggeriet skal udføres som vist på tegning A-101 og A-102, revision C.
+da	li	Tagfladen skal udføres i sort tagpap eller skifer, så den svarer til det eksisterende hus.
+da	li	Regnvand fra tilbygningen skal nedsives på egen grund.
+da	li	Byggeriet skal færdigmeldes senest 14 dage efter, at det er afsluttet.
+da	li	Der må ikke tages ophold i tilbygningen, før der er givet ibrugtagningstilladelse.
+da	h	Begrundelse
+da	p	Ejendommen ligger i et område, der er omfattet af lokalplan nr. 1043 for Risskov Nord. Lokalplanen tillader en bebyggelsesprocent på højst 30 for åben-lav boligbebyggelse. Med tilbygningen bliver bebyggelsesprocenten 27,4, og byggeriet holder sig inden for de højde- og afstandskrav, der følger af bygningsreglementet (BR18).
+da	p	Din entreprenør har i en mail til os skrevet: {{en:"The extension will be built with a timber frame and the facade will match the existing brickwork."}} Det er i overensstemmelse med lokalplanens bestemmelser om materialer, og vi har derfor ikke stillet yderligere krav til facaden.
+da	p	Naboen på nr. 16 har i høringsperioden gjort indsigelse mod skyggevirkningen fra tilbygningen. Kommunen har lavet en skyggeanalyse, som viser, at tilbygningen kun giver ekstra skygge på naboens terrasse om morgenen i månederne november til januar. Vi vurderer, at det ikke er en væsentlig gene, og indsigelsen giver derfor ikke anledning til at ændre afgørelsen.
+da	h	Klagevejledning
+da	p	Du kan klage over afgørelsen til Planklagenævnet. Klagen skal være modtaget inden fire uger fra den dag, afgørelsen er offentliggjort. Du klager via Klageportalen, som du finder på borger.dk eller virk.dk. Når du klager, skal du betale et gebyr på 900 kr. for privatpersoner og 1.800 kr. for virksomheder og organisationer.
+da	p	Hvis du har spørgsmål til afgørelsen, er du velkommen til at kontakte mig på telefon 89 40 22 17 eller på mail byggeri@kommune.dk. Husk at oplyse sagsnummeret, når du henvender dig.
+da	p	Med venlig hilsen
+da	addr	Jakob Lindholm Sørensen
+da	addr	Byggesagsbehandler, Teknik og Miljø
+da	h	Kopi af afgørelsen er sendt til
+da	li	Holm & Andersen Byg ApS, CVR 41 22 87 90
+da	li	Ejeren af Skovbrynet 16
+da	li	Danmarks Naturfredningsforening, lokalafdelingen
+da	h	Bilag
+da	li	Tegning A-101, plan og facader
+da	li	Tegning A-102, snit
+da	li	Skyggeanalyse af 24. oktober 2026

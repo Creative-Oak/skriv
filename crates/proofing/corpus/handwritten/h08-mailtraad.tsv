@@ -1,0 +1,28 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A Danish reply above a quoted English email thread.
+da	addr	Fra: Rasmus Holt
+da	addr	Til: Claire Dubois
+en	addr	{{da:Emne: SV:}} Study visit to the citizen service centre
+da	p	Hej Claire
+en	p	Thank you for your email. I am happy to confirm the study visit on Thursday 4 December. Below you will find a short programme in English. I have also added a few lines in Danish for my colleagues, who are copied on this email.
+da	p	Kære kolleger: Vi får besøg af en delegation fra Lyon, som gerne vil se, hvordan vi bruger selvbetjening og digital post i Borgerservice. Jeg har brug for to frivillige, der kan vise rundt og fortælle om jeres arbejde. Det tager cirka en time, og det foregår på engelsk. Skriv til mig senest fredag, hvis I har lyst.
+en	h	Programme
+en	li	10.00 Welcome and coffee at the town hall
+en	li	10.30 Presentation: digital self-service in Denmark
+en	li	11.15 Visit to the citizen service centre
+en	li	12.15 Lunch
+en	li	13.00 Questions and wrap-up
+en	p	The town hall is a ten-minute walk from the central station. Please bring your passport or ID card, as all visitors must register at the reception.
+en	p	Best regards
+da	addr	Rasmus Holt
+da	addr	Teamleder, Borgerservice
+da	addr	Tlf. 89 40 31 12
+en	p	From: Claire Dubois
+en	p	Sent: 30 October 2026 14:12
+en	p	Subject: Study visit to the citizen service centre
+en	p	Dear Rasmus,
+en	p	Following our conversation at the conference in Brussels, I would like to ask whether a small group from our city could visit your citizen service centre in early December. We are particularly interested in how you help elderly citizens who find it difficult to use digital services, and how you organise the work between the front desk and the case workers.
+en	p	We would be five people: two managers, two case workers and one person from our IT department. We could come on 3 or 4 December.
+en	p	Kind regards,
+en	p	Claire Dubois
+en	p	Head of Citizen Services, City of Lyon
