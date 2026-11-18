@@ -75,6 +75,10 @@ pub fn scale(doc: &Document, copies: usize) -> Document {
         };
         // Vary the wording per copy (a seeded shuffle of each text run's
         // words), so the copies don't compress to nothing in the zip.
+        // Known bug (found in Spike 2b): text runs keep their source
+        // origin, so the ODT writer copies the original spelling and the
+        // shuffle never reaches the written file. Kept as it is so the
+        // Spike 3 numbers stay reproducible; see 03-judgements.md, item 5.
         let mut rng = Rng::new(i as u64);
         for p in skriv_model::paragraphs_mut(&mut section) {
             for inline in &mut p.content {

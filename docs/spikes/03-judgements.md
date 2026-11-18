@@ -48,14 +48,24 @@ reviewed. Each says what was chosen, why, and what it costs. Results are in
 5. **The 100-page document** is the generated Danish municipal letter
    repeated 100 times (100 pages in LibreOffice 26.8), each copy in its own
    named section ("Afsnit 1" …), with fresh IDs, unique table names and
-   footnote IDs, and the words of each text run shuffled per copy so the
-   copies don't compress to nothing. It is generated at test time
-   (`workload::scale`), not committed.
+   footnote IDs. It is generated at test time (`workload::scale`), not
+   committed. **Correction (found in Spike 2b):** `scale` also shuffles the
+   words of each text run per copy so the copies wouldn't compress to
+   nothing, but the shuffle has no effect on the written ODT. Text runs
+   keep their source origin, so the writer copies the original spelling,
+   and all 100 copies are identical. Every Spike 3 measurement was taken
+   on the written (identical-copy) file, so the numbers stand; only this
+   description was wrong. The fresh 100-page document therefore
+   compresses unusually well (372 KB of XML in a 33 KB zip), which flatters
+   compression-friendly formats in the "fresh document" sizes. The year
+   traces add varied text, and their end-of-year ratios are unaffected.
 
 6. **"10× the document size" is measured against the zipped ODT**, the
    strict reading, and also reported against the uncompressed XML
-   (`content.xml` + `styles.xml`). Real prose zips about 4×; our shuffled
-   letter zips 11×, which makes the zipped ratio pessimistic.
+   (`content.xml` + `styles.xml`). Real prose zips about 4×; the fresh
+   100-page letter (identical copies, see the correction above) zips 11×,
+   and the year-end documents 5–6×, which makes the zipped ratio
+   pessimistic.
 
 7. **The one-year trace** is 250 sessions × 400 user-level edits by five
    authors in turn. Every session loads the saved bytes as a *new peer*
