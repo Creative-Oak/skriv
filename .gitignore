@@ -10,3 +10,4 @@ dist/
 /fidelity/reports/*
 !/fidelity/reports/README.md
 .DS_Store
+/prototypes/*/target*

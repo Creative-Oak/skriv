@@ -1,0 +1,8 @@
+
+running 1 test
+test concurrent_tables::loro_flow has been running for over 60 seconds
+loro-flow: 10000 runs, 174426 ops (34738 row inserts, 17478 row deletes, 17251 column inserts, 16829 column deletes, 88027 cell edits), 39924 merges, 5264 edits into cells a concurrent row+column insert left empty, 192 runs ended with no rows or no columns, 0 failures
+.
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 2 filtered out; finished in 80.24s
+
+EXIT 0

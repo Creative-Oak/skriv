@@ -28,3 +28,13 @@ unsafe_code = "forbid"
 
 [workspace.lints.clippy]
 all = { level = "warn", priority = -1 }
+
+# Optimise dependencies (Loro, Automerge, zip…) even in debug builds: the
+# CRDT tests replay thousands of merges. Workspace crates stay debuggable.
+[profile.dev.package."*"]
+opt-level = 2
+
+# Generic code from Loro and Automerge (Automerge's update_spans, for one)
+# is compiled into skriv-crdt; unoptimised it is ~80x slower.
+[profile.dev.package.skriv-crdt]
+opt-level = 1

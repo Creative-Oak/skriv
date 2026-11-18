@@ -368,6 +368,7 @@ pub fn propagate_dirty(doc: &mut Document) {
 }
 
 fn settle(meta: &mut NodeMeta, below: bool) -> bool {
+    let below = below || meta.children_changed;
     meta.descendants_dirty = below;
     below || meta.is_changed()
 }

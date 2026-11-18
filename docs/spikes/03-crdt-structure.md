@@ -23,4 +23,8 @@ properties and origins are encoded.
 - Automerge 2.2 block markers.
 - Both licences (MIT expected).
 
-**Status:** not started. Proposed plan: [`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md).
+**Status:** done except the blind review, 2026-11-17. Results:
+[`03-results.md`](03-results.md); judgement calls:
+[`03-judgements.md`](03-judgements.md); blind review sheets:
+[`03-blind-review/`](03-blind-review/); decision: ADR 0008 (proposed).
+Plan: [`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md).

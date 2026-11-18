@@ -1,0 +1,5 @@
+20 | getrandom_03 = { package = "getrandom", version = "0.3", features = ["wasm_js"] }
+loro: 2223807 bytes, gzip -9 783852 bytes
+20 | getrandom_03 = { package = "getrandom", version = "0.3", features = ["wasm_js"] }
+automerge: 1258740 bytes, gzip -9 481982 bytes
+EXIT 0

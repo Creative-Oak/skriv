@@ -351,7 +351,7 @@ impl<'a> Writer<'a> {
         if let Some(oc) = self.begin(c.kind.element(), &c.attrs, &c.meta) {
             let info = &c.info;
             if let Some(oi) = self.begin("office:change-info", &info.attrs, &info.meta) {
-                if info.meta.dirty {
+                if info.meta.dirty || info.meta.origin.is_none() {
                     if let Some(a) = &info.author {
                         self.text_element("dc:creator", a);
                     }
@@ -431,7 +431,7 @@ impl<'a> Writer<'a> {
             }
             Inline::Annotation(a) => {
                 if let Some(o) = self.begin("office:annotation", &a.attrs, &a.meta) {
-                    if a.meta.dirty {
+                    if a.meta.dirty || a.meta.origin.is_none() {
                         if let Some(v) = &a.author {
                             self.text_element("dc:creator", v);
                         }
@@ -473,7 +473,7 @@ impl<'a> Writer<'a> {
                                     "svg:desc"
                                 };
                                 if let Some(ol) = self.begin(name, &l.attrs, &l.meta) {
-                                    if l.meta.dirty {
+                                    if l.meta.dirty || l.meta.origin.is_none() {
                                         escape_text(&l.text, self.dialect, &mut self.out);
                                     }
                                     self.end(ol);

@@ -75,6 +75,6 @@ The document model is our own. It is ODF-shaped, but it is not ODF XML.
 | Question | Settled by |
 |---|---|
 | How much to lean on verbatim slots (report decision point 1) | Spike 1. Recommendation in the results doc: no extra reliance is needed for LibreOffice-written files. Re-check against municipal templates. |
-| How the model is encoded in the CRDT: text with Peritext marks plus block markers, versus a movable tree | Spike 3 |
-| Whether properties stay as ODF attribute maps or become a typed property set when the CRDT needs per-property merge | Spike 3 |
+| How the model is encoded in the CRDT: text with Peritext marks plus block markers, versus a movable tree | **Answered by Spike 3: both, split by level.** Paragraph boundaries are block markers in rich text (splits and joins behave like text, and it is several times smaller than a node per paragraph); sections, lists, items, tables and cells are movable-tree nodes, because moving them while others edit inside only works with a real move. See `docs/spikes/03-results.md` and ADR 0008 (proposed). |
+| Whether properties stay as ODF attribute maps or become a typed property set when the CRDT needs per-property merge | **Answered by Spike 3: per-property in the CRDT, keyed by ODF's own vocabulary.** One map entry (or mark) per attribute; direct formatting decomposed from automatic styles into one entry per property (`Δ<property-set>\|<attribute>`), with automatic style names re-derived on export. The model keeps its ordered attribute maps; order is a serialisation hint. |
 | Float rules for figures (top, bottom, here) layered over ODF anchoring | Spike 2b |

@@ -406,3 +406,46 @@ mod prop {
         }
     }
 }
+
+/// Found in Spike 3: deleting a child of an otherwise clean node must not
+/// resurrect it. Without `children_changed`, the clean section was copied
+/// whole from source, deleted paragraph included.
+#[test]
+fn deleting_a_child_of_a_clean_node_takes_effect() {
+    let mut odt = read(sample()).unwrap();
+    let sec = odt
+        .doc
+        .body
+        .iter_mut()
+        .find_map(|b| match b {
+            Block::Section(s) => Some(s),
+            _ => None,
+        })
+        .unwrap();
+    sec.blocks.clear();
+    sec.blocks.push(Block::Paragraph(Paragraph {
+        meta: NodeMeta::new(),
+        heading: false,
+        attrs: Attrs::default(),
+        content: vec![Inline::Text(Text::new("replacement"))],
+    }));
+    // A plain deletion: the section loses its only original child.
+    let mut odt2 = read(sample()).unwrap();
+    for b in &mut odt2.doc.body {
+        if let Block::Section(s) = b {
+            s.blocks.clear();
+            s.meta.children_changed = true;
+        }
+    }
+    let w = odt2.write().unwrap();
+    assert!(
+        !w.content_xml.contains("in section"),
+        "deleted paragraph came back"
+    );
+    assert!(
+        w.content_xml
+            .contains(r#"<text:section text:style-name="Sect1" text:name="Section1">"#)
+    );
+    let w = odt.write().unwrap();
+    assert!(w.content_xml.contains("replacement") && !w.content_xml.contains("in section"));
+}

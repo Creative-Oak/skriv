@@ -1,0 +1,16 @@
+
+running 2 tests
+loro: 100 pages, create 47 ms, merge 20 ms, suggestion touches 162 paragraphs, saved 735042 bytes (ODT 32876 bytes), 343 nodes regenerated, 1841 reused
+.test branch_and_merge::automerge has been running for over 60 seconds
+automerge: 100 pages, create 84173 ms, merge 106 ms, suggestion touches 162 paragraphs, saved 93752 bytes (ODT 32876 bytes), 343 nodes regenerated, 1841 reused
+.
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 145.94s
+
+
+running 2 tests
+loro: Outcome { runs: 100, tokens: 359, in_moved_section: 359, elsewhere: 0, lost: 0, duplicated: 0, moved_to_target: 100, section_split: 0, split_survived: 100 }
+.automerge: Outcome { runs: 100, tokens: 359, in_moved_section: 336, elsewhere: 23, lost: 0, duplicated: 0, moved_to_target: 45, section_split: 90, split_survived: 100 }
+.
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 26.65s
+
+EXIT 0

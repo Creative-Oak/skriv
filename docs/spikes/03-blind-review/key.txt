@@ -1,0 +1,23 @@
+ROT13. Decode only after all ratings are in (e.g. `tr 'A-Za-z' 'N-ZA-Mn-za-m' < key.txt`).
+
+1: N=nhgbzretr O=ybeb (uloevq) P=ybeb (gerr)
+2: N=ybeb (uloevq) O=nhgbzretr P=ybeb (gerr)
+3: N=ybeb (gerr) O=nhgbzretr P=ybeb (uloevq)
+4: N=ybeb (gerr) O=ybeb (uloevq) P=nhgbzretr
+5: N=nhgbzretr O=ybeb (gerr) P=ybeb (uloevq)
+6: N=ybeb (gerr) O=nhgbzretr P=ybeb (uloevq)
+7: N=ybeb (uloevq) O=ybeb (gerr) P=nhgbzretr
+8: N=ybeb (gerr) O=ybeb (uloevq) P=nhgbzretr
+9: N=ybeb (gerr) O=nhgbzretr P=ybeb (uloevq)
+10: N=ybeb (uloevq) O=nhgbzretr P=ybeb (gerr)
+11: N=ybeb (gerr) O=nhgbzretr P=ybeb (uloevq)
+12: N=ybeb (uloevq) O=ybeb (gerr) P=nhgbzretr
+13: N=nhgbzretr O=ybeb (uloevq) P=ybeb (gerr)
+14: N=nhgbzretr O=ybeb (gerr) P=ybeb (uloevq)
+15: N=ybeb (gerr) O=ybeb (uloevq) P=nhgbzretr
+16: N=ybeb (gerr) O=ybeb (uloevq) P=nhgbzretr
+17: N=nhgbzretr O=ybeb (uloevq) P=ybeb (gerr)
+18: N=nhgbzretr O=ybeb (uloevq) P=ybeb (gerr)
+19: N=ybeb (gerr) O=nhgbzretr P=ybeb (uloevq)
+20: N=ybeb (gerr) O=ybeb (uloevq) P=nhgbzretr
+21: N=ybeb (uloevq) O=ybeb (gerr) P=nhgbzretr

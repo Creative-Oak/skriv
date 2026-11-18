@@ -27,13 +27,15 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
 crates/model      the semantic document model: ODF-shaped, stable IDs, preservation slots
 crates/odf        ODT reader/writer: projection with preservation
 crates/fidelity   round-trip fidelity harness, with LibreOffice as oracle (CLI: skriv-fidelity)
+crates/crdt       Spike 3: the model in Loro and Automerge behind one trait
+prototypes/       spike prototypes outside the workspace (crdt-wasm-size)
 packages/         TypeScript (empty: tooling only, for the web UI and @skriv/* WASM packages)
 fidelity/         corpus, scripts, reports
 docs/adr          architecture decision records
 docs/spikes       spike briefs and results
 ```
 
-Reserved for later: `crates/layout`, `crates/docx`, `crates/crdt`.
+Reserved for later: `crates/layout`, `crates/docx`.
 
 ## Running it
 

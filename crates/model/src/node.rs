@@ -79,6 +79,11 @@ pub struct NodeMeta {
     /// but its children must be visited.
     #[serde(default)]
     pub descendants_dirty: bool,
+    /// The node's own tags are unchanged but its list of children is not
+    /// (one was deleted or moved away). Such a node can't be copied whole;
+    /// [`crate::propagate_dirty`] treats it like one with a dirty descendant.
+    #[serde(default)]
+    pub children_changed: bool,
 }
 
 impl NodeMeta {
@@ -91,6 +96,7 @@ impl NodeMeta {
                 dirty: false,
                 stamp_id: false,
                 descendants_dirty: false,
+                children_changed: false,
             },
             None => NodeMeta {
                 id: NodeId::mint(),
@@ -99,6 +105,7 @@ impl NodeMeta {
                 dirty: false,
                 stamp_id: false,
                 descendants_dirty: false,
+                children_changed: false,
             },
         }
     }
@@ -111,6 +118,7 @@ impl NodeMeta {
             dirty: true,
             stamp_id: false,
             descendants_dirty: false,
+            children_changed: false,
         }
     }
 
