@@ -1,0 +1,242 @@
+# Paragraphs w* quote Wikipedia (CC BY-SA 4.0); revisions in crates/proofing/corpus/wiki-manifest.tsv.
+=== lingua-da-en (min 20 letters, switch ≥ 0.95, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.99): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.85): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("en") 0.88): News from HR – November 2026
+h06-nyhedsbrev #8 [h 20] truth da got en (detector Some("en") 0.55): Influenzavaccination
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.66): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("en") 0.87): Christmas lunch
+h06-nyhedsbrev #18 [li 32] truth da got en (detector Some("da") 0.95): Maria Fernández, ingeniør i Vej og Park
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.96): Questions?
+h06-nyhedsbrev #25 [p 24] truth en got da (detector Some("da") 0.68): Write to hr@kommune.dk or call 89 40 10 00.
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.64): Hej Claire
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.85): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.89): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("da") 0.81): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("da") 0.71): Litteratur
+w03-metro #1 [p 174] truth en got da (detector Some("da") 1.00): The M4 line serves 13 stations, 6 of which are shared with the M3 line. It branches off the M3 line at Østerpo
+=== lingua-da-en+mask (min 40 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.99): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.85): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("en") 0.90): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector Some("en") 0.97): New rules for working from home
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.66): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("en") 0.87): Christmas lunch
+h06-nyhedsbrev #16 [h 23] truth da got en (detector Some("da") 0.99): Velkommen til nye kolleger
+h06-nyhedsbrev #18 [li 32] truth da got en (detector Some("da") 1.00): Maria Fernández, ingeniør i Vej og Park
+h06-nyhedsbrev #19 [li 38] truth da got en (detector Some("da") 0.99): Tobias Kragh, sagsbehandler i Borgerservice
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.96): Questions?
+h06-nyhedsbrev #25 [p 24] truth en got da (detector Some("da") 0.68): Write to hr@kommune.dk or call 89 40 10 00.
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.95): Hej Claire
+h08-mailtraad #6 [h 9] truth en got da (detector Some("da") 0.74): Programme
+h08-mailtraad #7 [li 29] truth en got da (detector Some("en") 0.97): 10.00 Welcome and coffee at the town hall
+h08-mailtraad #8 [li 39] truth en got da (detector Some("en") 0.76): 10.30 Presentation: digital self-service in Denmark
+h08-mailtraad #9 [li 30] truth en got da (detector Some("en") 0.96): 11.15 Visit to the citizen service centre
+h08-mailtraad #10 [li 5] truth en got da (detector None 0.00): 12.15 Lunch
+h08-mailtraad #11 [li 18] truth en got da (detector Some("en") 0.69): 13.00 Questions and wrap-up
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.92): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.95): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("da") 0.81): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("da") 0.71): Litteratur
+h11-eu-ansoegning #10 [li 51] truth en got da (detector Some("da") 0.97): Aarhus University, Department of Civil Engineering, Denmark
+h11-eu-ansoegning #11 [li 34] truth en got da (detector Some("en") 0.94): Swedish Geotechnical Institute, Sweden
+w05-statistik #28 [h 10] truth da got en (detector Some("da") 1.00): Bestyrelse
+w05-statistik #29 [p 35] truth da got en (detector Some("da") 1.00): For perioden 2022 til 2026 består KL's bestyrelse af:
+=== lingua-da-en-nb-sv (min 40 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.56): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector None 0.36): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("en") 0.71): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector Some("en") 0.92): New rules for working from home
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.51): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("en") 0.66): Christmas lunch
+h06-nyhedsbrev #16 [h 23] truth da got en (detector Some("da") 0.53): Velkommen til nye kolleger
+h06-nyhedsbrev #18 [li 32] truth da got en (detector None 0.45): Maria Fernández, ingeniør i Vej og Park
+h06-nyhedsbrev #19 [li 38] truth da got en (detector Some("da") 0.85): Tobias Kragh, sagsbehandler i Borgerservice
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.92): Questions?
+h06-nyhedsbrev #25 [p 24] truth en got da (detector Some("da") 0.32): Write to hr@kommune.dk or call 89 40 10 00.
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.41): Hej Claire
+h08-mailtraad #6 [h 9] truth en got da (detector Some("da") 0.39): Programme
+h08-mailtraad #7 [li 29] truth en got da (detector Some("en") 0.96): 10.00 Welcome and coffee at the town hall
+h08-mailtraad #8 [li 39] truth en got da (detector Some("en") 0.68): 10.30 Presentation: digital self-service in Denmark
+h08-mailtraad #9 [li 30] truth en got da (detector Some("en") 0.96): 11.15 Visit to the citizen service centre
+h08-mailtraad #10 [li 5] truth en got da (detector Some("en") 0.59): 12.15 Lunch
+h08-mailtraad #11 [li 18] truth en got da (detector Some("en") 0.82): 13.00 Questions and wrap-up
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.49): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.63): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("da") 0.39): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("da") 0.33): Litteratur
+w03-metro #1 [p 174] truth en got da (detector Some("da") 1.00): The M4 line serves 13 stations, 6 of which are shared with the M3 line. It branches off the M3 line at Østerpo
+w05-statistik #28 [h 10] truth da got en (detector Some("da") 0.76): Bestyrelse
+w05-statistik #29 [p 35] truth da got en (detector Some("da") 0.58): For perioden 2022 til 2026 består KL's bestyrelse af:
+w06-dansk #10 [p 177] truth en got da (detector None 1.00): Móðir Dyggva var Drótt, dóttir Danps konungs, sonar Rígs er fyrstr var konungr kallaðr á danska tungu. 'Dyggvi
+=== lingua-da-en-nb-sv+mask (min 40 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.56): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector None 0.36): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("en") 0.72): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector Some("en") 0.92): New rules for working from home
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.51): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("en") 0.66): Christmas lunch
+h06-nyhedsbrev #16 [h 23] truth da got en (detector Some("da") 0.53): Velkommen til nye kolleger
+h06-nyhedsbrev #18 [li 32] truth da got en (detector Some("da") 0.50): Maria Fernández, ingeniør i Vej og Park
+h06-nyhedsbrev #19 [li 38] truth da got en (detector Some("da") 0.70): Tobias Kragh, sagsbehandler i Borgerservice
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.92): Questions?
+h06-nyhedsbrev #25 [p 24] truth en got da (detector Some("da") 0.32): Write to hr@kommune.dk or call 89 40 10 00.
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.58): Hej Claire
+h08-mailtraad #6 [h 9] truth en got da (detector Some("da") 0.39): Programme
+h08-mailtraad #7 [li 29] truth en got da (detector Some("en") 0.91): 10.00 Welcome and coffee at the town hall
+h08-mailtraad #8 [li 39] truth en got da (detector Some("en") 0.58): 10.30 Presentation: digital self-service in Denmark
+h08-mailtraad #9 [li 30] truth en got da (detector Some("en") 0.92): 11.15 Visit to the citizen service centre
+h08-mailtraad #10 [li 5] truth en got da (detector None 0.00): 12.15 Lunch
+h08-mailtraad #11 [li 18] truth en got da (detector Some("en") 0.43): 13.00 Questions and wrap-up
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.63): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.52): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("da") 0.39): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("da") 0.33): Litteratur
+h11-eu-ansoegning #10 [li 51] truth en got da (detector Some("da") 0.76): Aarhus University, Department of Civil Engineering, Denmark
+h11-eu-ansoegning #11 [li 34] truth en got da (detector Some("en") 0.61): Swedish Geotechnical Institute, Sweden
+w05-statistik #28 [h 10] truth da got en (detector Some("da") 0.76): Bestyrelse
+w05-statistik #29 [p 35] truth da got en (detector Some("da") 0.60): For perioden 2022 til 2026 består KL's bestyrelse af:
+w06-dansk #10 [p 177] truth en got da (detector None 0.98): Móðir Dyggva var Drótt, dóttir Danps konungs, sonar Rígs er fyrstr var konungr kallaðr á danska tungu. 'Dyggvi
+=== lingua-da-en-low (min 40 letters, switch ≥ 0.8, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 1.00): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.98): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("en") 1.00): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector Some("en") 1.00): New rules for working from home
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.99): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("da") 0.61): Christmas lunch
+h06-nyhedsbrev #16 [h 23] truth da got en (detector Some("da") 1.00): Velkommen til nye kolleger
+h06-nyhedsbrev #18 [li 32] truth da got en (detector Some("da") 1.00): Maria Fernández, ingeniør i Vej og Park
+h06-nyhedsbrev #19 [li 38] truth da got en (detector Some("da") 1.00): Tobias Kragh, sagsbehandler i Borgerservice
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.87): Questions?
+h06-nyhedsbrev #25 [p 24] truth en got da (detector Some("da") 0.73): Write to hr@kommune.dk or call 89 40 10 00.
+h07-teknisk-vejledning #35 [td 40] truth da got en (detector Some("en") 1.00): Slet mappen %APPDATA%\LibreOffice\4\user\template
+h07-teknisk-vejledning #36 [td 20] truth da got en (detector Some("da") 1.00): Advarsel om certifikat
+h07-teknisk-vejledning #37 [td 21] truth da got en (detector Some("da") 1.00): Certifikatet er udløbet
+h07-teknisk-vejledning #38 [td 31] truth da got en (detector Some("da") 1.00): Forny certifikatet via IT-sikkerhed
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.99): Hej Claire
+h08-mailtraad #6 [h 9] truth en got da (detector Some("da") 0.73): Programme
+h08-mailtraad #7 [li 29] truth en got da (detector Some("en") 1.00): 10.00 Welcome and coffee at the town hall
+h08-mailtraad #8 [li 39] truth en got da (detector Some("en") 0.84): 10.30 Presentation: digital self-service in Denmark
+h08-mailtraad #9 [li 30] truth en got da (detector Some("en") 1.00): 11.15 Visit to the citizen service centre
+h08-mailtraad #10 [li 5] truth en got da (detector Some("en") 0.96): 12.15 Lunch
+h08-mailtraad #11 [li 18] truth en got da (detector Some("en") 0.87): 13.00 Questions and wrap-up
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 1.00): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.97): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("da") 0.99): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("en") 0.80): Litteratur
+w01-strukturreform #2 [p 384] truth en got da (detector Some("da") 1.00): Until the municipal reform of 1 April 1970, the number of councillors in Danish municipalities and counties wa
+w01-strukturreform #8 [p 1310] truth en got da (detector Some("da") 1.00): A few years later, the number was slightly reduced again to 275 as a few municipalities in Copenhagen County m
+w03-metro #1 [p 174] truth en got da (detector Some("da") 1.00): The M4 line serves 13 stations, 6 of which are shared with the M3 line. It branches off the M3 line at Østerpo
+w05-statistik #28 [h 10] truth da got en (detector Some("da") 1.00): Bestyrelse
+w05-statistik #29 [p 35] truth da got en (detector Some("da") 1.00): For perioden 2022 til 2026 består KL's bestyrelse af:
+=== whatlang-da-en (min 20 letters, switch ≥ 0.5, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.95): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.55): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("da") 0.11): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector Some("da") 0.14): New rules for working from home
+h06-nyhedsbrev #8 [h 20] truth da got en (detector Some("en") 0.35): Influenzavaccination
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.30): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("en") 0.35): Christmas lunch
+h06-nyhedsbrev #17 [h 22] truth en got da (detector Some("en") 0.46): Welcome to new colleagues
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.18): Questions?
+h07-teknisk-vejledning #13 [code 74] truth en got da (detector Some("en") 0.28): ERROR: could not load certificate from /etc/ssl/private/skabeloner.pem: permission denied
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.10): Hej Claire
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.10): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.20): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("en") 0.00): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("en") 0.03): Litteratur
+=== whatlang-da-en+mask (min 20 letters, switch ≥ 0.5, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.95): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.55): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("da") 0.09): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector Some("da") 0.14): New rules for working from home
+h06-nyhedsbrev #8 [h 20] truth da got en (detector Some("en") 0.35): Influenzavaccination
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.30): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector Some("en") 0.35): Christmas lunch
+h06-nyhedsbrev #17 [h 22] truth en got da (detector Some("en") 0.46): Welcome to new colleagues
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.18): Questions?
+h07-teknisk-vejledning #13 [code 74] truth en got da (detector Some("en") 0.28): ERROR: could not load certificate from /etc/ssl/private/skabeloner.pem: permission denied
+h08-mailtraad #3 [p 9] truth da got en (detector Some("da") 0.08): Hej Claire
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("en") 0.00): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector Some("da") 0.28): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector Some("en") 0.00): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("en") 0.03): Litteratur
+h10-klimarapport #39 [ref 105] truth en got da (detector Some("en") 0.22): World Resources Institute (2021). Global Protocol for Community-Scale Greenhouse Gas Emission Inventories, ver
+=== whatlang-all (min 40 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector None 0.05): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector None 0.21): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector Some("da") 0.01): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector None 0.01): New rules for working from home
+h06-nyhedsbrev #6 [p 91] truth da got en (detector None 0.25): Kommunen stiller en bærbar computer og en skærm til rådighed. Kontorstol og skrivebord skal du selv sørge for.
+h06-nyhedsbrev #8 [h 20] truth da got en (detector Some("en") 0.05): Influenzavaccination
+h06-nyhedsbrev #10 [p 96] truth da got en (detector None 0.18): Du kan blive vaccineret gratis mod influenza i kantinen tirsdag den 18. november mellem kl. 9 og 14. Du skal i
+h06-nyhedsbrev #13 [h 14] truth en got da (detector None 0.15): Christmas lunch
+h06-nyhedsbrev #16 [h 23] truth da got en (detector None 0.01): Velkommen til nye kolleger
+h06-nyhedsbrev #18 [li 32] truth da got en (detector Some("da") 0.22): Maria Fernández, ingeniør i Vej og Park
+h06-nyhedsbrev #19 [li 38] truth da got en (detector None 0.20): Tobias Kragh, sagsbehandler i Borgerservice
+h06-nyhedsbrev #20 [li 42] truth da got en (detector None 0.01): Aisha Mohammed, sygeplejerske i Hjemmeplejen Syd
+h06-nyhedsbrev #21 [li 34] truth da got en (detector None 0.04): Jonas Wiberg, udvikler i Digitalisering
+h06-nyhedsbrev #22 [h 9] truth da got en (detector Some("da") 0.00): Spørgsmål?
+h06-nyhedsbrev #24 [p 30] truth da got en (detector None 0.08): Skriv til hr@kommune.dk eller ring på 89 40 10 00.
+h08-mailtraad #3 [p 9] truth da got en (detector None 0.08): Hej Claire
+h08-mailtraad #6 [h 9] truth en got da (detector None 0.14): Programme
+h08-mailtraad #7 [li 29] truth en got da (detector Some("en") 1.00): 10.00 Welcome and coffee at the town hall
+h08-mailtraad #8 [li 39] truth en got da (detector Some("en") 0.10): 10.30 Presentation: digital self-service in Denmark
+h08-mailtraad #9 [li 30] truth en got da (detector Some("en") 0.19): 11.15 Visit to the citizen service centre
+h08-mailtraad #10 [li 5] truth en got da (detector None 0.05): 12.15 Lunch
+h08-mailtraad #11 [li 18] truth en got da (detector Some("en") 0.06): 13.00 Questions and wrap-up
+h08-mailtraad #14 [addr 10] truth da got en (detector None 0.02): Rasmus Holt
+h08-mailtraad #15 [addr 22] truth da got en (detector None 0.08): Teamleder, Borgerservice
+h08-mailtraad #16 [addr 3] truth da got en (detector None 0.00): Tlf. 89 40 31 12
+h10-klimarapport #35 [h 10] truth da got en (detector None 0.14): Litteratur
+w03-metro #13 [p 615] truth da got en (detector None 0.05): Af de ni underjordiske stationer er seks placeret 20 meter under jorden, mens tre stationer er placeret umidde
+w04-storebaelt #3 [p 296] truth da got en (detector None 0.05): Storebæltsforbindelsen (også kendt som Storebæltsbroen) er en kombineret bro- og tunnelforbindelse beregnet ti
+w04-storebaelt #4 [p 447] truth da got en (detector None 0.34): Forbindelsen er cirka 17 km lang. Den udgøres af 2 separate broer, en tunnel og et stykke vej på Sprogø. Forbi
+w04-storebaelt #5 [p 182] truth da got en (detector None 0.28): Mellem Sprogø og Fyn føres jernbanen på en selvstændig lavbro nord for motorvejsbroen. Kun motorvejen føres ov
+w04-storebaelt #9 [p 45] truth da got en (detector None 0.50): Højbroen er brugt som motiv på 1000-kronesedlen fra 2009-serien.
+w05-statistik #26 [p 153] truth da got en (detector None 0.02): KL har siden 2002 haft til huse på Ny Tøjhusgrunden på Islands Brygge i København. Domicilet er cirka 20.000 k
+w05-statistik #28 [h 10] truth da got en (detector Some("da") 0.04): Bestyrelse
+w05-statistik #29 [p 35] truth da got en (detector Some("da") 0.39): For perioden 2022 til 2026 består KL's bestyrelse af:
+w05-statistik #30 [li 46] truth da got en (detector None 0.11): Formand Martin Damm, borgmester i Kalundborg Kommune (V)
+w05-statistik #36 [li 45] truth da got en (detector Some("en") 0.02): Thomas Gyldal Petersen, borgmester i Herlev Kommune (A)
+=== dict-vote (min 20 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.67): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.50): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector None 0.00): News from HR – November 2026
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.50): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector None 0.00): Christmas lunch
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.50): Questions?
+h07-teknisk-vejledning #8 [code 50] truth da got en (detector Some("en") 0.67): git clone https://git.intern.kommune.dk/it/skabelonserver.git
+h08-mailtraad #2 [addr 41] truth en got da (detector None 0.00): Emne: SV: Study visit to the citizen service centre
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.50): Rasmus Holt
+h08-mailtraad #17 [p 16] truth en got da (detector Some("da") 0.50): From: Claire Dubois
+h08-mailtraad #18 [p 11] truth en got da (detector Some("en") 0.50): Sent: 30 October 2026 14:12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("da") 0.50): Litteratur
+=== lingua-da-en+mask & dict-vote (min 20 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.67): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.50): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector None 0.00): News from HR – November 2026
+h06-nyhedsbrev #8 [h 20] truth da got en (detector None 0.00): Influenzavaccination
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.50): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector None 0.00): Christmas lunch
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.50): Questions?
+h06-nyhedsbrev #25 [p 24] truth en got da (detector None 0.00): Write to hr@kommune.dk or call 89 40 10 00.
+h08-mailtraad #2 [addr 41] truth en got da (detector None 0.00): Emne: SV: Study visit to the citizen service centre
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.50): Rasmus Holt
+h08-mailtraad #17 [p 16] truth en got da (detector None 0.00): From: Claire Dubois
+h08-mailtraad #18 [p 11] truth en got da (detector Some("en") 0.50): Sent: 30 October 2026 14:12
+h10-klimarapport #35 [h 10] truth da got en (detector Some("da") 0.50): Litteratur
+=== whatlang-da-en & dict-vote (min 20 letters, switch ≥ 0, short inherit, headings look ahead)
+h04-kravspecifikation #12 [h 16] truth da got en (detector Some("da") 0.67): Krav til sikkerhed
+h04-kravspecifikation #22 [h 12] truth da got en (detector Some("da") 0.50): Krav til drift
+h06-nyhedsbrev #1 [p 18] truth en got da (detector None 0.00): News from HR – November 2026
+h06-nyhedsbrev #3 [h 26] truth en got da (detector None 0.00): New rules for working from home
+h06-nyhedsbrev #8 [h 20] truth da got en (detector None 0.00): Influenzavaccination
+h06-nyhedsbrev #9 [h 14] truth en got da (detector Some("en") 0.30): Flu vaccination
+h06-nyhedsbrev #13 [h 14] truth en got da (detector None 0.00): Christmas lunch
+h06-nyhedsbrev #23 [h 9] truth en got da (detector Some("en") 0.18): Questions?
+h08-mailtraad #2 [addr 41] truth en got da (detector None 0.00): Emne: SV: Study visit to the citizen service centre
+h08-mailtraad #14 [addr 10] truth da got en (detector Some("da") 0.10): Rasmus Holt
+h08-mailtraad #17 [p 16] truth en got da (detector None 0.00): From: Claire Dubois
+h08-mailtraad #18 [p 11] truth en got da (detector Some("en") 0.24): Sent: 30 October 2026 14:12
+h10-klimarapport #35 [h 10] truth da got en (detector None 0.00): Litteratur

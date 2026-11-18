@@ -1,0 +1,5833 @@
+{
+  "corpus": {
+    "chars": 103002,
+    "documents": 23,
+    "pages": 41.2008,
+    "paragraphs": 676,
+    "per_document": [
+      {
+        "chars": 2862,
+        "default": "da",
+        "en_paragraphs": 0,
+        "inline_spans": 1,
+        "name": "h01-byggetilladelse",
+        "paragraphs": 33,
+        "true_switches": 0
+      },
+      {
+        "chars": 2921,
+        "default": "da",
+        "en_paragraphs": 2,
+        "inline_spans": 0,
+        "name": "h02-it-styregruppe",
+        "paragraphs": 41,
+        "true_switches": 2
+      },
+      {
+        "chars": 3018,
+        "default": "da",
+        "en_paragraphs": 6,
+        "inline_spans": 1,
+        "name": "h03-projektbeskrivelse",
+        "paragraphs": 39,
+        "true_switches": 4
+      },
+      {
+        "chars": 2808,
+        "default": "da",
+        "en_paragraphs": 8,
+        "inline_spans": 0,
+        "name": "h04-kravspecifikation",
+        "paragraphs": 32,
+        "true_switches": 16
+      },
+      {
+        "chars": 2934,
+        "default": "da",
+        "en_paragraphs": 5,
+        "inline_spans": 2,
+        "name": "h05-databehandling",
+        "paragraphs": 28,
+        "true_switches": 6
+      },
+      {
+        "chars": 1729,
+        "default": "da",
+        "en_paragraphs": 11,
+        "inline_spans": 0,
+        "name": "h06-nyhedsbrev",
+        "paragraphs": 26,
+        "true_switches": 21
+      },
+      {
+        "chars": 2698,
+        "default": "da",
+        "en_paragraphs": 2,
+        "inline_spans": 0,
+        "name": "h07-teknisk-vejledning",
+        "paragraphs": 40,
+        "true_switches": 4
+      },
+      {
+        "chars": 1685,
+        "default": "da",
+        "en_paragraphs": 19,
+        "inline_spans": 1,
+        "name": "h08-mailtraad",
+        "paragraphs": 26,
+        "true_switches": 7
+      },
+      {
+        "chars": 2399,
+        "default": "da",
+        "en_paragraphs": 5,
+        "inline_spans": 0,
+        "name": "h09-jobopslag",
+        "paragraphs": 23,
+        "true_switches": 1
+      },
+      {
+        "chars": 2516,
+        "default": "da",
+        "en_paragraphs": 4,
+        "inline_spans": 2,
+        "name": "h10-klimarapport",
+        "paragraphs": 41,
+        "true_switches": 6
+      },
+      {
+        "chars": 2496,
+        "default": "en",
+        "en_paragraphs": 29,
+        "inline_spans": 0,
+        "name": "h11-eu-ansoegning",
+        "paragraphs": 33,
+        "true_switches": 3
+      },
+      {
+        "chars": 2533,
+        "default": "da",
+        "en_paragraphs": 0,
+        "inline_spans": 3,
+        "name": "h12-workshop",
+        "paragraphs": 19,
+        "true_switches": 0
+      },
+      {
+        "chars": 1271,
+        "default": "da",
+        "en_paragraphs": 1,
+        "inline_spans": 0,
+        "name": "h13-kontaktliste",
+        "paragraphs": 44,
+        "true_switches": 2
+      },
+      {
+        "chars": 7807,
+        "default": "da",
+        "en_paragraphs": 5,
+        "inline_spans": 0,
+        "name": "w01-strukturreform",
+        "paragraphs": 13,
+        "true_switches": 6
+      },
+      {
+        "chars": 6922,
+        "default": "da",
+        "en_paragraphs": 8,
+        "inline_spans": 0,
+        "name": "w02-folketinget",
+        "paragraphs": 19,
+        "true_switches": 8
+      },
+      {
+        "chars": 7787,
+        "default": "da",
+        "en_paragraphs": 7,
+        "inline_spans": 0,
+        "name": "w03-metro",
+        "paragraphs": 18,
+        "true_switches": 6
+      },
+      {
+        "chars": 6715,
+        "default": "da",
+        "en_paragraphs": 6,
+        "inline_spans": 0,
+        "name": "w04-storebaelt",
+        "paragraphs": 19,
+        "true_switches": 8
+      },
+      {
+        "chars": 5789,
+        "default": "da",
+        "en_paragraphs": 7,
+        "inline_spans": 0,
+        "name": "w05-statistik",
+        "paragraphs": 37,
+        "true_switches": 8
+      },
+      {
+        "chars": 7535,
+        "default": "da",
+        "en_paragraphs": 9,
+        "inline_spans": 0,
+        "name": "w06-dansk",
+        "paragraphs": 26,
+        "true_switches": 8
+      },
+      {
+        "chars": 7143,
+        "default": "da",
+        "en_paragraphs": 7,
+        "inline_spans": 0,
+        "name": "w07-folkeskolen",
+        "paragraphs": 36,
+        "true_switches": 6
+      },
+      {
+        "chars": 7122,
+        "default": "da",
+        "en_paragraphs": 6,
+        "inline_spans": 0,
+        "name": "w08-aarhus",
+        "paragraphs": 41,
+        "true_switches": 6
+      },
+      {
+        "chars": 7264,
+        "default": "en",
+        "en_paragraphs": 9,
+        "inline_spans": 0,
+        "name": "w09-gdpr",
+        "paragraphs": 16,
+        "true_switches": 8
+      },
+      {
+        "chars": 7048,
+        "default": "en",
+        "en_paragraphs": 17,
+        "inline_spans": 0,
+        "name": "w10-odf",
+        "paragraphs": 26,
+        "true_switches": 6
+      }
+    ],
+    "wikipedia_part": true
+  },
+  "detection": {
+    "best": {
+      "detector": "lingua-da-en+mask & dict-vote",
+      "policy": {
+        "headings_look_ahead": true,
+        "hysteresis": true,
+        "min_letters": 20,
+        "short_confidence": null,
+        "switch_confidence": 0.0
+      }
+    },
+    "detectors": [
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.75,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.75,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.937007874015748,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.937007874015748,
+            "tuned": 0.9448818897637795
+          },
+          {
+            "detector_alone": 0.98,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.98,
+            "tuned": 0.99
+          },
+          {
+            "detector_alone": 0.9891696750902527,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9891696750902527,
+            "tuned": 0.9855595667870036
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.7063492063492064,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.7936507936507936,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.7939914163090128,
+            "n": 233,
+            "raw": 0.8412017167381974,
+            "tuned": 0.927038626609442
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9612903225806452,
+            "n": 155,
+            "raw": 0.9612903225806452,
+            "tuned": 0.9741935483870968
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 0.9936305732484076,
+            "n": 157,
+            "raw": 0.9936305732484076,
+            "tuned": 0.9936305732484076
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "lingua-da-en",
+        "fixed": {
+          "all": {
+            "accuracy": 0.9733124018838305,
+            "correct": 620,
+            "false_switches": 23,
+            "missed": 18,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 16.197183098591548,
+            "per_10_pages": 5.582415875419895,
+            "spurious": 5,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9644970414201184,
+            "correct": 652,
+            "false_switches": 33,
+            "missed": 23,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 23.239436619718308,
+            "per_10_pages": 8.00955321255898,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9915492957746479,
+            "correct": 352,
+            "false_switches": 2,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 2,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9585492227979274,
+            "correct": 370,
+            "false_switches": 21,
+            "missed": 16,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 29.166666666666668,
+            "per_10_pages": 16.473172262315657,
+            "spurious": 5,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9864253393665159,
+            "correct": 436,
+            "false_switches": 9,
+            "missed": 6,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 6.818181818181818,
+            "per_10_pages": 2.1844236034251763,
+            "spurious": 3,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.950354609929078,
+            "correct": 268,
+            "false_switches": 21,
+            "missed": 18,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 24.41860465116279,
+            "per_10_pages": 10.503781361290065,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9960159362549801,
+            "correct": 250,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 2.857142857142857,
+            "per_10_pages": 0.7029185176854299,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9811616954474097,
+            "correct": 625,
+            "false_switches": 19,
+            "missed": 10,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 13.380281690140846,
+            "per_10_pages": 4.611560940564261,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9689349112426036,
+            "correct": 655,
+            "false_switches": 29,
+            "missed": 15,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 20.422535211267604,
+            "per_10_pages": 7.038698277703346,
+            "spurious": 14,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9802816901408451,
+            "correct": 348,
+            "false_switches": 10,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 17.857142857142858,
+            "per_10_pages": 4.715201810637495,
+            "spurious": 9,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9715025906735751,
+            "correct": 375,
+            "false_switches": 17,
+            "missed": 8,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 23.61111111111111,
+            "per_10_pages": 13.335425164731724,
+            "spurious": 9,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9886877828054299,
+            "correct": 437,
+            "false_switches": 7,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 5.303030303030303,
+            "per_10_pages": 1.6989961359973593,
+            "spurious": 3,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.8
+          },
+          "test": {
+            "accuracy": 0.9822695035460993,
+            "correct": 277,
+            "false_switches": 9,
+            "missed": 9,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 10.465116279069768,
+            "per_10_pages": 4.501620583410028,
+            "spurious": 0,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9960159362549801,
+            "correct": 250,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 2.857142857142857,
+            "per_10_pages": 0.7029185176854299,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9623233908948194,
+            "correct": 613,
+            "false_switches": 37,
+            "missed": 10,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 26.056338028169016,
+            "per_10_pages": 8.980408147414614,
+            "spurious": 27,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9349112426035503,
+            "correct": 632,
+            "false_switches": 41,
+            "missed": 11,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 28.87323943661972,
+            "per_10_pages": 9.951263082270248,
+            "spurious": 30,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9577464788732394,
+            "correct": 340,
+            "false_switches": 20,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 35.714285714285715,
+            "per_10_pages": 9.43040362127499,
+            "spurious": 18,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9455958549222798,
+            "correct": 365,
+            "false_switches": 31,
+            "missed": 6,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 43.05555555555556,
+            "per_10_pages": 24.317540006275497,
+            "spurious": 25,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9864253393665159,
+            "correct": 436,
+            "false_switches": 9,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 6.818181818181818,
+            "per_10_pages": 2.1844236034251763,
+            "spurious": 5,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9680851063829787,
+            "correct": 273,
+            "false_switches": 17,
+            "missed": 8,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 19.767441860465116,
+            "per_10_pages": 8.50306110199672,
+            "spurious": 9,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9880478087649402,
+            "correct": 248,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 8.571428571428571,
+            "per_10_pages": 2.10875555305629,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9764521193092621,
+            "correct": 622,
+            "false_switches": 23,
+            "missed": 19,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 16.197183098591548,
+            "per_10_pages": 5.582415875419895,
+            "spurious": 4,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9674556213017751,
+            "correct": 654,
+            "false_switches": 33,
+            "missed": 24,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 23.239436619718308,
+            "per_10_pages": 8.00955321255898,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 1.0,
+            "correct": 355,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9637305699481865,
+            "correct": 372,
+            "false_switches": 21,
+            "missed": 17,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 29.166666666666668,
+            "per_10_pages": 16.473172262315657,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9886877828054299,
+            "correct": 437,
+            "false_switches": 9,
+            "missed": 7,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 6.818181818181818,
+            "per_10_pages": 2.1844236034251763,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.95
+          },
+          "test": {
+            "accuracy": 0.9468085106382979,
+            "correct": 267,
+            "false_switches": 23,
+            "missed": 19,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 26.74418604651163,
+            "per_10_pages": 11.504141490936737,
+            "spurious": 4,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9960159362549801,
+            "correct": 250,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 2.857142857142857,
+            "per_10_pages": 0.7029185176854299,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 92.48677958579881
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.7,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.75,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.937007874015748,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.937007874015748,
+            "tuned": 0.9212598425196851
+          },
+          {
+            "detector_alone": 0.93,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.94,
+            "tuned": 0.91
+          },
+          {
+            "detector_alone": 0.9963898916967509,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9963898916967509,
+            "tuned": 0.9855595667870036
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.6507936507936508,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.7619047619047619,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.7553648068669528,
+            "n": 233,
+            "raw": 0.8240343347639485,
+            "tuned": 0.9098712446351931
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9419354838709677,
+            "n": 155,
+            "raw": 0.9419354838709677,
+            "tuned": 0.9225806451612903
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 1.0,
+            "n": 157,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "lingua-da-en+mask",
+        "fixed": {
+          "all": {
+            "accuracy": 0.967032967032967,
+            "correct": 616,
+            "false_switches": 27,
+            "missed": 19,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 19.014084507042252,
+            "per_10_pages": 6.553270810275529,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9585798816568047,
+            "correct": 648,
+            "false_switches": 37,
+            "missed": 24,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 26.056338028169016,
+            "per_10_pages": 8.980408147414614,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9802816901408451,
+            "correct": 348,
+            "false_switches": 4,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 7.142857142857143,
+            "per_10_pages": 1.8860807242549982,
+            "spurious": 3,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9455958549222798,
+            "correct": 365,
+            "false_switches": 27,
+            "missed": 19,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 37.5,
+            "per_10_pages": 21.17979290869156,
+            "spurious": 8,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9796380090497737,
+            "correct": 433,
+            "false_switches": 9,
+            "missed": 5,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 6.818181818181818,
+            "per_10_pages": 2.1844236034251763,
+            "spurious": 4,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.950354609929078,
+            "correct": 268,
+            "false_switches": 23,
+            "missed": 18,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 26.74418604651163,
+            "per_10_pages": 11.504141490936737,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9764521193092621,
+            "correct": 622,
+            "false_switches": 15,
+            "missed": 6,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 10.56338028169014,
+            "per_10_pages": 3.640706005708627,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9644970414201184,
+            "correct": 652,
+            "false_switches": 29,
+            "missed": 11,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 20.422535211267604,
+            "per_10_pages": 7.038698277703346,
+            "spurious": 18,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9661971830985916,
+            "correct": 343,
+            "false_switches": 10,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 17.857142857142858,
+            "per_10_pages": 4.715201810637495,
+            "spurious": 9,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.961139896373057,
+            "correct": 371,
+            "false_switches": 15,
+            "missed": 6,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 20.833333333333332,
+            "per_10_pages": 11.766551615939756,
+            "spurious": 9,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9841628959276018,
+            "correct": 435,
+            "false_switches": 5,
+            "missed": 2,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.787878787878788,
+            "per_10_pages": 1.2135686685695424,
+            "spurious": 3,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": 0.7,
+            "switch_confidence": 0.7
+          },
+          "test": {
+            "accuracy": 0.9893617021276596,
+            "correct": 279,
+            "false_switches": 5,
+            "missed": 5,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 5.813953488372093,
+            "per_10_pages": 2.500900324116682,
+            "spurious": 0,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9607535321821036,
+            "correct": 612,
+            "false_switches": 33,
+            "missed": 8,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 23.239436619718308,
+            "per_10_pages": 8.00955321255898,
+            "spurious": 25,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9260355029585798,
+            "correct": 626,
+            "false_switches": 47,
+            "missed": 14,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 33.098591549295776,
+            "per_10_pages": 11.4075454845537,
+            "spurious": 33,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9492957746478873,
+            "correct": 337,
+            "false_switches": 20,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 35.714285714285715,
+            "per_10_pages": 9.43040362127499,
+            "spurious": 18,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9404145077720207,
+            "correct": 363,
+            "false_switches": 29,
+            "missed": 6,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 40.27777777777778,
+            "per_10_pages": 22.748666457483527,
+            "spurious": 23,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9819004524886877,
+            "correct": 434,
+            "false_switches": 7,
+            "missed": 2,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 5.303030303030303,
+            "per_10_pages": 1.6989961359973593,
+            "spurious": 5,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.975177304964539,
+            "correct": 275,
+            "false_switches": 13,
+            "missed": 6,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 15.116279069767442,
+            "per_10_pages": 6.502340842703373,
+            "spurious": 7,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9920318725099602,
+            "correct": 249,
+            "false_switches": 4,
+            "missed": 2,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 5.714285714285714,
+            "per_10_pages": 1.4058370353708598,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9591836734693877,
+            "correct": 611,
+            "false_switches": 31,
+            "missed": 23,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 21.830985915492956,
+            "per_10_pages": 7.524125745131163,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9511834319526628,
+            "correct": 643,
+            "false_switches": 41,
+            "missed": 28,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 28.87323943661972,
+            "per_10_pages": 9.951263082270248,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9943661971830986,
+            "correct": 353,
+            "false_switches": 2,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 2,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9378238341968912,
+            "correct": 362,
+            "false_switches": 29,
+            "missed": 22,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 40.27777777777778,
+            "per_10_pages": 22.748666457483527,
+            "spurious": 7,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9728506787330317,
+            "correct": 430,
+            "false_switches": 15,
+            "missed": 10,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 11.363636363636363,
+            "per_10_pages": 3.640706005708627,
+            "spurious": 5,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 40,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9148936170212766,
+            "correct": 258,
+            "false_switches": 29,
+            "missed": 23,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 33.72093023255814,
+            "per_10_pages": 14.505221879876755,
+            "spurious": 6,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9920318725099602,
+            "correct": 249,
+            "false_switches": 2,
+            "missed": 1,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 2.857142857142857,
+            "per_10_pages": 0.7029185176854299,
+            "spurious": 1,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 59.85527071005917
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.6,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.75,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.8031496062992126,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.9133858267716536,
+            "tuned": 0.9212598425196851
+          },
+          {
+            "detector_alone": 0.96,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.97,
+            "tuned": 0.93
+          },
+          {
+            "detector_alone": 0.9855595667870036,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9855595667870036,
+            "tuned": 0.9783393501805054
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.5238095238095238,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.7380952380952381,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 0.9166666666666666,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6266094420600858,
+            "n": 233,
+            "raw": 0.8025751072961373,
+            "tuned": 0.9098712446351931
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9161290322580645,
+            "n": 155,
+            "raw": 0.9483870967741935,
+            "tuned": 0.9354838709677419
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 0.9872611464968153,
+            "n": 157,
+            "raw": 0.9872611464968153,
+            "tuned": 0.9872611464968153
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "lingua-da-en-nb-sv",
+        "fixed": {
+          "all": {
+            "accuracy": 0.9466248037676609,
+            "correct": 603,
+            "false_switches": 46,
+            "missed": 38,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 32.394366197183096,
+            "per_10_pages": 11.16483175083979,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9393491124260355,
+            "correct": 635,
+            "false_switches": 48,
+            "missed": 39,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 33.80281690140845,
+            "per_10_pages": 11.650259218267607,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9774647887323944,
+            "correct": 347,
+            "false_switches": 7,
+            "missed": 4,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 12.5,
+            "per_10_pages": 3.3006412674462466,
+            "spurious": 3,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9222797927461139,
+            "correct": 356,
+            "false_switches": 40,
+            "missed": 34,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 55.55555555555556,
+            "per_10_pages": 31.377470975839348,
+            "spurious": 6,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9570135746606335,
+            "correct": 423,
+            "false_switches": 34,
+            "missed": 27,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 25.757575757575758,
+            "per_10_pages": 8.252266946272888,
+            "spurious": 7,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.9078014184397163,
+            "correct": 256,
+            "false_switches": 39,
+            "missed": 34,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 45.348837209302324,
+            "per_10_pages": 19.50702252811012,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9840637450199203,
+            "correct": 247,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 8.571428571428571,
+            "per_10_pages": 2.10875555305629,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9733124018838305,
+            "correct": 620,
+            "false_switches": 27,
+            "missed": 16,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 19.014084507042252,
+            "per_10_pages": 6.553270810275529,
+            "spurious": 11,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9659763313609467,
+            "correct": 653,
+            "false_switches": 37,
+            "missed": 21,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 26.056338028169016,
+            "per_10_pages": 8.980408147414614,
+            "spurious": 16,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9802816901408451,
+            "correct": 348,
+            "false_switches": 8,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 14.285714285714286,
+            "per_10_pages": 3.7721614485099964,
+            "spurious": 6,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9637305699481865,
+            "correct": 372,
+            "false_switches": 21,
+            "missed": 12,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 29.166666666666668,
+            "per_10_pages": 16.473172262315657,
+            "spurious": 9,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9796380090497737,
+            "correct": 433,
+            "false_switches": 15,
+            "missed": 7,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 11.363636363636363,
+            "per_10_pages": 3.640706005708627,
+            "spurious": 8,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.5
+          },
+          "test": {
+            "accuracy": 0.9645390070921985,
+            "correct": 272,
+            "false_switches": 19,
+            "missed": 14,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 22.093023255813954,
+            "per_10_pages": 9.503421231643392,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9880478087649402,
+            "correct": 248,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 8.571428571428571,
+            "per_10_pages": 2.10875555305629,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9529042386185244,
+            "correct": 607,
+            "false_switches": 45,
+            "missed": 16,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 31.690140845070424,
+            "per_10_pages": 10.922118017125882,
+            "spurious": 29,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9171597633136095,
+            "correct": 620,
+            "false_switches": 59,
+            "missed": 22,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 41.54929577464789,
+            "per_10_pages": 14.320110289120601,
+            "spurious": 37,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9492957746478873,
+            "correct": 337,
+            "false_switches": 22,
+            "missed": 5,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 39.285714285714285,
+            "per_10_pages": 10.37344398340249,
+            "spurious": 17,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9352331606217616,
+            "correct": 361,
+            "false_switches": 35,
+            "missed": 10,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 48.611111111111114,
+            "per_10_pages": 27.45528710385943,
+            "spurious": 25,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9796380090497737,
+            "correct": 433,
+            "false_switches": 15,
+            "missed": 7,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 11.363636363636363,
+            "per_10_pages": 3.640706005708627,
+            "spurious": 8,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9574468085106383,
+            "correct": 270,
+            "false_switches": 23,
+            "missed": 11,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 26.74418604651163,
+            "per_10_pages": 11.504141490936737,
+            "spurious": 12,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9800796812749004,
+            "correct": 246,
+            "false_switches": 10,
+            "missed": 6,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 14.285714285714286,
+            "per_10_pages": 3.5145925884271496,
+            "spurious": 4,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9591836734693877,
+            "correct": 611,
+            "false_switches": 33,
+            "missed": 26,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 23.239436619718308,
+            "per_10_pages": 8.00955321255898,
+            "spurious": 7,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9511834319526628,
+            "correct": 643,
+            "false_switches": 43,
+            "missed": 31,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 30.281690140845072,
+            "per_10_pages": 10.436690549698065,
+            "spurious": 12,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 1,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9430051813471503,
+            "correct": 364,
+            "false_switches": 27,
+            "missed": 22,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 37.5,
+            "per_10_pages": 21.17979290869156,
+            "spurious": 5,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9728506787330317,
+            "correct": 430,
+            "false_switches": 17,
+            "missed": 13,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 12.878787878787879,
+            "per_10_pages": 4.126133473136444,
+            "spurious": 4,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 40,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9113475177304965,
+            "correct": 257,
+            "false_switches": 31,
+            "missed": 25,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 36.04651162790697,
+            "per_10_pages": 15.50558200952343,
+            "spurious": 6,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9840637450199203,
+            "correct": 247,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 8.571428571428571,
+            "per_10_pages": 2.10875555305629,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 122.61818786982249
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.45,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.75,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.8031496062992126,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.9133858267716536,
+            "tuned": 0.9212598425196851
+          },
+          {
+            "detector_alone": 0.91,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.94,
+            "tuned": 0.91
+          },
+          {
+            "detector_alone": 0.9927797833935018,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9927797833935018,
+            "tuned": 0.9819494584837545
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.5,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.7380952380952381,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 0.9166666666666666,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6137339055793991,
+            "n": 233,
+            "raw": 0.8068669527896996,
+            "tuned": 0.9098712446351931
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.8709677419354839,
+            "n": 155,
+            "raw": 0.9290322580645162,
+            "tuned": 0.9225806451612903
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 0.9936305732484076,
+            "n": 157,
+            "raw": 0.9936305732484076,
+            "tuned": 0.9936305732484076
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "lingua-da-en-nb-sv+mask",
+        "fixed": {
+          "all": {
+            "accuracy": 0.9293563579277865,
+            "correct": 592,
+            "false_switches": 53,
+            "missed": 41,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 37.32394366197183,
+            "per_10_pages": 12.86382788683715,
+            "spurious": 12,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9230769230769231,
+            "correct": 624,
+            "false_switches": 55,
+            "missed": 42,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 38.732394366197184,
+            "per_10_pages": 13.349255354264967,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9492957746478873,
+            "correct": 337,
+            "false_switches": 14,
+            "missed": 7,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 25.0,
+            "per_10_pages": 6.601282534892493,
+            "spurious": 7,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8963730569948186,
+            "correct": 346,
+            "false_switches": 47,
+            "missed": 38,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 65.27777777777777,
+            "per_10_pages": 36.86852839661123,
+            "spurious": 9,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9343891402714932,
+            "correct": 413,
+            "false_switches": 41,
+            "missed": 30,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 31.060606060606062,
+            "per_10_pages": 9.951263082270248,
+            "spurious": 11,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.9042553191489362,
+            "correct": 255,
+            "false_switches": 39,
+            "missed": 34,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 45.348837209302324,
+            "per_10_pages": 19.50702252811012,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9800796812749004,
+            "correct": 246,
+            "false_switches": 6,
+            "missed": 3,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 8.571428571428571,
+            "per_10_pages": 2.10875555305629,
+            "spurious": 3,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9733124018838305,
+            "correct": 620,
+            "false_switches": 21,
+            "missed": 12,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 14.788732394366198,
+            "per_10_pages": 5.096988407992078,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9659763313609467,
+            "correct": 653,
+            "false_switches": 31,
+            "missed": 17,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 21.830985915492956,
+            "per_10_pages": 7.524125745131163,
+            "spurious": 14,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.971830985915493,
+            "correct": 345,
+            "false_switches": 8,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 14.285714285714286,
+            "per_10_pages": 3.7721614485099964,
+            "spurious": 6,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.961139896373057,
+            "correct": 371,
+            "false_switches": 17,
+            "missed": 10,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 23.61111111111111,
+            "per_10_pages": 13.335425164731724,
+            "spurious": 7,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9773755656108597,
+            "correct": 432,
+            "false_switches": 11,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 8.333333333333334,
+            "per_10_pages": 2.6698510708529932,
+            "spurious": 7,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.5
+          },
+          "test": {
+            "accuracy": 0.975177304964539,
+            "correct": 275,
+            "false_switches": 13,
+            "missed": 10,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 15.116279069767442,
+            "per_10_pages": 6.502340842703373,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9920318725099602,
+            "correct": 249,
+            "false_switches": 4,
+            "missed": 2,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 5.714285714285714,
+            "per_10_pages": 1.4058370353708598,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9513343799058085,
+            "correct": 606,
+            "false_switches": 41,
+            "missed": 13,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 28.87323943661972,
+            "per_10_pages": 9.951263082270248,
+            "spurious": 28,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.915680473372781,
+            "correct": 619,
+            "false_switches": 55,
+            "missed": 19,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 38.732394366197184,
+            "per_10_pages": 13.349255354264967,
+            "spurious": 36,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9380281690140845,
+            "correct": 333,
+            "false_switches": 24,
+            "missed": 5,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 42.857142857142854,
+            "per_10_pages": 11.316484345529988,
+            "spurious": 19,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9300518134715026,
+            "correct": 359,
+            "false_switches": 33,
+            "missed": 9,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 45.833333333333336,
+            "per_10_pages": 25.886413555067463,
+            "spurious": 24,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9751131221719457,
+            "correct": 431,
+            "false_switches": 13,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 9.848484848484848,
+            "per_10_pages": 3.15527853828081,
+            "spurious": 9,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9680851063829787,
+            "correct": 273,
+            "false_switches": 17,
+            "missed": 8,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 19.767441860465116,
+            "per_10_pages": 8.50306110199672,
+            "spurious": 9,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9840637450199203,
+            "correct": 247,
+            "false_switches": 8,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 11.428571428571429,
+            "per_10_pages": 2.8116740707417196,
+            "spurious": 4,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.957613814756672,
+            "correct": 610,
+            "false_switches": 33,
+            "missed": 24,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 23.239436619718308,
+            "per_10_pages": 8.00955321255898,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9497041420118343,
+            "correct": 642,
+            "false_switches": 43,
+            "missed": 29,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 30.281690140845072,
+            "per_10_pages": 10.436690549698065,
+            "spurious": 14,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9915492957746479,
+            "correct": 352,
+            "false_switches": 4,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 7.142857142857143,
+            "per_10_pages": 1.8860807242549982,
+            "spurious": 3,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9378238341968912,
+            "correct": 362,
+            "false_switches": 29,
+            "missed": 22,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 40.27777777777778,
+            "per_10_pages": 22.748666457483527,
+            "spurious": 7,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9705882352941176,
+            "correct": 429,
+            "false_switches": 17,
+            "missed": 11,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 12.878787878787879,
+            "per_10_pages": 4.126133473136444,
+            "spurious": 6,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 40,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9148936170212766,
+            "correct": 258,
+            "false_switches": 29,
+            "missed": 23,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 33.72093023255814,
+            "per_10_pages": 14.505221879876755,
+            "spurious": 6,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9880478087649402,
+            "correct": 248,
+            "false_switches": 4,
+            "missed": 2,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 5.714285714285714,
+            "per_10_pages": 1.4058370353708598,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 156.63452366863905
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.75,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.75,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 0.5,
+            "kind": "code",
+            "n": 4,
+            "raw": 0.5,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.8188976377952756,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.8188976377952756,
+            "tuned": 0.9212598425196851
+          },
+          {
+            "detector_alone": 0.97,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.97,
+            "tuned": 0.93
+          },
+          {
+            "detector_alone": 0.9819494584837545,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9819494584837545,
+            "tuned": 0.9747292418772563
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.5714285714285714,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.7222222222222222,
+            "tuned": 0.9126984126984127
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6695278969957081,
+            "n": 233,
+            "raw": 0.7510729613733905,
+            "tuned": 0.9098712446351931
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9225806451612903,
+            "n": 155,
+            "raw": 0.9225806451612903,
+            "tuned": 0.9096774193548387
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 0.9872611464968153,
+            "n": 157,
+            "raw": 0.9872611464968153,
+            "tuned": 0.9872611464968153
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 0.9767441860465116,
+            "n": 43,
+            "raw": 0.9767441860465116,
+            "tuned": 0.9767441860465116
+          }
+        ],
+        "detector": "lingua-da-en-low",
+        "fixed": {
+          "all": {
+            "accuracy": 0.9623233908948194,
+            "correct": 613,
+            "false_switches": 35,
+            "missed": 20,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 24.64788732394366,
+            "per_10_pages": 8.494980679986798,
+            "spurious": 15,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9526627218934911,
+            "correct": 644,
+            "false_switches": 47,
+            "missed": 26,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 33.098591549295776,
+            "per_10_pages": 11.4075454845537,
+            "spurious": 21,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9774647887323944,
+            "correct": 347,
+            "false_switches": 8,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 14.285714285714286,
+            "per_10_pages": 3.7721614485099964,
+            "spurious": 8,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9455958549222798,
+            "correct": 365,
+            "false_switches": 29,
+            "missed": 16,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 40.27777777777778,
+            "per_10_pages": 22.748666457483527,
+            "spurious": 13,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9728506787330317,
+            "correct": 430,
+            "false_switches": 17,
+            "missed": 6,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 12.878787878787879,
+            "per_10_pages": 4.126133473136444,
+            "spurious": 11,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.9432624113475178,
+            "correct": 266,
+            "false_switches": 27,
+            "missed": 20,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 31.3953488372093,
+            "per_10_pages": 13.504861750230083,
+            "spurious": 7,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9880478087649402,
+            "correct": 248,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 8.571428571428571,
+            "per_10_pages": 2.10875555305629,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.967032967032967,
+            "correct": 616,
+            "false_switches": 33,
+            "missed": 17,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 23.239436619718308,
+            "per_10_pages": 8.00955321255898,
+            "spurious": 16,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9571005917159763,
+            "correct": 647,
+            "false_switches": 43,
+            "missed": 22,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 30.281690140845072,
+            "per_10_pages": 10.436690549698065,
+            "spurious": 21,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9661971830985916,
+            "correct": 343,
+            "false_switches": 16,
+            "missed": 3,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 28.571428571428573,
+            "per_10_pages": 7.544322897019993,
+            "spurious": 13,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9559585492227979,
+            "correct": 369,
+            "false_switches": 25,
+            "missed": 11,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 34.72222222222222,
+            "per_10_pages": 19.610919359899594,
+            "spurious": 14,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9705882352941176,
+            "correct": 429,
+            "false_switches": 19,
+            "missed": 8,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 14.393939393939394,
+            "per_10_pages": 4.611560940564261,
+            "spurious": 11,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.99
+          },
+          "test": {
+            "accuracy": 0.9680851063829787,
+            "correct": 273,
+            "false_switches": 17,
+            "missed": 14,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 19.767441860465116,
+            "per_10_pages": 8.50306110199672,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9840637450199203,
+            "correct": 247,
+            "false_switches": 8,
+            "missed": 6,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 11.428571428571429,
+            "per_10_pages": 2.8116740707417196,
+            "spurious": 2,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9167974882260597,
+            "correct": 584,
+            "false_switches": 89,
+            "missed": 15,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 62.67605633802817,
+            "per_10_pages": 21.601522300537855,
+            "spurious": 74,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8920118343195266,
+            "correct": 603,
+            "false_switches": 99,
+            "missed": 20,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 69.71830985915493,
+            "per_10_pages": 24.028659637676938,
+            "spurious": 79,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9126760563380282,
+            "correct": 324,
+            "false_switches": 52,
+            "missed": 3,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 92.85714285714286,
+            "per_10_pages": 24.519049415314974,
+            "spurious": 49,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8963730569948186,
+            "correct": 346,
+            "false_switches": 63,
+            "missed": 8,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 87.5,
+            "per_10_pages": 49.41951678694697,
+            "spurious": 55,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9683257918552036,
+            "correct": 428,
+            "false_switches": 25,
+            "missed": 7,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 18.939393939393938,
+            "per_10_pages": 6.067843342847712,
+            "spurious": 18,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9219858156028369,
+            "correct": 260,
+            "false_switches": 37,
+            "missed": 12,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 43.02325581395349,
+            "per_10_pages": 18.506662398463448,
+            "spurious": 25,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9482071713147411,
+            "correct": 238,
+            "false_switches": 26,
+            "missed": 7,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 37.142857142857146,
+            "per_10_pages": 9.13794072991059,
+            "spurious": 19,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9513343799058085,
+            "correct": 606,
+            "false_switches": 37,
+            "missed": 27,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 26.056338028169016,
+            "per_10_pages": 8.980408147414614,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9437869822485208,
+            "correct": 638,
+            "false_switches": 47,
+            "missed": 32,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 33.098591549295776,
+            "per_10_pages": 11.4075454845537,
+            "spurious": 15,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9887323943661972,
+            "correct": 351,
+            "false_switches": 2,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 2,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9326424870466321,
+            "correct": 360,
+            "false_switches": 29,
+            "missed": 22,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 40.27777777777778,
+            "per_10_pages": 22.748666457483527,
+            "spurious": 7,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9615384615384616,
+            "correct": 425,
+            "false_switches": 21,
+            "missed": 14,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 15.909090909090908,
+            "per_10_pages": 5.096988407992078,
+            "spurious": 7,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 40,
+            "short_confidence": null,
+            "switch_confidence": 0.8
+          },
+          "test": {
+            "accuracy": 0.9042553191489362,
+            "correct": 255,
+            "false_switches": 35,
+            "missed": 27,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 40.69767441860465,
+            "per_10_pages": 17.506302268816775,
+            "spurious": 8,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9800796812749004,
+            "correct": 246,
+            "false_switches": 8,
+            "missed": 5,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 11.428571428571429,
+            "per_10_pages": 2.8116740707417196,
+            "spurious": 3,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 82.59790976331362
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.7,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.7,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 0.75,
+            "kind": "code",
+            "n": 4,
+            "raw": 0.75,
+            "tuned": 0.75
+          },
+          {
+            "detector_alone": 0.7480314960629921,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.7480314960629921,
+            "tuned": 0.9291338582677166
+          },
+          {
+            "detector_alone": 0.97,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.97,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.9927797833935018,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9927797833935018,
+            "tuned": 0.9927797833935018
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.5793650793650794,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.6666666666666666,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6266094420600858,
+            "n": 233,
+            "raw": 0.6738197424892703,
+            "tuned": 0.927038626609442
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9354838709677419,
+            "n": 155,
+            "raw": 0.9354838709677419,
+            "tuned": 0.9741935483870968
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 0.9886363636363636
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 1.0,
+            "n": 157,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "whatlang-da-en",
+        "fixed": {
+          "all": {
+            "accuracy": 0.9733124018838305,
+            "correct": 620,
+            "false_switches": 27,
+            "missed": 23,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 19.014084507042252,
+            "per_10_pages": 6.553270810275529,
+            "spurious": 4,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9644970414201184,
+            "correct": 652,
+            "false_switches": 37,
+            "missed": 28,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 26.056338028169016,
+            "per_10_pages": 8.980408147414614,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9943661971830986,
+            "correct": 353,
+            "false_switches": 4,
+            "missed": 3,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 7.142857142857143,
+            "per_10_pages": 1.8860807242549982,
+            "spurious": 1,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9559585492227979,
+            "correct": 369,
+            "false_switches": 27,
+            "missed": 23,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 37.5,
+            "per_10_pages": 21.17979290869156,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9841628959276018,
+            "correct": 435,
+            "false_switches": 13,
+            "missed": 11,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 9.848484848484848,
+            "per_10_pages": 3.15527853828081,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.9468085106382979,
+            "correct": 267,
+            "false_switches": 23,
+            "missed": 20,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 26.74418604651163,
+            "per_10_pages": 11.504141490936737,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9764521193092621,
+            "correct": 622,
+            "false_switches": 24,
+            "missed": 21,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 16.901408450704224,
+            "per_10_pages": 5.825129609133803,
+            "spurious": 3,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9674556213017751,
+            "correct": 654,
+            "false_switches": 34,
+            "missed": 26,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 23.943661971830984,
+            "per_10_pages": 8.252266946272888,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.961139896373057,
+            "correct": 371,
+            "false_switches": 24,
+            "missed": 21,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 33.333333333333336,
+            "per_10_pages": 18.82648258550361,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9886877828054299,
+            "correct": 437,
+            "false_switches": 10,
+            "missed": 9,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 7.575757575757576,
+            "per_10_pages": 2.4271373371390847,
+            "spurious": 1,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.5
+          },
+          "test": {
+            "accuracy": 0.950354609929078,
+            "correct": 268,
+            "false_switches": 22,
+            "missed": 19,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 25.58139534883721,
+            "per_10_pages": 11.003961426113401,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9073783359497645,
+            "correct": 578,
+            "false_switches": 103,
+            "missed": 20,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 72.53521126760563,
+            "per_10_pages": 24.999514572532572,
+            "spurious": 83,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8727810650887574,
+            "correct": 590,
+            "false_switches": 127,
+            "missed": 25,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 89.43661971830986,
+            "per_10_pages": 30.82464418166638,
+            "spurious": 102,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.895774647887324,
+            "correct": 318,
+            "false_switches": 62,
+            "missed": 7,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 110.71428571428571,
+            "per_10_pages": 29.23425122595247,
+            "spurious": 55,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8963730569948186,
+            "correct": 346,
+            "false_switches": 66,
+            "missed": 12,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 91.66666666666667,
+            "per_10_pages": 51.772827110134926,
+            "spurious": 54,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9773755656108597,
+            "correct": 432,
+            "false_switches": 19,
+            "missed": 3,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 14.393939393939394,
+            "per_10_pages": 4.611560940564261,
+            "spurious": 16,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9219858156028369,
+            "correct": 260,
+            "false_switches": 41,
+            "missed": 13,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 47.674418604651166,
+            "per_10_pages": 20.507382657756793,
+            "spurious": 28,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9243027888446215,
+            "correct": 232,
+            "false_switches": 37,
+            "missed": 8,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 52.857142857142854,
+            "per_10_pages": 13.003992577180455,
+            "spurious": 29,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9764521193092621,
+            "correct": 622,
+            "false_switches": 24,
+            "missed": 21,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 16.901408450704224,
+            "per_10_pages": 5.825129609133803,
+            "spurious": 3,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9674556213017751,
+            "correct": 654,
+            "false_switches": 34,
+            "missed": 26,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 23.943661971830984,
+            "per_10_pages": 8.252266946272888,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.961139896373057,
+            "correct": 371,
+            "false_switches": 24,
+            "missed": 21,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 33.333333333333336,
+            "per_10_pages": 18.82648258550361,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9886877828054299,
+            "correct": 437,
+            "false_switches": 10,
+            "missed": 9,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 7.575757575757576,
+            "per_10_pages": 2.4271373371390847,
+            "spurious": 1,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.5
+          },
+          "test": {
+            "accuracy": 0.950354609929078,
+            "correct": 268,
+            "false_switches": 22,
+            "missed": 19,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 25.58139534883721,
+            "per_10_pages": 11.003961426113401,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 11.412007396449704
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.6,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.65,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 0.75,
+            "kind": "code",
+            "n": 4,
+            "raw": 0.75,
+            "tuned": 0.75
+          },
+          {
+            "detector_alone": 0.7480314960629921,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.7480314960629921,
+            "tuned": 0.9291338582677166
+          },
+          {
+            "detector_alone": 0.95,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.96,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.9855595667870036,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9855595667870036,
+            "tuned": 0.9927797833935018
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 0.8
+          },
+          {
+            "detector_alone": 0.6031746031746031,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.7142857142857143,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6137339055793991,
+            "n": 233,
+            "raw": 0.6824034334763949,
+            "tuned": 0.927038626609442
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9354838709677419,
+            "n": 155,
+            "raw": 0.9354838709677419,
+            "tuned": 0.9741935483870968
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 0.9772727272727273
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 1.0,
+            "n": 157,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "whatlang-da-en+mask",
+        "fixed": {
+          "all": {
+            "accuracy": 0.9717425431711146,
+            "correct": 619,
+            "false_switches": 29,
+            "missed": 25,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 20.422535211267604,
+            "per_10_pages": 7.038698277703346,
+            "spurious": 4,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9630177514792899,
+            "correct": 651,
+            "false_switches": 39,
+            "missed": 30,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 27.464788732394368,
+            "per_10_pages": 9.465835614842431,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9943661971830986,
+            "correct": 353,
+            "false_switches": 4,
+            "missed": 3,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 7.142857142857143,
+            "per_10_pages": 1.8860807242549982,
+            "spurious": 1,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9533678756476683,
+            "correct": 368,
+            "false_switches": 29,
+            "missed": 25,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 40.27777777777778,
+            "per_10_pages": 22.748666457483527,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9819004524886877,
+            "correct": 434,
+            "false_switches": 15,
+            "missed": 13,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 11.363636363636363,
+            "per_10_pages": 3.640706005708627,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.9432624113475178,
+            "correct": 266,
+            "false_switches": 25,
+            "missed": 22,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 29.069767441860463,
+            "per_10_pages": 12.50450162058341,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9748822605965463,
+            "correct": 621,
+            "false_switches": 26,
+            "missed": 23,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 18.309859154929576,
+            "per_10_pages": 6.31055707656162,
+            "spurious": 3,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9659763313609467,
+            "correct": 653,
+            "false_switches": 36,
+            "missed": 28,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 25.35211267605634,
+            "per_10_pages": 8.737694413700705,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9585492227979274,
+            "correct": 370,
+            "false_switches": 26,
+            "missed": 23,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 36.111111111111114,
+            "per_10_pages": 20.395356134295575,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9864253393665159,
+            "correct": 436,
+            "false_switches": 12,
+            "missed": 11,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 9.090909090909092,
+            "per_10_pages": 2.9125648045669017,
+            "spurious": 1,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.5
+          },
+          "test": {
+            "accuracy": 0.9468085106382979,
+            "correct": 267,
+            "false_switches": 24,
+            "missed": 21,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 27.906976744186046,
+            "per_10_pages": 12.004321555760074,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9058084772370487,
+            "correct": 577,
+            "false_switches": 101,
+            "missed": 20,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 71.12676056338029,
+            "per_10_pages": 24.514087105104757,
+            "spurious": 81,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8757396449704142,
+            "correct": 592,
+            "false_switches": 119,
+            "missed": 25,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 83.80281690140845,
+            "per_10_pages": 28.88293431195511,
+            "spurious": 94,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9014084507042254,
+            "correct": 320,
+            "false_switches": 56,
+            "missed": 7,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 100.0,
+            "per_10_pages": 26.405130139569973,
+            "spurious": 49,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8937823834196891,
+            "correct": 345,
+            "false_switches": 64,
+            "missed": 12,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 88.88888888888889,
+            "per_10_pages": 50.203953561342956,
+            "spurious": 52,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9773755656108597,
+            "correct": 432,
+            "false_switches": 19,
+            "missed": 3,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 14.393939393939394,
+            "per_10_pages": 4.611560940564261,
+            "spurious": 16,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9113475177304965,
+            "correct": 257,
+            "false_switches": 45,
+            "missed": 13,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 52.325581395348834,
+            "per_10_pages": 22.508102917050138,
+            "spurious": 32,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9243027888446215,
+            "correct": 232,
+            "false_switches": 37,
+            "missed": 8,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 52.857142857142854,
+            "per_10_pages": 13.003992577180455,
+            "spurious": 29,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9748822605965463,
+            "correct": 621,
+            "false_switches": 26,
+            "missed": 23,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 18.309859154929576,
+            "per_10_pages": 6.31055707656162,
+            "spurious": 3,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9659763313609467,
+            "correct": 653,
+            "false_switches": 36,
+            "missed": 28,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 25.35211267605634,
+            "per_10_pages": 8.737694413700705,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 2,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9585492227979274,
+            "correct": 370,
+            "false_switches": 26,
+            "missed": 23,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 36.111111111111114,
+            "per_10_pages": 20.395356134295575,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9864253393665159,
+            "correct": 436,
+            "false_switches": 12,
+            "missed": 11,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 9.090909090909092,
+            "per_10_pages": 2.9125648045669017,
+            "spurious": 1,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.5
+          },
+          "test": {
+            "accuracy": 0.9468085106382979,
+            "correct": 267,
+            "false_switches": 24,
+            "missed": 21,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 27.906976744186046,
+            "per_10_pages": 12.004321555760074,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 10.882471893491125
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.3,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.85,
+            "tuned": 0.85
+          },
+          {
+            "detector_alone": 0.25,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.2992125984251969,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.7322834645669292,
+            "tuned": 0.9212598425196851
+          },
+          {
+            "detector_alone": 0.73,
+            "kind": "li",
+            "n": 100,
+            "raw": 0.98,
+            "tuned": 0.89
+          },
+          {
+            "detector_alone": 0.9061371841155235,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9638989169675091,
+            "tuned": 0.9566787003610109
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.29365079365079366,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.8492063492063492,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 0.6666666666666666,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.18025751072961374,
+            "n": 233,
+            "raw": 0.7725321888412017,
+            "tuned": 0.9141630901287554
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.7032258064516129,
+            "n": 155,
+            "raw": 0.9483870967741935,
+            "tuned": 0.896774193548387
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 0.9431818181818182,
+            "n": 88,
+            "raw": 0.9772727272727273,
+            "tuned": 0.9772727272727273
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 0.9490445859872612,
+            "n": 157,
+            "raw": 0.9808917197452229,
+            "tuned": 0.9808917197452229
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 0.9534883720930233,
+            "n": 43,
+            "raw": 0.9534883720930233,
+            "tuned": 0.9534883720930233
+          }
+        ],
+        "detector": "whatlang-all",
+        "fixed": {
+          "all": {
+            "accuracy": 0.7864992150706437,
+            "correct": 501,
+            "false_switches": 89,
+            "missed": 76,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 62.67605633802817,
+            "per_10_pages": 21.601522300537855,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.7825443786982249,
+            "correct": 529,
+            "false_switches": 93,
+            "missed": 78,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 65.49295774647888,
+            "per_10_pages": 22.57237723539349,
+            "spurious": 15,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.7887323943661971,
+            "correct": 280,
+            "false_switches": 33,
+            "missed": 26,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 58.92857142857143,
+            "per_10_pages": 15.560165975103734,
+            "spurious": 7,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.810880829015544,
+            "correct": 313,
+            "false_switches": 53,
+            "missed": 49,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 73.61111111111111,
+            "per_10_pages": 41.575149042987135,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.7986425339366516,
+            "correct": 353,
+            "false_switches": 79,
+            "missed": 66,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 59.84848484848485,
+            "per_10_pages": 19.17438496339877,
+            "spurious": 13,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.7836879432624113,
+            "correct": 221,
+            "false_switches": 56,
+            "missed": 50,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 65.11627906976744,
+            "per_10_pages": 28.010083630106838,
+            "spurious": 6,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.749003984063745,
+            "correct": 188,
+            "false_switches": 36,
+            "missed": 27,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 51.42857142857143,
+            "per_10_pages": 12.652533318337738,
+            "spurious": 9,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9623233908948194,
+            "correct": 613,
+            "false_switches": 39,
+            "missed": 30,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 27.464788732394368,
+            "per_10_pages": 9.465835614842431,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9541420118343196,
+            "correct": 645,
+            "false_switches": 49,
+            "missed": 35,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 34.50704225352113,
+            "per_10_pages": 11.892972951981516,
+            "spurious": 14,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9830985915492958,
+            "correct": 349,
+            "false_switches": 8,
+            "missed": 4,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 14.285714285714286,
+            "per_10_pages": 3.7721614485099964,
+            "spurious": 4,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.961139896373057,
+            "correct": 371,
+            "false_switches": 26,
+            "missed": 23,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 36.111111111111114,
+            "per_10_pages": 20.395356134295575,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9660633484162896,
+            "correct": 427,
+            "false_switches": 23,
+            "missed": 17,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 17.424242424242426,
+            "per_10_pages": 5.582415875419895,
+            "spurious": 6,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9361702127659575,
+            "correct": 264,
+            "false_switches": 31,
+            "missed": 26,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 36.04651162790697,
+            "per_10_pages": 15.50558200952343,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9641434262948207,
+            "correct": 242,
+            "false_switches": 13,
+            "missed": 7,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 18.571428571428573,
+            "per_10_pages": 4.568970364955295,
+            "spurious": 6,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9089481946624803,
+            "correct": 579,
+            "false_switches": 91,
+            "missed": 50,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 64.08450704225352,
+            "per_10_pages": 22.08694976796567,
+            "spurious": 41,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8994082840236687,
+            "correct": 608,
+            "false_switches": 101,
+            "missed": 55,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 71.12676056338029,
+            "per_10_pages": 24.514087105104757,
+            "spurious": 46,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9126760563380282,
+            "correct": 324,
+            "false_switches": 42,
+            "missed": 18,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 75.0,
+            "per_10_pages": 19.80384760467748,
+            "spurious": 24,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9196891191709845,
+            "correct": 355,
+            "false_switches": 42,
+            "missed": 27,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 58.333333333333336,
+            "per_10_pages": 32.946344524631314,
+            "spurious": 15,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9660633484162896,
+            "correct": 427,
+            "false_switches": 23,
+            "missed": 17,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 17.424242424242426,
+            "per_10_pages": 5.582415875419895,
+            "spurious": 6,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9042553191489362,
+            "correct": 255,
+            "false_switches": 49,
+            "missed": 32,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 56.97674418604651,
+            "per_10_pages": 24.508823176343483,
+            "spurious": 17,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.8924302788844621,
+            "correct": 224,
+            "false_switches": 49,
+            "missed": 23,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 70.0,
+            "per_10_pages": 17.221503683293033,
+            "spurious": 26,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9434850863422292,
+            "correct": 601,
+            "false_switches": 41,
+            "missed": 34,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 28.87323943661972,
+            "per_10_pages": 9.951263082270248,
+            "spurious": 7,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9363905325443787,
+            "correct": 633,
+            "false_switches": 51,
+            "missed": 39,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 35.91549295774648,
+            "per_10_pages": 12.378400419409333,
+            "spurious": 12,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9887323943661972,
+            "correct": 351,
+            "false_switches": 4,
+            "missed": 4,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 7.142857142857143,
+            "per_10_pages": 1.8860807242549982,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9326424870466321,
+            "correct": 360,
+            "false_switches": 30,
+            "missed": 26,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 41.666666666666664,
+            "per_10_pages": 23.53310323187951,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9479638009049773,
+            "correct": 419,
+            "false_switches": 25,
+            "missed": 21,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 18.939393939393938,
+            "per_10_pages": 6.067843342847712,
+            "spurious": 4,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 40,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.8865248226950354,
+            "correct": 250,
+            "false_switches": 37,
+            "missed": 30,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 43.02325581395349,
+            "per_10_pages": 18.506662398463448,
+            "spurious": 7,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9601593625498008,
+            "correct": 241,
+            "false_switches": 11,
+            "missed": 8,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 15.714285714285714,
+            "per_10_pages": 3.8660518472698646,
+            "spurious": 3,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 58.126928994082846
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.75,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.95,
+            "tuned": 0.9
+          },
+          {
+            "detector_alone": 0.5,
+            "kind": "code",
+            "n": 4,
+            "raw": 0.75,
+            "tuned": 0.75
+          },
+          {
+            "detector_alone": 0.889763779527559,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.937007874015748,
+            "tuned": 0.952755905511811
+          },
+          {
+            "detector_alone": 0.97,
+            "kind": "li",
+            "n": 100,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.9855595667870036,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9891696750902527,
+            "tuned": 0.9891696750902527
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.6031746031746031,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.8888888888888888,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6952789699570815,
+            "n": 233,
+            "raw": 0.8927038626609443,
+            "tuned": 0.927038626609442
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9548387096774194,
+            "n": 155,
+            "raw": 0.9870967741935484,
+            "tuned": 0.9870967741935484
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 1.0,
+            "n": 157,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "dict-vote",
+        "fixed": {
+          "all": {
+            "accuracy": 0.8461538461538461,
+            "correct": 539,
+            "false_switches": 87,
+            "missed": 77,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 61.267605633802816,
+            "per_10_pages": 21.116094833110036,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8387573964497042,
+            "correct": 567,
+            "false_switches": 93,
+            "missed": 80,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 65.49295774647888,
+            "per_10_pages": 22.57237723539349,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.8788732394366198,
+            "correct": 312,
+            "false_switches": 32,
+            "missed": 26,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 57.142857142857146,
+            "per_10_pages": 15.088645794039985,
+            "spurious": 6,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8393782383419689,
+            "correct": 324,
+            "false_switches": 48,
+            "missed": 45,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 66.66666666666667,
+            "per_10_pages": 37.65296517100722,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.8416289592760181,
+            "correct": 372,
+            "false_switches": 73,
+            "missed": 65,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 55.303030303030305,
+            "per_10_pages": 17.71810256111532,
+            "spurious": 8,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.8049645390070922,
+            "correct": 227,
+            "false_switches": 55,
+            "missed": 51,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 63.95348837209303,
+            "per_10_pages": 27.5099035652835,
+            "spurious": 4,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.8565737051792829,
+            "correct": 215,
+            "false_switches": 39,
+            "missed": 32,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 55.714285714285715,
+            "per_10_pages": 13.706911094865884,
+            "spurious": 7,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9858712715855573,
+            "correct": 628,
+            "false_switches": 18,
+            "missed": 10,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 12.67605633802817,
+            "per_10_pages": 4.3688472068503525,
+            "spurious": 8,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9763313609467456,
+            "correct": 660,
+            "false_switches": 28,
+            "missed": 15,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 19.718309859154928,
+            "per_10_pages": 6.795984543989437,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9915492957746479,
+            "correct": 352,
+            "false_switches": 6,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 10.714285714285714,
+            "per_10_pages": 2.829121086382497,
+            "spurious": 5,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9766839378238342,
+            "correct": 377,
+            "false_switches": 18,
+            "missed": 10,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 25.0,
+            "per_10_pages": 14.119861939127707,
+            "spurious": 8,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.995475113122172,
+            "correct": 440,
+            "false_switches": 4,
+            "missed": 1,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.0303030303030303,
+            "per_10_pages": 0.9708549348556339,
+            "spurious": 3,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9787234042553191,
+            "correct": 276,
+            "false_switches": 12,
+            "missed": 9,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 13.953488372093023,
+            "per_10_pages": 6.002160777880037,
+            "spurious": 3,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9748822605965463,
+            "correct": 621,
+            "false_switches": 28,
+            "missed": 14,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 19.718309859154928,
+            "per_10_pages": 6.795984543989437,
+            "spurious": 14,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9600591715976331,
+            "correct": 649,
+            "false_switches": 38,
+            "missed": 19,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 26.760563380281692,
+            "per_10_pages": 9.223121881128522,
+            "spurious": 19,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9746478873239437,
+            "correct": 346,
+            "false_switches": 14,
+            "missed": 5,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 25.0,
+            "per_10_pages": 6.601282534892493,
+            "spurious": 9,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9689119170984456,
+            "correct": 374,
+            "false_switches": 20,
+            "missed": 10,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 27.77777777777778,
+            "per_10_pages": 15.688735487919674,
+            "spurious": 10,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.995475113122172,
+            "correct": 440,
+            "false_switches": 4,
+            "missed": 1,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.0303030303030303,
+            "per_10_pages": 0.9708549348556339,
+            "spurious": 3,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.975177304964539,
+            "correct": 275,
+            "false_switches": 14,
+            "missed": 9,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 16.27906976744186,
+            "per_10_pages": 7.002520907526709,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9840637450199203,
+            "correct": 247,
+            "false_switches": 8,
+            "missed": 4,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 11.428571428571429,
+            "per_10_pages": 2.8116740707417196,
+            "spurious": 4,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9811616954474097,
+            "correct": 625,
+            "false_switches": 22,
+            "missed": 15,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 15.492957746478874,
+            "per_10_pages": 5.3397021417059864,
+            "spurious": 7,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9718934911242604,
+            "correct": 657,
+            "false_switches": 32,
+            "missed": 20,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 22.535211267605632,
+            "per_10_pages": 7.766839478845071,
+            "spurious": 12,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 2,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9689119170984456,
+            "correct": 374,
+            "false_switches": 22,
+            "missed": 15,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 30.555555555555557,
+            "per_10_pages": 17.257609036711642,
+            "spurious": 7,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.995475113122172,
+            "correct": 440,
+            "false_switches": 4,
+            "missed": 1,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.0303030303030303,
+            "per_10_pages": 0.9708549348556339,
+            "spurious": 3,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9609929078014184,
+            "correct": 271,
+            "false_switches": 20,
+            "missed": 15,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 23.25581395348837,
+            "per_10_pages": 10.003601296466728,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 384.34946301775153
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.6,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.95,
+            "tuned": 0.9
+          },
+          {
+            "detector_alone": 0.5,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.8582677165354331,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.9133858267716536,
+            "tuned": 0.9448818897637795
+          },
+          {
+            "detector_alone": 0.92,
+            "kind": "li",
+            "n": 100,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.9819494584837545,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9891696750902527,
+            "tuned": 0.9855595667870036
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.6031746031746031,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.8888888888888888,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.6695278969957081,
+            "n": 233,
+            "raw": 0.8884120171673819,
+            "tuned": 0.927038626609442
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.9096774193548387,
+            "n": 155,
+            "raw": 0.9806451612903225,
+            "tuned": 0.9806451612903225
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 1.0,
+            "n": 157,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "lingua-da-en+mask & dict-vote",
+        "fixed": {
+          "all": {
+            "accuracy": 0.8461538461538461,
+            "correct": 539,
+            "false_switches": 87,
+            "missed": 77,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 61.267605633802816,
+            "per_10_pages": 21.116094833110036,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8387573964497042,
+            "correct": 567,
+            "false_switches": 93,
+            "missed": 80,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 65.49295774647888,
+            "per_10_pages": 22.57237723539349,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.8788732394366198,
+            "correct": 312,
+            "false_switches": 32,
+            "missed": 26,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 57.142857142857146,
+            "per_10_pages": 15.088645794039985,
+            "spurious": 6,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8393782383419689,
+            "correct": 324,
+            "false_switches": 48,
+            "missed": 45,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 66.66666666666667,
+            "per_10_pages": 37.65296517100722,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.8416289592760181,
+            "correct": 372,
+            "false_switches": 73,
+            "missed": 65,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 55.303030303030305,
+            "per_10_pages": 17.71810256111532,
+            "spurious": 8,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.8049645390070922,
+            "correct": 227,
+            "false_switches": 55,
+            "missed": 51,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 63.95348837209303,
+            "per_10_pages": 27.5099035652835,
+            "spurious": 4,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.8565737051792829,
+            "correct": 215,
+            "false_switches": 39,
+            "missed": 32,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 55.714285714285715,
+            "per_10_pages": 13.706911094865884,
+            "spurious": 7,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9858712715855573,
+            "correct": 628,
+            "false_switches": 17,
+            "missed": 13,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 11.971830985915492,
+            "per_10_pages": 4.126133473136444,
+            "spurious": 4,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9763313609467456,
+            "correct": 660,
+            "false_switches": 27,
+            "missed": 18,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 19.014084507042252,
+            "per_10_pages": 6.553270810275529,
+            "spurious": 9,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9943661971830986,
+            "correct": 353,
+            "false_switches": 4,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 7.142857142857143,
+            "per_10_pages": 1.8860807242549982,
+            "spurious": 3,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9766839378238342,
+            "correct": 377,
+            "false_switches": 17,
+            "missed": 13,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 23.61111111111111,
+            "per_10_pages": 13.335425164731724,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9932126696832579,
+            "correct": 439,
+            "false_switches": 5,
+            "missed": 3,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.787878787878788,
+            "per_10_pages": 1.2135686685695424,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.975177304964539,
+            "correct": 275,
+            "false_switches": 13,
+            "missed": 12,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 15.116279069767442,
+            "per_10_pages": 6.502340842703373,
+            "spurious": 1,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9717425431711146,
+            "correct": 619,
+            "false_switches": 31,
+            "missed": 19,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 21.830985915492956,
+            "per_10_pages": 7.524125745131163,
+            "spurious": 12,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9571005917159763,
+            "correct": 647,
+            "false_switches": 41,
+            "missed": 24,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 28.87323943661972,
+            "per_10_pages": 9.951263082270248,
+            "spurious": 17,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9746478873239437,
+            "correct": 346,
+            "false_switches": 14,
+            "missed": 6,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 25.0,
+            "per_10_pages": 6.601282534892493,
+            "spurious": 8,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9689119170984456,
+            "correct": 374,
+            "false_switches": 19,
+            "missed": 13,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 26.38888888888889,
+            "per_10_pages": 14.90429871352369,
+            "spurious": 6,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9932126696832579,
+            "correct": 439,
+            "false_switches": 5,
+            "missed": 3,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.787878787878788,
+            "per_10_pages": 1.2135686685695424,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9680851063829787,
+            "correct": 273,
+            "false_switches": 17,
+            "missed": 13,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 19.767441860465116,
+            "per_10_pages": 8.50306110199672,
+            "spurious": 4,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9760956175298805,
+            "correct": 245,
+            "false_switches": 12,
+            "missed": 6,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 17.142857142857142,
+            "per_10_pages": 4.21751110611258,
+            "spurious": 6,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9795918367346939,
+            "correct": 624,
+            "false_switches": 21,
+            "missed": 16,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 14.788732394366198,
+            "per_10_pages": 5.096988407992078,
+            "spurious": 5,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9704142011834319,
+            "correct": 656,
+            "false_switches": 31,
+            "missed": 21,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 21.830985915492956,
+            "per_10_pages": 7.524125745131163,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 1.0,
+            "correct": 355,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.966321243523316,
+            "correct": 373,
+            "false_switches": 21,
+            "missed": 16,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 29.166666666666668,
+            "per_10_pages": 16.473172262315657,
+            "spurious": 5,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9932126696832579,
+            "correct": 439,
+            "false_switches": 5,
+            "missed": 3,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 3.787878787878788,
+            "per_10_pages": 1.2135686685695424,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9539007092198581,
+            "correct": 269,
+            "false_switches": 21,
+            "missed": 16,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 24.41860465116279,
+            "per_10_pages": 10.503781361290065,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 536.4113727810651
+      },
+      {
+        "accuracy_by_kind": [
+          {
+            "detector_alone": 0.55,
+            "kind": "addr",
+            "n": 20,
+            "raw": 0.95,
+            "tuned": 0.9
+          },
+          {
+            "detector_alone": 0.25,
+            "kind": "code",
+            "n": 4,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.7007874015748031,
+            "kind": "h",
+            "n": 127,
+            "raw": 0.889763779527559,
+            "tuned": 0.937007874015748
+          },
+          {
+            "detector_alone": 0.94,
+            "kind": "li",
+            "n": 100,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.9855595667870036,
+            "kind": "p",
+            "n": 277,
+            "raw": 0.9927797833935018,
+            "tuned": 0.9891696750902527
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "quote",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "ref",
+            "n": 5,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "detector_alone": 0.5158730158730159,
+            "kind": "td",
+            "n": 126,
+            "raw": 0.9603174603174603,
+            "tuned": 0.9444444444444444
+          },
+          {
+            "detector_alone": 1.0,
+            "kind": "title",
+            "n": 12,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "accuracy_by_length": [
+          {
+            "bucket": "a: <20 letters",
+            "detector_alone": 0.5536480686695279,
+            "n": 233,
+            "raw": 0.9184549356223176,
+            "tuned": 0.927038626609442
+          },
+          {
+            "bucket": "b: 20-59",
+            "detector_alone": 0.8903225806451613,
+            "n": 155,
+            "raw": 0.9806451612903225,
+            "tuned": 0.9806451612903225
+          },
+          {
+            "bucket": "c: 60-149",
+            "detector_alone": 1.0,
+            "n": 88,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "d: 150-399",
+            "detector_alone": 1.0,
+            "n": 157,
+            "raw": 1.0,
+            "tuned": 1.0
+          },
+          {
+            "bucket": "e: 400+",
+            "detector_alone": 1.0,
+            "n": 43,
+            "raw": 1.0,
+            "tuned": 1.0
+          }
+        ],
+        "detector": "whatlang-da-en & dict-vote",
+        "fixed": {
+          "all": {
+            "accuracy": 0.8461538461538461,
+            "correct": 539,
+            "false_switches": 87,
+            "missed": 77,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 61.267605633802816,
+            "per_10_pages": 21.116094833110036,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.8387573964497042,
+            "correct": 567,
+            "false_switches": 93,
+            "missed": 80,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 65.49295774647888,
+            "per_10_pages": 22.57237723539349,
+            "spurious": 13,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.8788732394366198,
+            "correct": 312,
+            "false_switches": 32,
+            "missed": 26,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 57.142857142857146,
+            "per_10_pages": 15.088645794039985,
+            "spurious": 6,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.8393782383419689,
+            "correct": 324,
+            "false_switches": 48,
+            "missed": 45,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 66.66666666666667,
+            "per_10_pages": 37.65296517100722,
+            "spurious": 3,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.8416289592760181,
+            "correct": 372,
+            "false_switches": 73,
+            "missed": 65,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 55.303030303030305,
+            "per_10_pages": 17.71810256111532,
+            "spurious": 8,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.9
+          },
+          "test": {
+            "accuracy": 0.8049645390070922,
+            "correct": 227,
+            "false_switches": 55,
+            "missed": 51,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 63.95348837209303,
+            "per_10_pages": 27.5099035652835,
+            "spurious": 4,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.8565737051792829,
+            "correct": 215,
+            "false_switches": 39,
+            "missed": 32,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 55.714285714285715,
+            "per_10_pages": 13.706911094865884,
+            "spurious": 7,
+            "true_switches": 70
+          }
+        },
+        "optimistic": {
+          "all": {
+            "accuracy": 0.9874411302982732,
+            "correct": 629,
+            "false_switches": 16,
+            "missed": 14,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 11.267605633802816,
+            "per_10_pages": 3.8834197394225356,
+            "spurious": 2,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9807692307692307,
+            "correct": 663,
+            "false_switches": 26,
+            "missed": 19,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 18.309859154929576,
+            "per_10_pages": 6.31055707656162,
+            "spurious": 7,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9971830985915493,
+            "correct": 354,
+            "false_switches": 2,
+            "missed": 1,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 3.5714285714285716,
+            "per_10_pages": 0.9430403621274991,
+            "spurious": 1,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9792746113989638,
+            "correct": 378,
+            "false_switches": 16,
+            "missed": 14,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 22.22222222222222,
+            "per_10_pages": 12.550988390335739,
+            "spurious": 2,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9932126696832579,
+            "correct": 439,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 4.545454545454546,
+            "per_10_pages": 1.4562824022834508,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 10,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.975177304964539,
+            "correct": 275,
+            "false_switches": 14,
+            "missed": 13,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 16.27906976744186,
+            "per_10_pages": 7.002520907526709,
+            "spurious": 1,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "raw": {
+          "all": {
+            "accuracy": 0.9733124018838305,
+            "correct": 620,
+            "false_switches": 34,
+            "missed": 22,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 23.943661971830984,
+            "per_10_pages": 8.252266946272888,
+            "spurious": 12,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9674556213017751,
+            "correct": 654,
+            "false_switches": 44,
+            "missed": 27,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 30.985915492957748,
+            "per_10_pages": 10.679404283411973,
+            "spurious": 17,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 0.9802816901408451,
+            "correct": 348,
+            "false_switches": 14,
+            "missed": 7,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 25.0,
+            "per_10_pages": 6.601282534892493,
+            "spurious": 7,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.9766839378238342,
+            "correct": 377,
+            "false_switches": 18,
+            "missed": 14,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 25.0,
+            "per_10_pages": 14.119861939127707,
+            "spurious": 4,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9932126696832579,
+            "correct": 439,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 4.545454545454546,
+            "per_10_pages": 1.4562824022834508,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": false,
+            "hysteresis": false,
+            "min_letters": 0,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9645390070921985,
+            "correct": 272,
+            "false_switches": 20,
+            "missed": 15,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 23.25581395348837,
+            "per_10_pages": 10.003601296466728,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 0.9681274900398407,
+            "correct": 243,
+            "false_switches": 16,
+            "missed": 8,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 22.857142857142858,
+            "per_10_pages": 5.623348141483439,
+            "spurious": 8,
+            "true_switches": 70
+          }
+        },
+        "tuned": {
+          "all": {
+            "accuracy": 0.9795918367346939,
+            "correct": 624,
+            "false_switches": 22,
+            "missed": 17,
+            "pages": 41.2008,
+            "paragraphs": 637,
+            "per_100_true_switches": 15.492957746478874,
+            "per_10_pages": 5.3397021417059864,
+            "spurious": 5,
+            "true_switches": 142
+          },
+          "all_paragraphs": {
+            "accuracy": 0.9704142011834319,
+            "correct": 656,
+            "false_switches": 32,
+            "missed": 22,
+            "pages": 41.2008,
+            "paragraphs": 676,
+            "per_100_true_switches": 22.535211267605632,
+            "per_10_pages": 7.766839478845071,
+            "spurious": 10,
+            "true_switches": 142
+          },
+          "dev": {
+            "accuracy": 1.0,
+            "correct": 355,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 21.208,
+            "paragraphs": 355,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 56
+          },
+          "handwritten": {
+            "accuracy": 0.966321243523316,
+            "correct": 373,
+            "false_switches": 22,
+            "missed": 17,
+            "pages": 12.748,
+            "paragraphs": 386,
+            "per_100_true_switches": 30.555555555555557,
+            "per_10_pages": 17.257609036711642,
+            "spurious": 5,
+            "true_switches": 72
+          },
+          "long_paragraphs": {
+            "accuracy": 0.9932126696832579,
+            "correct": 439,
+            "false_switches": 6,
+            "missed": 4,
+            "pages": 41.2008,
+            "paragraphs": 442,
+            "per_100_true_switches": 4.545454545454546,
+            "per_10_pages": 1.4562824022834508,
+            "spurious": 2,
+            "true_switches": 132
+          },
+          "policy": {
+            "headings_look_ahead": true,
+            "hysteresis": true,
+            "min_letters": 20,
+            "short_confidence": null,
+            "switch_confidence": 0.0
+          },
+          "test": {
+            "accuracy": 0.9539007092198581,
+            "correct": 269,
+            "false_switches": 22,
+            "missed": 17,
+            "pages": 19.9928,
+            "paragraphs": 282,
+            "per_100_true_switches": 25.58139534883721,
+            "per_10_pages": 11.003961426113401,
+            "spurious": 5,
+            "true_switches": 86
+          },
+          "wikipedia": {
+            "accuracy": 1.0,
+            "correct": 251,
+            "false_switches": 0,
+            "missed": 0,
+            "pages": 28.4528,
+            "paragraphs": 251,
+            "per_100_true_switches": 0.0,
+            "per_10_pages": 0.0,
+            "spurious": 0,
+            "true_switches": 70
+          }
+        },
+        "us_per_paragraph": 462.98422928994086
+      }
+    ]
+  },
+  "speed": {
+    "check_words_per_second": 89525.65994297212,
+    "keystroke": [
+      {
+        "chars": 51,
+        "check_us": 26.868000000000002,
+        "dict_vote_us": 29.329,
+        "lingua_us": 50.731,
+        "paragraph": "median paragraph",
+        "whatlang_us": 5.505,
+        "words": 7
+      },
+      {
+        "chars": 573,
+        "check_us": 485.151,
+        "dict_vote_us": 516.154,
+        "lingua_us": 108.63,
+        "paragraph": "95th percentile",
+        "whatlang_us": 30.743,
+        "words": 97
+      },
+      {
+        "chars": 1716,
+        "check_us": 63.071000000000005,
+        "dict_vote_us": 4612.318,
+        "lingua_us": 273.121,
+        "paragraph": "longest",
+        "whatlang_us": 66.324,
+        "words": 265
+      }
+    ],
+    "load_ms": {
+      "da_DK": 85.703091,
+      "en_GB": 25.024871,
+      "en_US": 9.670559
+    }
+  },
+  "spelling": {
+    "danish_15_plus_letters": {
+      "flags": 8,
+      "words": 285
+    },
+    "modes": [
+      {
+        "distinct": 216,
+        "flags": 286,
+        "mode": "oracle: word language",
+        "per_1000_words": 20.47537227949599,
+        "wrong_language_flags": 0,
+        "wrong_language_flags_per_10_pages": 0.0
+      },
+      {
+        "distinct": 244,
+        "flags": 316,
+        "mode": "oracle: paragraph language",
+        "per_1000_words": 22.623138602520047,
+        "wrong_language_flags": 30,
+        "wrong_language_flags_per_10_pages": 7.281412011417254
+      },
+      {
+        "distinct": 255,
+        "flags": 327,
+        "mode": "predicted paragraph language",
+        "per_1000_words": 23.4106529209622,
+        "wrong_language_flags": 43,
+        "wrong_language_flags_per_10_pages": 10.436690549698064
+      },
+      {
+        "distinct": 245,
+        "flags": 314,
+        "mode": "predicted + sentence/quote segments",
+        "per_1000_words": 22.479954180985107,
+        "wrong_language_flags": 39,
+        "wrong_language_flags_per_10_pages": 9.46583561484243
+      },
+      {
+        "distinct": 126,
+        "flags": 144,
+        "mode": "predicted + either dictionary",
+        "per_1000_words": 10.309278350515465,
+        "wrong_language_flags": 0,
+        "wrong_language_flags_per_10_pages": 0.0
+      },
+      {
+        "distinct": 125,
+        "flags": 144,
+        "mode": "both dictionaries for every word",
+        "per_1000_words": 10.309278350515465,
+        "wrong_language_flags": 0,
+        "wrong_language_flags_per_10_pages": 0.0
+      },
+      {
+        "distinct": 171,
+        "flags": 207,
+        "mode": "predicted + either dictionary for capitalised words",
+        "per_1000_words": 14.81958762886598,
+        "wrong_language_flags": 22,
+        "wrong_language_flags_per_10_pages": 5.3397021417059864
+      },
+      {
+        "distinct": 191,
+        "flags": 242,
+        "mode": "en_GB: oracle word language",
+        "per_1000_words": 17.325315005727376,
+        "wrong_language_flags": 0,
+        "wrong_language_flags_per_10_pages": 0.0
+      },
+      {
+        "distinct": 154,
+        "flags": 185,
+        "mode": "en_GB: predicted + either dictionary for capitalised words",
+        "per_1000_words": 13.244558991981672,
+        "wrong_language_flags": 24,
+        "wrong_language_flags_per_10_pages": 5.825129609133803
+      },
+      {
+        "distinct": 165,
+        "flags": 203,
+        "mode": "proposed: segments + either dictionary for capitalised words and paragraphs under 20 letters",
+        "per_1000_words": 14.533218785796105,
+        "wrong_language_flags": 17,
+        "wrong_language_flags_per_10_pages": 4.126133473136444
+      },
+      {
+        "distinct": 147,
+        "flags": 178,
+        "mode": "en_GB: proposed",
+        "per_1000_words": 12.743413516609392,
+        "wrong_language_flags": 17,
+        "wrong_language_flags_per_10_pages": 4.126133473136444
+      }
+    ],
+    "oracle_by_language": {
+      "da": {
+        "flags": 85,
+        "words": 8237
+      },
+      "en": {
+        "flags": 201,
+        "words": 5731
+      }
+    },
+    "skipped": {
+      "Address": 103,
+      "Caps": 152,
+      "Digits": 954,
+      "Single": 540
+    },
+    "words": 13968
+  },
+  "typos": {
+    "by_class": [
+      {
+        "class": "cmp",
+        "flagged": 15,
+        "flagged_either": 15,
+        "lang": "da",
+        "n": 15,
+        "suggested": 15,
+        "top1": 12,
+        "top3": 15
+      },
+      {
+        "class": "dbl",
+        "flagged": 13,
+        "flagged_either": 13,
+        "lang": "da",
+        "n": 15,
+        "suggested": 13,
+        "top1": 7,
+        "top3": 11
+      },
+      {
+        "class": "drop",
+        "flagged": 9,
+        "flagged_either": 9,
+        "lang": "da",
+        "n": 12,
+        "suggested": 9,
+        "top1": 5,
+        "top3": 6
+      },
+      {
+        "class": "extra",
+        "flagged": 6,
+        "flagged_either": 6,
+        "lang": "da",
+        "n": 6,
+        "suggested": 6,
+        "top1": 1,
+        "top3": 3
+      },
+      {
+        "class": "fuge",
+        "flagged": 10,
+        "flagged_either": 10,
+        "lang": "da",
+        "n": 10,
+        "suggested": 10,
+        "top1": 6,
+        "top3": 9
+      },
+      {
+        "class": "inflect",
+        "flagged": 4,
+        "flagged_either": 4,
+        "lang": "da",
+        "n": 4,
+        "suggested": 4,
+        "top1": 3,
+        "top3": 4
+      },
+      {
+        "class": "key",
+        "flagged": 9,
+        "flagged_either": 9,
+        "lang": "da",
+        "n": 10,
+        "suggested": 9,
+        "top1": 5,
+        "top3": 8
+      },
+      {
+        "class": "realword",
+        "flagged": 0,
+        "flagged_either": 0,
+        "lang": "da",
+        "n": 10,
+        "suggested": 0,
+        "top1": 0,
+        "top3": 0
+      },
+      {
+        "class": "split",
+        "flagged": 0,
+        "flagged_either": 0,
+        "lang": "da",
+        "n": 8,
+        "suggested": 0,
+        "top1": 0,
+        "top3": 0
+      },
+      {
+        "class": "swap",
+        "flagged": 10,
+        "flagged_either": 10,
+        "lang": "da",
+        "n": 10,
+        "suggested": 10,
+        "top1": 8,
+        "top3": 9
+      },
+      {
+        "class": "æøå",
+        "flagged": 12,
+        "flagged_either": 10,
+        "lang": "da",
+        "n": 13,
+        "suggested": 12,
+        "top1": 5,
+        "top3": 6
+      },
+      {
+        "class": "common",
+        "flagged": 53,
+        "flagged_either": 50,
+        "lang": "en",
+        "n": 53,
+        "suggested": 53,
+        "top1": 47,
+        "top3": 53
+      },
+      {
+        "class": "realword",
+        "flagged": 0,
+        "flagged_either": 0,
+        "lang": "en",
+        "n": 5,
+        "suggested": 0,
+        "top1": 0,
+        "top3": 0
+      }
+    ],
+    "en_gb_flags_common": 53,
+    "en_gb_top3_common": 51,
+    "right_words_rejected": [],
+    "suggest_ms": {
+      "da": {
+        "max": 3845.4492689999997,
+        "n": 88,
+        "p50": 237.59982,
+        "p95": 1581.313764
+      },
+      "en": {
+        "max": 26.992557,
+        "n": 53,
+        "p50": 12.591843,
+        "p95": 24.124756
+      }
+    },
+    "totals": [
+      {
+        "detectable": false,
+        "flagged": 0,
+        "flagged_either": 0,
+        "lang": "da",
+        "n": 18,
+        "suggested": 0,
+        "top1": 0,
+        "top3": 0
+      },
+      {
+        "detectable": true,
+        "flagged": 88,
+        "flagged_either": 86,
+        "lang": "da",
+        "n": 95,
+        "suggested": 88,
+        "top1": 52,
+        "top3": 71
+      },
+      {
+        "detectable": false,
+        "flagged": 0,
+        "flagged_either": 0,
+        "lang": "en",
+        "n": 5,
+        "suggested": 0,
+        "top1": 0,
+        "top3": 0
+      },
+      {
+        "detectable": true,
+        "flagged": 53,
+        "flagged_either": 50,
+        "lang": "en",
+        "n": 53,
+        "suggested": 53,
+        "top1": 47,
+        "top3": 53
+      }
+    ]
+  }
+}

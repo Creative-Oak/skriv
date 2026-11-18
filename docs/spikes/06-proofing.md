@@ -13,4 +13,7 @@ to WASM, using the community `da_DK` dictionary.
 - LanguageTool's Danish rule coverage. The report expects it to be thin.
 - The licences of zspell, lingua-rs and whatlang, and of the `da_DK` dictionary.
 
-**Status:** not started.
+**Status:** done (2026-11-18). The criterion fails for automatic language
+switching (5.1 false switches per 10 pages at best; 0 on long paragraphs);
+spell checking against both dictionaries avoids the problem. See
+[`06-results.md`](06-results.md) and ADR 0009 (proposed).

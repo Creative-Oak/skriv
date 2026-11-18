@@ -1,0 +1,25 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A job advertisement in Danish followed by an English version, with English job-market vocabulary inside the Danish text.
+da	title	Erfaren softwareudvikler til Digitalisering
+da	p	Vil du være med til at bygge de digitale løsninger, som 340.000 borgere bruger hver dag? Vi søger en erfaren softwareudvikler til vores team, der udvikler og drifter kommunens selvbetjeningsløsninger.
+da	h	Om jobbet
+da	p	Du bliver en del af et team på otte udviklere, en product owner og en UX-designer. Vi arbejder agilt i sprints på to uger og har stor frihed til selv at vælge værktøjer. Vores løsninger er skrevet i TypeScript og Rust, og vi deployer til en Kubernetes-platform i et dansk datacenter.
+da	p	Dine opgaver bliver blandt andet at:
+da	li	udvikle nye funktioner i vores selvbetjeningsløsninger
+da	li	forbedre tilgængeligheden, så løsningerne kan bruges af alle
+da	li	deltage i code reviews og hjælpe yngre kolleger
+da	li	samarbejde med fagområderne om at forenkle arbejdsgange
+da	h	Om dig
+da	p	Du har nogle års erfaring med webudvikling og trives med at tage ansvar for en løsning fra idé til drift. Det er en fordel, hvis du har arbejdet med offentlige it-løsninger, men det er ikke et krav. Du behøver ikke at tale dansk fra første dag, men du skal være indstillet på at lære det. Vi tilbyder danskundervisning i arbejdstiden.
+da	h	Vi tilbyder
+da	li	en arbejdsplads med fokus på faglighed og trivsel
+da	li	fleksible arbejdstider og mulighed for hjemmearbejde
+da	li	en frokostordning og en aktiv personaleforening
+da	li	løn efter overenskomst med mulighed for tillæg
+da	h	Ansøgning
+da	p	Søg via linket senest den 30. november 2026. Vi holder samtaler i uge 50. Har du spørgsmål, så kontakt teamleder Nikolaj Vang på 89 40 55 21.
+en	h	In English
+en	p	Would you like to help build the digital services that 340,000 citizens use every day? We are looking for an experienced software developer to join our team, which develops and runs the municipality's self-service solutions.
+en	p	You will join a team of eight developers, a product owner and a UX designer. We work in two-week sprints and have a lot of freedom to choose our own tools. Our services are written in TypeScript and Rust and are deployed to a Kubernetes platform in a Danish data centre.
+en	p	You have several years of experience with web development and enjoy taking responsibility for a service from idea to operation. You do not need to speak Danish from day one, but you should be willing to learn. We offer Danish lessons during working hours.
+en	p	Apply via the link by 30 November 2026. Interviews will be held in week 50. If you have questions, please contact team leader Nikolaj Vang on +45 89 40 55 21.

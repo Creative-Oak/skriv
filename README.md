@@ -25,6 +25,10 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
 - **Spike 5 (DOCX): done.** DOCX via LibreOffice at the boundary; skriv
   adds no loss; tracked formatting and paragraph-mark changes are the weak
   spot; see [docs/spikes/05-results.md](docs/spikes/05-results.md).
+- **Spike 6 (proofing mixed Danish and English): done.** Automatic language
+  switching fails the criterion (5.1 false switches per 10 pages); checking
+  every word against both dictionaries works; see
+  [docs/spikes/06-results.md](docs/spikes/06-results.md) (ADR 0009, proposed).
 - **Next:** Spike 2 (editing latency, IME and screen readers on real
   devices).
 - **Decisions:** [docs/adr/](docs/adr/). **Progress:** [docs/PLAN.md](docs/PLAN.md).
@@ -36,7 +40,8 @@ crates/model      the semantic document model: ODF-shaped, stable IDs, preservat
 crates/odf        ODT reader/writer: projection with preservation
 crates/fidelity   round-trip fidelity harness, with LibreOffice as oracle (CLI: skriv-fidelity)
 crates/crdt       Spike 3: the model in Loro and Automerge behind one trait
-prototypes/       spike prototypes outside the workspace (crdt-wasm-size)
+crates/proofing   Spike 6: language per paragraph and spell checking (spellbook, da_DK, en_US)
+prototypes/       spike prototypes outside the workspace (crdt-wasm-size, proofing-wasm)
 packages/         TypeScript (empty: tooling only, for the web UI and @skriv/* WASM packages)
 fidelity/         corpus, scripts, reports
 docs/adr          architecture decision records

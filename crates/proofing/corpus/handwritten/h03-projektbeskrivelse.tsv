@@ -1,0 +1,41 @@
+#default=da
+#source=Written for Spike 6 (CC0-1.0). A project description with an English abstract, English partner names and an English evaluation plan.
+da	title	Klimatilpasning i ådalen: projektbeskrivelse
+en	h	Abstract
+en	p	The project will reduce the risk of flooding in the lower river valley by restoring 14 hectares of wetland, raising two road crossings and building a public path along the new floodplain. It combines nature-based solutions with traditional engineering and involves residents in the design from the start.
+en	p	The municipality leads the project together with the regional water utility and a university partner. The total budget is 18.4 million DKK, of which 60 per cent is requested from the programme.
+da	h	1. Baggrund
+da	p	De seneste ti år har ådalen været oversvømmet syv gange, og ved skybruddet i august 2024 stod vandet en halv meter over vejen ved Møllebroen. Kommunens klimatilpasningsplan peger på ådalen som et af de tre områder, hvor risikoen for skader er størst. Samtidig er der et ønske fra borgerne om bedre adgang til naturen langs åen.
+da	p	Projektet bygger på erfaringer fra lignende projekter i Holland og Tyskland, hvor man har givet vandet mere plads i stedet for at bygge højere diger. Den engelske betegnelse {{en:"room for the river"}} er efterhånden også blevet brugt i danske planer.
+da	h	2. Formål
+da	p	Formålet er at nedbringe risikoen for oversvømmelse af boliger og veje, at forbedre vandkvaliteten i åen og at skabe et nyt rekreativt område. Projektet skal også give viden om, hvordan naturbaserede løsninger kan kombineres med klassiske anlægsprojekter.
+da	h	3. Aktiviteter
+da	li	Genopretning af 14 hektar vådområde ved Nedre Mølle.
+da	li	Hævning af Møllebroen og Engvej med 70 cm.
+da	li	Anlæg af en 3,2 km lang sti med to fugletårne.
+da	li	Borgerinddragelse med workshops, gåture og en digital høring.
+da	li	Måling af vandstand og vandkvalitet i tre år efter anlægget.
+da	h	4. Partnere
+da	p	Projektet ledes af kommunen. Partnerne er forsyningsselskabet, Institut for Geoscience på universitetet og den lokale grundejerforening. Det hollandske firma Rivierwerk BV deltager som rådgiver på design af vådområdet.
+da	td	Partner
+da	td	Rolle
+da	td	Andel af budget
+da	td	Kommunen
+da	td	Projektleder, anlæg
+da	td	52 %
+da	td	Forsyningsselskabet
+da	td	Ledningsarbejde, målinger
+da	td	28 %
+da	td	Universitetet
+da	td	Evaluering
+da	td	15 %
+da	td	Grundejerforeningen
+da	td	Borgerinddragelse
+da	td	5 %
+en	h	5. Evaluation plan
+en	p	The university partner will evaluate the project against three indicators: the number of flooded properties during events with a return period of 20 years or more, the concentration of nitrogen and phosphorus downstream of the wetland, and the number of visitors on the new path.
+en	p	Data will be collected for three years after construction and published as open data under a CC BY 4.0 licence. A final report in English will be submitted to the programme secretariat in 2030.
+da	h	6. Tidsplan
+da	p	Projektering foregår i 2027, og anlægsarbejdet udføres i 2028. Vådområdet forventes at være fuldt etableret i 2029, hvorefter målingerne fortsætter til udgangen af 2031.
+da	h	7. Forankring
+da	p	Efter projektperioden overtager kommunens driftsafdeling vedligeholdelsen af stien og fugletårnene. Forsyningsselskabet fortsætter målingerne af vandstanden som en del af den almindelige drift, og resultaterne indgår i den næste revision af klimatilpasningsplanen.
