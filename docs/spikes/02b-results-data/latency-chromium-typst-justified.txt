@@ -1,0 +1,4 @@
+Chromium 157.0.8103.78
+typst (justified), page 1: 89 pages (full 1137 ms, hash 9a9571c37a722b6f); p50 70.80 ms, p95 98.70 ms, max 102.60 ms
+typst (justified), page 50: 89 pages (full 1137 ms, hash 9a9571c37a722b6f); p50 82.80 ms, p95 101.60 ms, max 346.90 ms
+typst (justified), table, page 80: 89 pages (full 1137 ms, hash 9a9571c37a722b6f); p50 89.90 ms, p95 103.90 ms, max 155.40 ms

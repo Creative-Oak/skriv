@@ -1,0 +1,6 @@
+own-greedy: 25363 spaces on justified lines; width / natural: min 0.93, mean 1.22, p95 1.51, max 1.90; wider than 2x: 0
+own: 25350 spaces on justified lines; width / natural: min 0.93, mean 1.22, p95 1.49, max 1.75; wider than 2x: 0
+own-shrink: 18124 spaces on justified lines; width / natural: min 0.62, mean 1.03, p95 1.30, max 1.44; wider than 2x: 0
+typst: 18506 spaces on justified lines; width / natural: min 0.62, mean 1.15, p95 1.92, max 2.88; wider than 2x: 698
+typst-compat: 25358 spaces on justified lines; width / natural: min 0.93, mean 1.21, p95 2.05, max 2.75; wider than 2x: 1386
+libreoffice: 25852 spaces on justified lines; width / natural: min 0.40, mean 1.22, p95 1.53, max 2.30; wider than 2x: 18

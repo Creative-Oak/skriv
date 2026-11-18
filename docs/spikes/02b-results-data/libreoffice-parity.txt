@@ -1,0 +1,10 @@
+letter-100 own-greedy: pages LO 101 engine 101; lines LO 3174 engine 3175; identical lines 3174/3174 (100.0%); pages starting alike 100/101
+letter-100 own: pages LO 101 engine 101; lines LO 3174 engine 3175; identical lines 3174/3174 (100.0%); pages starting alike 100/101
+letter-100 own-shrink: pages LO 101 engine 101; lines LO 3174 engine 3175; identical lines 3174/3174 (100.0%); pages starting alike 100/101
+letter-100 typst: pages LO 101 engine 100; lines LO 3174 engine 3074; identical lines 3074/3174 (96.8%); pages starting alike 100/100
+letter-100 typst-compat: pages LO 101 engine 100; lines LO 3174 engine 3074; identical lines 3074/3174 (96.8%); pages starting alike 100/100
+letter-100-justified own-greedy: pages LO 101 engine 101; lines LO 3167 engine 3166; identical lines 2927/3167 (92.4%); pages starting alike 100/101
+letter-100-justified own: pages LO 101 engine 101; lines LO 3167 engine 3166; identical lines 2791/3167 (88.1%); pages starting alike 100/101
+letter-100-justified own-shrink: pages LO 101 engine 91; lines LO 3167 engine 2651; identical lines 1367/3167 (43.2%); pages starting alike 4/91
+letter-100-justified typst: pages LO 101 engine 89; lines LO 3167 engine 2593; identical lines 1210/3167 (38.2%); pages starting alike 3/89
+letter-100-justified typst-compat: pages LO 101 engine 100; lines LO 3167 engine 3064; identical lines 2188/3167 (69.1%); pages starting alike 100/100

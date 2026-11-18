@@ -22,4 +22,7 @@ target (about 30 ms relayout per keystroke) with editable caret mapping.
   `hyph-utf8` patterns. The patterns carry per-language licences; the Danish
   one needs checking.
 
-**Status:** not started. Proposed plan: [`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md).
+**Status:** done, 2026-11-18, except latency on real devices (Spike 2).
+Results: [`02b-results.md`](02b-results.md); judgement calls:
+[`02b-judgements.md`](02b-judgements.md); decision: ADR 0007 (proposed).
+Plan: [`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md).

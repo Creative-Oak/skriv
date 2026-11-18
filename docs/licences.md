@@ -52,11 +52,32 @@ under MIT.
 Only tooling so far: `@biomejs/biome` (MIT OR Apache-2.0), `typescript`
 (Apache-2.0), `vitest` (MIT).
 
-## To verify before adoption (from the report, not checked yet)
+## Spike 2b layout candidates (verified 2026-11-18)
 
-- **Spike 2b:** Parley, HarfRust, Skrifa, Fontique, ICU4X, `hypher`;
-  `hyph-utf8` patterns (per-language licences, Danish included); bundled
-  fonts (OFL expected).
+Used in `prototypes/layout/` only (its own workspace); not yet in the core.
+
+| Crate | Version | Licence |
+|---|---|---|
+| `parley`, `parley_engine`, `fontique`, `parlance` | 0.13.0 / 0.1.1 | Apache-2.0 OR MIT |
+| `harfrust` | 0.15.0 (0.16.0 is current; Parley pins 0.15) | MIT |
+| `skrifa`, `read-fonts` | 0.49 / 0.46 | MIT OR Apache-2.0 |
+| ICU4X (`icu_segmenter`, `icu_properties`, …) | 2.3–2.4 | Unicode-3.0 |
+| `hypher` | 0.1.8 | MIT OR Apache-2.0 |
+| Danish hyphenation patterns (`hyph-utf8` `hyph-da`, Frank Jensen 1994, embedded in `hypher`) | | MIT OR LPPL-1.3+; we use MIT |
+| `typst`, `typst-ide`, `typst-layout` (prototype b, not adopted) | 0.15.1 | Apache-2.0; pulls 350 crates, of which `arrayref`, `kamadak-exif` and `mutate_once` are BSD-2-Clause, which `deny.toml` doesn't list |
+
+The own engine's 78 crates all pass `deny.toml`.
+
+**Fonts (prototype, fetched by `prototypes/layout/fetch-fonts.sh`, not
+committed):** Liberation Serif and Sans 2.1.5, SIL OFL 1.1. Font licences
+are not covered by `cargo deny`; OFL needs a policy line in ADR 0005 before
+fonts ship.
+
+**Test-time tools added by Spike 2b:** `hyphen-da` (LibreOffice's Danish
+hyphenation patterns, MPL-2.0 per its Debian copyright), Playwright's
+Chromium, Node 22.
+
+## To verify before adoption (from the report, not checked yet)
 - **Spike 3:** Loro, Automerge.
 - **Spike 2:** ProseMirror.
 - **Spike 6:** zspell, lingua-rs, whatlang; the `da_DK` Hunspell dictionary.
