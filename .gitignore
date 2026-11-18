@@ -13,3 +13,4 @@ dist/
 /prototypes/layout/fonts/*.ttf
 /prototypes/*/target*
 __pycache__/
+/.claude/worktrees/

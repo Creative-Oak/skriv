@@ -64,3 +64,11 @@ breaking, a large C++ dependency and a server round trip per keystroke.
 |---|---|
 | What LibreOffice keeps of our IDs, metadata and private data on re-save | **Answered by Spike 4** (LibreOffice 24.2 and 26.8): `xml:id` on paragraphs, headings and sections, `meta:user-defined` and an RDF metadata part survive; everything a re-save changes is listed in `docs/spikes/04-results.md`. File mode needs no LibreOffice at runtime. |
 | Whether a server-side LibreOffice converter ships at all, and where it runs | Later. Not needed for Phase 1. |
+
+## Spike 5: LibreOffice as the DOCX converter
+
+LibreOffice 24.2 converted 361 of 361 DOCX files to ODT and back; skriv in
+between added no loss. What the conversion loses is listed in
+`docs/spikes/05-results.md` (tracked formatting and paragraph-mark changes,
+"behind text" on drawings, some content controls, margins in 8% of files).
+Word was not available to check that it opens LibreOffice's output.

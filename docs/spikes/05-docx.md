@@ -18,4 +18,7 @@ tracked changes.
 oracle loop. A DOCX mode needs a second canonicaliser for OOXML and the
 `fldChar`, `numbering.xml` and `w:rPrChange` mappings.
 
-**Status:** not started.
+**Status:** run 2026-11-18 on LibreOffice 24.2: **continue** with DOCX
+converted by LibreOffice at the boundary. Results:
+[`05-results.md`](05-results.md); judgement calls:
+[`05-judgements.md`](05-judgements.md).

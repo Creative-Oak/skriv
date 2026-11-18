@@ -22,8 +22,11 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
 - **Spike 4 (files through LibreOffice): done.** Returned files become exact,
   attributed suggestion branches; see
   [docs/spikes/04-results.md](docs/spikes/04-results.md).
+- **Spike 5 (DOCX): done.** DOCX via LibreOffice at the boundary; skriv
+  adds no loss; tracked formatting and paragraph-mark changes are the weak
+  spot; see [docs/spikes/05-results.md](docs/spikes/05-results.md).
 - **Next:** Spike 2 (editing latency, IME and screen readers on real
-  devices); Spikes 5 (DOCX) and 6 (proofing).
+  devices).
 - **Decisions:** [docs/adr/](docs/adr/). **Progress:** [docs/PLAN.md](docs/PLAN.md).
 
 ## Layout
