@@ -14,7 +14,12 @@ import sys
 sys.path.insert(0, __import__("os").path.dirname(__file__))
 from docx_features import FEATURES  # noqa: E402
 
-PATHS = [("lo", "LibreOffice DOCX→DOCX"), ("sk", "via skriv (preserving)"), ("skr", "via skriv (regenerated)")]
+PATHS = [
+    ("lo", "LibreOffice DOCX→DOCX"),
+    ("lo2", "LibreOffice DOCX→ODT→DOCX"),
+    ("sk", "…→ODT→skriv→ODT→… (preserving)"),
+    ("skr", "…→ODT→skriv→ODT→… (regenerated)"),
+]
 
 
 def pct(a, b):

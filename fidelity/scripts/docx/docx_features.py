@@ -43,7 +43,11 @@ def wattr(el, name):
 
 
 def norm_text(s):
-    return re.sub(r"\s+", " ", s.replace("\u00a0", " ")).strip()
+    s = s.replace("\u00a0", " ").replace("\u2011", "-").replace("\u00ad", "")
+    # Symbol-font characters (w:sym, private use) and emoji: LibreOffice
+    # turns symbol characters into Unicode; compare the rest of the text.
+    s = "".join(c for c in s if not (0xE000 <= ord(c) <= 0xF8FF or ord(c) >= 0x1F000))
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def read_xml(z, name):
@@ -272,20 +276,43 @@ class Walk:
         self.nb = numbering
         self.items = collections.defaultdict(list)
         self.field_stack = []
+        self.table_styles = []
+        self.even_odd = False
+        self.hf_ids = []
 
-    # Text of an element, as Word shows it (deleted text excluded).
+    # Text of an element as Word shows it: deleted text, field results
+    # (computed: page numbers, TOC entries) and text boxes (their own
+    # feature) left out. Field state carries across paragraphs.
     def para_text(self, p):
         out = []
         for el in p.iter():
-            tag = etree.QName(el).localname if isinstance(el.tag, str) else ""
-            ns = etree.QName(el).namespace if isinstance(el.tag, str) else ""
-            if ns != W:
+            if not isinstance(el.tag, str):
                 continue
-            if tag == "t" and not self.inside(el, "del"):
+            q = etree.QName(el)
+            if q.namespace != W:
+                continue
+            tag = q.localname
+            if tag == "fldChar":
+                kind = wattr(el, "fldCharType")
+                if kind == "begin":
+                    self.field_stack.append("instr")
+                elif kind == "separate" and self.field_stack:
+                    self.field_stack[-1] = "result"
+                elif kind == "end" and self.field_stack:
+                    self.field_stack.pop()
+                continue
+            if tag not in ("t", "tab", "br", "cr", "noBreakHyphen"):
+                continue
+            if self.field_stack and "result" in self.field_stack:
+                continue
+            if self.inside(el, "del") or self.inside(el, "fldSimple") or self.inside(el, "txbxContent"):
+                continue
+            if tag == "t":
                 out.append(el.text or "")
-            elif tag == "tab" and el.getparent() is not None and etree.QName(el.getparent()).localname == "r":
-                out.append("\t")
-            elif tag in ("br", "cr") and not self.inside(el, "del"):
+            elif tag == "tab":
+                if el.getparent() is not None and etree.QName(el.getparent()).localname == "r":
+                    out.append("\t")
+            elif tag in ("br", "cr"):
                 out.append(" ")
             elif tag == "noBreakHyphen":
                 out.append("-")
@@ -328,8 +355,10 @@ class Walk:
         # Effective character formatting, per character, reported as maximal
         # stretches with the same value per property (so how the text is
         # cut into runs doesn't matter).
-        prpr = self.st.rpr(sid)
+        prpr = self.st.rpr(sid or self.st.default_para)
         base = dict(self.st.defaults_r)
+        for ts in self.table_styles:
+            base.update(self.st.rpr(ts))
         base.update(prpr)
         chars = []
         for r in p.iter(w("r")):
@@ -359,11 +388,22 @@ class Walk:
                     feature = "font" if prop == "font" else "character formatting"
                     self.items[feature].append((key, seg[:40], prop, val))
                 i0 = i1
-        # Tracked changes inside the paragraph.
+        # Tracked changes inside the paragraph: per kind and author, the
+        # changed text joined (adjacent insertions may be one element or
+        # several); paragraph-mark changes separately.
+        changed = collections.defaultdict(list)
         for tag in ("ins", "del", "moveFrom", "moveTo"):
             for c in p.iter(w(tag)):
+                parent = c.getparent()
+                if parent is not None and etree.QName(parent).localname == "rPr":
+                    pp = parent.getparent()
+                    if pp is not None and etree.QName(pp).localname == "pPr":
+                        self.items["tracked change"].append(("paragraph mark " + tag, wattr(c, "author") or "", key[:60]))
+                    continue
                 txt = "".join(x.text or "" for x in c.iter(w("t"), w("delText")))
-                self.items["tracked change"].append((tag, wattr(c, "author") or "", norm_text(txt)[:60]))
+                changed[(tag, wattr(c, "author") or "")].append(txt)
+        for (tag, author), parts in changed.items():
+            self.items["tracked change"].append((tag, author, norm_text("".join(parts))[:60]))
         for c in p.iter(w("rPrChange")):
             r = c.getparent().getparent()
             txt = "".join(x.text or "" for x in r.findall(w("t")))
@@ -403,15 +443,28 @@ class Walk:
         # Drawings.
         for d in p.iter(w("drawing")):
             self.items["drawing"].append(drawing_item(d))
+        for tb in p.iter(w("txbxContent")):
+            txt = norm_text(" ".join(x.text or "" for x in tb.iter(w("t"))))
+            if txt and not self.inside(tb, "txbxContent"):
+                self.items["text box text"].append((txt[:80],))
         for pict in p.iter(w("pict")):
             self.items["drawing"].append(("vml", "", "", "", ""))
         if p.find(f".//{{{M}}}oMath") is not None:
             self.items["equation"].append((key[:40],))
         for ff in p.iter(w("ffData")):
             kind = "text" if ff.find(w("textInput")) is not None else "check" if ff.find(w("checkBox")) is not None else "drop"
-            self.items["form field"].append((kind, wattr(ff.find(w("name")), "val") or ""))
+            self.items["form field"].append((key[:40], kind))
+            self.items["form field name"].append((wattr(ff.find(w("name")), "val") or "",))
 
     def table(self, t, where):
+        ts = wattr(t.find(f"{w('tblPr')}/{w('tblStyle')}"), "val")
+        self.table_styles.append(ts)
+        try:
+            self._table(t, where)
+        finally:
+            self.table_styles.pop()
+
+    def _table(self, t, where):
         rows = t.findall(w("tr"))
         grid = len(t.findall(f"{w('tblGrid')}/{w('gridCol')}"))
         self.items["table"].append((where, len(rows), grid))
@@ -481,15 +534,26 @@ class Walk:
         margins = tuple(round(float(wattr(mar, k) or 0) / 56.7) for k in ("top", "bottom", "left", "right")) if mar is not None else None
         ncols = wattr(cols, "num") if cols is not None else None
         self.items["section"].append((size, margins, ncols or "1"))
-        refs = sorted((etree.QName(r).localname, wattr(r, "type")) for r in s if isinstance(r.tag, str) and etree.QName(r).localname in ("headerReference", "footerReference"))
-        if s.find(w("titlePg")) is not None:
-            refs.append(("titlePg", "1"))
-        self.items["header/footer set"].append(tuple(refs))
+        # Which headers and footers apply: default always, first only with
+        # titlePg, even only with evenAndOddHeaders in settings.
+        title = s.find(w("titlePg")) is not None and onoff(s.find(w("titlePg")))
+        refs = []
+        for r in s:
+            if not isinstance(r.tag, str) or etree.QName(r).localname not in ("headerReference", "footerReference"):
+                continue
+            t = wattr(r, "type") or "default"
+            if (t == "first" and not title) or (t == "even" and not self.even_odd):
+                continue
+            refs.append((etree.QName(r).localname, t))
+            self.hf_ids.append(r.get(f"{{{R}}}id"))
+        self.items["header/footer set"].append(tuple(sorted(refs)))
 
 
 def field_item(instr):
     s = instr.strip()
     kind = s.split()[0].upper() if s.split() else ""
+    if kind == "TOC":
+        return (kind, "")
     args = norm_text(s[len(kind):])
     # Switches change formatting only; keep the kind and the main argument.
     main = re.sub(r"\\[*@#a-zA-Z]+\s*(\"[^\"]*\"|\S+)?", "", args).strip().strip('"')
@@ -533,13 +597,6 @@ def drawing_item(d):
     return (kind, "anchor:" + pos + ":" + wrap, size[0], size[1], "")
 
 
-def parts(z):
-    names = z.namelist()
-    def pick(prefix):
-        return sorted(n for n in names if re.fullmatch(rf"word/{prefix}\d*\.xml", n))
-    return pick("header"), pick("footer")
-
-
 def inventory(path):
     with zipfile.ZipFile(path) as z:
         doc = resolve_mce(read_xml(z, "word/document.xml"))
@@ -548,10 +605,17 @@ def inventory(path):
         styles = Styles(resolve_mce(read_xml(z, "word/styles.xml")))
         numbering = Numbering(resolve_mce(read_xml(z, "word/numbering.xml")))
         wk = Walk(styles, numbering)
+        settings = read_xml(z, "word/settings.xml")
+        if settings is not None and settings.find(w("evenAndOddHeaders")) is not None:
+            wk.even_odd = onoff(settings.find(w("evenAndOddHeaders")))
         body = doc.find(w("body"))
         wk.blocks(body, "body")
-        headers, footers = parts(z)
-        for name in headers + footers:
+        rels = read_xml(z, "word/_rels/document.xml.rels")
+        targets = {}
+        if rels is not None:
+            for rel in rels:
+                targets[rel.get("Id")] = "word/" + rel.get("Target", "").lstrip("/").removeprefix("word/")
+        for name in sorted({targets[i] for i in wk.hf_ids if i in targets}):
             root = resolve_mce(read_xml(z, name))
             if root is not None:
                 sub = Walk(styles, numbering)
@@ -563,6 +627,8 @@ def inventory(path):
                     wk.items["header/footer field"].append(f)
                 for d in sub.items["drawing"]:
                     wk.items["header/footer drawing"].append(d[:2])
+                for t in sub.items["text box text"]:
+                    wk.items["header/footer text"].append(t)
         for part, label in (("word/footnotes.xml", "footnote"), ("word/endnotes.xml", "endnote")):
             root = read_xml(z, part)
             if root is None:
@@ -589,7 +655,7 @@ FEATURES = [
     "text", "paragraph style", "outline level", "list", "alignment", "character formatting", "font",
     "table", "merged cell", "cell shading", "field", "hyperlink", "bookmark", "table of contents",
     "tracked change", "comment", "comment anchor", "note reference", "note text",
-    "drawing", "equation", "form field", "content control", "embedded document",
+    "drawing", "text box text", "equation", "form field", "form field name", "content control", "embedded document",
     "section", "header/footer set", "header/footer text", "header/footer field", "header/footer drawing",
 ]
 

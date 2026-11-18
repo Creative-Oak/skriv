@@ -9,6 +9,7 @@ For every .docx in the corpus directories:
   orig.docx  the file as found
   lo.docx    LibreOffice: open DOCX, save DOCX          (LibreOffice alone)
   lo.odt     LibreOffice: open DOCX, save ODT           (import via LibreOffice)
+  lo2.docx   lo.odt -> LibreOffice -> DOCX              (the control: no skriv)
   sk.docx    lo.odt -> skriv (read, write) -> LibreOffice -> DOCX
   skr.docx   lo.odt -> skriv (regenerate every node from the model) -> LibreOffice -> DOCX
 
@@ -112,6 +113,7 @@ def main():
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--limit", type=int)
     ap.add_argument("--child", nargs=2)
+    ap.add_argument("--compare-only", action="store_true", help="re-measure an earlier run's files")
     a = ap.parse_args()
     if a.child:
         spec = json.load(open(a.child[0]))
@@ -135,6 +137,12 @@ def main():
         os.makedirs(d, exist_ok=True)
         docs.append({"set": set_name, "id": os.path.basename(f)[:-5], "orig": f, "dir": d})
     t0 = time.time()
+    if a.compare_only:
+        prev = {(x["set"], x["id"]): x for x in json.load(open(os.path.join(out, "results.json")))}
+        r1 = {x["orig"]: prev.get((x["set"], x["id"]), {}).get("lo_import_error") for x in docs}
+        for x in docs:
+            x["skriv"] = prev.get((x["set"], x["id"]), {}).get("skriv", {})
+        return measure(a, out, docs, r1)
 
     # 1. LibreOffice: DOCX -> DOCX and DOCX -> ODT.
     jobs = [(x["orig"], [(os.path.join(x["dir"], "lo.docx"), "MS Word 2007 XML"), (os.path.join(x["dir"], "lo.odt"), "writer8")]) for x in docs]
@@ -152,9 +160,12 @@ def main():
             p = subprocess.run([fid, "roundtrip", lo_odt, os.path.join(x["dir"], name), *extra], capture_output=True, text=True, timeout=120)
             x["skriv"][name] = None if p.returncode == 0 else p.stderr.strip()[-300:]
 
-    # 3. LibreOffice: skriv's ODT -> DOCX.
+    # 3. LibreOffice: ODT -> DOCX, without skriv (the control) and after skriv.
     jobs = []
     for x in docs:
+        src = os.path.join(x["dir"], "lo.odt")
+        if os.path.exists(src):
+            jobs.append((src, [(os.path.join(x["dir"], "lo2.docx"), "MS Word 2007 XML")]))
         for name in ("sk", "skr"):
             src = os.path.join(x["dir"], f"{name}.odt")
             if os.path.exists(src):
@@ -162,6 +173,11 @@ def main():
     r2 = run_lo(a.soffice, jobs, a.workers)
     print(f"LibreOffice export: {sum(1 for v in r2.values() if v is None)}/{len(jobs)} in {time.time() - t0:.0f} s", flush=True)
 
+    measure(a, out, docs, r1)
+
+
+def measure(a, out, docs, r1):
+    t0 = time.time()
     # 4. Inventories, comparisons, validation.
     validator = docx_validate.Validator(a.xsd) if a.xsd else None
     results = []
@@ -176,7 +192,7 @@ def main():
         rec["census"] = {k: len(v) for k, v in orig.items() if v}
         if validator:
             rec["valid"] = {"orig": validator.validate(x["orig"])}
-        for name in ("lo", "sk", "skr"):
+        for name in ("lo", "lo2", "sk", "skr"):
             path = os.path.join(x["dir"], f"{name}.docx")
             if not os.path.exists(path):
                 rec[name] = None
