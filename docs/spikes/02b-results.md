@@ -10,7 +10,7 @@
 - **Judgement calls:** [`02b-judgements.md`](02b-judgements.md). **Raw
   output:** [`02b-results-data/`](02b-results-data/).
 - **Machine:** a 4-core Linux cloud container; Chromium 157 headless for the
-  browser runs; LibreOffice 26.8.1.1 as the reference. None of this is the
+  browser runs; LibreOffice 24.2.7.2 (Ubuntu package) as the reference; Spike 1 used 26.8.1.1 on macOS, and the parity run should be repeated against it. None of this is the
   reference hardware of the brief (mid-range Windows laptop, Android
   phone); Spike 2 has to repeat the latency runs there.
 - **Reproduce:** `prototypes/layout/fetch-fonts.sh`, then
@@ -151,7 +151,7 @@ compile in a process, before any caches, took 6.6 s).
 
 ### Line breaks and pages against LibreOffice
 
-LibreOffice 26.8.1.1 rendered both 100-page documents to PDF. Its body-text
+LibreOffice 24.2.7.2 rendered both 100-page documents to PDF. Its body-text
 lines (header, footer, footnotes and table cells left out) were compared,
 in order, with each engine's (`scripts/compare_lo.py`). List labels and
 footnote numbers, which LibreOffice draws but aren't paragraph text, are

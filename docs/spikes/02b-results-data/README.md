@@ -1,7 +1,7 @@
 # Spike 2b raw output
 
 Output of `prototypes/layout/measure.sh` (2026-11-18, 4-core Linux
-container, Chromium 157 headless, LibreOffice 26.8.1.1), compiler warnings
+container, Chromium 157 headless, LibreOffice 24.2.7.2), compiler warnings
 removed. The numbers in [`../02b-results.md`](../02b-results.md) come from
 these files.
 

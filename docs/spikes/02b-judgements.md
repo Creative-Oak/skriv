@@ -79,3 +79,10 @@ Decisions made during Spike 2b that the brief did not settle. Results are in
 13. **Latency is "relayout + locate the caret"**, timed around the engine
     call (`performance.now()` around the wasm call in Chromium). Painting is
     Spike 2's measurement.
+
+14. **The LibreOffice reference is 24.2.7.2**, the Ubuntu package in the
+    container, not 26.8.1.1 (Spike 1's macOS oracle). An earlier draft of
+    the results named 26.8.1.1 by mistake. Line breaking in Writer changed
+    little between these versions as far as we know, but that is not
+    verified: the parity run (`scripts/compare_lo.py`) should be repeated
+    against 26.8 before ADR 0007 is accepted.
