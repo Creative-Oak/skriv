@@ -54,7 +54,7 @@ skriv/
 | 0001 | We record decisions as ADRs | none |
 | 0002 | Our own ODF-shaped semantic model with stable UUIDs and preservation slots. Not ODF XML, OOXML or Typst. The editor tree is never the source of truth (SuperDoc lesson). | How much to lean on verbatim slots (Spike 1, decision point 1); CRDT encoding (Spike 3) |
 | 0003 | LibreOffice is the oracle and optional server converter, never the editor or the runtime I/O | Answered by Spike 4: IDs on paragraphs, headings and sections, user-defined metadata and an RDF part survive; `docs/spikes/04-results.md` |
-| 0004 | DOM rendering behind a replaceable input layer; pure canvas rejected for accessibility | ProseMirror-directed vs owned view (Spike 2); own engine vs Typst kernel (Spike 2b); Tauri vs Electron (Spike 7) |
+| 0004 | DOM rendering behind a replaceable input layer; pure canvas rejected for accessibility. View strategy B, an owned view (proposed, Spike 2) | Screen-reader and reference-hardware confirmation of B (Spike 2, deferred); Tauri vs Electron (Spike 7) |
 | 0005 | MPL-2.0 for core and apps; embeddable into AGPL birk; no AGPL or GPL dependencies in core; every dependency is checked and recorded in `docs/licences.md`, enforced by cargo-deny | Whether a future sync server should be AGPL (deferred) |
 | 0006 | Round-trip by projection with preservation: per-element dirty flag, untouched elements re-emitted verbatim | Granularity of slots (Spike 1 result) |
 | 0007 | (proposed, Spike 2b) Our own layout engine on Parley, not Typst as the kernel; LibreOffice line-break parity by default | Latency on real devices (Spike 2); determinism on macOS and Windows |
@@ -230,4 +230,13 @@ No pushing or GitHub repo creation unless asked.
   - Decided: web app first; Spike 7 (desktop) deferred.
   - CI on push runs only the quick checks. The LibreOffice fidelity job is manual (Run workflow).
   - Ten Word-exported EU ODT documents passed every criterion; addendum in the Spike 1 results.
+- 2026-11-18: Spike 2 started locally (it needs a person and real devices).
+  - Prototypes A (ProseMirror) and B (owned view, EditContext or textarea)
+    over the 2b engine in `prototypes/view/`; automated results and
+    findings in `docs/spikes/02-results.md` (in progress).
+  - Next: the manual sheet `docs/spikes/02-manual-tests.md`.
+- 2026-11-18: Spike 2 provisional verdict: B, the owned view (EditContext in
+  Chrome and Edge, hidden textarea in Firefox and Safari); ADR 0004 updated.
+  Phones, Windows, VoiceOver and reference-hardware latency deferred; the
+  screen-reader tests could still reverse the verdict.
 

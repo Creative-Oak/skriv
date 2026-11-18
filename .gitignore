@@ -13,3 +13,7 @@ dist/
 /prototypes/layout/fonts/*.ttf
 /prototypes/*/target*
 __pycache__/
+/prototypes/view/web/public/pkg/
+/prototypes/view/web/public/fonts/
+/prototypes/view/web/public/letter-100.json
+/prototypes/view/web/results/

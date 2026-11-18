@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "spike2-views",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--dir", "prototypes/view/web", "--ignore-workspace", "dev"],
+      "port": 5180
+    }
+  ]
+}

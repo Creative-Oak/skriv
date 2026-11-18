@@ -1,0 +1,21 @@
+[package]
+name = "view-engine"
+version = "0.0.0"
+description = "Spike 2: the document, edits and incremental layout behind both view prototypes, for wasm32."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+layout-contract = { path = "../../layout/contract", default-features = false }
+layout-own = { path = "../../layout/own" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+wasm-bindgen = "=0.2.130"
+
+[lints]
+workspace = true
