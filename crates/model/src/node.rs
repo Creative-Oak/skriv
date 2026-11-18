@@ -267,4 +267,10 @@ impl Slot {
     pub fn is_whitespace(&self) -> bool {
         self.name.is_none() && self.raw.chars().all(char::is_whitespace)
     }
+
+    /// Layout output a reader may drop: LibreOffice's `text:soft-page-break`,
+    /// which marks where its layout broke the page (between table rows, too).
+    pub fn is_layout(&self) -> bool {
+        self.name.as_deref() == Some("text:soft-page-break")
+    }
 }

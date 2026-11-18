@@ -11,3 +11,4 @@ dist/
 !/fidelity/reports/README.md
 .DS_Store
 /prototypes/*/target*
+__pycache__/

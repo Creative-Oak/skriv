@@ -1,0 +1,23 @@
+[package]
+name = "skriv-filemode"
+version = "0.0.0"
+description = "Spike 4: skriv's CRDT state in ODT files, and turning a file returned from LibreOffice into a suggestion branch."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+skriv-model.workspace = true
+skriv-odf.workspace = true
+skriv-crdt = { path = "../crdt", default-features = false, features = ["loro"] }
+loro = "1.18"
+zip.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+base64 = "0.22"
+similar = "2.7"
+uuid.workspace = true
+
+
+[lints]
+workspace = true

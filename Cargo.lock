@@ -159,6 +159,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "base64"
+version = "0.22.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
+
+[[package]]
 name = "bit-set"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1712,6 +1718,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3a219298ac11a56ea9a6d2120044824d6f01aeb034955e7af7bc16858527deea"
 
 [[package]]
+name = "similar"
+version = "2.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbbb5d9659141646ae647b42fe094daf6c6192d1620870b449d9557f748b2daa"
+
+[[package]]
 name = "skriv-crdt"
 version = "0.0.0"
 dependencies = [
@@ -1738,6 +1750,22 @@ dependencies = [
  "skriv-model",
  "skriv-odf",
  "walkdir",
+ "zip",
+]
+
+[[package]]
+name = "skriv-filemode"
+version = "0.0.0"
+dependencies = [
+ "base64",
+ "loro",
+ "serde",
+ "serde_json",
+ "similar",
+ "skriv-crdt",
+ "skriv-model",
+ "skriv-odf",
+ "uuid",
  "zip",
 ]
 

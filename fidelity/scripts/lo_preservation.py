@@ -525,7 +525,35 @@ def uno_store(soffice, profile, files, outdir, edit):
         check=False,
     )
     log_path = job + ".log"
-    return json.load(open(log_path)) if os.path.exists(log_path) else [{"ok": False, "error": "macro produced no log"}]
+    if os.path.exists(log_path):
+        return json.load(open(log_path))
+    # No Python script provider in this LibreOffice: drive it over a pipe instead.
+    return uno_store_pipe(soffice, profile, files, outdir, edit)
+
+
+def uno_store_pipe(soffice, profile, files, outdir, edit):
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "uno"))
+    try:
+        import lo_pipe
+    except ImportError:
+        return [{"ok": False, "error": "no script provider and no python3-uno"}]
+    log = []
+    with lo_pipe.office(soffice, profile) as (_ctx, desktop):
+        for p in files:
+            try:
+                doc = lo_pipe.load(desktop, p)
+                if doc is None:
+                    log.append({"in": p, "ok": False, "error": "not loaded"})
+                    continue
+                if edit:
+                    text = doc.getText()
+                    text.insertString(text.createTextCursorByRange(text.getStart()), "Edited in LibreOffice. ", False)
+                lo_pipe.store(doc, os.path.join(outdir, os.path.basename(p)))
+                doc.close(True)
+                log.append({"in": p, "ok": True})
+            except Exception as e:  # noqa: BLE001
+                log.append({"in": p, "ok": False, "error": repr(e)})
+    return log
 
 
 def evaluate(path, checks):
