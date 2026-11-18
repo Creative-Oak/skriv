@@ -1,0 +1,26 @@
+LanguageTool rule counts, Spike 6 (2026-11-18)
+
+Source: languagetool-org/languagetool, default branch, commit f44f56573542ffa0e336b4efd400f2143337250f
+Files: languagetool-language-modules/<lang>/src/main/resources/org/languagetool/rules/<lang>/{grammar,style}.xml
+Counted with Python's xml.etree: "rules" = every <rule> element (including those inside
+<rulegroup>), "top-level" = distinct ids of <rule>/<rulegroup> directly under a <category>.
+
+file                 rules  rulegroups  top-level ids
+da grammar.xml          78          19             38
+da style.xml        (none: 404)
+sv grammar.xml          33           2             32
+sv style.xml        (none: 404)
+nl grammar.xml        1916        1100           1111
+nl style.xml          1573        1000           1014
+de grammar.xml        4718        1171           2191
+de style.xml           512          91            158
+en grammar.xml        5571         972           2476
+en style.xml           535          75            290
+
+Danish categories in da/grammar.xml: CAT1, CAT2, CAT3, CAT4, GRAMMAR, GRAMMAR_COMMA, MISC.
+Java rules registered by Danish.java: CommaWhitespaceRule, DoublePunctuationRule,
+GenericUnpairedBracketsRule, HunspellRule, MultipleWhitespaceRule, UppercaseSentenceStartRule
+(all generic, shared with other languages).
+
+Licence: LGPL-2.1 (COPYING.txt at the repository root). Java. Not usable as a dependency of the
+core under ADR 0005; at most an optional, separately installed server.
