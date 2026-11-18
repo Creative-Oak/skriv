@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spike 2 views</title>
+    <style>
+      body { font: 16px/1.5 system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 16px; }
+      li { margin: 0.5rem 0; }
+      code { font-size: 0.9em; }
+    </style>
+  </head>
+  <body>
+    <h1>Spike 2: paginated editing</h1>
+    <p>The same 100-page Danish letter, laid out by the Spike 2b engine (wasm), in two views.</p>
+    <ul>
+      <li><a href="a.html">A: ProseMirror view</a>: contenteditable owned by ProseMirror; the engine's lines are decorations.</li>
+      <li><a href="b.html">B: owned view</a>: EditContext where the browser has it, otherwise a hidden textarea.
+        <a href="b.html?input=textarea">B with the textarea forced</a> ·
+        <a href="b.html?role=textbox">B with <code>role=textbox</code></a></li>
+    </ul>
+    <p>The panel at the bottom shows keystroke-to-paint latency; <em>Download JSON</em> saves every sample for the results.</p>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+@font-face {
+  font-family: "Liberation Serif";
+  src: url("/fonts/LiberationSerif-Regular.ttf");
+}
+@font-face {
+  font-family: "Liberation Serif";
+  font-weight: bold;
+  src: url("/fonts/LiberationSerif-Bold.ttf");
+}
+@font-face {
+  font-family: "Liberation Serif";
+  font-style: italic;
+  src: url("/fonts/LiberationSerif-Italic.ttf");
+}
+@font-face {
+  font-family: "Liberation Serif";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/LiberationSerif-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("/fonts/LiberationSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Liberation Sans";
+  font-weight: bold;
+  src: url("/fonts/LiberationSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Liberation Sans";
+  font-style: italic;
+  src: url("/fonts/LiberationSans-Italic.ttf");
+}
+@font-face {
+  font-family: "Liberation Sans";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/LiberationSans-BoldItalic.ttf");
+}
+
+:root {
+  color-scheme: light;
+}
+body {
+  margin: 0;
+  background: #e8e8e6;
+  padding: 16px 8px 120px;
+}
+.doc {
+  position: relative;
+  margin: 0 auto;
+}
+.pages,
+.flow,
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+.page {
+  position: absolute;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+.pnum {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font:
+    11px system-ui,
+    sans-serif;
+  color: #999;
+}
+
+/* Semantic blocks hold absolutely positioned runs; the blocks themselves
+   take no space. */
+.flow {
+  outline: none;
+  color: #111;
+}
+/* Each paragraph is its own layout boundary at the document's origin, so
+   redrawing one doesn't re-lay out the others' runs. */
+.flow :is(p, h1, h2, h3, h4, h5, h6) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  contain: layout size style;
+}
+.flow table {
+  border-collapse: collapse;
+}
+.flow td {
+  padding: 0;
+}
+.flow .r,
+.flow .lbl,
+.flow .hy {
+  position: absolute;
+  white-space: pre;
+  line-height: 1;
+}
+.flow .lbl {
+  text-align: right;
+}
+
+/* View B draws its own caret and selection. */
+.doc-b .flow {
+  caret-color: transparent;
+}
+.doc-b .flow ::selection {
+  background: transparent;
+}
+.overlay {
+  pointer-events: none;
+}
+.overlay .sel {
+  position: absolute;
+  background: rgb(56 120 220 / 0.3);
+}
+.overlay .comp {
+  position: absolute;
+  border-bottom: 2px solid #333;
+}
+.caret {
+  position: absolute;
+  width: 1.5px;
+  background: #000;
+}
+.caret.blink {
+  animation: blink 1.06s steps(1) 0.5s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.input {
+  position: absolute;
+  width: 2px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  resize: none;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 16px;
+  color: transparent;
+  background: transparent;
+  caret-color: transparent;
+}
+
+/* View A: ProseMirror's contenteditable; paragraphs are positioned by
+   decorations. */
+.doc-a .ProseMirror {
+  position: absolute;
+  inset: 0;
+  outline: none;
+  white-space: pre;
+  color: #111;
+}
+.doc-a .ProseMirror :is(p, h1, h2, h3, h4, h5, h6) {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  white-space: pre;
+  contain: layout size style;
+}
+.doc-a .ProseMirror .r {
+  position: absolute;
+  white-space: pre;
+  line-height: 1;
+}
+.doc-a .ProseMirror .lbl,
+.doc-a .ProseMirror .hy {
+  position: absolute;
+  white-space: pre;
+  line-height: 1;
+  user-select: none;
+}
+.doc-a .ProseMirror table {
+  border-collapse: collapse;
+}
+.doc-a .ProseMirror td {
+  padding: 0;
+}
+
+.hud {
+  position: fixed;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 10;
+  padding: 6px 10px;
+  font:
+    12px / 1.4 ui-monospace,
+    monospace;
+  background: rgb(255 255 255 / 0.95);
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  align-items: center;
+}
+.hud .status {
+  width: 100%;
+  color: #555;
+}
+.hud .buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.hud button {
+  font: inherit;
+}

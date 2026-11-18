@@ -72,6 +72,19 @@ Pulling in both adds 164 crates beyond `skriv-model`'s own (96 "MIT OR
 Apache-2.0", 36 MIT, the rest as listed above). Both libraries are usable
 under ADR 0005.
 
+## Spike 2 view prototypes (verified 2026-11-18)
+
+`prototypes/view/web`, a standalone pnpm package, not shipped. Licences
+from the npm registry metadata.
+
+| Package | Licence | Used for |
+|---|---|---|
+| `prosemirror-view` 1.42.9, `-state` 1.4.4, `-model` 1.25.13, `-transform` 1.12.6, `-commands` 1.7.2, `-history` 1.5.1, `-keymap` 1.2.3 | MIT | View A |
+| `vite` 8.3.8 | MIT | Dev server and build |
+| `typescript` 7.0.2 | Apache-2.0 | Type checking |
+| `playwright` 1.56.1 | Apache-2.0 | Automated latency and functional runs |
+| `wasm-bindgen` 0.2.130 (crate and CLI) | MIT OR Apache-2.0 | The engine's JavaScript bindings |
+
 ## Test-time tools (not linked, not shipped)
 
 | Tool | Licence | Used for |

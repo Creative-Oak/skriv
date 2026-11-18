@@ -61,6 +61,8 @@ pub struct OwnEngine {
     placed: Vec<Vec<(usize, Line)>>,
     pages: Pages,
     pub stats: Stats,
+    /// Pages the last `layout` call rebuilt (the view repaints only these).
+    pub rebuilt: Range<usize>,
 }
 
 #[derive(Clone, Debug, Default)]
@@ -159,6 +161,7 @@ impl OwnEngine {
             placed: Vec::new(),
             pages: Pages::default(),
             stats: Stats::default(),
+            rebuilt: 0..0,
         }
     }
 
@@ -378,7 +381,14 @@ impl OwnEngine {
             let mut x = x0;
             for (i, c) in seg.iter().enumerate() {
                 let w = if i >= vis {
-                    0.0
+                    // Hanging spaces take no room at a line break, but at
+                    // the end of the paragraph the caret moves over them
+                    // (as in LibreOffice), or a typed space wouldn't show.
+                    if last && c.space && !c.hard_break {
+                        c.advance
+                    } else {
+                        0.0
+                    }
                 } else if c.space {
                     c.advance + extra
                 } else {
@@ -785,6 +795,7 @@ impl OwnEngine {
             }
         }
         self.stats.pages_rebuilt += last + 1 - first;
+        self.rebuilt = first..last + 1;
     }
 }
 
