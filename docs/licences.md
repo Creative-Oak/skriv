@@ -40,6 +40,18 @@ CC0, 0BSD, Unlicense, MPL-2.0 or BSL-1.0 (or dual-licensed with one of these);
 - `imbl` 7.0.2 and `imbl-sized-chunks` 0.2.0 (used by Loro) are
   **MPL-2.0+**, file-level copyleft like skriv itself; already allowed.
 
+## Spike 5 inputs (verified 2026-11-18)
+
+Test-time only, nothing in the product:
+
+- **docx-corpus** (SuperDoc, https://docxcorp.us): the collection is
+  ODC-BY 1.0; each document remains its authors' copyright. Files are
+  fetched by ID and not committed.
+- **ECMA-376 5th edition Transitional XML schemas** (Part 4), fetched from
+  ecma-international.org; redistribution terms not checked, so not
+  committed.
+- **`lxml`** (BSD-3-Clause), Python, for the inventory and validator.
+
 ## Spike 4 additions (verified 2026-11-18)
 
 `crates/filemode` adds `base64` 0.22 (MIT OR Apache-2.0) and `similar` 2.7

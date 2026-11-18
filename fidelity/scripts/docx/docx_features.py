@@ -85,6 +85,22 @@ def resolve_mce(root):
 # ---------------------------------------------------------------- styles ---
 
 
+THEME_FONTS = {}
+
+
+def theme_fonts(root):
+    """minor/major Latin typefaces of the theme, for asciiTheme references."""
+    out = {}
+    if root is None:
+        return out
+    for kind in ("minor", "major"):
+        el = root.find(f".//{{{A}}}{kind}Font/{{{A}}}latin")
+        if el is not None:
+            for t in ("HAnsi", "Ascii", "Bidi", "EastAsia"):
+                out[f"@{kind}{t}"] = el.get("typeface")
+    return out
+
+
 class Styles:
     """Style names by ID, with basedOn chains, and docDefaults."""
 
@@ -189,11 +205,13 @@ def run_props(rpr):
     if hl is not None:
         p["highlight"] = wattr(hl, "val")
     sh = rpr.find(w("shd"))
-    if sh is not None and wattr(sh, "fill") not in (None, "auto", "FFFFFF"):
+    if sh is not None and (wattr(sh, "fill") or "auto").upper() not in ("AUTO", "FFFFFF"):
         p["shd"] = wattr(sh, "fill").upper()
     f = rpr.find(w("rFonts"))
     if f is not None and wattr(f, "ascii"):
         p["font"] = wattr(f, "ascii")
+    elif f is not None and wattr(f, "asciiTheme"):
+        p["font"] = "@" + wattr(f, "asciiTheme")
     va = rpr.find(w("vertAlign"))
     if va is not None:
         p["vertAlign"] = wattr(va, "val")
@@ -268,6 +286,16 @@ class Numbering:
 # --------------------------------------------------------------- walking ---
 
 
+# Fields whose result is computed (page numbers, dates, references, the
+# TOC): their displayed text is not compared.
+COMPUTED = {
+    "PAGE", "NUMPAGES", "SECTIONPAGES", "SECTION", "DATE", "TIME", "PRINTDATE", "SAVEDATE", "CREATEDATE",
+    "EDITTIME", "TOC", "TOA", "INDEX", "PAGEREF", "REF", "NOTEREF", "SEQ", "STYLEREF", "FILENAME", "FILESIZE",
+    "AUTHOR", "LASTSAVEDBY", "TITLE", "SUBJECT", "KEYWORDS", "COMMENTS", "DOCPROPERTY", "DOCVARIABLE",
+    "NUMWORDS", "NUMCHARS", "REVNUM", "TEMPLATE", "USERNAME", "USERINITIALS", "LISTNUM", "AUTONUM",
+}
+
+
 class Walk:
     """Collect items from the body (and, for text, headers and footers)."""
 
@@ -279,6 +307,8 @@ class Walk:
         self.table_styles = []
         self.even_odd = False
         self.hf_ids = []
+        self.hf_state = {}
+        self.hf_sections = []
 
     # Text of an element as Word shows it: deleted text, field results
     # (computed: page numbers, TOC entries) and text boxes (their own
@@ -295,17 +325,28 @@ class Walk:
             if tag == "fldChar":
                 kind = wattr(el, "fldCharType")
                 if kind == "begin":
-                    self.field_stack.append("instr")
+                    self.field_stack.append(["instr", ""])
                 elif kind == "separate" and self.field_stack:
-                    self.field_stack[-1] = "result"
+                    f = self.field_stack[-1]
+                    words = f[1].split()
+                    f[0] = "result-computed" if words and words[0].upper() in COMPUTED else "result"
                 elif kind == "end" and self.field_stack:
                     self.field_stack.pop()
                 continue
+            if tag == "instrText":
+                if self.field_stack:
+                    self.field_stack[-1][1] += el.text or ""
+                continue
             if tag not in ("t", "tab", "br", "cr", "noBreakHyphen"):
                 continue
-            if self.field_stack and "result" in self.field_stack:
+            if any(f[0] == "result-computed" for f in self.field_stack):
                 continue
-            if self.inside(el, "del") or self.inside(el, "fldSimple") or self.inside(el, "txbxContent"):
+            if self.inside(el, "del") or self.inside(el, "txbxContent"):
+                continue
+            fs = el.getparent()
+            while fs is not None and not (isinstance(fs.tag, str) and etree.QName(fs).localname == "fldSimple"):
+                fs = fs.getparent()
+            if fs is not None and (wattr(fs, "instr") or "").split()[:1] and wattr(fs, "instr").split()[0].upper() in COMPUTED:
                 continue
             if tag == "t":
                 out.append(el.text or "")
@@ -331,9 +372,12 @@ class Walk:
         text = self.para_text(p)
         nt = norm_text(text)
         ppr = p.find(w("pPr"))
+        if ppr is not None and ppr.find(w("sectPr")) is not None:
+            # A section break: the section that ends with this paragraph.
+            self.section(ppr.find(w("sectPr")))
         sid = wattr(ppr.find(w("pStyle")), "val") if ppr is not None else None
         key = nt[:80]
-        self.items["text"].append((where, nt))
+        self.items["text"].append(("hf" if where == "hf" else "body", nt))
         if not nt:
             return
         self.items["paragraph style"].append((key, self.st.name(sid)))
@@ -374,6 +418,8 @@ class Walk:
             eff.update(rp)
             eff.pop("_rstyle", None)
             visible = {k: str(v) for k, v in eff.items() if v not in (False, None, "none")}
+            if "font" in visible:
+                visible["font"] = THEME_FONTS.get(visible["font"], visible["font"])
             chars.extend((c, visible) for c in t)
         props = sorted({k for _, v in chars for k in v})
         for prop in props:
@@ -432,7 +478,7 @@ class Walk:
             self.items["hyperlink"].append((txt[:60],))
         for b in p.iter(w("bookmarkStart")):
             name = wattr(b, "name") or ""
-            if name != "_GoBack" and not name.startswith("_Toc") and not name.startswith("_Ref"):
+            if not name.startswith("_"):  # hidden bookmarks Word manages itself
                 self.items["bookmark"].append((name,))
         for fn in p.iter(w("footnoteReference")):
             self.items["note reference"].append(("footnote", key[:40]))
@@ -480,7 +526,7 @@ class Walk:
                     self.items["merged cell"].append(("vmerge", ri, col, wattr(vm, "val") or "continue"))
                 if tcpr is not None:
                     shd = tcpr.find(w("shd"))
-                    if shd is not None and wattr(shd, "fill") not in (None, "auto", "FFFFFF"):
+                    if shd is not None and (wattr(shd, "fill") or "auto").upper() not in ("AUTO", "FFFFFF"):
                         self.items["cell shading"].append((ri, col, wattr(shd, "fill").upper()))
                 col += span
                 self.blocks(tc, "cell")
@@ -534,19 +580,25 @@ class Walk:
         margins = tuple(round(float(wattr(mar, k) or 0) / 56.7) for k in ("top", "bottom", "left", "right")) if mar is not None else None
         ncols = wattr(cols, "num") if cols is not None else None
         self.items["section"].append((size, margins, ncols or "1"))
-        # Which headers and footers apply: default always, first only with
-        # titlePg, even only with evenAndOddHeaders in settings.
+        # Which headers and footers each section shows: a section without a
+        # reference inherits the previous section's; first only with
+        # titlePg, even only with evenAndOddHeaders. Compared by content
+        # once the parts are read (inventory()).
         title = s.find(w("titlePg")) is not None and onoff(s.find(w("titlePg")))
-        refs = []
         for r in s:
             if not isinstance(r.tag, str) or etree.QName(r).localname not in ("headerReference", "footerReference"):
                 continue
-            t = wattr(r, "type") or "default"
-            if (t == "first" and not title) or (t == "even" and not self.even_odd):
-                continue
-            refs.append((etree.QName(r).localname, t))
-            self.hf_ids.append(r.get(f"{{{R}}}id"))
-        self.items["header/footer set"].append(tuple(sorted(refs)))
+            kind = "header" if etree.QName(r).localname == "headerReference" else "footer"
+            self.hf_state[(kind, wattr(r, "type") or "default")] = r.get(f"{{{R}}}id")
+        shown = []
+        for kind in ("header", "footer"):
+            types = ["default"] + (["first"] if title else []) + (["even"] if self.even_odd else [])
+            for t in types:
+                rid = self.hf_state.get((kind, t))
+                if rid:
+                    shown.append((kind, t, rid))
+                    self.hf_ids.append(rid)
+        self.hf_sections.append(shown)
 
 
 def field_item(instr):
@@ -602,6 +654,8 @@ def inventory(path):
         doc = resolve_mce(read_xml(z, "word/document.xml"))
         if doc is None:
             raise ValueError("no word/document.xml")
+        THEME_FONTS.clear()
+        THEME_FONTS.update(theme_fonts(read_xml(z, "word/theme/theme1.xml")))
         styles = Styles(resolve_mce(read_xml(z, "word/styles.xml")))
         numbering = Numbering(resolve_mce(read_xml(z, "word/numbering.xml")))
         wk = Walk(styles, numbering)
@@ -615,11 +669,13 @@ def inventory(path):
         if rels is not None:
             for rel in rels:
                 targets[rel.get("Id")] = "word/" + rel.get("Target", "").lstrip("/").removeprefix("word/")
+        part_text = {}
         for name in sorted({targets[i] for i in wk.hf_ids if i in targets}):
             root = resolve_mce(read_xml(z, name))
             if root is not None:
                 sub = Walk(styles, numbering)
                 sub.blocks(root, "hf")
+                part_text[name] = norm_text(" ".join(t[1] for t in sub.items["text"] if t[1]) + " " + " ".join(t[0] for t in sub.items["text box text"]))[:60]
                 for t in sub.items["text"]:
                     if t[1]:
                         wk.items["header/footer text"].append((t[1][:80],))
@@ -629,6 +685,10 @@ def inventory(path):
                     wk.items["header/footer drawing"].append(d[:2])
                 for t in sub.items["text box text"]:
                     wk.items["header/footer text"].append(t)
+        for shown in wk.hf_sections:
+            # An empty header shows nothing: the same as no header.
+            items = tuple(sorted((k, t, part_text.get(targets.get(rid, ""), "")) for k, t, rid in shown if part_text.get(targets.get(rid, ""), "")))
+            wk.items["header/footer set"].append(items)
         for part, label in (("word/footnotes.xml", "footnote"), ("word/endnotes.xml", "endnote")):
             root = read_xml(z, part)
             if root is None:
