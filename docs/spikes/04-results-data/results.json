@@ -1,0 +1,6582 @@
+[
+  {
+    "job": "comments-ranged__no-edit__convert",
+    "doc": "comments-ranged",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 3,
+      "ignore xml:id": 3
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 3,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 312,
+    "attribution_total": 312,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.3494800000000002,
+    "rebase_reused": 4,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      3
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "comments-ranged__no-edit__store",
+    "doc": "comments-ranged",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 3,
+      "ignore xml:id": 3
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 3,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 312,
+    "attribution_total": 312,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.527864,
+    "rebase_reused": 4,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      3
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "comments-ranged__no-edit__docx",
+    "doc": "comments-ranged",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 4
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 2,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 1,
+      "blocks_moved": 0,
+      "chars_inserted": 18,
+      "chars_deleted": 2,
+      "mark_ops": 2,
+      "prop_ops": 14,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 32,
+      "format": 2,
+      "props": 14,
+      "structure": 6
+    },
+    "residual": {
+      "text": 32,
+      "format": 2,
+      "props": 14,
+      "structure": 6
+    },
+    "residual_detail": [
+      "- \"Sagsfremstilling\" (17 units)",
+      "~ \"Kommunen￼ har modta￼get din ansøgning om byggetilladelse til\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen￼ har modta￼get din ansøgning om byggetilladelse til\" formatting of 2 characters: obj (e.g. obj: Some(\"{\\\"Annotation\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"office:name\\\",\\\"value\\\":\\\"__Annotation__23_2596841277\\\"},{\\\"name\\\":\\\"loext:resolved\\\",\\\"value\\\":\\\"false\\\"}],\\\"author\\\":\\\"Sagsbehandler\\\",\\\"body\\\":[{\\\"Paragraph\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"text:style-name\\\",\\\"value\\\":\\\"Comment\\\"}],\\\"content\\\":[{\\\"Text\\\":{\\\"text\\\":\\\"Skal fristen nævnes her?\\\"}}],\\\"heading\\\":false}}],\\\"date\\\":\\\"2026-11-17T10:00:00\\\",\\\"initials\\\":\\\"SB\\\"}}\") → Some(\"{\\\"Annotation\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"office:name\\\",\\\"value\\\":\\\"__Annotation__26_3926507813\\\"},{\\\"name\\\":\\\"loext:resolved\\\",\\\"value\\\":\\\"false\\\"}],\\\"author\\\":\\\"Sagsbehandler\\\",\\\"body\\\":[{\\\"Paragraph\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"text:style-name\\\",\\\"value\\\":\\\"P3\\\"}],\\\"content\\\":[{\\\"Span\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"text:style-name\\\",\\\"value\\\":\\\"T1\\\"}],\\\"content\\\":[{\\\"Text\\\":{\\\"text\\\":\\\"Skal fristen nævnes her?\\\"}}]}}],\\\"heading\\\":false}}],\\\"date\\\":\\\"2026-11-17T10:00:00\\\",\\\"initials\\\":\\\"SB\\\"}}\"))",
+      "~ \"\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (21 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 0,
+    "attribution_total": 296,
+    "merge_residual": {
+      "text": 86,
+      "format": 2,
+      "props": 14,
+      "structure": 7
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.995351,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      6,
+      2
+    ],
+    "rebase_adopted": 2,
+    "error": null
+  },
+  {
+    "job": "comments-ranged__delete__store",
+    "doc": "comments-ranged",
+    "scenario": "delete",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 3,
+      "ignore xml:id": 3,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 3,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 13,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 12,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 12,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 299,
+    "attribution_total": 300,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.607821,
+    "rebase_reused": 4,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      3
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "comments-ranged__split__store",
+    "doc": "comments-ranged",
+    "scenario": "split",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 3,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 3,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 1,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 1,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 518,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 518,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 311,
+    "attribution_total": 312,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.7986650000000002,
+    "rebase_reused": 5,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      4
+    ],
+    "rebase_adopted": 4,
+    "error": null
+  },
+  {
+    "job": "danish-municipal-letter__no-edit__convert",
+    "doc": "danish-municipal-letter",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 23,
+      "ignore table:style-name": 4,
+      "ignore xml:id": 17
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 17,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 6,
+      "containers_by_text": 0,
+      "rows_matched": 1,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 2016,
+    "attribution_total": 2016,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.624745,
+    "rebase_reused": 22,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      10,
+      18
+    ],
+    "rebase_adopted": 21,
+    "error": null
+  },
+  {
+    "job": "danish-municipal-letter__no-edit__store",
+    "doc": "danish-municipal-letter",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 23,
+      "ignore table:style-name": 4,
+      "ignore xml:id": 17
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 17,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 6,
+      "containers_by_text": 0,
+      "rows_matched": 1,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 2016,
+    "attribution_total": 2016,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.606516,
+    "rebase_reused": 22,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      10,
+      18
+    ],
+    "rebase_adopted": 21,
+    "error": null
+  },
+  {
+    "job": "danish-municipal-letter__no-edit__docx",
+    "doc": "danish-municipal-letter",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 26,
+      "ignore @rep": 2,
+      "ignore table:style-name": 4
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 15,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 6,
+      "rows_matched": 1,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 2
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 2,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 44,
+      "chars_deleted": 1,
+      "mark_ops": 1,
+      "prop_ops": 98,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 86,
+      "format": 1,
+      "props": 98,
+      "structure": 10
+    },
+    "residual": {
+      "text": 86,
+      "format": 1,
+      "props": 98,
+      "structure": 10
+    },
+    "residual_detail": [
+      "~ \"Anne Østergaard￼Søndergade 12￼8000 Aarhus C\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Dato: 17. november 2026￼Sagsnr.: 2026-0193\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "- \"Afgørelse om byggetilladelse\" (29 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼\" formatting of 1 characters: obj (e.g. obj: Some(\"{\\\"Opaque\\\":{\\\"format\\\":\\\"Odf\\\",\\\"name\\\":\\\"text:note\\\",\\\"raw\\\":\\\"<text:note text:id=\\\\\\\"#note1\\\\\\\" text:note-class=\\\\\\\"footnote\\\\\\\"><text:note-citation>1</text:note-citation><text:note-body><text:p text:style-name=\\\\\\\"Footnote\\\\\\\">Jf. byggelovens § 16.</text:p></text:note-body></text:note>\\\"}}\") → Some(\"{\\\"Opaque\\\":{\\\"format\\\":\\\"Odf\\\",\\\"name\\\":\\\"text:note\\\",\\\"raw\\\":\\\"<text:note text:id=\\\\\\\"#note1\\\\\\\" text:note-class=\\\\\\\"footnote\\\\\\\"><text:note-citation>1</text:note-citation><text:note-body><text:p text:style-name=\\\\\\\"P2\\\\\\\">Jf. byggelovens § 16.</text:p></text:note-body></text:note>\\\"}}\"))",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"Klagevejledning\" (16 units)",
+      "~ [list] text:style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\")",
+      "~ \"Du kan klage til Planklagenævnet.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Klagefristen er 4 uger.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Fristen regnes fra modtagelsen.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Med venlig hilsen\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Byggesagsafdelingen\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (31 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 1972,
+    "attribution_total": 1973,
+    "merge_residual": {
+      "text": 86,
+      "format": 1,
+      "props": 98,
+      "structure": 10
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 11.071344999999999,
+    "rebase_reused": 29,
+    "rebase_regenerated": 1,
+    "rebase_plain": [
+      20,
+      14
+    ],
+    "rebase_adopted": 15,
+    "error": null
+  },
+  {
+    "job": "danish-municipal-letter__cell-type__store",
+    "doc": "danish-municipal-letter",
+    "scenario": "cell-type",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 23,
+      "ignore table:style-name": 4,
+      "ignore xml:id": 17
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 17,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 6,
+      "containers_by_text": 0,
+      "rows_matched": 1,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 9,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 9,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 9,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 2025,
+    "attribution_total": 2025,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.7241869999999997,
+    "rebase_reused": 22,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      10,
+      18
+    ],
+    "rebase_adopted": 21,
+    "error": null
+  },
+  {
+    "job": "danish-municipal-letter__row-insert__store",
+    "doc": "danish-municipal-letter",
+    "scenario": "row-insert",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 27,
+      "ignore table:style-name": 6,
+      "ignore xml:id": 17
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 17,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 6,
+      "containers_by_text": 0,
+      "rows_matched": 1,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 1,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 3
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 3
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 2016,
+    "attribution_total": 2016,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.8386549999999997,
+    "rebase_reused": 22,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      11,
+      18
+    ],
+    "rebase_adopted": 21,
+    "error": null
+  },
+  {
+    "job": "danish-municipal-letter__list-add__store",
+    "doc": "danish-municipal-letter",
+    "scenario": "list-add",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 24,
+      "ignore table:style-name": 4,
+      "ignore xml:id": 17
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 17,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 6,
+      "containers_by_text": 0,
+      "rows_matched": 1,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 31,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 31,
+      "format": 0,
+      "props": 0,
+      "structure": 2
+    },
+    "got": {
+      "text": 31,
+      "format": 0,
+      "props": 0,
+      "structure": 2
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 2047,
+    "attribution_total": 2047,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.865664,
+    "rebase_reused": 24,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      12,
+      18
+    ],
+    "rebase_adopted": 21,
+    "error": null
+  },
+  {
+    "job": "figures-captions-fields__no-edit__convert",
+    "doc": "figures-captions-fields",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 6,
+      "ignore xml:id": 6
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 6,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 100,
+    "attribution_total": 100,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.3376930000000002,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "figures-captions-fields__no-edit__store",
+    "doc": "figures-captions-fields",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 6,
+      "ignore xml:id": 6
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 6,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 100,
+    "attribution_total": 100,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.291239,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "figures-captions-fields__no-edit__docx",
+    "doc": "figures-captions-fields",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 7
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 5,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 1,
+      "blocks_moved": 0,
+      "chars_inserted": 21,
+      "chars_deleted": 4,
+      "mark_ops": 4,
+      "prop_ops": 22,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 34,
+      "format": 4,
+      "props": 22,
+      "structure": 4
+    },
+    "residual": {
+      "text": 34,
+      "format": 4,
+      "props": 22,
+      "structure": 4
+    },
+    "residual_detail": [
+      "- \"Kort over området\" (18 units)",
+      "~ \"\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼Figur ￼: Matriklen.\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼Figur ￼: Matriklen.\" formatting of 1 characters: obj (e.g. obj: Some(\"{\\\"Frame\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"draw:style-name\\\",\\\"value\\\":\\\"fr1\\\"},{\\\"name\\\":\\\"draw:name\\\",\\\"value\\\":\\\"Image1\\\"},{\\\"name\\\":\\\"text:anchor-type\\\",\\\"value\\\":\\\"paragraph\\\"},{\\\"name\\\":\\\"svg:width\\\",\\\"value\\\":\\\"60.0mm\\\"},{\\\"name\\\":\\\"svg:height\\\",\\\"value\\\":\\\"37.5mm\\\"},{\\\"name\\\":\\\"draw:z-index\\\",\\\"value\\\":\\\"0\\\"}],\\\"children\\\":[{\\\"Image\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"xlink:href\\\",\\\"value\\\":\\\"Pictures/100000000000004000000028245CD82E.png\\\"},{\\\"name\\\":\\\"xlink:type\\\",\\\"value\\\":\\\"simple\\\"},{\\\"name\\\":\\\"xlink:show\\\",\\\"value\\\":\\\"embed\\\"},{\\\"name\\\":\\\"xlink:actuate\\\",\\\"value\\\":\\\"onLoad\\\"},{\\\"name\\\":\\\"draw:mime-type\\\",\\\"value\\\":\\\"image/png\\\"}],\\\"children\\\":[]}},{\\\"Title\\\":{\\\"attrs\\\":[],\\\"text\\\":\\\"Kort over matriklen\\\"}},{\\\"Desc\\\":{\\\"attrs\\\":[],\\\"text\\\":\\\"Skitse af matriklen med tilbygningen markeret\\\"}}]}}\") → Some(\"{\\\"Frame\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"draw:style-name\\\",\\\"value\\\":\\\"fr1\\\"},{\\\"name\\\":\\\"draw:name\\\",\\\"value\\\":\\\"Image1\\\"},{\\\"name\\\":\\\"text:anchor-type\\\",\\\"value\\\":\\\"char\\\"},{\\\"name\\\":\\\"svg:y\\\",\\\"value\\\":\\\"0.0mm\\\"},{\\\"name\\\":\\\"svg:width\\\",\\\"value\\\":\\\"60.0mm\\\"},{\\\"name\\\":\\\"svg:height\\\",\\\"value\\\":\\\"37.5mm\\\"},{\\\"name\\\":\\\"draw:z-index\\\",\\\"value\\\":\\\"0\\\"}],\\\"children\\\":[{\\\"Image\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"xlink:href\\\",\\\"value\\\":\\\"Pictures/100000000000004000000028245CD82E.png\\\"},{\\\"name\\\":\\\"xlink:type\\\",\\\"value\\\":\\\"simple\\\"},{\\\"name\\\":\\\"xlink:show\\\",\\\"value\\\":\\\"embed\\\"},{\\\"name\\\":\\\"xlink:actuate\\\",\\\"value\\\":\\\"onLoad\\\"},{\\\"name\\\":\\\"draw:mime-type\\\",\\\"value\\\":\\\"image/png\\\"}],\\\"children\\\":[]}},{\\\"Desc\\\":{\\\"attrs\\\":[],\\\"text\\\":\\\"Kort over matriklen\\\\nSkitse af matriklen med tilbygningen markeret\\\"}}]}}\"))",
+      "~ \"￼Vilkårene står her.￼\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Se side ￼. Denne side er nummer ￼. Dato: ￼\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Se side ￼. Denne side er nummer ￼. Dato: ￼\" formatting of 3 characters: obj (e.g. obj: Some(\"{\\\"Field\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"text:reference-format\\\",\\\"value\\\":\\\"chapter\\\"},{\\\"name\\\":\\\"text:ref-name\\\",\\\"value\\\":\\\"sk-vilkaar\\\"}],\\\"kind\\\":\\\"Reference\\\",\\\"name\\\":\\\"text:bookmark-ref\\\"}}\") → Some(\"{\\\"Field\\\":{\\\"attrs\\\":[{\\\"name\\\":\\\"text:reference-format\\\",\\\"value\\\":\\\"number-no-superior\\\"},{\\\"name\\\":\\\"text:ref-name\\\",\\\"value\\\":\\\"sk-vilkaar\\\"}],\\\"kind\\\":\\\"Reference\\\",\\\"name\\\":\\\"text:bookmark-ref\\\"}}\"))",
+      "~ \"\" props Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (20 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 0,
+    "attribution_total": 83,
+    "merge_residual": {
+      "text": 88,
+      "format": 4,
+      "props": 22,
+      "structure": 5
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.8860919999999997,
+    "rebase_reused": 9,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      4,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "figures-captions-fields__delete__store",
+    "doc": "figures-captions-fields",
+    "scenario": "delete",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 6,
+      "ignore xml:id": 6,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 6,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 15,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 14,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 14,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 85,
+    "attribution_total": 86,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.341872,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "figures-captions-fields__split__store",
+    "doc": "figures-captions-fields",
+    "scenario": "split",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 6,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 6,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 1,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 1,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 42,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 42,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 99,
+    "attribution_total": 100,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.54183,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "lists-multilevel-numbering__no-edit__convert",
+    "doc": "lists-multilevel-numbering",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 13,
+      "ignore xml:id": 11
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 11,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 13,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 186,
+    "attribution_total": 186,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.230247,
+    "rebase_reused": 25,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      14,
+      11
+    ],
+    "rebase_adopted": 11,
+    "error": null
+  },
+  {
+    "job": "lists-multilevel-numbering__no-edit__store",
+    "doc": "lists-multilevel-numbering",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 13,
+      "ignore xml:id": 11
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 11,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 13,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 186,
+    "attribution_total": 186,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.219005,
+    "rebase_reused": 25,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      14,
+      11
+    ],
+    "rebase_adopted": 11,
+    "error": null
+  },
+  {
+    "job": "lists-multilevel-numbering__no-edit__docx",
+    "doc": "lists-multilevel-numbering",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 14
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 10,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 13,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 1,
+      "blocks_moved": 0,
+      "chars_inserted": 22,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 48,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 44,
+      "format": 0,
+      "props": 48,
+      "structure": 4
+    },
+    "residual": {
+      "text": 44,
+      "format": 0,
+      "props": 48,
+      "structure": 4
+    },
+    "residual_detail": [
+      "- \"Vilkår for tilladelsen\" (23 units)",
+      "~ [list] text:style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\")",
+      "~ \"Byggeriet skal opføres som ansøgt.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Facaden skal være i tegl.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Taget skal være sort.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Tagpap er ikke tilladt.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Byggeriet skal færdigmeldes.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Punktopstilling:\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ [list] text:style-name: Some(\"List_20_1\") → Some(\"WWNum3\")",
+      "~ \"æbler\" props Δ@style:list-style-name: Some(\"List_20_1\") → Some(\"WWNum3\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"pærer\" props Δ@style:list-style-name: Some(\"List_20_1\") → Some(\"WWNum3\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"blommer\" props Δ@style:list-style-name: Some(\"List_20_1\") → Some(\"WWNum3\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"\" props Δ@style:list-style-name: Some(\"List_20_1\") → Some(\"WWNum3\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (25 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 164,
+    "attribution_total": 164,
+    "merge_residual": {
+      "text": 44,
+      "format": 0,
+      "props": 48,
+      "structure": 4
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 4.886153,
+    "rebase_reused": 27,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      26,
+      1
+    ],
+    "rebase_adopted": 1,
+    "error": null
+  },
+  {
+    "job": "lists-multilevel-numbering__list-add__store",
+    "doc": "lists-multilevel-numbering",
+    "scenario": "list-add",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 14,
+      "ignore xml:id": 11
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 11,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 13,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 2,
+      "blocks_deleted": 0,
+      "blocks_moved": 1,
+      "chars_inserted": 31,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 100,
+      "format": 0,
+      "props": 0,
+      "structure": 10
+    },
+    "got": {
+      "text": 100,
+      "format": 0,
+      "props": 0,
+      "structure": 10
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 217,
+    "attribution_total": 217,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.661384,
+    "rebase_reused": 27,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      16,
+      11
+    ],
+    "rebase_adopted": 11,
+    "error": null
+  },
+  {
+    "job": "sections-columns__no-edit__convert",
+    "doc": "sections-columns",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 619,
+    "attribution_total": 619,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.280196,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "sections-columns__no-edit__store",
+    "doc": "sections-columns",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 619,
+    "attribution_total": 619,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.3395830000000002,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "sections-columns__no-edit__docx",
+    "doc": "sections-columns",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 6,
+      "ignore text:style-name": 2
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 2,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 1,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 16,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 15,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 32,
+      "format": 0,
+      "props": 15,
+      "structure": 5
+    },
+    "residual": {
+      "text": 32,
+      "format": 0,
+      "props": 15,
+      "structure": 5
+    },
+    "residual_detail": [
+      "~ \"Før sektionen.\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ [section] text:name: Some(\"Tospaltet\") → Some(\"TextSection\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"Efter sektionen.\" (17 units)",
+      "- \"\" (1 units)",
+      "+ \"[section]\" (19 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 603,
+    "attribution_total": 603,
+    "merge_residual": {
+      "text": 32,
+      "format": 0,
+      "props": 16,
+      "structure": 4
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.18854,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      5,
+      2
+    ],
+    "rebase_adopted": 2,
+    "error": null
+  },
+  {
+    "job": "sections-columns__type__docx",
+    "doc": "sections-columns",
+    "scenario": "type",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 6,
+      "ignore text:style-name": 2
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 2,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 1,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 61,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 15,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 77,
+      "format": 0,
+      "props": 15,
+      "structure": 5
+    },
+    "residual": {
+      "text": 32,
+      "format": 0,
+      "props": 15,
+      "structure": 5
+    },
+    "residual_detail": [
+      "~ \"Før sektionen.\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ [section] text:name: Some(\"Tospaltet\") → Some(\"TextSection\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"Efter sektionen.\" (17 units)",
+      "- \"\" (1 units)",
+      "+ \"[section]\" (19 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 648,
+    "attribution_total": 648,
+    "merge_residual": {
+      "text": 32,
+      "format": 0,
+      "props": 16,
+      "structure": 4
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.210279,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      5,
+      2
+    ],
+    "rebase_adopted": 2,
+    "error": null
+  },
+  {
+    "job": "sections-columns__type__store",
+    "doc": "sections-columns",
+    "scenario": "type",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 45,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 664,
+    "attribution_total": 664,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.438781,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "sections-columns__delete__store",
+    "doc": "sections-columns",
+    "scenario": "delete",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 278,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 277,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 277,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 341,
+    "attribution_total": 342,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.374278,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "sections-columns__bold__store",
+    "doc": "sections-columns",
+    "scenario": "bold",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 3,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 882,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 882,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 619,
+    "attribution_total": 619,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.4181549999999998,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "sections-columns__split__store",
+    "doc": "sections-columns",
+    "scenario": "split",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 6,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 1,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 1,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 572,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 572,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 618,
+    "attribution_total": 619,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.557334,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "sections-columns__tracked__store",
+    "doc": "sections-columns",
+    "scenario": "tracked",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore text:style-name": 1,
+      "ignore xml:id": 5,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Deletion": 1,
+        "Insertion": 1
+      },
+      "authors": {
+        "Lis Larsen": 2
+      },
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 0,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 45,
+      "chars_deleted": 277,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 250,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 250,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 387,
+    "attribution_total": 387,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 1.5415649999999999,
+    "rebase_reused": 4,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      0,
+      6
+    ],
+    "rebase_adopted": 4,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__no-edit__convert",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 443,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.119738,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__no-edit__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 443,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.092835,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__no-edit__docx",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 8
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 5,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 36,
+      "chars_deleted": 0,
+      "mark_ops": 2,
+      "prop_ops": 27,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 72,
+      "format": 40,
+      "props": 27,
+      "structure": 8
+    },
+    "residual": {
+      "text": 72,
+      "format": 40,
+      "props": 27,
+      "structure": 8
+    },
+    "residual_detail": [
+      "- \"Afgørelse om byggetilladelse\" (29 units)",
+      "- \"Baggrund\" (9 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Ord med tegnformat. Fremhævet med en tegnstil.\" props loext:marker-style-name: None → Some(\"T1\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:text-properties|fo:font-weight: Some(\"bold\") → None",
+      "~ \"Ord med tegnformat. Fremhævet med en tegnstil.\" formatting of 40 characters: Δstyle:text-properties|fo:font-weight, Δstyle:text-properties|style:font-weight-asian (e.g. Δstyle:text-properties|fo:font-weight: None → Some(\"bold\"))",
+      "~ \"Et afsnit med hånd-justeret venstremargen.\" props Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"En note i en arvet stil.\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼\" props loext:marker-style-name: None → Some(\"Fremhævning\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (42 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 0,
+    "attribution_total": 407,
+    "merge_residual": {
+      "text": 126,
+      "format": 40,
+      "props": 27,
+      "structure": 9
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 4.79344,
+    "rebase_reused": 12,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      7,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__type__docx",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "type",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 8
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 5,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 81,
+      "chars_deleted": 0,
+      "mark_ops": 2,
+      "prop_ops": 27,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 117,
+      "format": 40,
+      "props": 27,
+      "structure": 8
+    },
+    "residual": {
+      "text": 72,
+      "format": 40,
+      "props": 27,
+      "structure": 8
+    },
+    "residual_detail": [
+      "- \"Afgørelse om byggetilladelse\" (29 units)",
+      "- \"Baggrund\" (9 units)",
+      "~ \"Kommunen har modtaget din Tilføjet i LibreOffice, så æ, ø og\" props Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Ord med tegnformat. Fremhævet med en tegnstil.\" props loext:marker-style-name: None → Some(\"T1\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:text-properties|fo:font-weight: Some(\"bold\") → None",
+      "~ \"Ord med tegnformat. Fremhævet med en tegnstil.\" formatting of 40 characters: Δstyle:text-properties|fo:font-weight, Δstyle:text-properties|style:font-weight-asian (e.g. Δstyle:text-properties|fo:font-weight: None → Some(\"bold\"))",
+      "~ \"Et afsnit med hånd-justeret venstremargen.\" props Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"En note i en arvet stil.\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼\" props loext:marker-style-name: None → Some(\"Fremhævning\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.1mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (42 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 45,
+    "attribution_total": 452,
+    "merge_residual": {
+      "text": 126,
+      "format": 40,
+      "props": 27,
+      "structure": 9
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 5.14636,
+    "rebase_reused": 12,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      7,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__type__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "type",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 45,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 488,
+    "attribution_total": 488,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.149453,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__delete__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "delete",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 13,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 12,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 12,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 430,
+    "attribution_total": 431,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.2751360000000003,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__bold__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "bold",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 3,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 36,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 36,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 443,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.241178,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__split__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "split",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 8,
+      "ignore xml:id": 7,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 1,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 1,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 518,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 518,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 442,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.51607,
+    "rebase_reused": 9,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      8
+    ],
+    "rebase_adopted": 8,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__join__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "join",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 6,
+      "ignore xml:id": 6
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 6,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 1,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 92,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 92,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 20,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" formatting of 20 characters: Δstyle:text-properties|fo:font-weight (e.g. Δstyle:text-properties|fo:font-weight: None → Some(\"bold\"))"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 443,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 20,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.097075,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__delete-paragraph__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "delete-paragraph",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 6,
+      "ignore xml:id": 6
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 6,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 1,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 46,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 46,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 397,
+    "attribution_total": 397,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.044671,
+    "rebase_reused": 7,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__duplicate-paragraph__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "duplicate-paragraph",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 8,
+      "ignore xml:id": 7,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 294,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 294,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 294,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 737,
+    "attribution_total": 737,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.369582,
+    "rebase_reused": 9,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      2,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__move-paragraph__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "move-paragraph",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 1,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 443,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.3501860000000003,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__heading__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "heading",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 5,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 3,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 4,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 1,
+      "structure": 0
+    },
+    "residual_detail": [
+      "~ \"Ord med tegnformat. Fremhævet med en tegnstil.\" props Δstyle:text-properties|fo:font-weight: Some(\"bold\") → None"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 443,
+    "attribution_total": 443,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 1,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.278595,
+    "rebase_reused": 8,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      7
+    ],
+    "rebase_adopted": 7,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__session__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "session",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 8,
+      "ignore xml:id": 7,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 1,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 46,
+      "chars_deleted": 1,
+      "mark_ops": 4,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 71,
+      "format": 36,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 71,
+      "format": 36,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 487,
+    "attribution_total": 488,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.667402,
+    "rebase_reused": 9,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      8
+    ],
+    "rebase_adopted": 8,
+    "error": null
+  },
+  {
+    "job": "styles-inheritance-and-direct-formatting__tracked__store",
+    "doc": "styles-inheritance-and-direct-formatting",
+    "scenario": "tracked",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 7,
+      "ignore xml:id": 7,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Deletion": 1,
+        "Insertion": 1
+      },
+      "authors": {
+        "Lis Larsen": 2
+      },
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 7,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 0,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 46,
+      "chars_deleted": 13,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 47,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 47,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 473,
+    "attribution_total": 476,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.415648,
+    "rebase_reused": 6,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      0,
+      8
+    ],
+    "rebase_adopted": 6,
+    "error": null
+  },
+  {
+    "job": "table-of-contents__no-edit__convert",
+    "doc": "table-of-contents",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 9,
+      "ignore xml:id": 9
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 9,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 2,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 1221,
+    "attribution_total": 1221,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.263762,
+    "rebase_reused": 11,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      2,
+      9
+    ],
+    "rebase_adopted": 9,
+    "error": null
+  },
+  {
+    "job": "table-of-contents__no-edit__store",
+    "doc": "table-of-contents",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 9,
+      "ignore xml:id": 9
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 9,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 2,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 1221,
+    "attribution_total": 1221,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.2903279999999997,
+    "rebase_reused": 11,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      2,
+      9
+    ],
+    "rebase_adopted": 9,
+    "error": null
+  },
+  {
+    "job": "table-of-contents__no-edit__docx",
+    "doc": "table-of-contents",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 13
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 5,
+      "duplicate_ids": 0,
+      "containers_by_id": 2,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 4
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 4,
+      "blocks_deleted": 4,
+      "blocks_moved": 0,
+      "chars_inserted": 45,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 35,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 1,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 90,
+      "format": 0,
+      "props": 35,
+      "structure": 20
+    },
+    "residual": {
+      "text": 90,
+      "format": 0,
+      "props": 35,
+      "structure": 20
+    },
+    "residual_detail": [
+      "- \"[object]\" (1 units)",
+      "- \"￼Indledning￼\" (13 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"￼Baggrund￼\" (11 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"￼Vurdering￼\" (12 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"￼Konklusion￼\" (13 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[object]\" (1 units)",
+      "+ \"[list]\" (15 units)",
+      "+ \"[list]\" (15 units)",
+      "+ \"[list]\" (14 units)",
+      "+ \"[list]\" (15 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 0,
+    "attribution_total": 1176,
+    "merge_residual": {
+      "text": 144,
+      "format": 0,
+      "props": 35,
+      "structure": 21
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 7.104943,
+    "rebase_reused": 20,
+    "rebase_regenerated": 1,
+    "rebase_plain": [
+      15,
+      6
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "tables-widths-merged__no-edit__convert",
+    "doc": "tables-widths-merged",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 30,
+      "ignore @rep": 2,
+      "ignore table:style-name": 14,
+      "ignore xml:id": 15
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 15,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 1,
+      "containers_by_text": 0,
+      "rows_matched": 4,
+      "cols_matched": 3,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 111,
+    "attribution_total": 111,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.342521,
+    "rebase_reused": 10,
+    "rebase_regenerated": 1,
+    "rebase_plain": [
+      18,
+      17
+    ],
+    "rebase_adopted": 31,
+    "error": null
+  },
+  {
+    "job": "tables-widths-merged__no-edit__store",
+    "doc": "tables-widths-merged",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 30,
+      "ignore @rep": 2,
+      "ignore table:style-name": 14,
+      "ignore xml:id": 15
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 15,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 1,
+      "containers_by_text": 0,
+      "rows_matched": 4,
+      "cols_matched": 3,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 111,
+    "attribution_total": 111,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.246437,
+    "rebase_reused": 10,
+    "rebase_regenerated": 1,
+    "rebase_plain": [
+      18,
+      17
+    ],
+    "rebase_adopted": 31,
+    "error": null
+  },
+  {
+    "job": "tables-widths-merged__no-edit__docx",
+    "doc": "tables-widths-merged",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 35,
+      "ignore table:style-name": 14
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 14,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 1,
+      "rows_matched": 4,
+      "cols_matched": 3,
+      "embeds_matched": 0,
+      "new_nodes": 1
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 1,
+      "blocks_deleted": 1,
+      "blocks_moved": 0,
+      "chars_inserted": 7,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 98,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 14,
+      "format": 0,
+      "props": 98,
+      "structure": 6
+    },
+    "residual": {
+      "text": 14,
+      "format": 0,
+      "props": 98,
+      "structure": 6
+    },
+    "residual_detail": [
+      "- \"Gebyrer\" (8 units)",
+      "~ \"Sagstype\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"center\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Gebyr\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"center\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Frist\" props Δstyle:paragraph-properties|fo:text-align: None → Some(\"center\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Tilbygning\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"4.500 kr.\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"40 dage\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Carport\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"1.200 kr.\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"20 dage\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Nedrivning\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"0 kr.\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"10 dage\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Efter tabellen.\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (12 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 104,
+    "attribution_total": 104,
+    "merge_residual": {
+      "text": 14,
+      "format": 0,
+      "props": 98,
+      "structure": 6
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 4.764951,
+    "rebase_reused": 9,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      8,
+      31
+    ],
+    "rebase_adopted": 31,
+    "error": null
+  },
+  {
+    "job": "tables-widths-merged__cell-type__store",
+    "doc": "tables-widths-merged",
+    "scenario": "cell-type",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 30,
+      "ignore @rep": 2,
+      "ignore table:style-name": 14,
+      "ignore xml:id": 15
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 15,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 1,
+      "containers_by_text": 0,
+      "rows_matched": 4,
+      "cols_matched": 3,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 9,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 9,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 9,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 120,
+    "attribution_total": 120,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.288955,
+    "rebase_reused": 10,
+    "rebase_regenerated": 1,
+    "rebase_plain": [
+      18,
+      17
+    ],
+    "rebase_adopted": 31,
+    "error": null
+  },
+  {
+    "job": "tables-widths-merged__row-insert__store",
+    "doc": "tables-widths-merged",
+    "scenario": "row-insert",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 36,
+      "ignore @rep": 2,
+      "ignore table:style-name": 17,
+      "ignore xml:id": 15
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 15,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 1,
+      "containers_by_text": 0,
+      "rows_matched": 4,
+      "cols_matched": 3,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 1,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 4
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 4
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 3,
+      "structure": 0
+    },
+    "residual_detail": [
+      "~ \"\" props @style: Some(\"Table_20_Heading\") → Some(\"Table_20_Contents\")",
+      "~ \"\" props @style: Some(\"Table_20_Heading\") → Some(\"Table_20_Contents\")",
+      "~ \"\" props @style: Some(\"Table_20_Heading\") → Some(\"Table_20_Contents\")"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 111,
+    "attribution_total": 111,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 3,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.4688879999999997,
+    "rebase_reused": 11,
+    "rebase_regenerated": 1,
+    "rebase_plain": [
+      19,
+      17
+    ],
+    "rebase_adopted": 31,
+    "error": null
+  },
+  {
+    "job": "tables-widths-merged__column-delete__store",
+    "doc": "tables-widths-merged",
+    "scenario": "column-delete",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 21,
+      "ignore table:style-name": 9,
+      "ignore xml:id": 11
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 11,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 1,
+      "containers_by_text": 0,
+      "rows_matched": 4,
+      "cols_matched": 2,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 1,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 1,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 26,
+      "format": 0,
+      "props": 0,
+      "structure": 5
+    },
+    "got": {
+      "text": 26,
+      "format": 0,
+      "props": 1,
+      "structure": 5
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 1,
+      "structure": 0
+    },
+    "residual_detail": [
+      "~ [column] @width: Some(\"42.5mm\") → Some(\"85.0mm\")"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 85,
+    "attribution_total": 85,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 1,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.256944,
+    "rebase_reused": 5,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      10,
+      17
+    ],
+    "rebase_adopted": 24,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__no-edit__convert",
+    "doc": "tracked-changes-pending",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 4,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 145,
+    "attribution_total": 145,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.234564,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__no-edit__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 4,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 145,
+    "attribution_total": 145,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.201502,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__no-edit__docx",
+    "doc": "tracked-changes-pending",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 5,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 3,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 2
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 2,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 20,
+      "chars_deleted": 0,
+      "mark_ops": 1,
+      "prop_ops": 21,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 40,
+      "format": 11,
+      "props": 21,
+      "structure": 8
+    },
+    "residual": {
+      "text": 40,
+      "format": 11,
+      "props": 21,
+      "structure": 8
+    },
+    "residual_detail": [
+      "- \"[object]\" (1 units)",
+      "- \"Udkast til afgørelse\" (21 units)",
+      "~ \"Vi ￼ tilladelse til tilbygningen på 40 m2.\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼Tilladelsen￼ bortfalder efter et år.\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼Tilladelsen￼ bortfalder efter et år.\" formatting of 11 characters: Δstyle:text-properties|style:font-weight-asian (e.g. Δstyle:text-properties|style:font-weight-asian: None → Some(\"bold\"))",
+      "~ \"￼Denne sætning er indsat med ændringssporing.￼\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[object]\" (1 units)",
+      "+ \"[list]\" (25 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 0,
+    "attribution_total": 125,
+    "merge_residual": {
+      "text": 94,
+      "format": 11,
+      "props": 21,
+      "structure": 9
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.71972,
+    "rebase_reused": 10,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      6,
+      4
+    ],
+    "rebase_adopted": 4,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__type__docx",
+    "doc": "tracked-changes-pending",
+    "scenario": "type",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 5,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Insertion": 1
+      },
+      "authors": {
+        "Lis Larsen": 1
+      },
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 3,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 2
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 2,
+      "blocks_deleted": 2,
+      "blocks_moved": 0,
+      "chars_inserted": 65,
+      "chars_deleted": 0,
+      "mark_ops": 1,
+      "prop_ops": 21,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 85,
+      "format": 11,
+      "props": 21,
+      "structure": 8
+    },
+    "residual": {
+      "text": 40,
+      "format": 11,
+      "props": 21,
+      "structure": 8
+    },
+    "residual_detail": [
+      "- \"[object]\" (1 units)",
+      "- \"Udkast til afgørelse\" (21 units)",
+      "~ \"Vi ￼ tilladelse til tilbygningen Tilføjet i LibreOffice, så \" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼Tilladelsen￼ bortfalder efter et år.\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼Tilladelsen￼ bortfalder efter et år.\" formatting of 11 characters: Δstyle:text-properties|style:font-weight-asian (e.g. Δstyle:text-properties|style:font-weight-asian: None → Some(\"bold\"))",
+      "~ \"￼Denne sætning er indsat med ændringssporing.￼\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[object]\" (1 units)",
+      "+ \"[list]\" (25 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 45,
+    "attribution_total": 170,
+    "merge_residual": {
+      "text": 94,
+      "format": 11,
+      "props": 21,
+      "structure": 9
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 3.8529419999999996,
+    "rebase_reused": 8,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      6,
+      4
+    ],
+    "rebase_adopted": 2,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__type__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "type",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 4,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Insertion": 1
+      },
+      "authors": {
+        "Lis Larsen": 1
+      },
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 45,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 45,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 190,
+    "attribution_total": 190,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.366871,
+    "rebase_reused": 4,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__delete__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "delete",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 4,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Deletion": 1
+      },
+      "authors": {
+        "Lis Larsen": 1
+      },
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 9,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 9,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 9,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 136,
+    "attribution_total": 136,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.334156,
+    "rebase_reused": 4,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__split__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "split",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 5,
+      "ignore xml:id": 4,
+      "ignore Δstyle:text-properties|officeooo:paragraph-rsid": 2,
+      "spaces": 2
+    },
+    "tracked": {
+      "accepted": {
+        "Insertion": 1
+      },
+      "authors": {
+        "Lis Larsen": 1
+      },
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 0,
+      "new_nodes": 2
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 1,
+      "blocks_inserted": 1,
+      "blocks_deleted": 1,
+      "blocks_moved": 0,
+      "chars_inserted": 1,
+      "chars_deleted": 1,
+      "mark_ops": 1,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 14,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 14,
+      "format": 0,
+      "props": 0,
+      "structure": 3
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 2
+    },
+    "residual_detail": [
+      "- \"[object]\" (1 units)",
+      "+ \"[object]\" (1 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 144,
+    "attribution_total": 145,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 2
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.5965290000000003,
+    "rebase_reused": 4,
+    "rebase_regenerated": 3,
+    "rebase_plain": [
+      1,
+      6
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__join__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "join",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 3,
+      "ignore xml:id": 3,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Deletion": 1
+      },
+      "authors": {
+        "Lis Larsen": 1
+      },
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 3,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 1,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 74,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "got": {
+      "text": 74,
+      "format": 0,
+      "props": 0,
+      "structure": 1
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 145,
+    "attribution_total": 145,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.231347,
+    "rebase_reused": 3,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      1,
+      4
+    ],
+    "rebase_adopted": 2,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__heading__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "heading",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 4,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 0,
+      "mark_ops": 0,
+      "prop_ops": 3,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 3,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 3,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 145,
+    "attribution_total": 145,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.311376,
+    "rebase_reused": 6,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 5,
+    "error": null
+  },
+  {
+    "job": "tracked-changes-pending__tracked__store",
+    "doc": "tracked-changes-pending",
+    "scenario": "tracked",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 4,
+      "ignore xml:id": 4,
+      "spaces": 1
+    },
+    "tracked": {
+      "accepted": {
+        "Deletion": 1,
+        "Insertion": 1
+      },
+      "authors": {
+        "Lis Larsen": 2
+      },
+      "kept": 3
+    },
+    "change_ids_restored": 3,
+    "align": {
+      "paras_by_id": 4,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 0,
+      "rows_matched": 0,
+      "cols_matched": 0,
+      "embeds_matched": 1,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 45,
+      "chars_deleted": 9,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 44,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 44,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 179,
+    "attribution_total": 181,
+    "merge_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "merge_has_concurrent": true,
+    "import_ms": 2.409562,
+    "rebase_reused": 4,
+    "rebase_regenerated": 2,
+    "rebase_plain": [
+      1,
+      5
+    ],
+    "rebase_adopted": 3,
+    "error": null
+  },
+  {
+    "job": "letter-x20__no-edit__convert",
+    "doc": "letter-x20",
+    "scenario": "no-edit",
+    "save": "convert",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 461,
+      "ignore table:style-name": 80,
+      "ignore text:style-name": 20,
+      "ignore xml:id": 341,
+      "soft page break": 14
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 321,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 120,
+      "containers_by_text": 0,
+      "rows_matched": 20,
+      "cols_matched": 40,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 10,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 40320,
+    "attribution_total": 40320,
+    "merge_residual": null,
+    "merge_has_concurrent": false,
+    "import_ms": 42.641827,
+    "rebase_reused": 422,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      221,
+      341
+    ],
+    "rebase_adopted": 421,
+    "error": null
+  },
+  {
+    "job": "letter-x20__no-edit__store",
+    "doc": "letter-x20",
+    "scenario": "no-edit",
+    "save": "store",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": true,
+    "snapshot": true,
+    "base_from": "file snapshot",
+    "noise": {
+      "ignore @order": 461,
+      "ignore table:style-name": 80,
+      "ignore text:style-name": 20,
+      "ignore xml:id": 341,
+      "soft page break": 20
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 321,
+      "paras_by_text": 0,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 120,
+      "containers_by_text": 0,
+      "rows_matched": 20,
+      "cols_matched": 40,
+      "embeds_matched": 0,
+      "new_nodes": 0
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 0,
+      "blocks_deleted": 0,
+      "blocks_moved": 0,
+      "chars_inserted": 0,
+      "chars_deleted": 10,
+      "mark_ops": 0,
+      "prop_ops": 0,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "residual_detail": [],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 40320,
+    "attribution_total": 40320,
+    "merge_residual": null,
+    "merge_has_concurrent": false,
+    "import_ms": 41.721406,
+    "rebase_reused": 479,
+    "rebase_regenerated": 0,
+    "rebase_plain": [
+      183,
+      379
+    ],
+    "rebase_adopted": 440,
+    "error": null
+  },
+  {
+    "job": "letter-x20__no-edit__docx",
+    "doc": "letter-x20",
+    "scenario": "no-edit",
+    "save": "docx",
+    "returned": true,
+    "doc_id_in_meta": true,
+    "version_in_meta": true,
+    "state_part": false,
+    "snapshot": false,
+    "base_from": "skriv at the version in meta.xml",
+    "noise": {
+      "ignore @order": 522,
+      "ignore @rep": 40,
+      "ignore table:style-name": 80,
+      "ignore text:style-name": 21,
+      "ignore xml:id": 19,
+      "soft page break": 17
+    },
+    "tracked": {
+      "accepted": {},
+      "authors": {},
+      "kept": 0
+    },
+    "change_ids_restored": 0,
+    "align": {
+      "paras_by_id": 0,
+      "paras_by_text": 280,
+      "duplicate_ids": 0,
+      "containers_by_id": 1,
+      "containers_by_paras": 0,
+      "containers_by_text": 140,
+      "rows_matched": 20,
+      "cols_matched": 40,
+      "embeds_matched": 0,
+      "new_nodes": 41
+    },
+    "apply": {
+      "joins": 0,
+      "splits": 0,
+      "blocks_inserted": 41,
+      "blocks_deleted": 41,
+      "blocks_moved": 14,
+      "chars_inserted": 880,
+      "chars_deleted": 28,
+      "mark_ops": 20,
+      "prop_ops": 1878,
+      "rows_inserted": 0,
+      "rows_deleted": 0,
+      "cols_inserted": 0,
+      "cols_deleted": 0,
+      "embeds_replaced": 0,
+      "unsupported": []
+    },
+    "reenact_failed": [],
+    "intended": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "got": {
+      "text": 1720,
+      "format": 20,
+      "props": 1878,
+      "structure": 217
+    },
+    "residual": {
+      "text": 1720,
+      "format": 20,
+      "props": 1878,
+      "structure": 217
+    },
+    "residual_detail": [
+      "~ [section] text:name: Some(\"Afsnit 1\") → Some(\"TextSection\")",
+      "~ \"Anne Østergaard￼Søndergade 12￼8000 Aarhus C\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "~ \"Dato: 17. november 2026￼Sagsnr.: 2026-0193\" props Δstyle:paragraph-properties|fo:orphans: None → Some(\"0\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|fo:widows: None → Some(\"0\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\"), Δstyle:paragraph-properties|text:line-number: None → Some(\"0\"), Δstyle:paragraph-properties|text:number-lines: None → Some(\"false\")",
+      "- \"Afgørelse om byggetilladelse\" (29 units)",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"￼\" formatting of 1 characters: obj (e.g. obj: Some(\"{\\\"Opaque\\\":{\\\"format\\\":\\\"Odf\\\",\\\"name\\\":\\\"text:note\\\",\\\"raw\\\":\\\"<text:note text:id=\\\\\\\"#note1\\\\\\\" text:note-class=\\\\\\\"footnote\\\\\\\"><text:note-citation>1</text:note-citation><text:note-body><text:p text:style-name=\\\\\\\"Footnote\\\\\\\">Jf. byggelovens § 16.</text:p></text:note-body></text:note>\\\"}}\") → Some(\"{\\\"Opaque\\\":{\\\"format\\\":\\\"Odf\\\",\\\"name\\\":\\\"text:note\\\",\\\"raw\\\":\\\"<text:note text:id=\\\\\\\"#note1\\\\\\\" text:note-class=\\\\\\\"footnote\\\\\\\"><text:note-citation>1</text:note-citation><text:note-body><text:p text:style-name=\\\\\\\"P2\\\\\\\">Jf. byggelovens § 16.</text:p></text:note-body></text:note>\\\"}}\"))",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Kommunen har modtaget din ansøgning om byggetilladelse til e\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "- \"Klagevejledning\" (16 units)",
+      "~ [list] text:style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\")",
+      "~ \"Du kan klage til Planklagenævnet.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Klagefristen er 4 uger.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Fristen regnes fra modtagelsen.\" props Δ@style:list-style-name: Some(\"Numbering_20_123\") → Some(\"WWNum2\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Med venlig hilsen\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "~ \"Byggesagsafdelingen\" props Δstyle:paragraph-properties|fo:line-height: None → Some(\"115%\"), Δstyle:paragraph-properties|fo:margin-bottom: None → Some(\"2.5mm\"), Δstyle:paragraph-properties|fo:margin-top: None → Some(\"0.0mm\"), Δstyle:paragraph-properties|fo:text-align: None → Some(\"start\"), Δstyle:paragraph-properties|style:contextual-spacing: None → Some(\"false\"), Δstyle:paragraph-properties|style:justify-single-word: None → Some(\"false\"), Δstyle:paragraph-properties|style:writing-mode: None → Some(\"lr-tb\")",
+      "+ \"[list]\" (31 units)"
+    ],
+    "file_residual": {
+      "text": 0,
+      "format": 0,
+      "props": 0,
+      "structure": 0
+    },
+    "file_residual_detail": [],
+    "attribution_ok": 37970,
+    "attribution_total": 39460,
+    "merge_residual": null,
+    "merge_has_concurrent": false,
+    "import_ms": 604.20265,
+    "rebase_reused": 563,
+    "rebase_regenerated": 40,
+    "rebase_plain": [
+      358,
+      325
+    ],
+    "rebase_adopted": 287,
+    "error": null
+  }
+]

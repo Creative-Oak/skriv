@@ -1,0 +1,92 @@
+[
+  {
+    "doc": "comments-ranged",
+    "odt_plain": 12091,
+    "odt_none": 12618,
+    "odt_shallow": 19147,
+    "odt_full": 23555,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "danish-municipal-letter",
+    "odt_plain": 28786,
+    "odt_none": 29458,
+    "odt_shallow": 40633,
+    "odt_full": 48718,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "figures-captions-fields",
+    "odt_plain": 20243,
+    "odt_none": 20807,
+    "odt_shallow": 28469,
+    "odt_full": 34254,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "lists-multilevel-numbering",
+    "odt_plain": 11590,
+    "odt_none": 12205,
+    "odt_shallow": 21417,
+    "odt_full": 28261,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "sections-columns",
+    "odt_plain": 15096,
+    "odt_none": 15637,
+    "odt_shallow": 21966,
+    "odt_full": 26270,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "styles-inheritance-and-direct-formatting",
+    "odt_plain": 13855,
+    "odt_none": 14458,
+    "odt_shallow": 21427,
+    "odt_full": 26439,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "table-of-contents",
+    "odt_plain": 24121,
+    "odt_none": 24708,
+    "odt_shallow": 33297,
+    "odt_full": 39602,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "tables-widths-merged",
+    "odt_plain": 10687,
+    "odt_none": 11328,
+    "odt_shallow": 20825,
+    "odt_full": 27279,
+    "shallow_has_secret": false,
+    "full_has_secret": false
+  },
+  {
+    "doc": "tracked-changes-pending",
+    "odt_plain": 10886,
+    "odt_none": 11433,
+    "odt_shallow": 18482,
+    "odt_full": 23686,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "letter-x20",
+    "odt_plain": 32855,
+    "odt_none": 36407,
+    "odt_shallow": 88095,
+    "odt_full": 122449,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  }
+]

@@ -53,7 +53,7 @@ skriv/
 |---|---|---|
 | 0001 | We record decisions as ADRs | none |
 | 0002 | Our own ODF-shaped semantic model with stable UUIDs and preservation slots. Not ODF XML, OOXML or Typst. The editor tree is never the source of truth (SuperDoc lesson). | How much to lean on verbatim slots (Spike 1, decision point 1); CRDT encoding (Spike 3) |
-| 0003 | LibreOffice is the oracle and optional server converter, never the editor or the runtime I/O | Whether xml:id, extra parts and metadata survive LibreOffice (Spike 4) |
+| 0003 | LibreOffice is the oracle and optional server converter, never the editor or the runtime I/O | Answered by Spike 4: IDs on paragraphs, headings and sections, user-defined metadata and an RDF part survive; `docs/spikes/04-results.md` |
 | 0004 | DOM rendering behind a replaceable input layer; pure canvas rejected for accessibility | ProseMirror-directed vs owned view (Spike 2); own engine vs Typst kernel (Spike 2b); Tauri vs Electron (Spike 7) |
 | 0005 | MPL-2.0 for core and apps; embeddable into AGPL birk; no AGPL or GPL dependencies in core; every dependency is checked and recorded in `docs/licences.md`, enforced by cargo-deny | Whether a future sync server should be AGPL (deferred) |
 | 0006 | Round-trip by projection with preservation: per-element dirty flag, untouched elements re-emitted verbatim | Granularity of slots (Spike 1 result) |

@@ -308,6 +308,133 @@ pub struct Baseline {
 }
 
 impl Baseline {
+    /// Spike 4 (file mode): make a file that came back from another program
+    /// the source file. `self` is the baseline imported from that file (with
+    /// its nodes renamed to skriv's IDs); `l` is skriv's state after the
+    /// import. Wherever skriv's form of a node is equivalent to the file's
+    /// (`same`: the same content, spelled differently), record skriv's form,
+    /// so the next export copies the file's own XML for every node nobody
+    /// touched instead of regenerating it. Returns how many nodes adopted.
+    ///
+    /// Rows, columns and cells are passed to `same` as containers of kind
+    /// `@row`, `@col` and `@cell` (properties, and a cell's blocks).
+    pub fn adopt(&mut self, l: &LDoc, same: &dyn Fn(&LNode, &LNode) -> bool) -> usize {
+        fn bare(kind: &str, props: &Props, children: Vec<LNode>) -> LNode {
+            LNode::Container {
+                id: String::new(),
+                kind: kind.into(),
+                props: props.clone(),
+                children,
+            }
+        }
+        fn walk(
+            b: &mut Baseline,
+            v: &[LNode],
+            same: &dyn Fn(&LNode, &LNode) -> bool,
+            n: &mut usize,
+        ) {
+            for node in v {
+                match node {
+                    LNode::Para(p) => {
+                        if let Some((bp, _)) = b.paras.get_mut(&p.id)
+                            && bp != p
+                            && same(&LNode::Para(bp.clone()), node)
+                        {
+                            *bp = p.clone();
+                            *n += 1;
+                        }
+                    }
+                    LNode::Embed { id, json } => {
+                        if let Some((bj, _)) = b.embeds.get_mut(id)
+                            && bj != json
+                            && same(
+                                &LNode::Embed {
+                                    id: id.clone(),
+                                    json: bj.clone(),
+                                },
+                                node,
+                            )
+                        {
+                            *bj = json.clone();
+                            *n += 1;
+                        }
+                    }
+                    LNode::Container {
+                        id,
+                        kind,
+                        props,
+                        children,
+                    } => {
+                        if let Some((bp, _, _)) = b.containers.get_mut(id)
+                            && bp != props
+                            && same(&bare(kind, bp, vec![]), &bare(kind, props, vec![]))
+                        {
+                            *bp = props.clone();
+                            *n += 1;
+                        }
+                        walk(b, children, same, n);
+                    }
+                    LNode::Table(t) => {
+                        let t = normalize_spans(t);
+                        for (ri, (rid, rp)) in t.rows.iter().enumerate() {
+                            if let Some((bp, bc, _)) = b.rows.get_mut(rid) {
+                                let cells = &t.cells[ri];
+                                let ok = bc.len() == cells.len()
+                                    && same(&bare("@row", bp, vec![]), &bare("@row", rp, vec![]))
+                                    && bc.iter().zip(cells).all(|(x, y)| {
+                                        same(
+                                            &bare("@cell", &x.props, x.blocks.clone()),
+                                            &bare("@cell", &y.props, y.blocks.clone()),
+                                        )
+                                    });
+                                if ok && (bp != rp || bc != cells) {
+                                    *bp = rp.clone();
+                                    *bc = cells.clone();
+                                    *n += 1;
+                                }
+                            }
+                            for c in &t.cells[ri] {
+                                if let Some((bc, _)) = b.cells.get_mut(&c.id)
+                                    && bc != c
+                                    && same(
+                                        &bare("@cell", &bc.props, bc.blocks.clone()),
+                                        &bare("@cell", &c.props, c.blocks.clone()),
+                                    )
+                                {
+                                    *bc = c.clone();
+                                    *n += 1;
+                                }
+                                walk(b, &c.blocks, same, n);
+                            }
+                        }
+                        for (cid, cp) in &t.cols {
+                            let src = cp.get("@rep").cloned().unwrap_or_else(|| cid.clone());
+                            if let Some((bp, _, _)) = b.cols.get_mut(&src)
+                                && bp != cp
+                                && same(&bare("@col", bp, vec![]), &bare("@col", cp, vec![]))
+                            {
+                                *bp = cp.clone();
+                                *n += 1;
+                            }
+                        }
+                        if let Some((bt, _)) = b.tables.get_mut(&t.id)
+                            && *bt != t
+                            && same(&LNode::Table(bt.clone()), &LNode::Table(t.clone()))
+                        {
+                            *bt = t.clone();
+                            *n += 1;
+                        }
+                    }
+                }
+            }
+        }
+        let mut n = 0;
+        walk(self, &l.body, same, &mut n);
+        n
+    }
+}
+
+impl Baseline {
     fn origins(&self) -> HashMap<&str, Origin> {
         let mut m = HashMap::new();
         for (id, (_, p)) in &self.paras {
@@ -588,7 +715,7 @@ impl Importer<'_> {
                         for gc in &g.children {
                             match gc {
                                 TableChild::Column(col) => self.column(&mut lt, col, Some(&g.name)),
-                                TableChild::Opaque(s) if s.is_whitespace() => {}
+                                TableChild::Opaque(s) if s.is_whitespace() || s.is_layout() => {}
                                 _ => return None,
                             }
                         }
@@ -598,7 +725,7 @@ impl Importer<'_> {
                         for gc in &g.children {
                             match gc {
                                 TableChild::Row(r) => rows.push((r, Some(&g.name))),
-                                TableChild::Opaque(s) if s.is_whitespace() => {}
+                                TableChild::Opaque(s) if s.is_whitespace() || s.is_layout() => {}
                                 _ => return None,
                             }
                         }
@@ -606,7 +733,7 @@ impl Importer<'_> {
                     }
                     _ => return None,
                 },
-                TableChild::Opaque(s) if s.is_whitespace() => {}
+                TableChild::Opaque(s) if s.is_whitespace() || s.is_layout() => {}
                 TableChild::Opaque(_) => return None,
             }
         }

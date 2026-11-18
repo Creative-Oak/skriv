@@ -594,6 +594,217 @@ impl LoroFlowDocument {
     }
 }
 
+/// Operations Spike 4's file-mode import needs beyond [`CrdtDoc`]: joining
+/// paragraphs, inserting any block anywhere, and Loro versions.
+impl LoroFlowDocument {
+    /// Wrap a Loro document that already holds a skriv document.
+    pub fn from_loro(doc: LoroDoc, peer: Peer) -> Self {
+        configure(&doc);
+        doc.set_peer_id(peer).expect("peer id");
+        Self::wrap(doc)
+    }
+
+    /// The current version (Loro frontiers), encoded.
+    pub fn version(&mut self) -> Vec<u8> {
+        self.doc.commit();
+        self.doc.oplog_frontiers().encode()
+    }
+
+    /// A branch starting from an earlier `version` of this document.
+    pub fn fork_at(&mut self, version: &[u8], peer: Peer) -> Option<Self> {
+        self.doc.commit();
+        let f = loro::Frontiers::decode(version).ok()?;
+        let doc = self.doc.fork_at(&f).ok()?;
+        Some(Self::from_loro(doc, peer))
+    }
+
+    /// The current state without history before it (a Loro shallow snapshot).
+    pub fn save_shallow(&mut self) -> Vec<u8> {
+        self.doc.commit();
+        let f = self.doc.oplog_frontiers();
+        self.doc
+            .export(ExportMode::shallow_snapshot(&f))
+            .expect("shallow snapshot")
+    }
+
+    /// Everything this document has that a peer at `version` lacks.
+    pub fn updates_since(&mut self, version: &[u8]) -> Option<Vec<u8>> {
+        self.doc.commit();
+        let f = loro::Frontiers::decode(version).ok()?;
+        let vv = self.doc.frontiers_to_vv(&f)?;
+        self.doc.export(ExportMode::updates(&vv)).ok()
+    }
+
+    pub fn import_updates(&mut self, bytes: &[u8]) -> bool {
+        self.doc.commit();
+        let ok = self.doc.import(bytes).is_ok();
+        self.reindex();
+        ok
+    }
+
+    /// Delete the paragraph break before `pid`: its text joins the previous
+    /// paragraph, keeping its characters (and their authors). Only within one
+    /// flow, and only when the previous item is a paragraph.
+    pub fn join_para(&mut self, pid: &str) -> bool {
+        let Some((_, t, m, _)) = self.extent(pid) else {
+            return false;
+        };
+        if m == 0 {
+            return false;
+        }
+        let items = read_items(&t);
+        let Some(i) = items.iter().position(|it| it.start == m) else {
+            return false;
+        };
+        if i == 0 || !matches!(items[i - 1].node, LNode::Para(_)) {
+            return false;
+        }
+        t.delete(m, 1).is_ok()
+    }
+
+    /// Insert any block (paragraph, embed, container, table) just before `before`.
+    pub fn insert_before(&mut self, before: &str, n: &LNode) -> bool {
+        if let Some((flow, t, m, _)) = self.extent(before) {
+            if is_flow_item(n) {
+                write_items(&t, m, &[n]);
+                self.reindex();
+                return true;
+            }
+            let tree = self.tree();
+            let Some(parent) = tree.parent(flow) else {
+                return false;
+            };
+            let idx = self.index_of(parent, flow);
+            if m == 0 {
+                self.write_node(parent, idx, n);
+            } else {
+                self.split_flow(flow, &t, m);
+                self.write_node(parent, idx + 1, n);
+            }
+            self.reindex();
+            return true;
+        }
+        let Some(b) = self.node(before) else {
+            return false;
+        };
+        let Some(parent) = self.tree().parent(b) else {
+            return false;
+        };
+        let idx = self.index_of(parent, b);
+        self.place(parent, idx, n);
+        true
+    }
+
+    /// Insert any block just after `after`.
+    pub fn insert_after(&mut self, after: &str, n: &LNode) -> bool {
+        if let Some((flow, t, m, len)) = self.extent(after) {
+            if is_flow_item(n) {
+                write_items(&t, m + 1 + len, &[n]);
+                self.reindex();
+                return true;
+            }
+            let tree = self.tree();
+            let Some(parent) = tree.parent(flow) else {
+                return false;
+            };
+            let idx = self.index_of(parent, flow);
+            self.split_flow(flow, &t, m + 1 + len);
+            self.write_node(parent, idx + 1, n);
+            self.reindex();
+            return true;
+        }
+        let Some(a) = self.node(after) else {
+            return false;
+        };
+        let Some(parent) = self.tree().parent(a) else {
+            return false;
+        };
+        let idx = self.index_of(parent, a);
+        self.place(parent, idx + 1, n);
+        true
+    }
+
+    /// Insert a block as the first child of container `parent` (`None`: the body).
+    pub fn insert_first(&mut self, parent: Option<&str>, n: &LNode) -> bool {
+        let p = match parent {
+            None => TreeParentId::Root,
+            Some(id) => match self.node(id) {
+                Some(x) => TreeParentId::Node(x),
+                None => return false,
+            },
+        };
+        self.place(p, 0, n);
+        true
+    }
+
+    /// Move block `id` to be the first child of `parent` (`None`: the body).
+    /// Paragraphs move by copy and delete, as in [`CrdtDoc::move_block_after`].
+    pub fn move_first(&mut self, parent: Option<&str>, id: &str) -> bool {
+        let p = match parent {
+            None => TreeParentId::Root,
+            Some(x) => match self.node(x) {
+                Some(n) => TreeParentId::Node(n),
+                None => return false,
+            },
+        };
+        if let Some(n) = self.node(id) {
+            let ok = self.tree().mov_to(n, p, 0).is_ok();
+            self.reindex();
+            return ok;
+        }
+        let Some(para) = self.para(id) else {
+            return false;
+        };
+        if !self.delete_block(id) {
+            return false;
+        }
+        self.place(p, 0, &LNode::Para(para));
+        true
+    }
+
+    fn index_of(&self, parent: TreeParentId, n: TreeID) -> usize {
+        self.tree()
+            .children(parent)
+            .unwrap_or_default()
+            .iter()
+            .position(|x| *x == n)
+            .unwrap_or(0)
+    }
+
+    fn place(&mut self, parent: TreeParentId, idx: usize, n: &LNode) {
+        if is_flow_item(n) {
+            self.write_flow(parent, idx, &[n]);
+        } else {
+            self.write_node(parent, idx, n);
+        }
+        self.reindex();
+    }
+
+    /// Set (or remove) one property of a table column or row.
+    pub fn set_line_prop(
+        &mut self,
+        tid: &str,
+        line: &str,
+        rows: bool,
+        key: &str,
+        value: Option<&str>,
+    ) -> bool {
+        let Some(n) = self.node(tid) else {
+            return false;
+        };
+        let Some(pm) = get_map(&self.meta(n), if rows { "rp" } else { "cp" }) else {
+            return false;
+        };
+        let Some(lp) = get_map(&pm, line) else {
+            return false;
+        };
+        match value {
+            Some(v) => lp.insert(key, v).is_ok(),
+            None => lp.delete(key).is_ok(),
+        }
+    }
+}
+
 impl CrdtDoc for LoroFlowDocument {
     const NAME: &'static str = "loro-flow";
 

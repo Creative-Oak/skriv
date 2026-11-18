@@ -1,0 +1,92 @@
+[
+  {
+    "doc": "comments-ranged",
+    "odt_plain": 12091,
+    "odt_none": 12620,
+    "odt_shallow": 19155,
+    "odt_full": 23689,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "danish-municipal-letter",
+    "odt_plain": 28786,
+    "odt_none": 29454,
+    "odt_shallow": 40635,
+    "odt_full": 48477,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "figures-captions-fields",
+    "odt_plain": 20243,
+    "odt_none": 20808,
+    "odt_shallow": 28512,
+    "odt_full": 34551,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "lists-multilevel-numbering",
+    "odt_plain": 11590,
+    "odt_none": 12207,
+    "odt_shallow": 21513,
+    "odt_full": 28120,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "sections-columns",
+    "odt_plain": 15096,
+    "odt_none": 15636,
+    "odt_shallow": 21915,
+    "odt_full": 26305,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "styles-inheritance-and-direct-formatting",
+    "odt_plain": 13855,
+    "odt_none": 14454,
+    "odt_shallow": 21462,
+    "odt_full": 26481,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "table-of-contents",
+    "odt_plain": 24121,
+    "odt_none": 24709,
+    "odt_shallow": 33273,
+    "odt_full": 39770,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "tables-widths-merged",
+    "odt_plain": 10687,
+    "odt_none": 11327,
+    "odt_shallow": 20899,
+    "odt_full": 27543,
+    "shallow_has_secret": false,
+    "full_has_secret": false
+  },
+  {
+    "doc": "tracked-changes-pending",
+    "odt_plain": 10886,
+    "odt_none": 11432,
+    "odt_shallow": 18522,
+    "odt_full": 23480,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  },
+  {
+    "doc": "letter-x100",
+    "odt_plain": 38973,
+    "odt_none": 54349,
+    "odt_shallow": 277706,
+    "odt_full": 400339,
+    "shallow_has_secret": false,
+    "full_has_secret": true
+  }
+]

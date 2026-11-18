@@ -12,3 +12,4 @@ dist/
 .DS_Store
 /prototypes/layout/fonts/*.ttf
 /prototypes/*/target*
+__pycache__/

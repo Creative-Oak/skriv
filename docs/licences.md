@@ -40,6 +40,12 @@ CC0, 0BSD, Unlicense, MPL-2.0 or BSL-1.0 (or dual-licensed with one of these);
 - `imbl` 7.0.2 and `imbl-sized-chunks` 0.2.0 (used by Loro) are
   **MPL-2.0+**, file-level copyleft like skriv itself; already allowed.
 
+## Spike 4 additions (verified 2026-11-18)
+
+`crates/filemode` adds `base64` 0.22 (MIT OR Apache-2.0) and `similar` 2.7
+(Apache-2.0); `cargo deny check licenses` passes. Test-time: `python3-uno`
+(LibreOffice's UNO bridge, MPL-2.0) drives LibreOffice over a pipe.
+
 ## Spike 3 CRDT candidates (verified 2026-11-17)
 
 Checked against the published crates and npm packages, and the licence

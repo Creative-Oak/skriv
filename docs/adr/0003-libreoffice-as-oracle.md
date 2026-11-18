@@ -62,5 +62,5 @@ breaking, a large C++ dependency and a server round trip per keystroke.
 
 | Question | Settled by |
 |---|---|
-| What LibreOffice keeps of our IDs, metadata and private data on re-save | Spike 4. First findings: `docs/spikes/04-libreoffice-preservation-findings.md` |
+| What LibreOffice keeps of our IDs, metadata and private data on re-save | **Answered by Spike 4** (LibreOffice 24.2 and 26.8): `xml:id` on paragraphs, headings and sections, `meta:user-defined` and an RDF metadata part survive; everything a re-save changes is listed in `docs/spikes/04-results.md`. File mode needs no LibreOffice at runtime. |
 | Whether a server-side LibreOffice converter ships at all, and where it runs | Later. Not needed for Phase 1. |

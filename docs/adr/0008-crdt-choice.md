@@ -108,3 +108,11 @@ tree already is).
 | The storage yardstick (zipped ODT or XML; generated or real documents) and the history policy | Team decision; measure on municipal documents |
 | Lists and tables inside table cells | When the editor needs them (cells are tree nodes, so the hybrid can nest) |
 | Named styles: per-property merge, or one value per style? | When concurrent style editing is a feature |
+
+## Confirmed by Spike 4
+
+File mode needs, and Loro provides: shallow snapshots (state without
+history, so a file can carry the document without its deleted text),
+`fork_at` a version named in the file, and update export from a branch
+made from a shallow snapshot into the full document. The file records its
+encoding (`loro-flow-1`). See `docs/spikes/04-results.md`.
