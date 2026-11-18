@@ -1,0 +1,335 @@
+{
+ "_version": "LibreOffice 24.2.7.2 420(Build:2)",
+ "comments-ranged__no-edit__convert.odt": {
+  "ok": true
+ },
+ "danish-municipal-letter__no-edit__convert.odt": {
+  "ok": true
+ },
+ "figures-captions-fields__no-edit__convert.odt": {
+  "ok": true
+ },
+ "lists-multilevel-numbering__no-edit__convert.odt": {
+  "ok": true
+ },
+ "sections-columns__no-edit__convert.odt": {
+  "ok": true
+ },
+ "styles-inheritance-and-direct-formatting__no-edit__convert.odt": {
+  "ok": true
+ },
+ "table-of-contents__no-edit__convert.odt": {
+  "ok": true
+ },
+ "tables-widths-merged__no-edit__convert.odt": {
+  "ok": true
+ },
+ "tracked-changes-pending__no-edit__convert.odt": {
+  "ok": true
+ },
+ "letter-x20__no-edit__convert.odt": {
+  "ok": true
+ },
+ "comments-ranged__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "comments-ranged__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "comments-ranged__delete__store.odt": {
+  "ok": true,
+  "ops": [
+   "delete"
+  ]
+ },
+ "comments-ranged__split__store.odt": {
+  "ok": true,
+  "ops": [
+   "split"
+  ]
+ },
+ "danish-municipal-letter__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "danish-municipal-letter__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "danish-municipal-letter__cell-type__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "danish-municipal-letter__row-insert__store.odt": {
+  "ok": true,
+  "ops": [
+   "row_insert"
+  ]
+ },
+ "danish-municipal-letter__list-add__store.odt": {
+  "ok": true,
+  "ops": [
+   "list_add"
+  ]
+ },
+ "figures-captions-fields__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "figures-captions-fields__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "figures-captions-fields__delete__store.odt": {
+  "ok": true,
+  "ops": [
+   "delete"
+  ]
+ },
+ "figures-captions-fields__split__store.odt": {
+  "ok": true,
+  "ops": [
+   "split"
+  ]
+ },
+ "lists-multilevel-numbering__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "lists-multilevel-numbering__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "lists-multilevel-numbering__list-add__store.odt": {
+  "ok": true,
+  "ops": [
+   "list_add"
+  ]
+ },
+ "sections-columns__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "sections-columns__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "sections-columns__type__docx.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "sections-columns__type__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "sections-columns__delete__store.odt": {
+  "ok": true,
+  "ops": [
+   "delete"
+  ]
+ },
+ "sections-columns__bold__store.odt": {
+  "ok": true,
+  "ops": [
+   "bold"
+  ]
+ },
+ "sections-columns__split__store.odt": {
+  "ok": true,
+  "ops": [
+   "split"
+  ]
+ },
+ "sections-columns__tracked__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert",
+   "delete"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "styles-inheritance-and-direct-formatting__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "styles-inheritance-and-direct-formatting__type__docx.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__type__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__delete__store.odt": {
+  "ok": true,
+  "ops": [
+   "delete"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__bold__store.odt": {
+  "ok": true,
+  "ops": [
+   "bold"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__split__store.odt": {
+  "ok": true,
+  "ops": [
+   "split"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__join__store.odt": {
+  "ok": true,
+  "ops": [
+   "join"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__delete-paragraph__store.odt": {
+  "ok": true,
+  "ops": [
+   "delete_para"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__duplicate-paragraph__store.odt": {
+  "ok": true,
+  "ops": [
+   "dup_para"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__move-paragraph__store.odt": {
+  "ok": true,
+  "ops": [
+   "move_para"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__heading__store.odt": {
+  "ok": true,
+  "ops": [
+   "heading"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__session__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert",
+   "bold",
+   "split"
+  ]
+ },
+ "styles-inheritance-and-direct-formatting__tracked__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert",
+   "delete"
+  ]
+ },
+ "table-of-contents__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "table-of-contents__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "tables-widths-merged__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "tables-widths-merged__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "tables-widths-merged__cell-type__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "tables-widths-merged__row-insert__store.odt": {
+  "ok": true,
+  "ops": [
+   "row_insert"
+  ]
+ },
+ "tables-widths-merged__column-delete__store.odt": {
+  "ok": true,
+  "ops": [
+   "col_delete"
+  ]
+ },
+ "tracked-changes-pending__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "tracked-changes-pending__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "tracked-changes-pending__type__docx.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "tracked-changes-pending__type__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert"
+  ]
+ },
+ "tracked-changes-pending__delete__store.odt": {
+  "ok": true,
+  "ops": [
+   "delete"
+  ]
+ },
+ "tracked-changes-pending__split__store.odt": {
+  "ok": true,
+  "ops": [
+   "split"
+  ]
+ },
+ "tracked-changes-pending__join__store.odt": {
+  "ok": true,
+  "ops": [
+   "join"
+  ]
+ },
+ "tracked-changes-pending__heading__store.odt": {
+  "ok": true,
+  "ops": [
+   "heading"
+  ]
+ },
+ "tracked-changes-pending__tracked__store.odt": {
+  "ok": true,
+  "ops": [
+   "insert",
+   "delete"
+  ]
+ },
+ "letter-x20__no-edit__store.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "letter-x20__no-edit__docx.odt": {
+  "ok": true,
+  "ops": []
+ },
+ "_seconds": 13.3
+}

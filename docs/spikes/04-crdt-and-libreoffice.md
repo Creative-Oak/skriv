@@ -11,7 +11,9 @@ LibreOffice or email.
 **Kill / continue (from the report).** Returned copies become attributed
 suggestion branches with under 5% spurious changes.
 
-**Status:** pre-work done in Spike 1. LibreOffice 26.8 was tested for what it
+**Status:** run 2026-11-18 on LibreOffice 24.2: **continue**. Results:
+[`04-results.md`](04-results.md); judgement calls:
+[`04-judgements.md`](04-judgements.md). Pre-work done in Spike 1. LibreOffice 26.8 was tested for what it
 keeps; see [`04-libreoffice-preservation-findings.md`](04-libreoffice-preservation-findings.md).
 The findings change the report's proposed design: an extra package part does
 **not** survive, but an RDF metadata file does.

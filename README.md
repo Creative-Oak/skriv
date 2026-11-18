@@ -15,10 +15,15 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
 
 - **Spike 1 (ODT round-trip fidelity): done.** Results are in
   [docs/spikes/01-odt-roundtrip-results.md](docs/spikes/01-odt-roundtrip-results.md).
-- **Spike 4 pre-work** (what LibreOffice keeps of our IDs and data): see
-  [docs/spikes/04-libreoffice-preservation-findings.md](docs/spikes/04-libreoffice-preservation-findings.md).
-- **Next:** Spikes 2, 2b and 3; see
-  [docs/spikes/02-03-next-spikes-plan.md](docs/spikes/02-03-next-spikes-plan.md).
+- **Spike 2b (layout engine): done.** Our own engine on Parley; see
+  [docs/spikes/02b-results.md](docs/spikes/02b-results.md) (ADR 0007, proposed).
+- **Spike 3 (CRDT): done.** Loro with a hybrid encoding; see
+  [docs/spikes/03-results.md](docs/spikes/03-results.md) (ADR 0008, proposed).
+- **Spike 4 (files through LibreOffice): done.** Returned files become exact,
+  attributed suggestion branches; see
+  [docs/spikes/04-results.md](docs/spikes/04-results.md).
+- **Next:** Spike 2 (editing latency, IME and screen readers on real
+  devices); Spikes 5 (DOCX) and 6 (proofing).
 - **Decisions:** [docs/adr/](docs/adr/). **Progress:** [docs/PLAN.md](docs/PLAN.md).
 
 ## Layout
