@@ -406,3 +406,93 @@ mod prop {
         }
     }
 }
+
+/// Replace the list paragraph "one" with `content`, write, and return the
+/// written content.xml and that paragraph's text as read back.
+fn rewrite_one(content: Vec<Inline>) -> (String, String) {
+    let mut odt = read(sample()).unwrap();
+    let mut paras = paragraphs_mut(&mut odt.doc);
+    let at = paras.iter().position(|p| p.plain_text() == "one").unwrap();
+    paras[at].content = content;
+    paras[at].meta.dirty = true;
+    let w = odt.write().unwrap();
+    let mut back = read(w.bytes).unwrap();
+    let text = paragraphs_mut(&mut back.doc)[at].plain_text();
+    (w.content_xml, text)
+}
+
+fn texts(parts: &[&str]) -> Vec<Inline> {
+    parts.iter().map(|t| Inline::Text(Text::new(*t))).collect()
+}
+
+#[test]
+fn regenerated_text_encodes_white_space() {
+    for (input, xml) in [
+        ("a  b", "a <text:s/>b"),
+        ("a    b", r#"a <text:s text:c="3"/>b"#),
+        (" lead", "<text:s/>lead"),
+        ("  lead", r#"<text:s text:c="2"/>lead"#),
+        ("trail ", "trail "),
+        ("tab\there", "tab<text:tab/>here"),
+        ("tab\t here", "tab<text:tab/><text:s/>here"),
+        ("line\nbreak", "line<text:line-break/>break"),
+        ("din  byggetilladelse", "din <text:s/>byggetilladelse"),
+        ("x & <y>", "x &amp; &lt;y&gt;"),
+    ] {
+        let (out, back) = rewrite_one(texts(&[input]));
+        let want = format!("<text:list-item><text:p>{xml}</text:p>");
+        assert!(out.contains(&want), "{input:?}: want {want} in\n{out}");
+        assert_eq!(back, input, "{input:?} read back");
+    }
+}
+
+#[test]
+fn white_space_runs_are_tracked_across_inlines() {
+    // A run split over two text inlines, and over a regenerated span.
+    let (out, back) = rewrite_one(texts(&["a ", " b"]));
+    assert!(out.contains("<text:p>a <text:s/>b</text:p>"), "{out}");
+    assert_eq!(back, "a  b");
+
+    let span = Inline::Span(Span {
+        meta: NodeMeta::default(),
+        attrs: Attrs::default(),
+        content: texts(&["  c"]),
+    });
+    let mut content = texts(&["a "]);
+    content.push(span);
+    let (out, back) = rewrite_one(content);
+    assert!(
+        out.contains(r#"<text:p>a <text:span><text:s text:c="2"/>c</text:span></text:p>"#),
+        "{out}"
+    );
+    assert_eq!(back, "a   c");
+}
+
+#[test]
+fn source_text_next_to_new_text_stays_verbatim() {
+    // "B" ... " &lt;x&gt; " keeps its source spelling; a space appended after
+    // its trailing space must not collapse into it.
+    let mut odt = read(sample()).unwrap();
+    let mut paras = paragraphs_mut(&mut odt.doc);
+    let at = paras
+        .iter()
+        .position(|p| p.plain_text().starts_with("A   B"))
+        .unwrap();
+    let p = &mut paras[at];
+    let i = p
+        .content
+        .iter()
+        .position(|i| matches!(i, Inline::Text(t) if t.text == " <x> "))
+        .unwrap();
+    p.content.insert(i + 1, Inline::Text(Text::new(" new ")));
+    p.meta.dirty = true;
+    let before = p.plain_text();
+    let w = odt.write().unwrap();
+    assert!(
+        w.content_xml.contains(" &lt;x&gt; <text:s/>new <text:span"),
+        "{}",
+        w.content_xml
+    );
+    let mut back = read(w.bytes).unwrap();
+    assert_eq!(paragraphs_mut(&mut back.doc)[at].plain_text(), before);
+}

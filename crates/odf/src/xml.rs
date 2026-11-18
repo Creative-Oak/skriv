@@ -349,6 +349,61 @@ pub fn escape_text(s: &str, d: Dialect, out: &mut String) {
     }
 }
 
+/// Escape character data written inside paragraph content (`text:p`,
+/// `text:h` and the spans, links and fields in them), encoding white space
+/// the way ODF requires (ODF 1.2+ §6.1.2): consumers collapse runs of white
+/// space and drop it at the start of a paragraph, so
+///
+/// - the first space of a run is literal, the rest `<text:s text:c="N"/>`;
+/// - a space with white space (or the paragraph start, a `text:tab` or a
+///   `text:line-break`) before it is written as `<text:s/>`;
+/// - `\t` becomes `<text:tab/>` and `\n` (or `\r\n`, `\r`) `<text:line-break/>`.
+///
+/// `prev_space` says whether what came before counts as white space; start
+/// a paragraph with `true`. It is updated to describe the end of `s`.
+pub fn escape_para_text(s: &str, d: Dialect, prev_space: &mut bool, out: &mut String) {
+    let mut chars = s.chars().peekable();
+    while let Some(c) = chars.next() {
+        match c {
+            ' ' => {
+                let mut n = 1;
+                while chars.next_if_eq(&' ').is_some() {
+                    n += 1;
+                }
+                if !*prev_space {
+                    out.push(' ');
+                    n -= 1;
+                }
+                match n {
+                    0 => {}
+                    1 => out.push_str("<text:s/>"),
+                    _ => {
+                        out.push_str("<text:s text:c=\"");
+                        out.push_str(&n.to_string());
+                        out.push_str("\"/>");
+                    }
+                }
+                *prev_space = true;
+            }
+            '\t' => {
+                out.push_str("<text:tab/>");
+                *prev_space = true;
+            }
+            '\n' | '\r' => {
+                if c == '\r' {
+                    chars.next_if_eq(&'\n');
+                }
+                out.push_str("<text:line-break/>");
+                *prev_space = true;
+            }
+            _ => {
+                escape_text(c.encode_utf8(&mut [0; 4]), d, out);
+                *prev_space = false;
+            }
+        }
+    }
+}
+
 /// Escape an attribute value for double quotes. Tabs and newlines become
 /// character references so attribute-value normalisation can't eat them.
 pub fn escape_attr(s: &str, d: Dialect, out: &mut String) {

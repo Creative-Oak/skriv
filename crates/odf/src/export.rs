@@ -11,7 +11,7 @@
 
 use skriv_model::*;
 
-use crate::xml::{Dialect, escape_attr, escape_text};
+use crate::xml::{Dialect, escape_attr, escape_para_text, escape_text};
 
 /// Byte accounting for one write, used by the fidelity report to show how
 /// much of the output was copied, regenerated, or carried in slots.
@@ -65,6 +65,9 @@ pub struct Writer<'a> {
     pub opts: WriteOptions,
     /// Escaping conventions of the part being written.
     pub dialect: Dialect,
+    /// Whether the paragraph content written so far ends in white space (or
+    /// is empty), for encoding spaces in regenerated text.
+    prev_space: bool,
 }
 
 impl<'a> Writer<'a> {
@@ -77,6 +80,7 @@ impl<'a> Writer<'a> {
             stats: WriteStats::default(),
             opts,
             dialect: Dialect::default(),
+            prev_space: true,
         }
     }
 
@@ -254,10 +258,14 @@ impl<'a> Writer<'a> {
         match b {
             Block::Paragraph(p) => {
                 let name = if p.heading { "text:h" } else { "text:p" };
+                // Paragraphs nest (comments, text boxes): keep the outer
+                // paragraph's state.
+                let outer = std::mem::replace(&mut self.prev_space, true);
                 if let Some(o) = self.begin(name, &p.attrs, &p.meta) {
                     self.inlines(&p.content);
                     self.end(o);
                 }
+                self.prev_space = outer;
             }
             Block::List(l) => {
                 if let Some(o) = self.begin("text:list", &l.attrs, &l.meta) {
@@ -402,13 +410,25 @@ impl<'a> Writer<'a> {
     fn inline(&mut self, i: &Inline) {
         match i {
             Inline::Text(t) => match t.origin {
-                Some(o) if !self.opts.regenerate_text => {
-                    let src = self.src(o.part);
-                    self.out.push_str(&src[o.start..o.end]);
+                Some(o) => {
+                    if self.opts.regenerate_text {
+                        escape_text(&t.text, self.dialect, &mut self.out);
+                    } else {
+                        let src = self.src(o.part);
+                        self.out.push_str(&src[o.start..o.end]);
+                    }
+                    self.note_written(i);
                 }
-                _ => escape_text(&t.text, self.dialect, &mut self.out),
+                // Text typed or changed in skriv: its white space is meant
+                // literally, so encode it so consumers don't collapse it.
+                None => {
+                    escape_para_text(&t.text, self.dialect, &mut self.prev_space, &mut self.out)
+                }
             },
-            Inline::Control(c) => self.leaf(c.kind.element(), &c.attrs, &c.meta),
+            Inline::Control(c) => {
+                self.leaf(c.kind.element(), &c.attrs, &c.meta);
+                self.note_written(i);
+            }
             Inline::Span(s) | Inline::Link(s) => {
                 let name = if matches!(i, Inline::Link(_)) {
                     "text:a"
@@ -418,12 +438,16 @@ impl<'a> Writer<'a> {
                 if let Some(o) = self.begin(name, &s.attrs, &s.meta) {
                     self.inlines(&s.content);
                     self.end(o);
+                } else {
+                    self.note_written(i);
                 }
             }
             Inline::Field(f) => {
                 if let Some(o) = self.begin(&f.name, &f.attrs, &f.meta) {
                     self.inlines(&f.display);
                     self.end(o);
+                } else {
+                    self.note_written(i);
                 }
             }
             Inline::Bookmark(m) | Inline::ChangeMark(m) | Inline::AnnotationEnd(m) => {
@@ -486,6 +510,16 @@ impl<'a> Writer<'a> {
                 }
             }
             Inline::Opaque(s) => self.slot(s),
+        }
+    }
+
+    /// Update [`Self::prev_space`] after `i` was written without going
+    /// through [`escape_para_text`] (copied from source, or a control).
+    fn note_written(&mut self, i: &Inline) {
+        let mut s = String::new();
+        i.push_plain_text(&mut s);
+        if let Some(c) = s.chars().last() {
+            self.prev_space = matches!(c, ' ' | '\t' | '\n' | '\r');
         }
     }
 
