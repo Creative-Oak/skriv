@@ -1,0 +1,29 @@
+[package]
+name = "layout-wasm"
+version = "0.0.0"
+description = "Spike 2b: both paginators in wasm32, driven from JavaScript to time keystrokes in a browser."
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = ["own", "typst"]
+own = ["dep:layout-own"]
+typst = ["dep:layout-typst"]
+
+[dependencies]
+layout-contract = { workspace = true, default-features = false }
+layout-own = { workspace = true, optional = true }
+layout-typst = { workspace = true, optional = true }
+serde_json.workspace = true
+
+# `#[unsafe(no_mangle)]` exports need `unsafe_code`; this crate does nothing else.
+[lints.rust]
+unsafe_code = "allow"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
