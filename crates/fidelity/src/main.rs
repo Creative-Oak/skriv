@@ -57,11 +57,37 @@ enum Cmd {
         #[arg(long)]
         canary: bool,
     },
+    /// Read one ODT and write it back (Spike 5: skriv in the middle of a
+    /// conversion path). `--regenerate` writes every node from the model,
+    /// so only what the model understands survives.
+    Roundtrip {
+        input: PathBuf,
+        output: PathBuf,
+        #[arg(long)]
+        regenerate: bool,
+    },
 }
 
 fn main() -> Result<()> {
     let cli = Cli::parse();
     match cli.cmd {
+        Cmd::Roundtrip {
+            input,
+            output,
+            regenerate,
+        } => {
+            let mut odt = skriv_odf::read(std::fs::read(&input)?)?;
+            let opts = if regenerate {
+                skriv_odf::touch_all(&mut odt.doc);
+                skriv_odf::WriteOptions {
+                    regenerate_text: true,
+                    ..Default::default()
+                }
+            } else {
+                Default::default()
+            };
+            std::fs::write(&output, odt.write_with(opts)?.bytes)?;
+        }
         Cmd::Run {
             corpus,
             out,
