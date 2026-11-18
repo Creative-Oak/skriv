@@ -19,6 +19,8 @@ Phase 0 retires risk; it doesn't build product. There is no editor UI yet.
   [docs/spikes/04-libreoffice-preservation-findings.md](docs/spikes/04-libreoffice-preservation-findings.md).
 - **Next:** Spikes 2, 2b and 3; see
   [docs/spikes/02-03-next-spikes-plan.md](docs/spikes/02-03-next-spikes-plan.md).
+- **Design:** [docs/design/](docs/design/), starting with
+  [guidance for people who think in Word](docs/design/01-guidance.md).
 - **Decisions:** [docs/adr/](docs/adr/). **Progress:** [docs/PLAN.md](docs/PLAN.md).
 
 ## Layout
@@ -31,6 +33,7 @@ packages/         TypeScript (empty: tooling only, for the web UI and @skriv/* W
 fidelity/         corpus, scripts, reports
 docs/adr          architecture decision records
 docs/spikes       spike briefs and results
+docs/design       product design notes
 ```
 
 Reserved for later: `crates/layout`, `crates/docx`, `crates/crdt`.

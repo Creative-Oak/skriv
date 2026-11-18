@@ -229,3 +229,6 @@ No pushing or GitHub repo creation unless asked.
   - CI on push runs only the quick checks. The LibreOffice fidelity job is manual (Run workflow).
   - Ten Word-exported EU ODT documents passed every criterion; addendum in the Spike 1 results.
 
+- 2026-11-18: Design note on in-product guidance (`docs/design/01-guidance.md`).
+  - Proposed: an inspector, Word words in command search, nudges, and one-time concept cards. No character.
+  - Model follow-up (G0): full style provenance resolution, then measure detector precision on the corpus.
