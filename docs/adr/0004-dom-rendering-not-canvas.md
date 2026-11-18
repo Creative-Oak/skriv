@@ -52,5 +52,5 @@ anything for it yet; Spike 2 does that.
 | Question | Settled by |
 |---|---|
 | View strategy: A (ProseMirror view with engine-directed lines and pages) or B (owned DOM view with EditContext or a hidden textarea) | Spike 2 |
-| Layout kernel: our own on the Linebender stack, or Typst as the kernel | Spike 2b |
+| Layout kernel: our own on the Linebender stack, or Typst as the kernel | **Answered by Spike 2b:** our own engine on Parley (ADR 0007, proposed). Under 1 ms per keystroke at p95 on 100 pages in Chromium; Typst's kernel takes 75–175 ms. |
 | Desktop shell: Tauri (system WebViews; WebKitGTK on Linux is the risk) or Electron | Spike 7, deferred until after the web app |

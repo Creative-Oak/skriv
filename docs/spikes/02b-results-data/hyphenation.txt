@@ -1,0 +1,2 @@
+83 words; identical in 83 (100.0%)
+break points: 151 shared, 0 only LibreOffice, 0 only hypher

@@ -33,6 +33,7 @@ packages/         TypeScript (empty: tooling only, for the web UI and @skriv/* W
 fidelity/         corpus, scripts, reports
 docs/adr          architecture decision records
 docs/spikes       spike briefs and results
+prototypes/layout Spike 2b: the layout contract, our own paginator and a Typst kernel
 ```
 
 Reserved for later: `crates/layout`, `crates/docx`.

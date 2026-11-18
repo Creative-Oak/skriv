@@ -1,0 +1,47 @@
+# Spike 2b: two paginators behind one layout contract.
+# Not part of the main workspace (Typst is heavy). Fonts: ./fetch-fonts.sh first.
+
+[workspace]
+resolver = "3"
+members = ["contract", "own", "typst-kernel", "bench", "wasm"]
+
+[workspace.package]
+edition = "2024"
+license = "MPL-2.0"
+rust-version = "1.100"
+publish = false
+
+[workspace.dependencies]
+skriv-model = { path = "../../crates/model" }
+skriv-odf = { path = "../../crates/odf" }
+layout-contract = { path = "contract" }
+layout-own = { path = "own" }
+layout-typst = { path = "typst-kernel" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+parley = { version = "0.13", default-features = false, features = ["std"] }
+parley_engine = { version = "0.13", default-features = false, features = ["std"] }
+hypher = { version = "0.1.8", default-features = false, features = ["alloc", "danish", "english"] }
+typst = "0.15.1"
+typst-ide = "0.15.1"
+typst-layout = "0.15.1"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+
+[profile.release]
+debug = 1
+
+[profile.wasm]
+inherits = "release"
+opt-level = 3
+debug = 0
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev.package."*"]
+opt-level = 2
