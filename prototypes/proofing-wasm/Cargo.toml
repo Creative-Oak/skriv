@@ -1,0 +1,30 @@
+# Spike 6: the proofing crate in wasm32. How big is it, how long does it
+# take to load the dictionaries and check text? Not part of the workspace.
+# Build and measure with ./measure.sh (needs ../../crates/proofing/dicts).
+
+[package]
+name = "skriv-proofing-wasm"
+version = "0.0.0"
+edition = "2024"
+license = "MPL-2.0"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = []
+lingua = ["skriv-proofing/lingua"]
+whatlang = ["skriv-proofing/whatlang"]
+
+[dependencies]
+skriv-proofing = { path = "../../crates/proofing", default-features = false }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[workspace]

@@ -45,7 +45,12 @@ impl Lingua {
     pub fn new(confusers: bool, low_accuracy: bool) -> Self {
         use lingua::Language::*;
         let langs: &[lingua::Language] = if confusers {
-            &[Danish, English, Bokmal, Swedish]
+            #[cfg(feature = "lingua-confusers")]
+            {
+                &[Danish, English, Bokmal, Swedish]
+            }
+            #[cfg(not(feature = "lingua-confusers"))]
+            panic!("built without the lingua-confusers feature")
         } else {
             &[Danish, English]
         };
@@ -95,6 +100,8 @@ impl Detector for Lingua {
         let lang = match top {
             lingua::Language::Danish => Some(Lang::Da),
             lingua::Language::English => Some(Lang::En),
+            // Bokmål and Swedish, when built with them.
+            #[allow(unreachable_patterns)]
             _ => None,
         };
         Detection {

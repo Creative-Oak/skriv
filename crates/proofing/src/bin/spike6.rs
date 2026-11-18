@@ -299,7 +299,10 @@ fn run_detection(docs: &[Doc], speller: &Speller, out: &std::path::Path) -> Dete
     let mut rows = Vec::new();
     let mut md = String::new();
     let mut best_overall: Option<Best> = None;
-    let mut errors_txt = String::new();
+    // Excerpts of the Wikipedia part are CC BY-SA: say where they come from.
+    let mut errors_txt = String::from(
+        "# Paragraphs w* quote Wikipedia (CC BY-SA 4.0); revisions in crates/proofing/corpus/wiki-manifest.tsv.\n",
+    );
     writeln!(md, "# Spike 6: language per paragraph\n").unwrap();
     let total_chars: usize = docs.iter().map(Doc::chars).sum();
     writeln!(
@@ -586,7 +589,12 @@ fn run_spelling(
         "predicted + either dictionary for capitalised words",
         "en_GB: oracle word language",
         "en_GB: predicted + either dictionary for capitalised words",
+        "proposed: segments + either dictionary for capitalised words and paragraphs under 20 letters",
+        "en_GB: proposed",
     ];
+    // Flags a mode adds over the oracle word language (same English
+    // dictionary): false flags caused by getting the language wrong.
+    let mut extra = vec![0usize; modes.len()];
     let mut flags: Vec<BTreeMap<String, usize>> = vec![BTreeMap::new(); modes.len()];
     let mut nflags = vec![0usize; modes.len()];
     let mut words = 0usize;
@@ -633,7 +641,16 @@ fn run_spelling(
                 } else {
                     &[pred]
                 };
-                let sets: [&[Lang]; 9] = [
+                let both = [seg, seg.other()];
+                let one = [seg];
+                let proposed: &[Lang] = if text::letters(&p.text) < 20
+                    || word.chars().next().is_some_and(char::is_uppercase)
+                {
+                    &both
+                } else {
+                    &one
+                };
+                let sets: [&[Lang]; 11] = [
                     &[truth],
                     &[p.lang],
                     &[pred],
@@ -643,13 +660,17 @@ fn run_spelling(
                     cap,
                     &[truth],
                     cap,
+                    proposed,
+                    proposed,
                 ];
-                let mut ok0 = true;
+                let gb = |m: usize| m == 7 || m == 8 || m == 10;
+                let ok0 = speller.check(&p.text, &w, &[truth]);
+                let ok0_gb = speller_gb.check(&p.text, &w, &[truth]);
                 for (m, langs) in sets.iter().enumerate() {
-                    let sp = if m >= 7 { speller_gb } else { speller };
+                    let sp = if gb(m) { speller_gb } else { speller };
                     let ok = sp.check(&p.text, &w, langs);
-                    if m == 0 {
-                        ok0 = ok;
+                    if !ok && (if gb(m) { ok0_gb } else { ok0 }) {
+                        extra[m] += 1;
                     }
                     if !ok {
                         nflags[m] += 1;
@@ -677,13 +698,17 @@ fn run_spelling(
     )
     .unwrap();
     writeln!(md, "Skipped words (not checked): {skipped:?}\n").unwrap();
-    writeln!(md, "| Mode | Flags | per 1,000 words |\n|---|---|---|").unwrap();
+    let pages = docs.iter().map(Doc::chars).sum::<usize>() as f64 / PAGE_CHARS as f64;
+    writeln!(md, "Every flag is a false flag (the corpus is taken as correctly spelled). \"Wrong-language flags\" are flags the mode adds over checking each word in its true language.\n").unwrap();
+    writeln!(md, "| Mode | Flags | per 1,000 words | Wrong-language flags | per 10 pages |\n|---|---|---|---|---|").unwrap();
     for (m, name) in modes.iter().enumerate() {
         writeln!(
             md,
-            "| {name} | {} | {:.1} |",
+            "| {name} | {} | {:.1} | {} | {:.1} |",
             nflags[m],
-            nflags[m] as f64 * 1000.0 / words as f64
+            nflags[m] as f64 * 1000.0 / words as f64,
+            extra[m],
+            extra[m] as f64 * 10.0 / pages
         )
         .unwrap();
     }
@@ -693,7 +718,7 @@ fn run_spelling(
         by_lang[0][1], by_lang[0][0], by_lang[1][1], by_lang[1][0], long_da[1], long_da[0]
     )
     .unwrap();
-    for m in [0, 2, 6, 7, 8] {
+    for m in [0, 2, 7, 10] {
         writeln!(md, "## Flagged words: {}\n", modes[m]).unwrap();
         let mut v: Vec<_> = flags[m].iter().collect();
         v.sort_by(|a, b| b.1.cmp(a.1).then(a.0.cmp(b.0)));
@@ -715,6 +740,7 @@ fn run_spelling(
         "skipped": skipped,
         "modes": modes.iter().enumerate().map(|(m, n)| json!({"mode": n, "flags": nflags[m],
             "per_1000_words": nflags[m] as f64 * 1000.0 / words as f64,
+            "wrong_language_flags": extra[m], "wrong_language_flags_per_10_pages": extra[m] as f64 * 10.0 / pages,
             "distinct": flags[m].len()})).collect::<Vec<_>>(),
         "oracle_by_language": {"da": {"words": by_lang[0][0], "flags": by_lang[0][1]},
                                "en": {"words": by_lang[1][0], "flags": by_lang[1][1]}},
@@ -734,7 +760,7 @@ fn run_typos(speller: &Speller, speller_gb: &Speller, out: &std::path::Path) -> 
     .expect("parse typos");
     let mut by_class: BTreeMap<(Lang, String), [usize; 6]> = BTreeMap::new();
     let mut lines = String::new();
-    let mut times = Vec::new();
+    let mut times: [Vec<f64>; 2] = [Vec::new(), Vec::new()];
     let mut bad_right = Vec::new();
     for t in &typos {
         let words: Vec<&str> = t.wrong.split(' ').collect();
@@ -751,7 +777,7 @@ fn run_typos(speller: &Speller, speller_gb: &Speller, out: &std::path::Path) -> 
         if own && words.len() == 1 {
             let tm = Instant::now();
             sugg = speller.suggest(&t.wrong, t.lang);
-            times.push(tm.elapsed().as_secs_f64() * 1e3);
+            times[t.lang.index()].push(tm.elapsed().as_secs_f64() * 1e3);
             top1 = sugg.first() == Some(&t.right);
             top3 = sugg.iter().take(3).any(|s| s == &t.right);
         }
@@ -810,13 +836,17 @@ fn run_typos(speller: &Speller, speller_gb: &Speller, out: &std::path::Path) -> 
         )
         .unwrap();
     }
-    let n = times.len();
-    let (p50, p95, max) = (
-        pct(&mut times, 0.5),
-        pct(&mut times, 0.95),
-        pct(&mut times, 1.0),
-    );
-    writeln!(md, "\nSuggestion time per word ({n} words): median {p50:.0} ms, p95 {p95:.0} ms, max {max:.0} ms.").unwrap();
+    let mut suggest_ms = serde_json::Map::new();
+    for l in Lang::ALL {
+        let v = &mut times[l.index()];
+        let n = v.len();
+        let (p50, p95, max) = (pct(v, 0.5), pct(v, 0.95), pct(v, 1.0));
+        writeln!(md, "\nSuggestion time per flagged {l} word ({n} words): median {p50:.0} ms, p95 {p95:.0} ms, max {max:.0} ms.").unwrap();
+        suggest_ms.insert(
+            l.code().into(),
+            json!({"n": n, "p50": p50, "p95": p95, "max": max}),
+        );
+    }
     writeln!(md, "\nRight words the dictionary rejects: {bad_right:?}").unwrap();
     // en_GB for comparison: which English typos it flags, and top 3.
     let common: Vec<&corpus::Typo> = typos
@@ -844,7 +874,7 @@ fn run_typos(speller: &Speller, speller_gb: &Speller, out: &std::path::Path) -> 
             "flagged": a[1], "flagged_either": a[2], "top1": a[3], "top3": a[4], "suggested": a[5]})).collect::<Vec<_>>(),
         "totals": tot.iter().map(|((l, d), a)| json!({"lang": l, "detectable": d, "n": a[0],
             "flagged": a[1], "flagged_either": a[2], "top1": a[3], "top3": a[4], "suggested": a[5]})).collect::<Vec<_>>(),
-        "suggest_ms": {"n": n, "p50": p50, "p95": p95, "max": max},
+        "suggest_ms": suggest_ms,
         "right_words_rejected": bad_right,
         "en_gb_flags_common": gb,
         "en_gb_top3_common": gb_top3,

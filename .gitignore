@@ -16,3 +16,4 @@ __pycache__/
 /crates/proofing/dicts/
 /crates/proofing/corpus/wiki-cache/
 /crates/proofing/corpus/wiki-build/
+/prototypes/proofing-wasm/out/
