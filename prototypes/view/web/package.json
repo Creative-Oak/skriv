@@ -1,0 +1,27 @@
+{
+  "name": "@skriv/spike2-views",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Spike 2: view prototypes A (ProseMirror) and B (owned view) over the Spike 2b layout engine.",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "prosemirror-commands": "1.7.2",
+    "prosemirror-history": "1.5.1",
+    "prosemirror-keymap": "1.2.3",
+    "prosemirror-model": "1.25.13",
+    "prosemirror-state": "1.4.4",
+    "prosemirror-transform": "1.12.6",
+    "prosemirror-view": "1.42.9"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "typescript": "^7.0.2",
+    "vite": "8.3.8"
+  },
+  "license": "MPL-2.0"
+}

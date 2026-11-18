@@ -20,4 +20,8 @@ hidden textarea), both on a 100-page document. Test with:
 
 **Decides:** the view strategy (ADR 0004).
 
-**Status:** not started. Proposed plan: [`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md).
+**Status:** in progress. Prototypes and automated runs done; manual
+device and screen-reader tests next. Plan:
+[`02-03-next-spikes-plan.md`](02-03-next-spikes-plan.md); results so far:
+[`02-results.md`](02-results.md); manual sheet:
+[`02-manual-tests.md`](02-manual-tests.md).

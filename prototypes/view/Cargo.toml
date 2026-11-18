@@ -1,0 +1,28 @@
+# Spike 2: the editing core both view prototypes share (wasm32).
+# Its own workspace, like prototypes/layout; it reuses that workspace's
+# layout contract and engine by path. Fonts: ../layout/fetch-fonts.sh first.
+
+[workspace]
+resolver = "3"
+members = ["engine"]
+
+[workspace.package]
+edition = "2024"
+license = "MPL-2.0"
+rust-version = "1.100"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev.package."*"]
+opt-level = 2

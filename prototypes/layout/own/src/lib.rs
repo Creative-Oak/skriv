@@ -61,6 +61,8 @@ pub struct OwnEngine {
     placed: Vec<Vec<(usize, Line)>>,
     pages: Pages,
     pub stats: Stats,
+    /// Pages the last `layout` call rebuilt (the view repaints only these).
+    pub rebuilt: Range<usize>,
 }
 
 #[derive(Clone, Debug, Default)]
@@ -159,6 +161,7 @@ impl OwnEngine {
             placed: Vec::new(),
             pages: Pages::default(),
             stats: Stats::default(),
+            rebuilt: 0..0,
         }
     }
 
@@ -785,6 +788,7 @@ impl OwnEngine {
             }
         }
         self.stats.pages_rebuilt += last + 1 - first;
+        self.rebuilt = first..last + 1;
     }
 }
 

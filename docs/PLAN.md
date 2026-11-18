@@ -230,4 +230,8 @@ No pushing or GitHub repo creation unless asked.
   - Decided: web app first; Spike 7 (desktop) deferred.
   - CI on push runs only the quick checks. The LibreOffice fidelity job is manual (Run workflow).
   - Ten Word-exported EU ODT documents passed every criterion; addendum in the Spike 1 results.
-
+- 2026-11-18: Spike 2 started locally (it needs a person and real devices).
+  - Prototypes A (ProseMirror) and B (owned view, EditContext or textarea)
+    over the 2b engine in `prototypes/view/`; automated results and
+    findings in `docs/spikes/02-results.md` (in progress).
+  - Next: the manual sheet `docs/spikes/02-manual-tests.md`.
